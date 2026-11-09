@@ -1,0 +1,36 @@
+flowchart LR
+  %% 设计图解；未实现。箭头含义见本图说明。
+  current["完整快照<br/>保存视图"]:::data
+  change["源码／输入／配置<br/>规则组合变化"]:::core
+  freeze["冻结新输入<br/>与有效组合"]:::data
+  queries["查询／集合依赖<br/>成功与失败"]:::data
+  invalidate["直接＋传递失效"]:::warning
+  stale["旧结果标过期"]:::warning
+  recompute["重算受影响范围"]:::core
+  merge["重合并独立证据<br/>共享实体保留"]:::core
+  compare["验收／回归对照<br/>增量＝全量"]:::core
+  publish["新的完整快照"]:::data
+  views["主视图／反查<br/>矩阵／解释更新"]:::business
+  history["旧快照／注释<br/>历史可回看"]:::data
+  incomplete["中断／对照失败<br/>保留诊断"]:::warning
+  input_moved["分析期间输入变<br/>重试或下一任务"]:::warning
+  current -- "检测变化" --> change
+  change -- "新指纹" --> freeze
+  freeze -- "依赖对照" --> queries
+  queries -- "集合／查询变" --> invalidate
+  invalidate -. "标记旧派生" .-> stale
+  stale -- "选定重建范围" --> recompute
+  recompute -- "当前独立依据" --> merge
+  merge -- "完整候选结果" --> publish
+  merge -. "验收／回归" .-> compare
+  publish -- "切换结果" --> views
+  views -- "保留历史" --> history
+  recompute -. "中断／超限" .-> incomplete
+  compare -. "对照不等价" .-> incomplete
+  freeze -. "期间又变化" .-> input_moved
+  input_moved -- "重新冻结" --> freeze
+  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e
+  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73
+  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d
+  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4
+  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931

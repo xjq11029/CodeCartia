@@ -1,0 +1,38 @@
+flowchart LR
+  %% 设计图解；未实现。箭头含义见本图说明。
+  feedback["新项目错连<br/>漏连／未解析"]:::data
+  triage["根因分类<br/>补必要上下文"]:::core
+  candidate["AI 候选规则<br/>模式＋前提＋反例"]:::optional
+  verify["源码／语义<br/>配置核对"]:::core
+  trial["项目内试运行<br/>新旧自动副本"]:::core
+  independent["独立项目验证<br/>家族隔离"]:::core
+  regression["冻结基准回归<br/>受影响分项"]:::core
+  review["维护者审查<br/>适用范围"]:::core
+  package["不可变版本<br/>规则包"]:::data
+  effective["冻结有效组合<br/>启用／覆盖／依赖"]:::core
+  new_project["另一新项目<br/>自动分析复测"]:::core
+  rollback["回归后<br/>停用／回退"]:::warning
+  quarantine["证据不足／失败<br/>保留候选"]:::warning
+  rebuild["依赖失效<br/>重新合并／分析"]:::core
+  feedback -- "证据与问题" --> triage
+  triage -- "允许范围证据" --> candidate
+  candidate -- "候选与反例" --> verify
+  verify -- "核对通过" --> trial
+  trial -- "同输入比较" --> independent
+  independent -- "独立支持" --> regression
+  regression -- "分项回归通过" --> review
+  review -- "审查固化" --> package
+  package -- "冻结启用组合" --> effective
+  effective -- "无 AI 自动运行" --> new_project
+  new_project -. "出现回归" .-> rollback
+  new_project -- "继续记录反馈" --> feedback
+  verify -. "核对不足" .-> quarantine
+  independent -. "未泛化" .-> quarantine
+  regression -. "回归失败" .-> quarantine
+  rollback -- "切换组合" --> rebuild
+  rebuild -- "失效后重算" --> effective
+  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e
+  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73
+  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d
+  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4
+  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931

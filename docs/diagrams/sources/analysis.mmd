@@ -1,0 +1,39 @@
+flowchart LR
+  %% 设计图解；未实现。箭头含义见本图说明。
+  input["源码／静态配置<br/>语义输入"]:::data
+  freeze["冻结输入清单"]:::data
+  discover["工程发现<br/>与基础索引"]:::core
+  semantic["语义／有限数据流<br/>语言 worker"]:::core
+  framework["框架事实<br/>与检查点"]:::core
+  facts["统一事实<br/>证据与来源"]:::data
+  links["跨工程关联<br/>条件化处理链"]:::core
+  scenario["场景／步骤<br/>条件化结构"]:::business
+  binding["步骤授权关联"]:::business
+  merge["合并证据<br/>来源／冲突"]:::core
+  snapshot["快照／关系<br/>派生结果"]:::data
+  read["查询／图／源码<br/>同一语义结果"]:::core
+  partial["部分结果／候选"]:::warning
+  diagnosis["失败／缺输入<br/>完整性诊断"]:::warning
+  input -- "登记指纹" --> freeze
+  freeze -- "选定输入" --> discover
+  discover -- "相关工程" --> semantic
+  semantic -- "语义事实" --> facts
+  semantic -- "语言事实" --> framework
+  framework -- "结构化事实" --> facts
+  facts -- "上下文／配置" --> links
+  links -- "可关联步骤" --> scenario
+  scenario -- "动作／对象" --> binding
+  facts -- "原始事实" --> merge
+  facts -- "已索引授权事实" --> binding
+  binding -- "条件化绑定" --> merge
+  merge -- "来源与证据" --> snapshot
+  snapshot -- "快照查询" --> read
+  semantic -. "worker 失败" .-> diagnosis
+  links -. "分发未知／超限" .-> diagnosis
+  diagnosis -. "保留可用范围" .-> partial
+  partial -. "附完整性状态" .-> snapshot
+  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e
+  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73
+  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d
+  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4
+  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931

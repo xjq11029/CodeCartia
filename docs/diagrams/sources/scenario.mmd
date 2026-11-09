@@ -1,0 +1,35 @@
+flowchart LR
+  %% 设计图解；未实现。箭头含义见本图说明。
+  entry["审批入口"]:::business
+  identity["已认证身份<br/>u2 / T1"]:::data
+  object["绑定同一申请<br/>r2 / owner:u1"]:::data
+  auth["manager 授权<br/>同租户／非本人"]:::business
+  state["业务状态校验<br/>SUBMITTED"]:::business
+  amount["业务金额校验<br/>金额 ≤ 5000"]:::business
+  transaction["显式事务<br/>状态＋审计"]:::business
+  commit["事务提交成功<br/>审批已持久化"]:::business
+  receipt["提交后<br/>调用回执发送"]:::business
+  receipt_ok["回执调用<br/>成功返回分支"]:::business
+  auth_failure["授权拒绝<br/>终止审批动作"]:::warning
+  business_failure["业务校验失败<br/>无状态写入"]:::warning
+  receipt_failure["记录回执失败<br/>审批不回滚"]:::warning
+  commit_failure["事务提交失败<br/>不报持久成功"]:::warning
+  entry -- "身份校验" --> identity
+  identity -- "同一上下文" --> object
+  object -- "主体／对象条件" --> auth
+  auth -- "授权允许" --> state
+  state -- "状态符合" --> amount
+  amount -- "金额符合" --> transaction
+  transaction -- "提交成功" --> commit
+  commit -- "提交之后" --> receipt
+  receipt -- "成功返回" --> receipt_ok
+  auth -. "条件不满足" .-> auth_failure
+  state -. "状态错误" .-> business_failure
+  amount -. "金额超限" .-> business_failure
+  transaction -. "事务／提交失败" .-> commit_failure
+  receipt -. "发送失败" .-> receipt_failure
+  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e
+  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73
+  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d
+  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4
+  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931

@@ -1,0 +1,37 @@
+flowchart LR
+  %% 设计图解；未实现。箭头含义见本图说明。
+  scenario["业务场景"]:::business
+  step["场景步骤"]:::business
+  action["业务动作"]:::business
+  object["业务对象<br/>状态／值版本"]:::data
+  actor["业务参与者"]:::business
+  binding["步骤授权绑定"]:::core
+  rule["业务规则<br/>状态操作"]:::business
+  evidence["实现与<br/>逐项证据"]:::data
+  subject["主体／身份<br/>与资源关系"]:::data
+  role["系统角色<br/>身份域"]:::data
+  policy["权限／策略<br/>独立共享实体"]:::data
+  checkpoint["实际检查点<br/>入口／路径"]:::core
+  visibility["前端可见性<br/>认证条件"]:::warning
+  unlinked["未关联声明<br/>诊断状态"]:::warning
+  scenario -- "包含 1:N" --> step
+  step -- "组织 1:N" --> action
+  action -- "操作 M:N" --> object
+  step -- "参与 M:N" --> actor
+  action -- "上下文绑定" --> binding
+  action -- "受规则约束" --> rule
+  object -. "状态依据" .-> evidence
+  actor -- "有据映射" --> subject
+  actor -- "映射 M:N" --> role
+  subject -- "主体／数据条件" --> binding
+  role -- "有据授予 M:N" --> policy
+  policy -- "引用 M:N" --> binding
+  binding -- "有据覆盖路径" --> checkpoint
+  checkpoint -. "挂载／执行依据" .-> evidence
+  visibility -- "独立条件" --> binding
+  unlinked -. "保留原始实体" .-> role
+  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e
+  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73
+  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d
+  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4
+  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931
