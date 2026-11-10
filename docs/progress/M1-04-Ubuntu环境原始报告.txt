@@ -1,0 +1,54 @@
+
+--- System ---
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+7.0.0-42-generic
+x86_64
+4
+
+--- Resources ---
+               total        used        free      shared  buff/cache   available
+Mem:           7.8Gi       851Mi       6.1Gi        13Mi       1.1Gi       6.9Gi
+Swap:          4.0Gi          0B       4.0Gi
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/sda2      ext4   58G   14G   42G  25% /
+Filesystem     Inodes IUsed IFree IUse% Mounted on
+/dev/sda2        3.7M  219K  3.5M    6% /
+
+--- Tool paths ---
+docker           docker-compose   java             javac            dotnet           clang            clang++          node             corepack         pnpm             python3          /usr/bin/python3
+pip3             cmake            ninja            mvn              gradle           
+--- Installed tool versions ---
+Not found: java
+Not found: javac
+Not found: dotnet
+Not found: dotnet
+Not found: clang
+Not found: clang++
+Not found: node
+
+$ python3 --version
+Python 3.12.3
+Not found: cmake
+Not found: ninja
+Not found: docker
+
+--- Package-manager entry points (not executed) ---
+
+--- Local Docker service (no remote context) ---
+inactive
+inactive
+
+--- Check finished ---
+No software was installed; no containers were started.
