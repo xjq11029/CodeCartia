@@ -147,6 +147,14 @@ def validate(data: dict) -> None:
     if tuple(graph["id"] for graph in graphs) != GRAPH_IDS:
         raise ValueError("图集必须按约定包含八张图")
     for graph in graphs:
+        guide = graph.get("plainGuide", {})
+        for field in ("summary", "example", "scope"):
+            if not isinstance(guide.get(field), str) or not guide[field].strip():
+                raise ValueError(f'{graph["id"]}：缺少通俗说明 {field}')
+        reading = guide.get("reading")
+        if (not isinstance(reading, list) or not reading
+                or any(not isinstance(item, str) or not item.strip() for item in reading)):
+            raise ValueError(f'{graph["id"]}：读图方法必须为非空文字列表')
         identifiers = [node["id"] for node in graph["nodes"]]
         if len(identifiers) != len(set(identifiers)):
             raise ValueError(f'{graph["id"]}：节点 ID 重复')
@@ -155,6 +163,8 @@ def validate(data: dict) -> None:
                 raise ValueError("节点 ID 必须为字母、数字、下划线或短横线")
             if not node.get("detail") or not node.get("label"):
                 raise ValueError(f'{graph["id"]}：节点缺少名称或说明')
+            if not isinstance(node.get("plainExplanation"), str) or not node["plainExplanation"].strip():
+                raise ValueError(f'{graph["id"]}/{node["id"]}：节点缺少通俗解释')
             if node.get("type", "core") not in PALETTE:
                 raise ValueError(f'{graph["id"]}：未知节点类型')
             if (node["x"] < 0 or node["y"] < 0
@@ -185,7 +195,8 @@ def render_svg(graph: dict) -> str:
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" '
         f'width="{width}" height="{height}" role="img" aria-labelledby="{graph_id}-title {graph_id}-desc">',
         f'<title id="{graph_id}-title">{escape(graph["title"])} · 设计图解</title>',
-        f'<desc id="{graph_id}-desc">{escape(graph["question"])}。{escape(graph["description"])}</desc>',
+        f'<desc id="{graph_id}-desc">{escape(graph["plainGuide"]["summary"])} '
+        f'{escape(graph["plainGuide"]["scope"])} {escape(graph["description"])}</desc>',
         '<style>text{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif} '
         '.graph-node{cursor:pointer;outline:none}.graph-node:hover rect,.graph-node:focus rect'
         '{stroke-width:3;filter:brightness(.97)} .edge-label{pointer-events:none}</style>',
@@ -239,8 +250,9 @@ def render_svg(graph: dict) -> str:
         cx, cy = centers(node)
         output.append(
             f'<g class="graph-node" data-node-id="{escape(node["id"])}" tabindex="0" '
-            f'role="button" aria-label="{escape(node["label"].replace(chr(10), " "))}">'
-            f'<title>{escape(node["detail"])}</title>'
+            f'role="button" aria-label="{escape(node["label"].replace(chr(10), " "))}：'
+            f'{escape(node["plainExplanation"])}">'
+            f'<title>{escape(node["plainExplanation"])}\n专业说明：{escape(node["detail"])}</title>'
             f'<rect x="{node["x"]}" y="{node["y"]}" width="{node["w"]}" height="{node["h"]}" '
             f'rx="10" fill="{fill}" stroke="{stroke}" stroke-width="1.3"{dash}/>'
             f'<rect x="{node["x"] + 1}" y="{node["y"] + 14}" width="3" '
@@ -261,15 +273,27 @@ def markdown(data: dict) -> str:
     lines = [
         "# CodeCartia 架构与设计图解", "",
         "> 图解版本：0.1｜依据：设计 v0.6、推进 v0.4、验收样例 v0.3｜日期：2026-11-09", "",
-        "本图解解释已确认的产品设计。当前 M1-01 文档已交付，M1 基线未冻结、G1 未通过；",
-        "应用、分析 worker、可执行原型及 BS/AP 验收均未实现或执行。图中的技术选型仍为候选。", "",
+        "本图解解释 CodeCartia 的产品设计。当前已有设计图解、模拟体验原型与可运行采购示例；",
+        "产品分析器、CLI 与 Web 尚未实现，BS/AP 完整分析验收未执行，M1 基线未冻结、G1 未通过。",
+        "图中的技术选型仍为候选；采购示例的功能测试不代表 CodeCartia 自动分析能力已经通过验收。", "",
         "[打开离线交互图解](index.html) · [图源与维护方法](README.md) · [完整设计](../CodeCartia-设计方案.md)", "",
         "按产品全景、系统架构、分析流程、核心模型、业务示例、界面导航、快照变化和规则改进阅读。",
         "各图箭头分别表示阅读关系、信息依赖或合成目标工程的条件路径，不能混作真实运行记录。", "",
     ]
     for number, graph in enumerate(data["graphs"], 1):
-        lines += [f'## {number:02d} {graph["title"]}', "", graph["question"], "", graph["description"], "",
-                  f'![{graph["title"]}](svgs/{graph["id"]}.svg)', ""]
+        guide = graph["plainGuide"]
+        lines += [f'## {number:02d} {graph["title"]}', "", graph["question"], "",
+                  "### 一句话看懂", "", guide["summary"], "", guide["scope"], "",
+                  f'![{graph["title"]}](svgs/{graph["id"]}.svg)', "",
+                  "### 怎么读这张图", ""]
+        lines += [f'{index}. {item}' for index, item in enumerate(guide["reading"], 1)]
+        lines += ["", "### 举个小例子", "", guide["example"], "",
+                  "### 节点的通俗解释", "", "| 图中名称 | 通俗解释 |", "|---|---|"]
+        for node in graph["nodes"]:
+            label = node["label"].replace("\n", " ").replace("|", "\\|")
+            explanation = node["plainExplanation"].replace("\n", " ").replace("|", "\\|")
+            lines.append(f'| {label} | {explanation} |')
+        lines += ["", "### 专业说明与设计边界", "", graph["description"], ""]
         lines += [f'- {note}' for note in graph.get("notes", [])]
         lines += ["", "依据：" + "；".join(
             f'[{source["label"]}]({source["path"]})（{source.get("section", "相关章节")}）'

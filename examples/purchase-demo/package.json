@@ -1,0 +1,15 @@
+{
+  "name": "codecartia-purchase-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "供 CodeCartia 体验原型阅读的 B0 合成采购工程",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node test/purchase.test.js",
+    "evidence": "node scripts/build-evidence.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

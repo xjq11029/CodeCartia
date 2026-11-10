@@ -1,0 +1,8 @@
+{
+  "realm": "realm-purchase",
+  "actorBindings": {
+    "申请人": ["realm-purchase:employee"],
+    "审批人": ["realm-purchase:manager"],
+    "观察者": ["realm-purchase:manager", "realm-purchase:readonly"]
+  }
+}

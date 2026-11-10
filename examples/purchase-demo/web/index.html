@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>B0 合成采购工程</title>
+  <style>
+    body { max-width: 860px; margin: 50px auto; padding: 0 24px; font: 16px/1.7 system-ui,sans-serif; color:#263146; background:#f6f8fc; }
+    main { background:white; border:1px solid #dce2ec; padding:28px; border-radius:14px; }
+    h1 { margin-top:0; font-size:28px; } p { color:#586780; }
+    label { display:block; margin:14px 0; } select { width:100%; padding:10px; border:1px solid #bdc8d9; border-radius:6px; }
+    button { padding:9px 16px; margin:10px 8px 10px 0; cursor:pointer; border:1px solid #a6b6d1; border-radius:6px; background:#edf3ff; }
+    button[hidden] { display:none; } pre { overflow:auto; min-height:160px; padding:16px; background:#14223b; color:#dceaff; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>B0 合成采购工程</h1>
+    <p>此页面只用于运行示例代码。主体、申请、会话与数据均为合成输入；固定演示会话不具备生产认证能力。</p>
+    <label>演示主体<select id="user" aria-label="演示主体"></select></label>
+    <label>申请（标签显示初始值，当前值以读取结果为准）<select id="request" aria-label="申请"></select></label>
+    <div>
+      <button id="read">读取申请</button>
+      <button id="submit">提交申请</button>
+      <button id="approve" hidden>审批申请</button>
+    </div>
+    <pre id="output" aria-live="polite">选择主体和申请，然后执行一个动作。</pre>
+    <p>审批按钮只根据 manager 显示。授权允许之后仍需通过状态、金额与事务检查。数据仅在服务进程内保存，重启服务恢复 B0。</p>
+  </main>
+  <script type="module" src="/web/PurchasePage.js"></script>
+</body>
+</html>

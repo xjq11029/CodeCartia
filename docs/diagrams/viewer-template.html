@@ -61,6 +61,28 @@
     .question-icon{width:27px;height:27px;display:grid;place-items:center;flex-shrink:0;border-radius:8px;background:var(--blue-soft);color:var(--blue);font-weight:700}
     .question-card h2{font-size:15px;line-height:1.6;margin:0 0 4px}
     .question-card p{color:var(--muted);font-size:13px;margin:0}
+    .question-copy{min-width:0;flex:1}
+    .question-card .plain-summary{color:var(--ink);font-size:14px;line-height:1.85}
+    .plain-kicker{font-size:11px;font-weight:700;color:var(--teal);margin:6px 0 3px}
+    .question-card .plain-scope{font-size:12px;color:var(--amber);margin-top:8px}
+    .technical-description{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+    .technical-description summary{font-size:12px;color:var(--muted);cursor:pointer}
+    .technical-description p{margin-top:8px}
+    .plain-guide{margin-top:17px;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:20px;box-shadow:var(--shadow)}
+    .plain-guide h2{font-size:16px;margin:0 0 14px}
+    .plain-guide h3{font-size:13px;margin:0 0 8px;color:var(--teal)}
+    .plain-guide-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px}
+    .plain-reading{margin:0;padding-left:22px;display:grid;gap:9px;font-size:13px;line-height:1.85;color:var(--muted)}
+    .plain-example{padding:14px 16px;border-radius:9px;background:var(--teal-soft);min-width:0}
+    .plain-example p{font-size:13px;line-height:1.85;margin:0;overflow-wrap:anywhere}
+    .plain-glossary{border-top:1px solid var(--line);padding-top:13px;margin-top:17px}
+    .plain-glossary summary{cursor:pointer;font-size:13px;font-weight:600}
+    .plain-node-list{list-style:none;margin:13px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px}
+    .plain-node-list li{border-top:1px solid var(--line);padding-top:10px;min-width:0}
+    .plain-node-list button{font:inherit;font-size:13px;font-weight:600;color:var(--blue);border:0;background:none;padding:0;text-align:left;line-height:1.6}
+    .plain-node-list button:hover{text-decoration:underline}
+    .plain-node-list p{font-size:12px;color:var(--muted);line-height:1.85;margin:4px 0 0;overflow-wrap:anywhere}
+    @media(max-width:900px){.plain-guide-grid,.plain-node-list{grid-template-columns:1fr}.plain-guide{padding:16px}.plain-guide-grid{gap:16px}}
     .reading-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:17px;align-items:start}
     .canvas-card{border:1px solid var(--line);background:var(--surface);border-radius:13px;box-shadow:var(--shadow);overflow:hidden;min-width:0}
     .canvas-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding:12px 13px;border-bottom:1px solid var(--line);background:var(--surface)}
@@ -92,6 +114,7 @@
     .detail-empty{font-size:13px;color:var(--muted);margin:0;line-height:1.9}
     .detail-content h3{font-size:18px;line-height:1.5;margin:0 0 12px;overflow-wrap:anywhere}
     .detail-content p{font-size:13px;margin:12px 0;color:var(--muted);white-space:pre-wrap;overflow-wrap:anywhere}
+    .detail-content .node-plain{padding:12px 14px;border-left:3px solid var(--teal);border-radius:5px;background:var(--teal-soft);color:var(--ink);line-height:1.85}
     .status-badge{display:inline-block;font-size:11px;border:1px solid #d1b784;padding:3px 8px;border-radius:6px;background:var(--amber-soft);color:var(--amber)}
     .field-label{font-size:11px;color:var(--muted);font-weight:700;margin:18px 0 6px;letter-spacing:.5px}
     .source-list{list-style:none;padding:0;margin:0;display:grid;gap:9px;font-size:12px}
@@ -179,6 +202,7 @@
     @media(max-width:510px){.brand small{display:none}.brand strong{font-size:14px}.top-status span{font-size:9px;padding:2px 6px}.topbar{gap:7px;padding:0 10px}.brand{gap:8px}.brand-mark{width:27px;height:27px;font-size:14px}.top-button{font-size:11px;padding:5px 6px}.top-status span:nth-child(2){display:none}.page-intro{display:block}.chapter-pill{display:inline-block;margin-top:11px}h1{font-size:23px}.diagram-stage{height:440px}.canvas-toolbar{gap:5px}.toolbar-separator{display:none}.tool-button{font-size:11px;padding:5px 7px}.tool-button.icon{width:31px}.canvas-footer{padding:9px 12px}.stage-hint{font-size:9px}.example-shell{grid-template-columns:1fr}.example-sidebar{border-right:0;border-bottom:1px solid var(--line);padding:15px}.scenario-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.scenario-button{padding:8px 5px;font-size:11px;flex-wrap:wrap;gap:3px}.scenario-button span:first-child{flex-basis:100%}.example-step-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.step-button{padding:8px 6px;font-size:11px}.role-select{max-width:100%}.filter-note{margin-bottom:10px}.example-step-label{margin-top:14px}.example-main{padding:17px}.evidence-panel{padding:17px}.chapter-pager{gap:8px}.pager-button{font-size:11px;padding:10px}.fullscreen-view .canvas-card{inset:5px}.fullscreen-view.has-selected-node .detail-card{right:12px;bottom:55px;width:calc(100vw - 24px);max-height:35vh}.sources-panel .source-list{gap:10px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
     @page{size:A4 landscape;margin:12mm}
+    @media print{.print-explanation{height:auto!important;min-height:184mm;overflow:visible!important}.print-explanation h3{font-size:11pt;margin:3mm 0 1mm}.print-explanation p,.print-explanation li{font-size:9pt;line-height:1.65}.print-explanation ol{margin:1mm 0;padding-left:6mm}.print-node-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2mm 7mm;list-style:none;padding:0;margin:0}.print-node-list li{break-inside:avoid;border-top:1px solid #d0dce8;padding-top:1.5mm}.print-node-list p{margin:0}.print-node-list strong{font-size:9pt}}
     @media print{html,body{background:#fff!important;color:#182b43!important;font-size:10pt}.topbar,.sidebar,main,.toast,.skip,.fallback{display:none!important}.print-only{display:block!important}.print-cover{page-break-after:always;break-after:page;padding:18mm 15mm;min-height:160mm}.print-cover h1{font-size:29pt;margin-bottom:10mm}.print-cover p{font-size:12pt;line-height:1.8}.print-cover ol{font-size:12pt;line-height:2}.print-page{page-break-after:always;break-after:page;page-break-inside:avoid;break-inside:avoid;height:184mm;display:flex;flex-direction:column;overflow:hidden}.print-page:last-child{page-break-after:auto;break-after:auto}.print-page h2{font-size:18pt;line-height:1.3;margin:0 0 3mm}.print-question{font-size:10pt;margin:0 0 2mm}.print-svg{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}.print-svg svg{display:block;width:100%;height:100%;max-height:153mm;object-fit:contain}.print-source{font-size:8pt;line-height:1.45;margin:2mm 0 0;color:#455d79}.print-status{font-size:8pt;float:right;font-weight:400;color:#7a551a}.print-wireframe{height:auto;min-height:170mm}.print-wireframe .print-svg{font-size:12pt}.print-wireframe table{border-collapse:collapse;width:100%;font-size:10pt;line-height:1.65;margin-top:6mm}.print-wireframe td,.print-wireframe th{padding:3mm;border:1px solid #d0dce8;text-align:left;vertical-align:top}.print-wireframe th{background:#eef4f9}.print-wireframe p{font-size:10pt}.fallback{display:block!important;margin:0;padding:0}.fallback-card{page-break-after:always;break-after:page}.fallback-card img{max-height:150mm}}
   </style>
 </head>
@@ -204,7 +228,7 @@
   </aside>
   <main id="reading-content" tabindex="-1">
     <div class="page-intro"><div><p class="eyebrow" id="chapter-eyebrow">CODECARTIA / DESIGN MAP 01</p><h1 id="diagram-title">CodeCartia 架构与设计图解</h1><p id="diagram-subtitle">以业务场景为主线理解架构、事实、证据与变化。</p></div><span class="chapter-pill" id="chapter-pill">01 / 08</span></div>
-    <section class="question-card" aria-label="本图回答的问题"><span class="question-icon" aria-hidden="true">?</span><div><h2 id="diagram-question"></h2><p id="diagram-description"></p></div></section>
+    <section class="question-card" aria-label="本图回答的问题"><span class="question-icon" aria-hidden="true">?</span><div class="question-copy"><h2 id="diagram-question"></h2><div class="plain-kicker">一句话看懂</div><p class="plain-summary" id="diagram-summary"></p><p class="plain-scope" id="diagram-scope"></p><details class="technical-description" id="technical-description"><summary>查看专业说明与箭头含义</summary><p id="diagram-description"></p></details></div></section>
     <div class="reading-layout">
       <section class="canvas-card" aria-label="交互设计图">
         <div class="canvas-toolbar" aria-label="图解控制工具">
@@ -214,7 +238,7 @@
           <button class="tool-button" id="download-svg">下载 SVG</button>
           <button class="tool-button" id="copy-link">复制链接</button>
           <button class="tool-button" id="print-all">打印图集</button>
-          <span class="canvas-caption">点击节点 · 查看依据</span>
+          <span class="canvas-caption">点击节点 · 看通俗解释与依据</span>
         </div>
         <div class="diagram-stage" id="diagram-stage" tabindex="0" aria-label="设计图视口：滚轮缩放，拖动平移，方向键移动，加减号缩放，0适配，Enter选择节点，Escape退出全屏">
           <div class="graph-plane" id="graph-plane"></div>
@@ -223,10 +247,15 @@
         <div class="canvas-footer"><span id="canvas-node-count"></span><span>相对适配视口的比例 · 不代表运行轨迹</span><a id="static-svg-link" href="svgs/overview.svg" target="_blank" rel="noopener">打开静态 SVG ↗</a></div>
       </section>
       <aside class="detail-card" aria-label="选中节点详情">
-        <div class="detail-header"><h2>节点与设计依据</h2><span>文档视图</span><button class="close-detail" id="close-detail" aria-label="收起全屏中的节点详情">收起</button></div>
-        <div class="detail-content" id="node-detail"><p class="detail-empty">选择图中节点，阅读它的职责、关系、条件和来源。可使用 Tab 定位节点，再按 Enter 打开详情。</p></div>
+        <div class="detail-header"><h2>节点解释与设计依据</h2><span>文档视图</span><button class="close-detail" id="close-detail" aria-label="收起全屏中的节点详情">收起</button></div>
+        <div class="detail-content" id="node-detail"><p class="detail-empty">点击图中节点，先看通俗解释，再查专业说明与依据。也可在下方展开本章所有节点的解释，或使用 Tab / Enter 选择图中节点。</p></div>
       </aside>
     </div>
+    <section class="plain-guide" id="plain-guide" aria-labelledby="plain-guide-title">
+      <h2 id="plain-guide-title">用简单的话理解这张图</h2>
+      <div class="plain-guide-grid"><div><h3>怎么读这张图</h3><ol class="plain-reading" id="plain-reading"></ol></div><div class="plain-example"><h3>举个小例子</h3><p id="plain-example"></p></div></div>
+      <details class="plain-glossary" id="plain-glossary"><summary id="plain-glossary-summary">展开本章所有节点的通俗解释</summary><ul class="plain-node-list" id="plain-node-list"></ul></details>
+    </section>
     <details class="notes-panel" id="notes-panel" aria-label="阅读提示" hidden><summary>阅读提示与设计边界</summary><ul id="diagram-notes"></ul></details>
     <section class="wireframe" id="wireframe" aria-labelledby="wireframe-title" hidden>
       <div class="wireframe-heading"><span class="example-label">合成示例，待实现界面</span><h2 id="wireframe-title">从场景进入步骤，再阅读规则、授权与证据</h2><p>以验收样例 v0.3 的 B0 采购输入演示阅读方式。选择场景和步骤，查看同一动作的独立条件；角色筛选只改变候选步骤，不切换目标身份、代为登录或授予权限。</p></div>
@@ -240,7 +269,7 @@
           <p class="example-label-small example-step-label">当前场景的候选步骤</p><ol class="example-step-list" id="example-step-list"></ol><p class="filter-empty" id="filter-empty" hidden></p>
         </aside>
         <section class="example-main" id="example-main" aria-label="合成业务步骤详情"></section>
-        <aside class="evidence-panel" aria-label="合成步骤的逻辑证据"><h3>依据与缺口</h3><p>F.* 是规格中的逻辑证据标签，尚未映射到可执行样例的源码位置；此处按文档定位，不提供虚构文件行号。</p><div class="evidence-tabs" id="evidence-tabs"></div><div id="evidence-detail"></div><a href="../CodeCartia-业务场景与权限验收样例.md" style="font-size:11px">阅读 B0 与 BS / AP 规格 ↗</a></aside>
+        <aside class="evidence-panel" aria-label="合成步骤的逻辑证据"><h3>依据与缺口</h3><p>本图用 F.* 标签定位合成规格，实际示例源码可在产品体验原型中查看。这里仅解释文档，没有执行 CodeCartia 自动分析。</p><div class="evidence-tabs" id="evidence-tabs"></div><div id="evidence-detail"></div><a href="../prototype/index.html" style="font-size:11px">查看体验原型与示例源码 ↗</a><br><a href="../CodeCartia-业务场景与权限验收样例.md" style="font-size:11px">阅读 B0 与 BS / AP 规格 ↗</a></aside>
       </div>
       <div class="example-bottom"><span>仅阅读交互 · 没有分析目标工程</span><span>默认展示所有步骤 · 独立保留认证 / UI / 授权 / 数据范围 / 业务条件</span><span>样例规格尚未执行验收</span></div>
     </section>
@@ -279,11 +308,32 @@
       {id:'incremental',title:'增量变化与快照一致性',chapter:'增量更新 · §8.2'},
       {id:'rules',title:'AI 规则改进与验证闭环',chapter:'规则迭代 · §13.1–13.6'}
     ];
+    function showEntryMessage(title,description,path,label) {
+      $('diagram-question').textContent=title;
+      const summary=$('diagram-summary');summary.textContent=description;
+      $('diagram-scope').textContent='';$('technical-description').hidden=true;
+      const link=document.createElement('a');link.href=path;link.textContent=label;link.className='tool-button';
+      link.style.display='inline-block';link.style.marginTop='10px';
+      summary.append(document.createElement('br'),link);
+      document.querySelectorAll('.reading-layout,.plain-guide,.sources-panel,.chapter-pager').forEach(section=>section.hidden=true);
+    }
+    const dataText=$('graph-data').textContent.trim(),svgText=$('diagram-svgs').textContent.trim();
+    const isTemplate=dataText.startsWith('__') && svgText.startsWith('__');
+    if(isTemplate) {
+      const entry=new URL('index.html'+location.hash,location.href);
+      if(entry.pathname!==location.pathname) {
+        document.title='正在打开完整图解 · CodeCartia';
+        showEntryMessage('当前打开的是编辑模板，正在进入完整图解。','正式阅读入口为同目录的 index.html。',entry.href,'打开完整架构与设计图解');
+        location.replace(entry.href);
+      } else {
+        showEntryMessage('当前页面尚未生成图集。','请按维护说明重新生成完整阅读页面。','README.md','查看生成与维护说明');
+      }
+      return;
+    }
     let raw, svgs;
-    try {raw = JSON.parse($('graph-data').textContent); svgs = JSON.parse($('diagram-svgs').textContent);} catch(error) {
-      $('diagram-question').textContent = '图集数据未能读取，请打开静态图或 Markdown 图解。';
-      $('diagram-description').textContent = '本页支持 file:// 离线打开；静态 SVG 位于 svgs 目录。';
-      $('canvas-node-count').textContent = '静态阅读入口仍可使用';
+    try {raw=JSON.parse(dataText);svgs=JSON.parse(svgText);} catch(error) {
+      showEntryMessage('图集数据缺失或损坏。','请按维护说明重新生成页面，或打开独立 SVG 阅读。','README.md','查看修复与维护说明');
+      console.error('CodeCartia 图集数据读取失败：',error);
       return;
     }
     const collections = raw.graphs || raw.diagrams || raw;
@@ -341,7 +391,27 @@
       const nodeMap = new Map(nodesFor(graphs[id]).map(node=>[node.id,node]));
       svg.querySelectorAll('[data-node-id]').forEach(node=>{
         node.classList.add('graph-node');node.setAttribute('tabindex','0');node.setAttribute('role','button');
-        const data=nodeMap.get(node.dataset.nodeId);node.setAttribute('aria-label',data && data.label || node.dataset.nodeId);node.setAttribute('aria-pressed','false');
+        const data=nodeMap.get(node.dataset.nodeId);node.setAttribute('aria-label',data ? plain(data.label).replace(/\n/g,' ')+'：'+plain(data.plainExplanation) : node.dataset.nodeId);node.setAttribute('aria-pressed','false');
+      });
+    }
+    function renderPlainGuide(graph) {
+      const guide=graph.plainGuide || {};
+      $('diagram-summary').textContent=plain(guide.summary);
+      $('diagram-scope').textContent=plain(guide.scope);
+      $('technical-description').open=false;
+      $('plain-reading').replaceChildren();
+      sourceItems(guide.reading).forEach(text=>$('plain-reading').append(el('li',plain(text))));
+      $('plain-example').textContent=plain(guide.example);
+      $('plain-guide').hidden=!guide.summary;
+      $('plain-glossary').open=false;
+      const nodes=nodesFor(graph);
+      $('plain-glossary-summary').textContent='展开本章全部 '+nodes.length+' 个节点的通俗解释';
+      $('plain-node-list').replaceChildren();
+      nodes.forEach(node=>{
+        const item=el('li'),button=el('button',plain(node.label).replace(/\n/g,' '));
+        button.type='button';button.dataset.explainNode=node.id;
+        button.setAttribute('aria-label','查看'+plain(node.label).replace(/\n/g,' ')+'的解释与依据');
+        item.append(button,el('p',plain(node.plainExplanation)));$('plain-node-list').append(item);
       });
     }
     function showGraph(id,resetScroll) {
@@ -354,6 +424,7 @@
       $('diagram-subtitle').textContent=plain(graph.subtitle);
       $('diagram-question').textContent=plain(graph.question);
       $('diagram-description').textContent=plain(graph.description);
+      renderPlainGuide(graph);
       $('chapter-eyebrow').textContent='CODECARTIA / DESIGN MAP '+String(index+1).padStart(2,'0');
       $('chapter-pill').textContent=String(index+1).padStart(2,'0')+' / 08';
       document.querySelectorAll('[data-chapter-id]').forEach(link=>{if(link.dataset.chapterId===id)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
@@ -377,7 +448,7 @@
     }
     function renderEmptyDetail() {
       document.body.classList.remove('has-selected-node');
-      $('node-detail').replaceChildren(el('p','选择图中节点，阅读它的职责、关系、条件和来源。可使用 Tab 定位节点，再按 Enter 打开详情。','detail-empty'));
+      $('node-detail').replaceChildren(el('p','点击图中节点，先看通俗解释，再查专业说明与依据。也可在下方展开本章所有节点的解释，或使用 Tab / Enter 选择图中节点。','detail-empty'));
     }
     function showNode(nodeId) {
       const graph=graphs[currentId],node=nodesFor(graph).find(n=>n.id===nodeId);
@@ -386,8 +457,11 @@
       plane.querySelectorAll('[data-node-id]').forEach(n=>{const selected=n.dataset.nodeId===nodeId;n.classList.toggle('selected',selected);n.setAttribute('aria-pressed',String(selected));});
       const detail=$('node-detail');detail.replaceChildren(el('h3',node.label || node.id));
       detail.append(el('span',plain(node.status || '设计说明 · 尚未实现'),'status-badge'));
+      detail.append(el('div','通俗解释','field-label'),el('p',plain(node.plainExplanation),'node-plain'));
+      detail.append(el('div','专业说明','field-label'));
       detail.append(el('p',plain(node.detail || node.description)));
-      if(node.type)detail.append(el('div','节点分类：'+plain(node.type),'field-label'));
+      const kinds={core:'结构与分析',data:'输入、事实与存储',business:'业务含义',optional:'可选辅助',warning:'条件与缺口'};
+      if(node.type)detail.append(el('div','节点分类：'+(kinds[node.type] || plain(node.type)),'field-label'));
       detail.append(el('div','来源与定位','field-label'));
       const sources=el('ul',null,'source-list');renderSources(sources,node.source || node.sources || graph.source || graph.sources);detail.append(sources);
       detail.append(el('div','来源指向设计与规格；节点关系不代表运行事实或已通过验收。','detail-note'));
@@ -539,20 +613,34 @@
     $('scenario-list').addEventListener('click',event=>{const button=event.target.closest('[data-scenario]');if(button){selectedScenario=button.dataset.scenario;selectedStep='';renderExample();}});
     $('example-step-list').addEventListener('click',event=>{const button=event.target.closest('[data-step]');if(button){selectedStep=button.dataset.step;renderExample();}});
     $('evidence-tabs').addEventListener('click',event=>{const button=event.target.closest('[data-evidence]');if(button){selectedEvidence=button.dataset.evidence;renderEvidence();}});
+    $('plain-node-list').addEventListener('click',event=>{
+      const button=event.target.closest('[data-explain-node]');
+      if(!button)return;
+      showNode(button.dataset.explainNode);
+      const detail=$('node-detail');detail.tabIndex=-1;detail.focus({preventScroll:true});
+      detail.scrollIntoView({block:'center',behavior:'instant'});
+    });
     function buildPrintReader() {
       const reader=$('print-reader');reader.replaceChildren();
       const cover=el('article',null,'print-cover');cover.append(el('p','CODECARTIA / DESIGN READER','eyebrow'),el('h1','CodeCartia 架构与设计图解'),el('p','设计 v0.6 · 2026-11-09\n应用尚未实现；M1 基线未冻结。\n图解依据设计与合成规格组织，颜色与连线不表示验收通过或真实运行。'));
       const contents=el('ol');chapters.forEach(ch=>contents.append(el('li',graphs[ch.id].title || ch.title)));cover.append(contents);reader.append(cover);
       chapters.forEach((chapter,index)=>{
         const graph=graphs[chapter.id],page=el('article',null,'print-page');
-        const title=el('h2',String(index+1).padStart(2,'0')+' · '+(graph.title || chapter.title));title.append(el('span','设计图解 · 尚未实现','print-status'));page.append(title,el('p',plain(graph.question),'print-question'));
+        const title=el('h2',String(index+1).padStart(2,'0')+' · '+(graph.title || chapter.title));title.append(el('span','设计图解 · 尚未实现','print-status'));page.append(title,el('p',plain(graph.plainGuide.summary),'print-question'));
         const figure=el('div',null,'print-svg');figure.innerHTML=graphMarkup(chapter.id);const svg=figure.querySelector('svg');if(svg){decorateSVG(svg,chapter.id);svg.setAttribute('preserveAspectRatio','xMidYMid meet');}page.append(figure);
         const sources=sourceItems(graph.source || graph.sources).map(source=>typeof source==='string'?source:(source.label || source.path || '')+(source.section?' · '+plain(source.section):''));
         page.append(el('p','来源：'+sources.join('；')+'。规划能力未实现；条件、未知与来源须结合原文阅读。','print-source'));reader.append(page);
+        const guide=graph.plainGuide,explanation=el('article',null,'print-page print-explanation');
+        explanation.append(el('h2',String(index+1).padStart(2,'0')+' · 通俗说明'),el('p',plain(guide.scope),'print-source'),el('h3','怎么读这张图'));
+        const reading=el('ol');guide.reading.forEach(text=>reading.append(el('li',plain(text))));
+        explanation.append(reading,el('h3','举个小例子'),el('p',plain(guide.example)),el('h3','节点解释'));
+        const glossary=el('ul',null,'print-node-list');
+        nodesFor(graph).forEach(node=>{const item=el('li');item.append(el('strong',plain(node.label).replace(/\n/g,' ')),el('p',plain(node.plainExplanation)));glossary.append(item);});
+        explanation.append(glossary);reader.append(explanation);
       });
-      const wire=el('article',null,'print-page print-wireframe');wire.append(el('h2','06 附 · 合成采购场景的界面阅读线框'),el('p','合成示例，待实现界面。场景 → 步骤 → 业务规则与授权 → 逻辑证据；角色筛选仅改变候选列表，不切换身份或授予权限。B0规格尚未执行。'));
+      const wire=el('article',null,'print-page print-wireframe');wire.append(el('h2','06 附 · 合成采购场景的界面阅读线框'),el('p','本图演示设计中的阅读方式。场景 → 步骤 → 业务规则与授权 → 逻辑证据；角色筛选仅改变候选列表，不切换身份或授予权限。BS/AP 完整分析验收尚未执行。'));
       const table=el('table'),head=el('tr');['场景 / 参与角色','步骤','认证 / UI / 授权 / 数据范围','业务规则与逻辑依据'].forEach(value=>head.append(el('th',value)));table.append(head);
-      exampleScenarios.forEach(scenario=>{const row=el('tr');row.append(el('td',scenario.label+'\n'+scenario.actor),el('td',scenario.steps.map(step=>step.label).join(' → ')),el('td',scenario.id==='approve'?'入口要求已认证；UI只按manager可见；后端限定manager、同租户且非本人申请。':scenario.id==='submit'?'入口要求已认证；UI未指定；employee仅提交同租户本人申请。':'入口要求已认证；UI未指定；employee读取同租户本人申请；manager、readonly读取同租户申请。'),el('td',scenario.id==='approve'?'SUBMITTED且金额≤5000；更新与审计在事务内；提交后回执失败不回滚。F.policy.approve / F.handler.approve / F.tx.approve / F.receipt':scenario.id==='submit'?'DRAFT且金额>0；仅明确成功依据支持持久SUBMITTED。F.policy.submit / F.handler.submit / F.commit.submit / F.audit':'不复用审批条件；B0未指定更多读取业务前置条件。F.policy.read / F.route.read'));table.append(row);});wire.append(table,el('p','F.*仅为文档逻辑标签，尚未映射到真实样例源码或行号。来源：CodeCartia-业务场景与权限验收样例.md v0.3 §2，设计方案 v0.6 §3。'));reader.append(wire);
+      exampleScenarios.forEach(scenario=>{const row=el('tr');row.append(el('td',scenario.label+'\n'+scenario.actor),el('td',scenario.steps.map(step=>step.label).join(' → ')),el('td',scenario.id==='approve'?'入口要求已认证；UI只按manager可见；后端限定manager、同租户且非本人申请。':scenario.id==='submit'?'入口要求已认证；UI未指定；employee仅提交同租户本人申请。':'入口要求已认证；UI未指定；employee读取同租户本人申请；manager、readonly读取同租户申请。'),el('td',scenario.id==='approve'?'SUBMITTED且金额≤5000；更新与审计在事务内；提交后回执失败不回滚。F.policy.approve / F.handler.approve / F.tx.approve / F.receipt':scenario.id==='submit'?'DRAFT且金额>0；仅明确成功依据支持持久SUBMITTED。F.policy.submit / F.handler.submit / F.commit.submit / F.audit':'不复用审批条件；B0未指定更多读取业务前置条件。F.policy.read / F.route.read'));table.append(row);});wire.append(table,el('p','本图用 F.* 标签按文档定位，实际源码位置见产品体验原型；源码示例不代表自动分析已经实现。来源：CodeCartia-业务场景与权限验收样例.md v0.3 §2，设计方案 v0.6 §3。'));reader.append(wire);
     }
     $('print-all').addEventListener('click',()=>{buildPrintReader();window.print();});window.addEventListener('beforeprint',buildPrintReader);
     renderDirectory();renderExample();buildPrintReader();showGraph(location.hash.slice(1) || 'overview',false);

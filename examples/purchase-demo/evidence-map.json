@@ -1,0 +1,192 @@
+{
+  "format": "codecartia-demo-evidence-v1",
+  "scope": "合成示例逻辑段位置索引，非自动分析结果或独立验收真值",
+  "evidence": {
+    "F.ui.approve": {
+      "file": "web/PurchasePage.js",
+      "startLine": 19,
+      "endLine": 23,
+      "sha256": "a2ac0c8dee7995050ab68429da5fe3e2da4a7c5d8ad2ba38f94fcf9f0ec6caec"
+    },
+    "F.ui.actions": {
+      "file": "web/PurchasePage.js",
+      "startLine": 40,
+      "endLine": 42,
+      "sha256": "a2ac0c8dee7995050ab68429da5fe3e2da4a7c5d8ad2ba38f94fcf9f0ec6caec"
+    },
+    "F.client.submit": {
+      "file": "web/api.js",
+      "startLine": 17,
+      "endLine": 19,
+      "sha256": "f5258098701174e34698b9275687e155a94659c7975095df160e01a523fdd796"
+    },
+    "F.client.approve": {
+      "file": "web/api.js",
+      "startLine": 23,
+      "endLine": 25,
+      "sha256": "f5258098701174e34698b9275687e155a94659c7975095df160e01a523fdd796"
+    },
+    "F.client.read": {
+      "file": "web/api.js",
+      "startLine": 29,
+      "endLine": 31,
+      "sha256": "f5258098701174e34698b9275687e155a94659c7975095df160e01a523fdd796"
+    },
+    "F.audit": {
+      "file": "server/audit.js",
+      "startLine": 2,
+      "endLine": 12,
+      "sha256": "0ecc56e765ad4b4dfe6ba053fcce49f7d132c8328fd2bd99b1d35f6f3c311937"
+    },
+    "F.identity": {
+      "file": "server/auth.js",
+      "startLine": 5,
+      "endLine": 30,
+      "sha256": "52dd4bb11048b52d9fae3fc4df4120d12e4bbb56402f603b3e5ce6f5ae0f625e"
+    },
+    "F.commit.submit": {
+      "file": "server/handlers.js",
+      "startLine": 14,
+      "endLine": 18,
+      "sha256": "04f939c304b9c5ae1e4fe4d94f4ca119ed76d29f61eaadee1a1e06baa543c5e3"
+    },
+    "F.handler.submit": {
+      "file": "server/handlers.js",
+      "startLine": 6,
+      "endLine": 24,
+      "sha256": "04f939c304b9c5ae1e4fe4d94f4ca119ed76d29f61eaadee1a1e06baa543c5e3"
+    },
+    "F.tx.approve": {
+      "file": "server/handlers.js",
+      "startLine": 36,
+      "endLine": 40,
+      "sha256": "04f939c304b9c5ae1e4fe4d94f4ca119ed76d29f61eaadee1a1e06baa543c5e3"
+    },
+    "F.receipt.after-commit": {
+      "file": "server/handlers.js",
+      "startLine": 44,
+      "endLine": 51,
+      "sha256": "04f939c304b9c5ae1e4fe4d94f4ca119ed76d29f61eaadee1a1e06baa543c5e3"
+    },
+    "F.handler.approve": {
+      "file": "server/handlers.js",
+      "startLine": 28,
+      "endLine": 58,
+      "sha256": "04f939c304b9c5ae1e4fe4d94f4ca119ed76d29f61eaadee1a1e06baa543c5e3"
+    },
+    "F.handler.read": {
+      "file": "server/handlers.js",
+      "startLine": 62,
+      "endLine": 70,
+      "sha256": "04f939c304b9c5ae1e4fe4d94f4ca119ed76d29f61eaadee1a1e06baa543c5e3"
+    },
+    "F.policy.submit": {
+      "file": "server/policies.js",
+      "startLine": 12,
+      "endLine": 17,
+      "sha256": "4d1ac30cd918453310d610ea4fa984fdbd1138f89f1360d7ebb7b5d546866bf7"
+    },
+    "F.policy.approve": {
+      "file": "server/policies.js",
+      "startLine": 21,
+      "endLine": 26,
+      "sha256": "4d1ac30cd918453310d610ea4fa984fdbd1138f89f1360d7ebb7b5d546866bf7"
+    },
+    "F.policy.read": {
+      "file": "server/policies.js",
+      "startLine": 30,
+      "endLine": 37,
+      "sha256": "4d1ac30cd918453310d610ea4fa984fdbd1138f89f1360d7ebb7b5d546866bf7"
+    },
+    "F.receipt.target": {
+      "file": "server/receipt.js",
+      "startLine": 9,
+      "endLine": 17,
+      "sha256": "4ca9f105a80240dabf8c6312b9ab29d6452a0f70b66e88a9fe89d378448160b4"
+    },
+    "F.receipt": {
+      "file": "server/receipt.js",
+      "startLine": 2,
+      "endLine": 30,
+      "sha256": "4ca9f105a80240dabf8c6312b9ab29d6452a0f70b66e88a9fe89d378448160b4"
+    },
+    "F.repository.get": {
+      "file": "server/repository.js",
+      "startLine": 23,
+      "endLine": 27,
+      "sha256": "51c333700931ec7a7a12c42b5e94e374f157176376fc006314bcc8a96f3d5eb4"
+    },
+    "F.repository.transaction": {
+      "file": "server/repository.js",
+      "startLine": 31,
+      "endLine": 52,
+      "sha256": "51c333700931ec7a7a12c42b5e94e374f157176376fc006314bcc8a96f3d5eb4"
+    },
+    "F.route.submit": {
+      "file": "server/routes.js",
+      "startLine": 8,
+      "endLine": 16,
+      "sha256": "b4e4e20c40ec87ef3a5683fa76ffd0adffec1f79260d92f14cc5d42bd9c787cb"
+    },
+    "F.route.approve": {
+      "file": "server/routes.js",
+      "startLine": 19,
+      "endLine": 27,
+      "sha256": "b4e4e20c40ec87ef3a5683fa76ffd0adffec1f79260d92f14cc5d42bd9c787cb"
+    },
+    "F.route.read": {
+      "file": "server/routes.js",
+      "startLine": 30,
+      "endLine": 38,
+      "sha256": "b4e4e20c40ec87ef3a5683fa76ffd0adffec1f79260d92f14cc5d42bd9c787cb"
+    },
+    "F.workflow.load": {
+      "file": "server/workflow.js",
+      "startLine": 5,
+      "endLine": 10,
+      "sha256": "7ff3fba1fc8ee53975bb63b7514e35360216fa5ed68586734cb1138de04487a5"
+    },
+    "F.workflow.candidates": {
+      "file": "server/workflow.js",
+      "startLine": 15,
+      "endLine": 23,
+      "sha256": "7ff3fba1fc8ee53975bb63b7514e35360216fa5ed68586734cb1138de04487a5"
+    },
+    "F.roles": {
+      "file": "data/fixtures.js",
+      "startLine": 4,
+      "endLine": 16,
+      "sha256": "968ae79b2ecb2613710e27e8e0a611b139d422571b6f703f688bf0a254b2528d"
+    },
+    "F.objects": {
+      "file": "data/fixtures.js",
+      "startLine": 20,
+      "endLine": 25,
+      "sha256": "968ae79b2ecb2613710e27e8e0a611b139d422571b6f703f688bf0a254b2528d"
+    },
+    "F.declaration.unassociated": {
+      "file": "config/declarations.js",
+      "startLine": 2,
+      "endLine": 8,
+      "sha256": "a0415f433f7b32993451615d7de9508b9d69911de3e1cad832bfd37c7e655b2d"
+    },
+    "F.workflow.actor-bindings": {
+      "file": "config/workflow.json",
+      "startLine": 1,
+      "endLine": 8,
+      "sha256": "a662cd0899bfe38bbb2d859a6cb229c5792f021903698f3f21286e8e1c1a7afb"
+    },
+    "F.workflow.config": {
+      "file": "config/workflow.json",
+      "startLine": 1,
+      "endLine": 8,
+      "sha256": "a662cd0899bfe38bbb2d859a6cb229c5792f021903698f3f21286e8e1c1a7afb"
+    },
+    "F.doc.flow": {
+      "file": "README.md",
+      "startLine": 24,
+      "endLine": 28,
+      "sha256": "94fe86cefeb41122f44ef79b83685be51880d4620764d62d18e768d5e4dd8fa2"
+    }
+  }
+}

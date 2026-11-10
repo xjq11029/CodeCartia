@@ -6,15 +6,14 @@
 ## 当前状态
 
 M1-01 文档交付已完成，M1 基线尚未冻结。
-目前只有文档，没有应用源码、包配置、可执行原型或运行命令。
+已有设计图解、模拟体验原型与可运行采购示例；产品分析器、CLI 和 Web 尚未实现，M1 分析验收未完成。
 
 ## 关键目录
 
 - docs/：设计、审查、推进方案及验收样例。
 - docs/diagrams/：离线 HTML 图解、SVG 与可编辑图源。
-- docs/capabilities/：语言、业务与授权覆盖清单。
-- docs/acceptance/：需求与验收追踪。
-- docs/decisions/：待决策事项。
+- docs/prototype/：业务闭环与代码实现双向映射的模拟体验原型、生成器及验证脚本。
+- examples/purchase-demo/：真实合成源码、功能测试与证据索引。
 - docs/progress/：任务状态与复核记录。
 
 ## 工程边界
@@ -23,10 +22,16 @@ M1-01 文档交付已完成，M1 基线尚未冻结。
 - 首版目标语言须分别通过深度分析验收，范围见设计方案。
 - 核心验收采用自动静态分析，AI 辅助与人工调整单独报告。
 
+## 已验证命令
+
+- 仓库根目录：`node docs/prototype/build.mjs` 生成原型；`node docs/prototype/verify.mjs` 验证业务结果与交互。
+- `examples/purchase-demo/`：`pnpm test` 验证示例功能；以上均不作为产品分析验收。
+
 ## 阅读入口
 
-- [README.md](README.md)：项目介绍。
-- [架构与设计图解](docs/diagrams/index.html)：从总览到步骤与依据的交互阅读。
-- [docs/README.md](docs/README.md)：设计及专题文档索引。
-- [M1 任务清单](docs/progress/M1-任务清单.md)：实际进度与任务依赖。
+- [README.md](README.md)：项目介绍与推荐阅读顺序。
+- [docs/README.md](docs/README.md)：完整阅读路线及文档名称与实际路径对照。
+- [docs/diagrams/index.html](docs/diagrams/index.html)：图解成品入口，从总览进入步骤与依据。
+- [docs/prototype/index.html](docs/prototype/index.html)：产品体验入口，结果为模拟数据。
+- [docs/progress/M1-任务清单.md](docs/progress/M1-任务清单.md)：实际进度与任务依赖。
 - 外部参考工程 SeeCode：`D:\ProjectCode\SeeCode`（本机路径），供后续设计与实现参考。
