@@ -1,0 +1,18 @@
+{
+  "expectedVersion": "csharp-independent-v1",
+  "inputVersion": "csharp-raw-v1",
+  "positiveCalls": [
+    { "text": "Converter.Select(7)", "signature": "Lab.Converter.Select(int)", "targetInputId": "csharp-input:positive/Converter.cs" },
+    { "text": "Converter.Select(label)", "signature": "Lab.Converter.Select(string)", "targetInputId": "csharp-input:positive/Converter.cs" }
+  ],
+  "unknownCalls": [
+    { "caseId": "missing-reference", "text": "ExternalApi.Read()", "reason": "no-bound-symbol", "diagnosticId": "CS0103" },
+    { "caseId": "dynamic", "text": "receiver.Read()", "reason": "dynamic-dispatch" }
+  ],
+  "coordinateProbes": [
+    { "id": "x", "mappingStatus": "exact", "normalized": { "startByte": 7, "endByte": 8, "startLine": 1, "startColumn": 3, "endLine": 1, "endColumn": 4 } },
+    { "id": "z", "mappingStatus": "exact", "normalized": { "startByte": 10, "endByte": 11, "startLine": 2, "startColumn": 1, "endLine": 2, "endColumn": 2 } },
+    { "id": "inside-surrogate", "mappingStatus": "unavailable", "diagnosticCode": "UTF16_ENDPOINT_INSIDE_SURROGATE" },
+    { "id": "inside-crlf", "mappingStatus": "unavailable", "diagnosticCode": "UTF16_ENDPOINT_INSIDE_CRLF" }
+  ]
+}

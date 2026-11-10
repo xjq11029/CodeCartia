@@ -1,0 +1,9 @@
+{
+  "name": "codecartia-m1-js-ts-local-experiment",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "extract": "node extract.mjs",
+    "verify": "node verify.mjs"
+  }
+}

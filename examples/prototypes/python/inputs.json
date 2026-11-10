@@ -1,0 +1,15 @@
+{
+  "experimentId": "M1-04-python-ast-local",
+  "registryVersion": "0.1-experiment",
+  "projects": [
+    {"id": "positive", "root": "fixtures/positive", "files": ["entry.py", "mathops.py", "reexport.py"]},
+    {"id": "negative", "root": "fixtures/negative", "files": ["entry.py", "mathops.py"]},
+    {"id": "missing", "root": "fixtures/missing", "files": ["entry.py", "missing_input.py"]},
+    {"id": "coordinates", "root": "fixtures/coordinates", "files": ["utf8_crlf.py"]},
+    {"id": "side_effect", "root": "fixtures/side_effect", "files": ["entry.py"]},
+    {"id": "malformed", "root": "fixtures/malformed", "files": ["broken.py"]}
+  ],
+  "encodingProfile": "UTF-8-only-experiment",
+  "searchPathPolicy": "only-exact-registered-flat-module-files; no sys.path, import hooks, namespace packages or installed modules",
+  "sourcePolicy": "read-only-parse; no import, eval, exec, compile-to-code, subprocess or module execution"
+}

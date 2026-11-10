@@ -1,0 +1,6 @@
+{
+  "typescriptModule": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/typescript.js",
+  "observedVersion": "6.0.3",
+  "source": "当前 Windows 开发机 VS Code 内置 TypeScript；只作为已装候选实测，不作为产品依赖选型。",
+  "nodeObserved": "D:/Node/node.exe v24.11.0"
+}

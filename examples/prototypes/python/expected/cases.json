@@ -1,0 +1,24 @@
+{
+  "description": "独立人工对照，提取器不得读取。只检验本次声明的受限模式，不是产品基准或召回分数。",
+  "bindings": [
+    {"project": "positive", "owner": "entry.dispatch", "callee": "emit", "target": "mathops.encode", "mode": "confirmed"},
+    {"project": "positive", "owner": "entry.dispatch", "callee": "helpers.decode", "target": "mathops.decode", "mode": "confirmed"},
+    {"project": "positive", "owner": "entry.dispatch", "callee": "local", "target": "entry.local", "mode": "confirmed"},
+    {"project": "positive", "owner": "entry.dispatch", "callee": "forwarded", "target": "mathops.encode", "mode": "confirmed"},
+    {"project": "negative", "owner": "entry.shadow", "callee": "emit", "mode": "unresolved", "code": "PARAMETER_TARGET_UNKNOWN"},
+    {"project": "negative", "owner": "entry.rebound", "callee": "emit", "mode": "unresolved", "code": "ASSIGNMENT_BINDING_UNKNOWN", "count": 2},
+    {"project": "negative", "owner": "entry.patched", "callee": "helpers.encode", "mode": "unresolved", "code": "ATTRIBUTE_WRITE_BOUNDARY"},
+    {"project": "negative", "owner": "entry.dynamic", "callee": "factory", "mode": "unresolved", "code": "PARAMETER_TARGET_UNKNOWN"},
+    {"project": "negative", "owner": "entry.dynamic", "callee": "target", "mode": "unresolved", "code": "ASSIGNMENT_BINDING_UNKNOWN"},
+    {"project": "negative", "owner": "entry.first", "callee": "same", "target": "entry.first.same", "mode": "confirmed"},
+    {"project": "negative", "owner": "entry.second", "callee": "same", "target": "entry.second.same", "mode": "confirmed"},
+    {"project": "negative", "owner": "entry.decoration_boundary", "callee": "wrapped", "mode": "unresolved", "code": "DECORATOR_BINDING_UNKNOWN"},
+    {"project": "missing", "owner": "entry.dispatch", "callee": "unknown_alias", "mode": "unresolved", "code": "MODULE_INPUT_MISSING"},
+    {"project": "missing", "owner": "entry.dispatch", "callee": "importlib.import_module", "mode": "unresolved", "code": "MODULE_INPUT_MISSING"},
+    {"project": "missing", "owner": "entry.dispatch", "callee": "receiver.encode", "mode": "unresolved", "code": "TYPE_ATTRIBUTE_UNVERIFIED"}
+  ],
+  "requiredDiagnosticCodes": ["INPUT_MISSING", "SYNTAX_ERROR", "MODULE_INPUT_MISSING", "PARAMETER_TARGET_UNKNOWN", "ASSIGNMENT_BINDING_UNKNOWN", "ATTRIBUTE_WRITE_BOUNDARY", "TYPE_ATTRIBUTE_UNVERIFIED", "DECORATOR_BINDING_UNKNOWN"],
+  "coordinateCase": {"project": "coordinates", "file": "utf8_crlf.py", "owner": "utf8_crlf.caller", "callee": "target", "line": 6, "startColumn": 18, "endColumn": 27, "nativeStartColumn": 22, "nativeEndColumn": 31, "startByte": 79, "endByte": 88},
+  "independentCoordinateText": "甲😀x\r\nz",
+  "independentCoordinatePoints": [{"byte": 7, "line": 1, "column": 3}, {"byte": 8, "line": 1, "column": 4}, {"byte": 10, "line": 2, "column": 1}, {"byte": 11, "line": 2, "column": 2}]
+}

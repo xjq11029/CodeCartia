@@ -1,0 +1,1 @@
+{ "entry": "Page.tsx", "routes": [{ "path": "/view", "component": "Page" }], "frameworkVersion": "待实际工具与输入确认" }

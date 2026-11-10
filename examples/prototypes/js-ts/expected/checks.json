@@ -1,0 +1,32 @@
+{
+  "source": "SPEC.md 中正反例；按原始输入独立填写文件/行与预期，不向extract传递。",
+  "calls": [
+    { "file": "inputs/semantic/wrapper.ts", "line": 3, "mode": "exact", "targetFile": "inputs/semantic/transport.ts", "targetLine": 1, "argument": "route" },
+    { "file": "inputs/semantic/entry.ts", "line": 5, "mode": "exact", "targetFile": "inputs/semantic/wrapper.ts", "targetLine": 2, "argument": "\"/alpha\"" },
+    { "file": "inputs/semantic/entry.ts", "line": 8, "mode": "exact", "targetFile": "inputs/semantic/wrapper.ts", "targetLine": 2, "argument": "\"/beta\"" },
+    { "file": "inputs/semantic/entry.ts", "line": 13, "mode": "exact", "targetFile": "inputs/semantic/entry.ts", "targetLine": 12, "argument": "\"scope-a\"" },
+    { "file": "inputs/semantic/entry.ts", "line": 17, "mode": "exact", "targetFile": "inputs/semantic/entry.ts", "targetLine": 16, "argument": "\"scope-b\"" },
+    { "file": "inputs/semantic/entry.ts", "line": 20, "mode": "exact", "signatureLine": 1, "signatureFile": "inputs/semantic/overload.ts", "returnType": "string" },
+    { "file": "inputs/semantic/entry.ts", "line": 21, "mode": "exact", "signatureLine": 2, "signatureFile": "inputs/semantic/overload.ts", "returnType": "number" },
+    { "file": "inputs/semantic/entry.ts", "line": 22, "mode": "candidateSet", "candidateDeclarations": [{ "file": "inputs/semantic/overload.ts", "line": 7 }, { "file": "inputs/semantic/overload.ts", "line": 8 }] },
+    { "file": "inputs/semantic/entry.ts", "line": 23, "mode": "unknown", "diagnostic": "TS2769" },
+    { "file": "inputs/semantic/entry.ts", "line": 26, "mode": "unknown" },
+    { "file": "inputs/semantic/missing.ts", "line": 2, "mode": "unknown" },
+    { "file": "inputs/semantic/esm.js", "line": 2, "mode": "exact", "targetFile": "inputs/semantic/js-helper.js", "targetLine": 2, "argument": "\"js-input\"" }
+  ],
+  "mustDiffer": [
+    { "field": "targetIds", "a": { "file": "inputs/semantic/entry.ts", "line": 13 }, "b": { "file": "inputs/semantic/entry.ts", "line": 17 } },
+    { "field": "contextId", "a": { "file": "inputs/semantic/entry.ts", "line": 5 }, "b": { "file": "inputs/semantic/entry.ts", "line": 8 } }
+  ],
+  "sameTargetDifferentArguments": [{ "a": { "file": "inputs/semantic/entry.ts", "line": 5 }, "b": { "file": "inputs/semantic/entry.ts", "line": 8 } }],
+  "diagnostics": ["TS2307", "TS2322", "TS2769"],
+  "coordinates": [
+    { "file": "inputs/semantic/coordinates.ts", "value": "x", "nativeStart": 6, "nativeEnd": 7, "normalized": { "startByte": 10, "endByte": 11, "startLine": 1, "startColumn": 6, "endLine": 1, "endColumn": 7 } },
+    { "file": "inputs/semantic/bom.ts", "value": "x", "nativeStart": 7, "nativeEnd": 8, "normalized": { "startByte": 13, "endByte": 14, "startLine": 1, "startColumn": 6, "endLine": 1, "endColumn": 7 } }
+  ],
+  "jsx": [
+    { "file": "inputs/components/page.tsx", "line": 4, "targetFile": "inputs/components/Widget.tsx", "targetLine": 1 },
+    { "file": "inputs/components/plain.jsx", "line": 2, "targetFile": "inputs/components/Widget.tsx", "targetLine": 1 }
+  ],
+  "frameworkStatus": { "vue": "specification-only", "react": "specification-only", "node": "specification-only", "next": "specification-only", "html": "specification-only" }
+}
