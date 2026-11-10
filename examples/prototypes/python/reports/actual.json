@@ -1,0 +1,1715 @@
+{
+  "reportFormatVersion": "python-local-ast-v1",
+  "experimentId": "M1-04-python-ast-local",
+  "status": "local-executed",
+  "contractReference": "M1-02 source-span and local binding subset; not schema conformance",
+  "toolchain": {
+    "name": "Python ast",
+    "version": "3.14.2",
+    "executable": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "platform": "Windows-11-10.0.22621-SP0"
+  },
+  "extractorFingerprint": "sha256:dd57f9cdc7c7e88b086b73a9bc1d6b5c021c332cbf6fec4ee3a5f9237650047a",
+  "registryFingerprint": "sha256:614cac04c9193f324258bdd4eccf9391696385dda5915d916b9ad6f55242816a",
+  "expectedReadByExtractor": false,
+  "targetModulesExecuted": false,
+  "inputs": [
+    {
+      "inputId": "positive:entry.py",
+      "path": "fixtures/positive/entry.py",
+      "fingerprint": "sha256:56ef520767573fdbe6802245cb9c8f322d8790b7a7375ba1006335841bb9d1c7",
+      "byteLength": 248,
+      "encoding": "UTF-8"
+    },
+    {
+      "inputId": "positive:mathops.py",
+      "path": "fixtures/positive/mathops.py",
+      "fingerprint": "sha256:cfcbf32f012c51f164d684c27185e21ceb1030d647c1fc4a0518ea92efa88101",
+      "byteLength": 74,
+      "encoding": "UTF-8"
+    },
+    {
+      "inputId": "positive:reexport.py",
+      "path": "fixtures/positive/reexport.py",
+      "fingerprint": "sha256:961e4e30a5ce8221b8ef5581d8cef0c885a71ceccf8ee9afa40b85b57d65bdfc",
+      "byteLength": 43,
+      "encoding": "UTF-8"
+    },
+    {
+      "inputId": "negative:entry.py",
+      "path": "fixtures/negative/entry.py",
+      "fingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+      "byteLength": 664,
+      "encoding": "UTF-8"
+    },
+    {
+      "inputId": "negative:mathops.py",
+      "path": "fixtures/negative/mathops.py",
+      "fingerprint": "sha256:274274845fe0f48d985a5bfe101366c34cdeebbbbef4b22c3048725cadcd78cc",
+      "byteLength": 36,
+      "encoding": "UTF-8"
+    },
+    {
+      "inputId": "missing:entry.py",
+      "path": "fixtures/missing/entry.py",
+      "fingerprint": "sha256:51a26b1756160cbf425495caeb8536db178fed6582f6a0fdcc6409cd30fcd008",
+      "byteLength": 207,
+      "encoding": "UTF-8"
+    },
+    {
+      "inputId": "coordinates:utf8_crlf.py",
+      "path": "fixtures/coordinates/utf8_crlf.py",
+      "fingerprint": "sha256:52277a7de101cb00fd23662e2c960f139e002614340edc2f534bd0dbd2b7db79",
+      "byteLength": 90,
+      "encoding": "UTF-8"
+    },
+    {
+      "inputId": "side_effect:entry.py",
+      "path": "fixtures/side_effect/entry.py",
+      "fingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+      "byteLength": 315,
+      "encoding": "UTF-8"
+    },
+    {
+      "inputId": "malformed:broken.py",
+      "path": "fixtures/malformed/broken.py",
+      "fingerprint": "sha256:6b8c8a725c23dc076d9a2c185ce4e02435746bc3b4f99906d13de360e56898c7",
+      "byteLength": 22,
+      "encoding": "UTF-8"
+    }
+  ],
+  "inputQueries": [
+    {
+      "path": "fixtures/positive/entry.py",
+      "exists": true
+    },
+    {
+      "path": "fixtures/positive/mathops.py",
+      "exists": true
+    },
+    {
+      "path": "fixtures/positive/reexport.py",
+      "exists": true
+    },
+    {
+      "path": "fixtures/negative/entry.py",
+      "exists": true
+    },
+    {
+      "path": "fixtures/negative/mathops.py",
+      "exists": true
+    },
+    {
+      "path": "fixtures/missing/entry.py",
+      "exists": true
+    },
+    {
+      "path": "fixtures/missing/missing_input.py",
+      "exists": false
+    },
+    {
+      "path": "fixtures/coordinates/utf8_crlf.py",
+      "exists": true
+    },
+    {
+      "path": "fixtures/side_effect/entry.py",
+      "exists": true
+    },
+    {
+      "path": "fixtures/malformed/broken.py",
+      "exists": true
+    }
+  ],
+  "facts": [
+    {
+      "project": "positive",
+      "file": "entry.py",
+      "owner": "entry.dispatch",
+      "callee": "emit",
+      "text": "emit(value)",
+      "mode": "confirmed",
+      "bindingKind": "lexical-declaration-reference",
+      "target": "mathops.encode",
+      "targetEvidence": {
+        "inputId": "positive:mathops.py",
+        "inputFingerprint": "sha256:cfcbf32f012c51f164d684c27185e21ceb1030d647c1fc4a0518ea92efa88101",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 1,
+          "startColumn": 0,
+          "endLine": 2,
+          "endColumn": 16
+        },
+        "normalized": {
+          "startByte": 0,
+          "endByte": 35,
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 2,
+          "endColumn": 17
+        }
+      },
+      "code": null,
+      "evidence": {
+        "inputId": "positive:entry.py",
+        "inputFingerprint": "sha256:56ef520767573fdbe6802245cb9c8f322d8790b7a7375ba1006335841bb9d1c7",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 11,
+          "startColumn": 4,
+          "endLine": 11,
+          "endColumn": 15
+        },
+        "normalized": {
+          "startByte": 172,
+          "endByte": 183,
+          "startLine": 11,
+          "startColumn": 5,
+          "endLine": 11,
+          "endColumn": 16
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "positive",
+      "file": "entry.py",
+      "owner": "entry.dispatch",
+      "callee": "helpers.decode",
+      "text": "helpers.decode(value)",
+      "mode": "confirmed",
+      "bindingKind": "lexical-declaration-reference",
+      "target": "mathops.decode",
+      "targetEvidence": {
+        "inputId": "positive:mathops.py",
+        "inputFingerprint": "sha256:cfcbf32f012c51f164d684c27185e21ceb1030d647c1fc4a0518ea92efa88101",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 5,
+          "startColumn": 0,
+          "endLine": 6,
+          "endColumn": 16
+        },
+        "normalized": {
+          "startByte": 38,
+          "endByte": 73,
+          "startLine": 5,
+          "startColumn": 1,
+          "endLine": 6,
+          "endColumn": 17
+        }
+      },
+      "code": null,
+      "evidence": {
+        "inputId": "positive:entry.py",
+        "inputFingerprint": "sha256:56ef520767573fdbe6802245cb9c8f322d8790b7a7375ba1006335841bb9d1c7",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 12,
+          "startColumn": 4,
+          "endLine": 12,
+          "endColumn": 25
+        },
+        "normalized": {
+          "startByte": 188,
+          "endByte": 209,
+          "startLine": 12,
+          "startColumn": 5,
+          "endLine": 12,
+          "endColumn": 26
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "positive",
+      "file": "entry.py",
+      "owner": "entry.dispatch",
+      "callee": "local",
+      "text": "local(value)",
+      "mode": "confirmed",
+      "bindingKind": "lexical-declaration-reference",
+      "target": "entry.local",
+      "targetEvidence": {
+        "inputId": "positive:entry.py",
+        "inputFingerprint": "sha256:56ef520767573fdbe6802245cb9c8f322d8790b7a7375ba1006335841bb9d1c7",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 6,
+          "startColumn": 0,
+          "endLine": 7,
+          "endColumn": 16
+        },
+        "normalized": {
+          "startByte": 110,
+          "endByte": 144,
+          "startLine": 6,
+          "startColumn": 1,
+          "endLine": 7,
+          "endColumn": 17
+        }
+      },
+      "code": null,
+      "evidence": {
+        "inputId": "positive:entry.py",
+        "inputFingerprint": "sha256:56ef520767573fdbe6802245cb9c8f322d8790b7a7375ba1006335841bb9d1c7",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 13,
+          "startColumn": 4,
+          "endLine": 13,
+          "endColumn": 16
+        },
+        "normalized": {
+          "startByte": 214,
+          "endByte": 226,
+          "startLine": 13,
+          "startColumn": 5,
+          "endLine": 13,
+          "endColumn": 17
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "positive",
+      "file": "entry.py",
+      "owner": "entry.dispatch",
+      "callee": "forwarded",
+      "text": "forwarded(value)",
+      "mode": "confirmed",
+      "bindingKind": "lexical-declaration-reference",
+      "target": "mathops.encode",
+      "targetEvidence": {
+        "inputId": "positive:mathops.py",
+        "inputFingerprint": "sha256:cfcbf32f012c51f164d684c27185e21ceb1030d647c1fc4a0518ea92efa88101",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 1,
+          "startColumn": 0,
+          "endLine": 2,
+          "endColumn": 16
+        },
+        "normalized": {
+          "startByte": 0,
+          "endByte": 35,
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 2,
+          "endColumn": 17
+        }
+      },
+      "code": null,
+      "evidence": {
+        "inputId": "positive:entry.py",
+        "inputFingerprint": "sha256:56ef520767573fdbe6802245cb9c8f322d8790b7a7375ba1006335841bb9d1c7",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 14,
+          "startColumn": 4,
+          "endLine": 14,
+          "endColumn": 20
+        },
+        "normalized": {
+          "startByte": 231,
+          "endByte": 247,
+          "startLine": 14,
+          "startColumn": 5,
+          "endLine": 14,
+          "endColumn": 21
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "negative",
+      "file": "entry.py",
+      "owner": "entry.shadow",
+      "callee": "emit",
+      "text": "emit(\"shadow\")",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "PARAMETER_TARGET_UNKNOWN",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 6,
+          "startColumn": 11,
+          "endLine": 6,
+          "endColumn": 25
+        },
+        "normalized": {
+          "startByte": 92,
+          "endByte": 106,
+          "startLine": 6,
+          "startColumn": 12,
+          "endLine": 6,
+          "endColumn": 26
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "negative",
+      "file": "entry.py",
+      "owner": "entry.rebound",
+      "callee": "emit",
+      "text": "emit(value)",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "ASSIGNMENT_BINDING_UNKNOWN",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 10,
+          "startColumn": 4,
+          "endLine": 10,
+          "endColumn": 15
+        },
+        "normalized": {
+          "startByte": 133,
+          "endByte": 144,
+          "startLine": 10,
+          "startColumn": 5,
+          "endLine": 10,
+          "endColumn": 16
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "negative",
+      "file": "entry.py",
+      "owner": "entry.rebound",
+      "callee": "emit",
+      "text": "emit(\"rebound\")",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "ASSIGNMENT_BINDING_UNKNOWN",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 12,
+          "startColumn": 11,
+          "endLine": 12,
+          "endColumn": 26
+        },
+        "normalized": {
+          "startByte": 173,
+          "endByte": 188,
+          "startLine": 12,
+          "startColumn": 12,
+          "endLine": 12,
+          "endColumn": 27
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "negative",
+      "file": "entry.py",
+      "owner": "entry.patched",
+      "callee": "helpers.encode",
+      "text": "helpers.encode(\"patch\")",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "ATTRIBUTE_WRITE_BOUNDARY",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 17,
+          "startColumn": 11,
+          "endLine": 17,
+          "endColumn": 34
+        },
+        "normalized": {
+          "startByte": 249,
+          "endByte": 272,
+          "startLine": 17,
+          "startColumn": 12,
+          "endLine": 17,
+          "endColumn": 35
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "negative",
+      "file": "entry.py",
+      "owner": "entry.dynamic",
+      "callee": "factory",
+      "text": "factory()",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "PARAMETER_TARGET_UNKNOWN",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 21,
+          "startColumn": 13,
+          "endLine": 21,
+          "endColumn": 22
+        },
+        "normalized": {
+          "startByte": 310,
+          "endByte": 319,
+          "startLine": 21,
+          "startColumn": 14,
+          "endLine": 21,
+          "endColumn": 23
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "negative",
+      "file": "entry.py",
+      "owner": "entry.dynamic",
+      "callee": "target",
+      "text": "target(\"dynamic\")",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "ASSIGNMENT_BINDING_UNKNOWN",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 22,
+          "startColumn": 11,
+          "endLine": 22,
+          "endColumn": 28
+        },
+        "normalized": {
+          "startByte": 331,
+          "endByte": 348,
+          "startLine": 22,
+          "startColumn": 12,
+          "endLine": 22,
+          "endColumn": 29
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "negative",
+      "file": "entry.py",
+      "owner": "entry.first",
+      "callee": "same",
+      "text": "same(\"one\")",
+      "mode": "confirmed",
+      "bindingKind": "lexical-declaration-reference",
+      "target": "entry.first.same",
+      "targetEvidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 26,
+          "startColumn": 4,
+          "endLine": 27,
+          "endColumn": 20
+        },
+        "normalized": {
+          "startByte": 368,
+          "endByte": 405,
+          "startLine": 26,
+          "startColumn": 5,
+          "endLine": 27,
+          "endColumn": 21
+        }
+      },
+      "code": null,
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 28,
+          "startColumn": 11,
+          "endLine": 28,
+          "endColumn": 22
+        },
+        "normalized": {
+          "startByte": 417,
+          "endByte": 428,
+          "startLine": 28,
+          "startColumn": 12,
+          "endLine": 28,
+          "endColumn": 23
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "negative",
+      "file": "entry.py",
+      "owner": "entry.second",
+      "callee": "same",
+      "text": "same(\"two\")",
+      "mode": "confirmed",
+      "bindingKind": "lexical-declaration-reference",
+      "target": "entry.second.same",
+      "targetEvidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 32,
+          "startColumn": 4,
+          "endLine": 33,
+          "endColumn": 20
+        },
+        "normalized": {
+          "startByte": 449,
+          "endByte": 486,
+          "startLine": 32,
+          "startColumn": 5,
+          "endLine": 33,
+          "endColumn": 21
+        }
+      },
+      "code": null,
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 34,
+          "startColumn": 11,
+          "endLine": 34,
+          "endColumn": 22
+        },
+        "normalized": {
+          "startByte": 498,
+          "endByte": 509,
+          "startLine": 34,
+          "startColumn": 12,
+          "endLine": 34,
+          "endColumn": 23
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "negative",
+      "file": "entry.py",
+      "owner": "entry.decoration_boundary",
+      "callee": "wrapped",
+      "text": "wrapped(\"decorated\")",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "DECORATOR_BINDING_UNKNOWN",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 47,
+          "startColumn": 11,
+          "endLine": 47,
+          "endColumn": 31
+        },
+        "normalized": {
+          "startByte": 643,
+          "endByte": 663,
+          "startLine": 47,
+          "startColumn": 12,
+          "endLine": 47,
+          "endColumn": 32
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "missing",
+      "file": "entry.py",
+      "owner": "entry.dispatch",
+      "callee": "unknown_alias",
+      "text": "unknown_alias(\"missing\")",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "MODULE_INPUT_MISSING",
+      "evidence": {
+        "inputId": "missing:entry.py",
+        "inputFingerprint": "sha256:51a26b1756160cbf425495caeb8536db178fed6582f6a0fdcc6409cd30fcd008",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 6,
+          "startColumn": 4,
+          "endLine": 6,
+          "endColumn": 28
+        },
+        "normalized": {
+          "startByte": 103,
+          "endByte": 127,
+          "startLine": 6,
+          "startColumn": 5,
+          "endLine": 6,
+          "endColumn": 29
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "missing",
+      "file": "entry.py",
+      "owner": "entry.dispatch",
+      "callee": "importlib.import_module",
+      "text": "importlib.import_module(module_name)",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "MODULE_INPUT_MISSING",
+      "evidence": {
+        "inputId": "missing:entry.py",
+        "inputFingerprint": "sha256:51a26b1756160cbf425495caeb8536db178fed6582f6a0fdcc6409cd30fcd008",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 7,
+          "startColumn": 4,
+          "endLine": 7,
+          "endColumn": 40
+        },
+        "normalized": {
+          "startByte": 132,
+          "endByte": 168,
+          "startLine": 7,
+          "startColumn": 5,
+          "endLine": 7,
+          "endColumn": 41
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "missing",
+      "file": "entry.py",
+      "owner": "entry.dispatch",
+      "callee": "receiver.encode",
+      "text": "receiver.encode(\"typed-boundary\")",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "TYPE_ATTRIBUTE_UNVERIFIED",
+      "evidence": {
+        "inputId": "missing:entry.py",
+        "inputFingerprint": "sha256:51a26b1756160cbf425495caeb8536db178fed6582f6a0fdcc6409cd30fcd008",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 8,
+          "startColumn": 4,
+          "endLine": 8,
+          "endColumn": 37
+        },
+        "normalized": {
+          "startByte": 173,
+          "endByte": 206,
+          "startLine": 8,
+          "startColumn": 5,
+          "endLine": 8,
+          "endColumn": 38
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "coordinates",
+      "file": "utf8_crlf.py",
+      "owner": "utf8_crlf.caller",
+      "callee": "target",
+      "text": "target(7)",
+      "mode": "confirmed",
+      "bindingKind": "lexical-declaration-reference",
+      "target": "utf8_crlf.target",
+      "targetEvidence": {
+        "inputId": "coordinates:utf8_crlf.py",
+        "inputFingerprint": "sha256:52277a7de101cb00fd23662e2c960f139e002614340edc2f534bd0dbd2b7db79",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 1,
+          "startColumn": 0,
+          "endLine": 2,
+          "endColumn": 16
+        },
+        "normalized": {
+          "startByte": 0,
+          "endByte": 36,
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 2,
+          "endColumn": 17
+        }
+      },
+      "code": null,
+      "evidence": {
+        "inputId": "coordinates:utf8_crlf.py",
+        "inputFingerprint": "sha256:52277a7de101cb00fd23662e2c960f139e002614340edc2f534bd0dbd2b7db79",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 6,
+          "startColumn": 22,
+          "endLine": 6,
+          "endColumn": 31
+        },
+        "normalized": {
+          "startByte": 79,
+          "endByte": 88,
+          "startLine": 6,
+          "startColumn": 18,
+          "endLine": 6,
+          "endColumn": 27
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "side_effect",
+      "file": "entry.py",
+      "owner": "entry",
+      "callee": "Path(__file__).with_suffix(\".executed\").write_text",
+      "text": "Path(__file__).with_suffix(\".executed\").write_text(\"fixture was executed\")",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "DYNAMIC_EXPRESSION_UNRESOLVED",
+      "evidence": {
+        "inputId": "side_effect:entry.py",
+        "inputFingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 4,
+          "startColumn": 0,
+          "endLine": 4,
+          "endColumn": 74
+        },
+        "normalized": {
+          "startByte": 97,
+          "endByte": 171,
+          "startLine": 4,
+          "startColumn": 1,
+          "endLine": 4,
+          "endColumn": 75
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "side_effect",
+      "file": "entry.py",
+      "owner": "entry",
+      "callee": "Path(__file__).with_suffix",
+      "text": "Path(__file__).with_suffix(\".executed\")",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "DYNAMIC_EXPRESSION_UNRESOLVED",
+      "evidence": {
+        "inputId": "side_effect:entry.py",
+        "inputFingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 4,
+          "startColumn": 0,
+          "endLine": 4,
+          "endColumn": 39
+        },
+        "normalized": {
+          "startByte": 97,
+          "endByte": 136,
+          "startLine": 4,
+          "startColumn": 1,
+          "endLine": 4,
+          "endColumn": 40
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "side_effect",
+      "file": "entry.py",
+      "owner": "entry",
+      "callee": "Path",
+      "text": "Path(__file__)",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "MODULE_INPUT_MISSING",
+      "evidence": {
+        "inputId": "side_effect:entry.py",
+        "inputFingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 4,
+          "startColumn": 0,
+          "endLine": 4,
+          "endColumn": 14
+        },
+        "normalized": {
+          "startByte": 97,
+          "endByte": 111,
+          "startLine": 4,
+          "startColumn": 1,
+          "endLine": 4,
+          "endColumn": 15
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "side_effect",
+      "file": "entry.py",
+      "owner": "entry",
+      "callee": "RuntimeError",
+      "text": "RuntimeError(\"This fixture must only be parsed\")",
+      "mode": "unresolved",
+      "bindingKind": "lexical-declaration-reference",
+      "target": null,
+      "targetEvidence": null,
+      "code": "NAME_BINDING_UNKNOWN",
+      "evidence": {
+        "inputId": "side_effect:entry.py",
+        "inputFingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 5,
+          "startColumn": 6,
+          "endLine": 5,
+          "endColumn": 54
+        },
+        "normalized": {
+          "startByte": 178,
+          "endByte": 226,
+          "startLine": 5,
+          "startColumn": 7,
+          "endLine": 5,
+          "endColumn": 55
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    },
+    {
+      "project": "side_effect",
+      "file": "entry.py",
+      "owner": "entry.unreachable",
+      "callee": "pure",
+      "text": "pure(\"syntax-only\")",
+      "mode": "confirmed",
+      "bindingKind": "lexical-declaration-reference",
+      "target": "entry.pure",
+      "targetEvidence": {
+        "inputId": "side_effect:entry.py",
+        "inputFingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 8,
+          "startColumn": 0,
+          "endLine": 9,
+          "endColumn": 16
+        },
+        "normalized": {
+          "startByte": 229,
+          "endByte": 262,
+          "startLine": 8,
+          "startColumn": 1,
+          "endLine": 9,
+          "endColumn": 17
+        }
+      },
+      "code": null,
+      "evidence": {
+        "inputId": "side_effect:entry.py",
+        "inputFingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 13,
+          "startColumn": 11,
+          "endLine": 13,
+          "endColumn": 30
+        },
+        "normalized": {
+          "startByte": 295,
+          "endByte": 314,
+          "startLine": 13,
+          "startColumn": 12,
+          "endLine": 13,
+          "endColumn": 31
+        }
+      },
+      "production": "automatic",
+      "runtimeTargetMode": "unknown",
+      "executionReachability": "not-evaluated",
+      "runtimeObserved": false
+    }
+  ],
+  "diagnostics": [
+    {
+      "code": "PARAMETER_TARGET_UNKNOWN",
+      "project": "negative",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 6,
+          "startColumn": 11,
+          "endLine": 6,
+          "endColumn": 25
+        },
+        "normalized": {
+          "startByte": 92,
+          "endByte": 106,
+          "startLine": 6,
+          "startColumn": 12,
+          "endLine": 6,
+          "endColumn": 26
+        }
+      }
+    },
+    {
+      "code": "ASSIGNMENT_BINDING_UNKNOWN",
+      "project": "negative",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 10,
+          "startColumn": 4,
+          "endLine": 10,
+          "endColumn": 15
+        },
+        "normalized": {
+          "startByte": 133,
+          "endByte": 144,
+          "startLine": 10,
+          "startColumn": 5,
+          "endLine": 10,
+          "endColumn": 16
+        }
+      }
+    },
+    {
+      "code": "ASSIGNMENT_BINDING_UNKNOWN",
+      "project": "negative",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 12,
+          "startColumn": 11,
+          "endLine": 12,
+          "endColumn": 26
+        },
+        "normalized": {
+          "startByte": 173,
+          "endByte": 188,
+          "startLine": 12,
+          "startColumn": 12,
+          "endLine": 12,
+          "endColumn": 27
+        }
+      }
+    },
+    {
+      "code": "ATTRIBUTE_WRITE_BOUNDARY",
+      "project": "negative",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 17,
+          "startColumn": 11,
+          "endLine": 17,
+          "endColumn": 34
+        },
+        "normalized": {
+          "startByte": 249,
+          "endByte": 272,
+          "startLine": 17,
+          "startColumn": 12,
+          "endLine": 17,
+          "endColumn": 35
+        }
+      }
+    },
+    {
+      "code": "PARAMETER_TARGET_UNKNOWN",
+      "project": "negative",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 21,
+          "startColumn": 13,
+          "endLine": 21,
+          "endColumn": 22
+        },
+        "normalized": {
+          "startByte": 310,
+          "endByte": 319,
+          "startLine": 21,
+          "startColumn": 14,
+          "endLine": 21,
+          "endColumn": 23
+        }
+      }
+    },
+    {
+      "code": "ASSIGNMENT_BINDING_UNKNOWN",
+      "project": "negative",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 22,
+          "startColumn": 11,
+          "endLine": 22,
+          "endColumn": 28
+        },
+        "normalized": {
+          "startByte": 331,
+          "endByte": 348,
+          "startLine": 22,
+          "startColumn": 12,
+          "endLine": 22,
+          "endColumn": 29
+        }
+      }
+    },
+    {
+      "code": "DECORATOR_BINDING_UNKNOWN",
+      "project": "negative",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "negative:entry.py",
+        "inputFingerprint": "sha256:bbe5677584fb7a87e588265dee9a9e01c56c21109c138c840b37d74b627c0e6b",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 47,
+          "startColumn": 11,
+          "endLine": 47,
+          "endColumn": 31
+        },
+        "normalized": {
+          "startByte": 643,
+          "endByte": 663,
+          "startLine": 47,
+          "startColumn": 12,
+          "endLine": 47,
+          "endColumn": 32
+        }
+      }
+    },
+    {
+      "code": "INPUT_MISSING",
+      "project": "missing",
+      "file": "missing_input.py"
+    },
+    {
+      "code": "MODULE_INPUT_MISSING",
+      "project": "missing",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "missing:entry.py",
+        "inputFingerprint": "sha256:51a26b1756160cbf425495caeb8536db178fed6582f6a0fdcc6409cd30fcd008",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 6,
+          "startColumn": 4,
+          "endLine": 6,
+          "endColumn": 28
+        },
+        "normalized": {
+          "startByte": 103,
+          "endByte": 127,
+          "startLine": 6,
+          "startColumn": 5,
+          "endLine": 6,
+          "endColumn": 29
+        }
+      }
+    },
+    {
+      "code": "MODULE_INPUT_MISSING",
+      "project": "missing",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "missing:entry.py",
+        "inputFingerprint": "sha256:51a26b1756160cbf425495caeb8536db178fed6582f6a0fdcc6409cd30fcd008",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 7,
+          "startColumn": 4,
+          "endLine": 7,
+          "endColumn": 40
+        },
+        "normalized": {
+          "startByte": 132,
+          "endByte": 168,
+          "startLine": 7,
+          "startColumn": 5,
+          "endLine": 7,
+          "endColumn": 41
+        }
+      }
+    },
+    {
+      "code": "TYPE_ATTRIBUTE_UNVERIFIED",
+      "project": "missing",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "missing:entry.py",
+        "inputFingerprint": "sha256:51a26b1756160cbf425495caeb8536db178fed6582f6a0fdcc6409cd30fcd008",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 8,
+          "startColumn": 4,
+          "endLine": 8,
+          "endColumn": 37
+        },
+        "normalized": {
+          "startByte": 173,
+          "endByte": 206,
+          "startLine": 8,
+          "startColumn": 5,
+          "endLine": 8,
+          "endColumn": 38
+        }
+      }
+    },
+    {
+      "code": "DYNAMIC_EXPRESSION_UNRESOLVED",
+      "project": "side_effect",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "side_effect:entry.py",
+        "inputFingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 4,
+          "startColumn": 0,
+          "endLine": 4,
+          "endColumn": 74
+        },
+        "normalized": {
+          "startByte": 97,
+          "endByte": 171,
+          "startLine": 4,
+          "startColumn": 1,
+          "endLine": 4,
+          "endColumn": 75
+        }
+      }
+    },
+    {
+      "code": "DYNAMIC_EXPRESSION_UNRESOLVED",
+      "project": "side_effect",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "side_effect:entry.py",
+        "inputFingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 4,
+          "startColumn": 0,
+          "endLine": 4,
+          "endColumn": 39
+        },
+        "normalized": {
+          "startByte": 97,
+          "endByte": 136,
+          "startLine": 4,
+          "startColumn": 1,
+          "endLine": 4,
+          "endColumn": 40
+        }
+      }
+    },
+    {
+      "code": "MODULE_INPUT_MISSING",
+      "project": "side_effect",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "side_effect:entry.py",
+        "inputFingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 4,
+          "startColumn": 0,
+          "endLine": 4,
+          "endColumn": 14
+        },
+        "normalized": {
+          "startByte": 97,
+          "endByte": 111,
+          "startLine": 4,
+          "startColumn": 1,
+          "endLine": 4,
+          "endColumn": 15
+        }
+      }
+    },
+    {
+      "code": "NAME_BINDING_UNKNOWN",
+      "project": "side_effect",
+      "file": "entry.py",
+      "evidence": {
+        "inputId": "side_effect:entry.py",
+        "inputFingerprint": "sha256:f0e91ad1f6b607e231d8b94d72e98a285813b90f3fced8f89ba111dbcce9b960",
+        "mappingStatus": "exact",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "Python ast",
+          "version": "3.14.2",
+          "unit": "UTF-8-byte-column",
+          "lineBase": 1,
+          "columnBase": 0,
+          "endConvention": "exclusive",
+          "startLine": 5,
+          "startColumn": 6,
+          "endLine": 5,
+          "endColumn": 54
+        },
+        "normalized": {
+          "startByte": 178,
+          "endByte": 226,
+          "startLine": 5,
+          "startColumn": 7,
+          "endLine": 5,
+          "endColumn": 55
+        }
+      }
+    },
+    {
+      "code": "SYNTAX_ERROR",
+      "project": "malformed",
+      "file": "broken.py",
+      "line": 1,
+      "message": "invalid syntax"
+    }
+  ],
+  "durationMs": 52.98929999844404,
+  "completeness": {
+    "complete": false,
+    "freshness": "current",
+    "unsupportedModes": [
+      "runtime-targets-and-reachability",
+      "types-and-frameworks",
+      "full-project-loading",
+      "class-lambda-comprehension-scopes",
+      "general-dataflow",
+      "worker-and-public-schema"
+    ]
+  },
+  "scopeLimitations": [
+    "Confirmed means a lexical declaration reference in the registered flat-module subset, never proof of a runtime call target or execution.",
+    "Parameters, assignments, decorators and observed module attribute writes remain unknown; no import hooks, type inference or fixture execution.",
+    "Real project loading, packaging environments, framework semantics and all-language depth remain unverified."
+  ]
+}

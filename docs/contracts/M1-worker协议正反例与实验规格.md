@@ -1,8 +1,8 @@
 # M1 worker 协议正反例与实验规格
 
-> 草案版本：0.1｜`protocolVersion: 0.1-draft`｜`schemaVersion: 0.1-draft`｜日期：2026-11-10｜工作包：M1-03
+> 草案版本：0.2｜`protocolVersion: 0.2-draft`｜`schemaVersion: 0.2-draft`｜日期：2026-11-10｜工作包：M1-03
 >
-> 状态：独立预期与待执行实验规格，未实现消息生产器、协议校验器、worker 或测试运行器。本文消息、计数与状态均为手工示意，未取得协议执行、各语言分析或产品验收成绩。
+> 状态：完整 worker 消息实验仍待执行。R11/R12 的精确引用和发布状态转换已有独立最小参考模型及测试；未实现完整消息生产器、协议校验器或 worker，不能将参考模型成绩当作传输/各语言分析或产品验收。
 
 依据：[M1-03 任务](../progress/M1-任务清单.md)、[需求追踪](../acceptance/M1-需求与验收追踪.md)中的 REQ21/22/39/41，以及四份 [M1-02 契约](README.md)。逻辑字段对齐 [worker 与扩展协议草案](M1-worker与扩展协议.md)，预期先从源要求独立定义，再检查协议能否表达和验证。局部 `W-*` 编号只定位本附录，不新增 R/BS/AP 产品验收组。
 
@@ -28,6 +28,7 @@
 | `snapshotId=snap1`、`scope.configId=c1` | 明确工程 p1、环境 env1、配置 c1；角色声明尚未绑定入口时显式保留未绑定状态，不解释为所有入口 |
 | `analysisProfileId=ap1`、`inputManifestRef=im1`、`identityRegistryRef=ir1` | 均指已冻结的版本/指纹与来源视图；已登记输入、规则组合、模式、预算和共享元数据使用一致版本 |
 | `sourceViewId=sv-static` | 正常序列是无当次 AI/人工依赖的自动视图；辅助来源实验另用显式请求的独立视图/任务，不向自动账本混入 |
+| `publicationSlotId=slot1/requestId=req1/requestGeneration=1` | 正常序列的宿主发布请求；多 worker 同请求共用世代。R12 变体登记 req2、世代 2，同槽位不同规则组合仍相互竞争 |
 | `allowPartial=true` | 正常合成任务明确许可结构合法的语义部分结果；这是指定实验值而非产品默认，W-S09 单独改为 false |
 | 能力与扩展清单 | 每例明确“必需/可选”、声明/协商版本及支持范围；缺输入、缺工具与能力不支持分别记录 |
 | 旧可见快照 `snap0` | 初始已发布完整结果，用于证明坏批次、取消、超时、部分结果不会替换；只有当前输入改变才将旧相关结果标过期 |
@@ -43,13 +44,14 @@
 
 | 局部例 / 来源 | 操作或唯一变体 | 具体预期 | 失败判据 |
 |---|---|---|---|
-| W-H01-P / REQ21 | `hello → initialize → ready`；双方都显式提供 `(protocolVersion=0.1-draft,schemaVersion=0.1-draft)` 同一配对，必需能力与扩展满足 | 显式记录选定配对和能力清单，ready 后才接纳 analyze；握手不产生业务事实 | 仅凭 worker 名称或两版本各自相交默认兼容；ready 前执行任务 |
+| W-H01-P / REQ21 | `hello → initialize → ready`；双方都显式提供 `(protocolVersion=0.2-draft,schemaVersion=0.2-draft)` 同一配对，必需能力与扩展满足 | 显式记录选定配对和能力清单，ready 后才接纳 analyze；握手不产生业务事实 | 仅凭 worker 名称或两版本各自相交默认兼容；ready 前执行任务 |
 | W-H02-N / REQ21 | 只使协议版本集合无交集 | 拒绝建立可执行会话并报告双方版本；无 analyze 读取或批次接收 | 选“较新”版本继续，或无提示退为另一协议 |
 | W-H03-N / REQ21、REQ20 | 协议兼容，只使公共图 schema 无交集 | 分别报告 schema 不兼容，不接纳任务 | 因协议匹配而删除未知图字段后宣称完整 |
 | W-H04-N / REQ21 | 必需扩展/消息或模式的版本不受支持 | 引导阶段明确不兼容；已有任务收到 task.rejected 时宿主 sealed_failed、reasonClass=request_rejected，不等待从未开始的 finished；列出缺项/影响范围 | 继续输出 complete=true，把必需目标改为不适用，或任务拒绝后无限等待 |
 | W-H05-P / REQ21 | 仅增加可忽略的可选展示扩展；必要语义全部满足 | 明确保存可选扩展处理/忽略状态及范围；公共字段和事实结果保持 | 忽略扩展却改变公共 resolution、scope 或来源 |
 | W-H06-N / REQ21、REQ46 | worker 无法启动、工具缺失，或握手未在登记探索期限内结束 | 区分启动/缺工具/握手超时，记录宿主失败或不可用范围；旧快照保留 | EOF 当成功；自动安装/下载或借其他语言结果补齐该语言 |
 | W-H07-N / REQ21 | 双方协议版本集、schema 版本集分别有交集，但 offeredPairs 没有双方共同配对（用独立符号版本 vA/vB 指定错位变体） | 会话拒绝并保留实际配对差异；不得从两个独立集合拼一个未提供配对 | 只核对两版本集合各自非空，自动组合未声明兼容性 |
+| W-H08-N / R11/R12 | 旧生产者仅提供 `(0.1-draft,0.1-draft)`；或在 0.2 会话传 ID-only 事实/缺失发布请求世代 | 前者配对不兼容拒绝；后者 schema/协议失败，原始历史保持旧版本 | 给旧消息补“当前 revision/世代”或改标签使其通过 |
 
 ### 3.2 包络、身份与日志
 
@@ -77,8 +79,9 @@
 | W-B09-N / REQ21、S01 | 登记的数据窗口耗尽，继续发送大批；同时触发 cancel/timeout | 背压及资源观察明确，不静默丢必需记录；取消/超时控制仍可被处理，受影响结果完整性受限 | 无限缓冲、丢引用继续完整，或控制队列被未 ACK 数据堵死 |
 | W-B10-N / REQ21、REQ46 | 候选传输中分割、截断、错编码或超出登记帧范围；另有完整中文/空格/emoji 文本 | 合法分割能还原原始载荷；非法帧有诊断并不得注入事实；正常文本不被误丢 | 字节边界破坏内容指纹、按乱码猜原文，或把合法换行当普通日志 |
 | W-B11-P / REQ21、R07 | W-B01 的 b2 再携带同 wireRecordKey、同内容的 r1，其载荷指纹改为 fb2-repeat，manifest 正确登记 5 条 | 传输按两个唯一批次中的载荷出现计数：b1=1、b2=5、totalRecordCount=6、Relation=2；合并后的唯一版本记录仍为 5，两种计数分别报告 | 用合并唯一数 5 检查载荷总数，或把合法跨批重现当重复批次失败 |
+| W-B12-P/N / R11 | 同 id 的 r@v1/r@v2 乱序输出；下游明确依赖 v1，变体缺 revision、改 scope/来源/layer；独立双支持及因果环 | 精确键解析，不以 v2 满足 v1；缺键/缺确切版本失败；双支持逐分支保留，直接/间接自支持拒绝 | 最新到达者覆盖依赖、EntityRef 被当事实依据，或把支持反向索引当输入 |
 
-wireRecordKey 依主草案区分 kind、逻辑 ID、revisionId/版本锚点、来源视图和 scope；同逻辑对象的不同版本/独立推导不是同键异内容。W-B07 的损坏引用和语义输入缺失是不同失败：前者不能伪造结构补齐；后者可保留已有合法局部事实及缺输入诊断。合法 partial 的引用、schema 与来源也须可核对；协议损坏不通过改一个 complete=false 就变成可发布的合法结果。
+wireRecordKey 与 FactRef 同键，含 kind、逻辑 ID、revisionId、snapshotId、sourceViewId、完整 scope 和 layer；所有字段必需，没有“缺版本用 ID”的回退。同逻辑对象不同版本/独立推导不是同键异内容。W-B07 的损坏引用和语义输入缺失是不同失败：前者不能伪造结构补齐；后者可保留已有合法局部事实及缺输入诊断。合法 partial 的引用、schema 与来源也须可核对；协议损坏不通过改一个 complete=false 就变成可发布的合法结果。
 
 ### 3.4 终态、取消、超时与重试
 
@@ -93,6 +96,9 @@ wireRecordKey 依主草案区分 kind、逻辑 ID、revisionId/版本锚点、�
 | W-L07-P/N / REQ21 | 相同 analyze 身份与冻结载荷重发；变体同 attempt 改输入/规则指纹 | 相同请求按协议幂等，不启动两个独立副作用；冲突载荷拒绝，变化需新 attempt 和相应 snapshot | 同隔离键悄悄启动两次，或让重试混合版本 |
 | W-L08-N / REQ22 | 已 sealed_completed、尚未持久化/发布时，必要输入变化；另有存储事务失败变体 | 宿主执行终态仍 sealed_completed；撤销 publication 资格并隔离本次结果，记录发布失败/输入变化，旧可见快照保持（输入变化才标其相关证据 stale）；新任务使用新 attempt | 把 sealed_completed 逆转为 sealed_failed，或因执行已完成仍发布混合版本/未持久化结果 |
 | W-L09-P/N / REQ21 | 明确协商的一个 worker 进程承载两个活动任务；其中一个已取消但停止期限届满，需要进程级强制结束 | 取消者保持 sealed_cancelled；同进程其他未封存 attempt 封存 failed 并记录关联进程/终止原因，已封存裁决不逆转；所有相关快照依赖受限。任务级停止只有实际隔离模型有据支持时单独验证 | 只报告取消者而让同进程其他任务假装继续运行；无隔离证据承诺只终止一个任务 |
+| W-L10-P/N / R12 | 同输入/scope 的 req1 和 req2 选择不同规则，req2 后发先完成；另在 req1 eligible 后、提交前登记 req2 | 同槽位最新世代 req2 可发布；req1 sealed_completed 保留但结果 historical；最终比较与切换为单一原子动作 | 根据最后完成者发布；以 profile 不同拆槽；预检后无条件写入 |
+| W-L11-P/N / R12 | 最新 req2 登记后被拒绝/取消/超时/失败或 partial；req1 随后完成；另恢复宿主状态 | 最新世代不回退，req1 不补位，原 current 保留并按输入标过期；恢复必须保留最新请求及终态 | 从“最大成功世代”恢复或最新失败后自动授权旧请求 |
+| W-L12-P/N / R12 | 同请求重发/内部重试，另有新的用户请求和两个独立槽位 | 重发不增世代、内部重试不越过更新请求、旧 attempt 隔离；新用户请求增世代；独立槽位互不阻塞 | 旧 attempt 借同世代复活，或给无关范围强加同一最新请求 |
 
 宿主 HostAttemptRecord.decision、上层取消返回 HostCancelResult 与 worker task.finished.outcome/cancel.ack 分开记录；词表遵循主草案。取消与完成的结果以宿主同 attempt 的原子接受裁决为准。实验必须覆盖两种先后和“finished 已收、校验未完”的第三种窗口，不能只验证没有竞态的直线序列。执行封存不可逆，后续发布失败是独立结果，不改变既有裁决。
 
@@ -118,7 +124,7 @@ W-S03/04 只定义协议不得损坏、提前裁决或丢弃原始字段的预�
 
 ### 4.1 W-B01 正例与两个只改一项的反例
 
-所有任务消息使用 §2 的隔离键和冻结版本。记录账本为：r1 是有 evidenceIds=[ev1]、derivationIds=[d1]、sourceId=x、targetIds=[y] 的公共 Relation；x/y 是 Entity 版本记录；ev1 是合法 Evidence；d1 以 x/y/ev1 为直接依据支持 r1。条件为空的含义、输入登记及来源/分析器/规则引用另在冻结元数据中明确，不由空列表证明整个工程无条件。
+所有任务消息使用 §2 的隔离键、发布请求/世代和冻结版本。此处别名 r1/x/y/ev1/d1 分别代表**完整 FactRef**（kind、id、revisionId、snap1、sv-static、完整 scope、layer），不能直接把别名字串放进可执行载荷。r1 的逻辑 sourceRef/targetRefs 另外使用身份登记中的 xEntity/yEntity（EntityRef）；其 evidenceRefs=[ev1]。x/y 是 EntityVersion，ev1 是 Evidence，d1 的 inputFactRefs=[x,y,ev1]、outputFactRefs=[r1]。r1 的传输 payload 不含 derivationRefs；宿主接到 d1 后才生成支持投影 derivationRefs=[d1]，此索引不是 d1 的输入，也不参与 r1 的内容 revision，不形成自支持。条件为空的含义、输入登记及来源/分析器/规则引用另在冻结元数据中明确，不由空列表证明整个工程无条件。
 
 | 顺序 | 消息 / 核心字段 | 宿主应有观察 |
 |---|---|---|
@@ -127,7 +133,7 @@ W-S03/04 只定义协议不得损坏、提前裁决或丢弃原始字段的预�
 | 6 | W facts.batch(batchId=b1,sequence=1,payloadFingerprint=fb1,records=[r1]) | 接收 1 条，前向引用未齐，暂存而非完整发布 |
 | 7 | H batch.ack(b1,sequence=1) | 只确认接收状态，不解除最终引用/语义检查 |
 | 8–9 | W facts.batch(b2,2,fb2,[x,y,ev1,d1])；H batch.ack(b2,2) | 唯一批次 2；records 共 5；本地必要引用闭合 |
-| 10 | W task.finished(outcome=completed,finalSequence=2,batchManifest=[(b1,1,fb1,1),(b2,2,fb2,4)],recordCounts={Relation:1,Entity:2,Evidence:1,Derivation:1},totalRecordCount=5,completeness=完整声明范围) | 校验接收清单/计数/指纹/引用/来源及范围；尚不因收到消息自行发布 |
+| 10 | W task.finished(outcome=completed,finalSequence=2,batchManifest=[(b1,1,fb1,1),(b2,2,fb2,4)],recordCounts={Relation:1,EntityVersion:2,Evidence:1,Derivation:1},totalRecordCount=5,completeness=完整声明范围,publicationSlotId=slot1,requestId=req1,requestGeneration=1) | 校验接收清单/计数/指纹/精确引用/来源及范围；尚不因收到消息自行发布 |
 | 11 | 宿主原子封存完成；整体所有必要 producer 和快照门槛通过 | 该范围才可按快照契约原子发布；不是各语言/业务准入成绩 |
 
 W-B04 只去掉步骤 8/9，仍用同一终结：宿主实际只收到 1 批/1 条，明确缺 b2/引用，不能完成发布。W-B05 只把步骤 10 的 totalRecordCount 改为 6：实际总数仍为 5，必须报告计数不符；不能复制 r1 或更改接收账本来配合终结。分项数、manifest 指纹或序列范围的独立变体按同样方法逐项对比。
@@ -144,7 +150,7 @@ W-B04 只去掉步骤 8/9，仍用同一终结：宿主实际只收到 1 批/1 �
 
 ## 5. 待执行实验组织与报告
 
-执行前先登记候选传输/接收器版本、测试生产者版本、探索 OS/架构、只读工作区与允许输入根、各上限及超时参数。尚未实现时字段标“未执行/未取得”，不写成已通过。此目录只交付规格，实验源码/fixtures/独立断言与运行报告均待创建。
+完整 worker 实验执行前先登记候选传输/接收器版本、测试生产者版本、探索 OS/架构、只读工作区与允许输入根、各上限及超时参数。尚未实现时字段标“未执行/未取得”。本目录保存规格；[R11/R12 最小参考实验](../../examples/prototypes/contracts/README.md)已执行精确引用和发布状态转换及错误实现对照，其运行记录见该目录报告；真实消息流/进程/存储实验仍待完成。
 
 | 实验任务 | 操作与观察 | 失败判据 / 报告要求 | 归属 |
 |---|---|---|---|
@@ -155,4 +161,4 @@ W-B04 只去掉步骤 8/9，仍用同一终结：宿主实际只收到 1 批/1 �
 
 每份执行报告至少保存：用例/来源、版本与环境、原始输入/载荷和清单指纹、探索预算、操作/故障注入点、独立预期、实际消息/状态轨迹、原始/有效/隔离批次账本、字段/schema/引用/来源差异、旧新快照与发布记录、耗时/内存、退出/取消/清理结果、失败边界和报告复现入口。预期与报告置于隔离评估侧，不进入真实分析输入或规则生成可见的保留答案。
 
-本轮只能核对字段、手工计数、状态与源契约一致性。尚未执行上述实验，M1-03 的“可复现”完成条件、各栈接入、进程取消/恢复、真实分析/安全/兼容及 G1 均保持待验证；后续范围/预算/选型按待决策清单准备依据再冻结。
+上述完整 worker 序列尚未执行。R11/R12 参考模型通过不意味着 W-* 的握手、传输、进程和真实存储已通过；M1-03 的完整可复现条件、各栈接入、进程取消/恢复、真实分析/安全/兼容及 G1 均待验证。

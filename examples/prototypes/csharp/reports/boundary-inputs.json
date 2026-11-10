@@ -1,0 +1,36 @@
+{
+  "inputVersion": "csharp-raw-v1",
+  "languageVersion": "CSharp10",
+  "references": "runtime-core-library-only",
+  "cases": [
+    {
+      "id": "boundary",
+      "sources": [
+        "../analyze.ps1.cs"
+      ]
+    }
+  ],
+  "coordinateInput": "coordinate.txt",
+  "coordinateProbes": [
+    {
+      "id": "x",
+      "startUtf16": 3,
+      "lengthUtf16": 1
+    },
+    {
+      "id": "z",
+      "startUtf16": 6,
+      "lengthUtf16": 1
+    },
+    {
+      "id": "inside-surrogate",
+      "startUtf16": 2,
+      "lengthUtf16": 1
+    },
+    {
+      "id": "inside-crlf",
+      "startUtf16": 5,
+      "lengthUtf16": 0
+    }
+  ]
+}

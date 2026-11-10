@@ -1,0 +1,26 @@
+{
+  "scope": "Explicit refusal of project files only; actual MSBuild/JDT project loading untested",
+  "testFingerprint": "sha256:962c11b44ab3b5077faae339830757b01c7dd17c9bb9d750113a746e47b634a1",
+  "checks": [
+    {
+      "passed": true,
+      "name": "project-file-refused-before-loading"
+    },
+    {
+      "passed": true,
+      "name": "path-traversal-refused"
+    },
+    {
+      "passed": true,
+      "name": "output-cannot-overwrite-input-or-oracle"
+    },
+    {
+      "passed": true,
+      "name": "project-execution-sentinel-absent"
+    },
+    {
+      "passed": true,
+      "name": "runner-directory-link-refused"
+    }
+  ]
+}

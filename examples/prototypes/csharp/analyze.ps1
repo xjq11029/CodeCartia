@@ -1,6 +1,7 @@
 param(
     [string]$FixtureRoot = (Join-Path $PSScriptRoot 'fixtures'),
     [string]$RoslynRoot = $PSHOME,
+    [string]$InputManifest = (Join-Path $PSScriptRoot 'inputs.json'),
     [string]$OutFile = (Join-Path $PSScriptRoot 'reports/actual.json')
 )
 
@@ -20,8 +21,9 @@ function Get-ContainedPath([string]$Root, [string]$Relative, [bool]$MustExist = 
     }
     $taskWalk = $taskFullPath
     while ($taskWalk -and $taskWalk.Length -ge $taskRootPath.Length) {
-        if (Test-Path -LiteralPath $taskWalk) {
-            if ((Get-Item -LiteralPath $taskWalk -Force).Attributes -band [IO.FileAttributes]::ReparsePoint) {
+        $taskPathItem = Get-Item -LiteralPath $taskWalk -Force -ErrorAction SilentlyContinue
+        if ($null -ne $taskPathItem) {
+            if ($taskPathItem.Attributes -band [IO.FileAttributes]::ReparsePoint) {
                 throw "登记根内拒绝链接或重解析点：$taskWalk"
             }
         }
@@ -127,7 +129,14 @@ function Get-SourceSpan($Source, [int]$Start, [int]$Length) {
     return $taskSpan
 }
 
-$taskManifestPath = Join-Path $PSScriptRoot 'inputs.json'
+$taskClock = [Diagnostics.Stopwatch]::StartNew()
+$taskFixtureRelative = [IO.Path]::GetRelativePath($PSScriptRoot, [IO.Path]::GetFullPath($FixtureRoot))
+if ($taskFixtureRelative -ne 'fixtures') { throw '局部实验只允许本目录登记的 fixtures 根。' }
+$taskManifestPath = Get-ContainedPath $PSScriptRoot ([IO.Path]::GetRelativePath($PSScriptRoot, [IO.Path]::GetFullPath($InputManifest)))
+if ([IO.Path]::GetExtension($taskManifestPath) -ne '.json') { throw '输入清单只接受静态 JSON，不加载项目文件。' }
+$taskReportsRoot = Join-Path $PSScriptRoot 'reports'
+$taskOutPath = Get-ContainedPath $taskReportsRoot ([IO.Path]::GetRelativePath($taskReportsRoot, [IO.Path]::GetFullPath($OutFile))) $false
+if ([IO.Path]::GetExtension($taskOutPath) -ne '.json') { throw '报告仅写入 reports/ 内 JSON。' }
 $taskManifestBytes = [IO.File]::ReadAllBytes($taskManifestPath)
 $taskManifest = $taskUtf8.GetString($taskManifestBytes) | ConvertFrom-Json
 if ($taskManifest.references -ne 'runtime-core-library-only') { throw '仅支持显式的 runtime-core-library-only 实验配置' }
@@ -158,6 +167,7 @@ foreach ($taskCase in $taskManifest.cases) {
         [Microsoft.CodeAnalysis.MetadataReference[]]@($taskReference),
         $taskCompilationOptions
     )
+    $taskNativeDiagnostics = @($taskCompilation.GetDiagnostics())
     $taskCalls = [Collections.Generic.List[object]]::new()
     $taskDeclarations = [Collections.Generic.List[object]]::new()
     foreach ($taskTree in $taskTrees) {
@@ -182,6 +192,8 @@ foreach ($taskCase in $taskManifest.cases) {
             $taskTargetCompleteness = 'unknown'
             if (($null -ne $taskOperation -and $taskOperation.Kind.ToString() -eq 'DynamicInvocation') -or $taskSymbolInfo.CandidateReason.ToString() -eq 'LateBound') {
                 $taskReason = 'dynamic-dispatch'
+            } elseif (@($taskNativeDiagnostics | Where-Object { $_.Severity -eq [Microsoft.CodeAnalysis.DiagnosticSeverity]::Error -and $_.Location.SourceTree -eq $taskTree -and $_.Location.SourceSpan.IntersectsWith($taskNode.Span) }).Count) {
+                $taskReason = 'no-bound-symbol'
             } elseif ($null -ne $taskSymbol -and $taskSymbol -is [Microsoft.CodeAnalysis.IMethodSymbol] -and $taskSymbol.IsStatic) {
                 $taskTargetMode = 'exact'
                 $taskTargetCompleteness = 'complete'
@@ -220,7 +232,7 @@ foreach ($taskCase in $taskManifest.cases) {
             })
         }
     }
-    $taskDiagnostics = @($taskCompilation.GetDiagnostics() | ForEach-Object {
+    $taskDiagnostics = @($taskNativeDiagnostics | ForEach-Object {
         $taskDiagnosticSpan = $null
         if ($_.Location.IsInSource) {
             $taskDiagnosticSpan = Get-SourceSpan $taskSources[$_.Location.SourceTree.FilePath] $_.Location.SourceSpan.Start $_.Location.SourceSpan.Length
@@ -240,7 +252,7 @@ foreach ($taskCase in $taskManifest.cases) {
         localCompilerDiagnosticsClear = ($taskDiagnostics.Count -eq 0)
         completeness = [ordered]@{
             complete = $false
-            missingInputs = $(if ($taskCase.id -eq 'missing-reference') { @('ExternalApi reference') } else { @() })
+            missingInputs = @($taskDiagnostics | Where-Object { $_.id -in @('CS0012', 'CS0234', 'CS0246', 'CS0518', 'CS1980') } | ForEach-Object { $_.id + ': ' + $_.message })
             unsupportedModes = @('full-project-and-framework-semantics', 'dataflow', 'runtime-dispatch')
             freshness = 'current'
         }
@@ -260,7 +272,7 @@ $taskPublicInputs = @($taskSources.Values | Sort-Object relativePath | ForEach-O
 })
 $taskReport = [ordered]@{
     reportFormatVersion = 'csharp-exploration-report-v1'
-    schemaVersion = '0.1-draft'
+    contractReference = 'M1-02 0.1-draft; not a schema-conformance declaration'
     contractSubset = 'M1-02 source-span, local static binding, unknown target and diagnostics only'
     inputVersion = $taskManifest.inputVersion
     analysisMode = 'static'
@@ -275,6 +287,10 @@ $taskReport = [ordered]@{
         runtimeVersion = [Runtime.InteropServices.RuntimeInformation]::FrameworkDescription
         roslynVersion = $taskRoslynVersion
         roslynRoot = [IO.Path]::GetFullPath($RoslynRoot)
+        roslynAssemblies = @('Microsoft.CodeAnalysis.dll', 'Microsoft.CodeAnalysis.CSharp.dll') | ForEach-Object {
+            $taskAssemblyPath = Join-Path $RoslynRoot $_
+            [ordered]@{ path = $taskAssemblyPath; fingerprint = Get-Fingerprint ([IO.File]::ReadAllBytes($taskAssemblyPath)) }
+        }
         languageVersion = $taskManifest.languageVersion
         preprocessorSymbols = @()
         outputKind = 'DynamicallyLinkedLibrary'
@@ -291,8 +307,10 @@ $taskReport = [ordered]@{
     inputs = $taskPublicInputs
     cases = $taskCaseReports.ToArray()
     coordinateProbes = $taskProbes
+    durationMs = $taskClock.Elapsed.TotalMilliseconds
+    peakWorkingSetBytes = [Diagnostics.Process]::GetCurrentProcess().PeakWorkingSet64
+    scopeLimitations = @('Only registered UTF-8 text and explicit runtime metadata; no emit or target execution.', 'MSBuild/JDT and real project loading are not exercised; refusing project files does not validate those loaders.', 'Not full schema, worker, dataflow, framework or language-depth acceptance.')
 }
-$taskOutPath = Get-ContainedPath $PSScriptRoot ([IO.Path]::GetRelativePath($PSScriptRoot, [IO.Path]::GetFullPath($OutFile))) $false
 [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($taskOutPath)) | Out-Null
 [IO.File]::WriteAllText($taskOutPath, ($taskReport | ConvertTo-Json -Depth 40), $taskUtf8)
 Write-Output "已生成局部实验报告：$taskOutPath"

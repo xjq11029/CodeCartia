@@ -1,18 +1,18 @@
 {
   "source": "SPEC.md 中正反例；按原始输入独立填写文件/行与预期，不向extract传递。",
   "calls": [
-    { "file": "inputs/semantic/wrapper.ts", "line": 3, "mode": "exact", "targetFile": "inputs/semantic/transport.ts", "targetLine": 1, "argument": "route" },
-    { "file": "inputs/semantic/entry.ts", "line": 5, "mode": "exact", "targetFile": "inputs/semantic/wrapper.ts", "targetLine": 2, "argument": "\"/alpha\"" },
-    { "file": "inputs/semantic/entry.ts", "line": 8, "mode": "exact", "targetFile": "inputs/semantic/wrapper.ts", "targetLine": 2, "argument": "\"/beta\"" },
-    { "file": "inputs/semantic/entry.ts", "line": 13, "mode": "exact", "targetFile": "inputs/semantic/entry.ts", "targetLine": 12, "argument": "\"scope-a\"" },
-    { "file": "inputs/semantic/entry.ts", "line": 17, "mode": "exact", "targetFile": "inputs/semantic/entry.ts", "targetLine": 16, "argument": "\"scope-b\"" },
-    { "file": "inputs/semantic/entry.ts", "line": 20, "mode": "exact", "signatureLine": 1, "signatureFile": "inputs/semantic/overload.ts", "returnType": "string" },
-    { "file": "inputs/semantic/entry.ts", "line": 21, "mode": "exact", "signatureLine": 2, "signatureFile": "inputs/semantic/overload.ts", "returnType": "number" },
-    { "file": "inputs/semantic/entry.ts", "line": 22, "mode": "candidateSet", "candidateDeclarations": [{ "file": "inputs/semantic/overload.ts", "line": 7 }, { "file": "inputs/semantic/overload.ts", "line": 8 }] },
-    { "file": "inputs/semantic/entry.ts", "line": 23, "mode": "unknown", "diagnostic": "TS2769" },
-    { "file": "inputs/semantic/entry.ts", "line": 26, "mode": "unknown" },
-    { "file": "inputs/semantic/missing.ts", "line": 2, "mode": "unknown" },
-    { "file": "inputs/semantic/esm.js", "line": 2, "mode": "exact", "targetFile": "inputs/semantic/js-helper.js", "targetLine": 2, "argument": "\"js-input\"" }
+    { "file": "inputs/semantic/wrapper.ts", "line": 3, "callText": "transmit(route)", "mode": "exact", "targetFile": "inputs/semantic/transport.ts", "targetLine": 1, "argument": "route" },
+    { "file": "inputs/semantic/entry.ts", "line": 5, "callText": "invoke(\"/alpha\")", "mode": "exact", "targetFile": "inputs/semantic/wrapper.ts", "targetLine": 2, "argument": "\"/alpha\"" },
+    { "file": "inputs/semantic/entry.ts", "line": 8, "callText": "invoke(\"/beta\")", "mode": "exact", "targetFile": "inputs/semantic/wrapper.ts", "targetLine": 2, "argument": "\"/beta\"" },
+    { "file": "inputs/semantic/entry.ts", "line": 13, "callText": "same(\"scope-a\")", "mode": "exact", "targetFile": "inputs/semantic/entry.ts", "targetLine": 12, "argument": "\"scope-a\"" },
+    { "file": "inputs/semantic/entry.ts", "line": 17, "callText": "same(\"scope-b\")", "mode": "exact", "targetFile": "inputs/semantic/entry.ts", "targetLine": 16, "argument": "\"scope-b\"" },
+    { "file": "inputs/semantic/entry.ts", "line": 20, "callText": "convert(\"ok\")", "mode": "exact", "signatureLine": 1, "signatureFile": "inputs/semantic/overload.ts", "returnType": "string" },
+    { "file": "inputs/semantic/entry.ts", "line": 21, "callText": "convert(7)", "mode": "exact", "signatureLine": 2, "signatureFile": "inputs/semantic/overload.ts", "returnType": "number" },
+    { "file": "inputs/semantic/entry.ts", "line": 22, "callText": "selected(\"candidate\")", "mode": "candidateSet", "candidateDeclarations": [{ "file": "inputs/semantic/overload.ts", "line": 7 }, { "file": "inputs/semantic/overload.ts", "line": 8 }] },
+    { "file": "inputs/semantic/entry.ts", "line": 23, "callText": "convert(true)", "mode": "unknown", "diagnostic": "TS2769" },
+    { "file": "inputs/semantic/entry.ts", "line": 26, "callText": "dynamic(\"opaque\")", "mode": "unknown" },
+    { "file": "inputs/semantic/missing.ts", "line": 2, "callText": "absent(\"input\")", "mode": "unknown" },
+    { "file": "inputs/semantic/esm.js", "line": 2, "callText": "alias(\"js-input\")", "mode": "exact", "targetFile": "inputs/semantic/js-helper.js", "targetLine": 2, "argument": "\"js-input\"" }
   ],
   "mustDiffer": [
     { "field": "targetIds", "a": { "file": "inputs/semantic/entry.ts", "line": 13 }, "b": { "file": "inputs/semantic/entry.ts", "line": 17 } },

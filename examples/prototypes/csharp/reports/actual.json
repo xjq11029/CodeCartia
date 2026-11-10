@@ -1,0 +1,893 @@
+{
+  "reportFormatVersion": "csharp-exploration-report-v1",
+  "contractReference": "M1-02 0.1-draft; not a schema-conformance declaration",
+  "contractSubset": "M1-02 source-span, local static binding, unknown target and diagnostics only",
+  "inputVersion": "csharp-raw-v1",
+  "analysisMode": "static",
+  "generatedAt": "2026-11-10T06:07:28.1443594Z",
+  "analysisProfile": {
+    "extractorVersion": "csharp-experiment-v1",
+    "extractorFingerprint": "sha256:bc9fd540dc3d8bd5b631a184fdf556139c794381178a722edbf423958feaede8",
+    "inputManifestFingerprint": "sha256:690a163fb3b61587728fc3bd20f90a72a075f10e87b600eade64bf84347489a6",
+    "fixtureRoot": "D:\\ProjectCode\\CodeCartia\\examples\\prototypes\\csharp\\fixtures",
+    "fileSpacePolicy": "Windows lexical containment; OrdinalIgnoreCase; reject reparse points within registered root",
+    "powershellVersion": "7.6.9",
+    "runtimeVersion": ".NET 10.0.14",
+    "roslynVersion": "5.0.0.0",
+    "roslynRoot": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell",
+    "roslynAssemblies": [
+      {
+        "path": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\Microsoft.CodeAnalysis.dll",
+        "fingerprint": "sha256:e7a25cbdec95390e9672659872189da368032625d784c25569617617932c145f"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\Microsoft.CodeAnalysis.CSharp.dll",
+        "fingerprint": "sha256:5e9323e98d99f669acd10705c40d985dbabeaf0984285ed32922f91df223124b"
+      }
+    ],
+    "languageVersion": "CSharp10",
+    "preprocessorSymbols": [],
+    "outputKind": "DynamicallyLinkedLibrary",
+    "emit": false,
+    "projectLoad": false,
+    "fixtureExecuted": false,
+    "references": [
+      {
+        "path": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\System.Private.CoreLib.dll",
+        "fingerprint": "sha256:69d56e12535d3a8f2f8f89ac8f97577e6dc788d26f2e7b69be8fb5f6ff17ff28",
+        "role": "explicit runtime core metadata; no SDK/reference-pack claim"
+      }
+    ],
+    "answerInputsRead": false
+  },
+  "inputs": [
+    {
+      "inputId": "csharp-input:coordinate.txt",
+      "relativePath": "coordinate.txt",
+      "inputFingerprint": "sha256:3b69debcd827888520be10cd94521de2e2b1566881ec41349b4f417883fe8c85",
+      "encoding": "UTF-8-no-BOM",
+      "byteLength": 11,
+      "bomLength": 0
+    },
+    {
+      "inputId": "csharp-input:dynamic/Entry.cs",
+      "relativePath": "dynamic/Entry.cs",
+      "inputFingerprint": "sha256:c07bdf31160581c06ec9dbfbb12f9f3ba1aafdae2659b3eedb76d00601bba8a5",
+      "encoding": "UTF-8-no-BOM",
+      "byteLength": 121,
+      "bomLength": 0
+    },
+    {
+      "inputId": "csharp-input:missing-reference/Entry.cs",
+      "relativePath": "missing-reference/Entry.cs",
+      "inputFingerprint": "sha256:6007d5bbaab1572af5cf2028bb4a71603a88108f70eaa11270dba829cdc45821",
+      "encoding": "UTF-8-no-BOM",
+      "byteLength": 107,
+      "bomLength": 0
+    },
+    {
+      "inputId": "csharp-input:positive/Converter.cs",
+      "relativePath": "positive/Converter.cs",
+      "inputFingerprint": "sha256:9a6ad92da69a5eba3d404a21716b0cfe0f6d3858ef678bb853fbdd83c866c5ab",
+      "encoding": "UTF-8-no-BOM",
+      "byteLength": 162,
+      "bomLength": 0
+    },
+    {
+      "inputId": "csharp-input:positive/Entry.cs",
+      "relativePath": "positive/Entry.cs",
+      "inputFingerprint": "sha256:291de057689ffbc62b0cb3f5961e74dd57efce40e10250469167083ea3d4defa",
+      "encoding": "UTF-8-no-BOM",
+      "byteLength": 203,
+      "bomLength": 0
+    }
+  ],
+  "cases": [
+    {
+      "caseId": "positive",
+      "declarations": [
+        {
+          "signature": "Lab.Converter.Select(int)",
+          "sourceSpan": {
+            "inputId": "csharp-input:positive/Converter.cs",
+            "inputFingerprint": "sha256:9a6ad92da69a5eba3d404a21716b0cfe0f6d3858ef678bb853fbdd83c866c5ab",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 73,
+              "endByte": 79,
+              "startLine": 5,
+              "startColumn": 26,
+              "endLine": 5,
+              "endColumn": 32
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:positive/Converter.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 73,
+                "endUtf16": 79,
+                "startLine": 4,
+                "startColumn": 25,
+                "endLine": 4,
+                "endColumn": 31
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          }
+        },
+        {
+          "signature": "Lab.Converter.Select(string)",
+          "sourceSpan": {
+            "inputId": "csharp-input:positive/Converter.cs",
+            "inputFingerprint": "sha256:9a6ad92da69a5eba3d404a21716b0cfe0f6d3858ef678bb853fbdd83c866c5ab",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 129,
+              "endByte": 135,
+              "startLine": 6,
+              "startColumn": 26,
+              "endLine": 6,
+              "endColumn": 32
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:positive/Converter.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 129,
+                "endUtf16": 135,
+                "startLine": 5,
+                "startColumn": 25,
+                "endLine": 5,
+                "endColumn": 31
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          }
+        },
+        {
+          "signature": "Lab.Entry.FromNumber()",
+          "sourceSpan": {
+            "inputId": "csharp-input:positive/Entry.cs",
+            "inputFingerprint": "sha256:291de057689ffbc62b0cb3f5961e74dd57efce40e10250469167083ea3d4defa",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 69,
+              "endByte": 79,
+              "startLine": 5,
+              "startColumn": 26,
+              "endLine": 5,
+              "endColumn": 36
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:positive/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 69,
+                "endUtf16": 79,
+                "startLine": 4,
+                "startColumn": 25,
+                "endLine": 4,
+                "endColumn": 35
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          }
+        },
+        {
+          "signature": "Lab.Entry.FromText()",
+          "sourceSpan": {
+            "inputId": "csharp-input:positive/Entry.cs",
+            "inputFingerprint": "sha256:291de057689ffbc62b0cb3f5961e74dd57efce40e10250469167083ea3d4defa",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 131,
+              "endByte": 139,
+              "startLine": 6,
+              "startColumn": 26,
+              "endLine": 6,
+              "endColumn": 34
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:positive/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 131,
+                "endUtf16": 139,
+                "startLine": 5,
+                "startColumn": 25,
+                "endLine": 5,
+                "endColumn": 33
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          }
+        }
+      ],
+      "calls": [
+        {
+          "sampleKey": "positive:positive/Entry.cs:85",
+          "text": "Converter.Select(7)",
+          "sourceSpan": {
+            "inputId": "csharp-input:positive/Entry.cs",
+            "inputFingerprint": "sha256:291de057689ffbc62b0cb3f5961e74dd57efce40e10250469167083ea3d4defa",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 85,
+              "endByte": 104,
+              "startLine": 5,
+              "startColumn": 42,
+              "endLine": 5,
+              "endColumn": 61
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:positive/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 85,
+                "endUtf16": 104,
+                "startLine": 4,
+                "startColumn": 41,
+                "endLine": 4,
+                "endColumn": 60
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          },
+          "targetMode": "exact",
+          "targetSetCompleteness": "complete",
+          "resolution": "confirmed",
+          "target": {
+            "signature": "Lab.Converter.Select(int)",
+            "declarationSpan": {
+              "inputId": "csharp-input:positive/Converter.cs",
+              "inputFingerprint": "sha256:9a6ad92da69a5eba3d404a21716b0cfe0f6d3858ef678bb853fbdd83c866c5ab",
+              "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+              "normalized": {
+                "startByte": 73,
+                "endByte": 79,
+                "startLine": 5,
+                "startColumn": 26,
+                "endLine": 5,
+                "endColumn": 32
+              },
+              "nativePositions": [
+                {
+                  "tool": "Roslyn",
+                  "toolVersion": "5.0.0.0",
+                  "inputId": "csharp-input:positive/Converter.cs",
+                  "offsetUnit": "UTF16-code-unit",
+                  "offsetBase": 0,
+                  "lineBase": 0,
+                  "columnBase": 0,
+                  "endConvention": "exclusive",
+                  "startUtf16": 73,
+                  "endUtf16": 79,
+                  "startLine": 4,
+                  "startColumn": 25,
+                  "endLine": 4,
+                  "endColumn": 31
+                }
+              ],
+              "mappingIds": [],
+              "mappingStatus": "exact",
+              "diagnosticCode": null
+            },
+            "locationKind": "source"
+          },
+          "candidateSignatures": [],
+          "candidateReason": "None",
+          "operationKind": "Invocation",
+          "reason": "compiler-bound-static-method",
+          "production": "automatic",
+          "semanticKind": "implementation-fact",
+          "runtimeObserved": false
+        },
+        {
+          "sampleKey": "positive:positive/Entry.cs:170",
+          "text": "Converter.Select(label)",
+          "sourceSpan": {
+            "inputId": "csharp-input:positive/Entry.cs",
+            "inputFingerprint": "sha256:291de057689ffbc62b0cb3f5961e74dd57efce40e10250469167083ea3d4defa",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 174,
+              "endByte": 197,
+              "startLine": 6,
+              "startColumn": 64,
+              "endLine": 6,
+              "endColumn": 87
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:positive/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 170,
+                "endUtf16": 193,
+                "startLine": 5,
+                "startColumn": 64,
+                "endLine": 5,
+                "endColumn": 87
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          },
+          "targetMode": "exact",
+          "targetSetCompleteness": "complete",
+          "resolution": "confirmed",
+          "target": {
+            "signature": "Lab.Converter.Select(string)",
+            "declarationSpan": {
+              "inputId": "csharp-input:positive/Converter.cs",
+              "inputFingerprint": "sha256:9a6ad92da69a5eba3d404a21716b0cfe0f6d3858ef678bb853fbdd83c866c5ab",
+              "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+              "normalized": {
+                "startByte": 129,
+                "endByte": 135,
+                "startLine": 6,
+                "startColumn": 26,
+                "endLine": 6,
+                "endColumn": 32
+              },
+              "nativePositions": [
+                {
+                  "tool": "Roslyn",
+                  "toolVersion": "5.0.0.0",
+                  "inputId": "csharp-input:positive/Converter.cs",
+                  "offsetUnit": "UTF16-code-unit",
+                  "offsetBase": 0,
+                  "lineBase": 0,
+                  "columnBase": 0,
+                  "endConvention": "exclusive",
+                  "startUtf16": 129,
+                  "endUtf16": 135,
+                  "startLine": 5,
+                  "startColumn": 25,
+                  "endLine": 5,
+                  "endColumn": 31
+                }
+              ],
+              "mappingIds": [],
+              "mappingStatus": "exact",
+              "diagnosticCode": null
+            },
+            "locationKind": "source"
+          },
+          "candidateSignatures": [],
+          "candidateReason": "None",
+          "operationKind": "Invocation",
+          "reason": "compiler-bound-static-method",
+          "production": "automatic",
+          "semanticKind": "implementation-fact",
+          "runtimeObserved": false
+        }
+      ],
+      "diagnostics": [],
+      "localCompilerDiagnosticsClear": true,
+      "completeness": {
+        "complete": false,
+        "missingInputs": [],
+        "unsupportedModes": [
+          "full-project-and-framework-semantics",
+          "dataflow",
+          "runtime-dispatch"
+        ],
+        "freshness": "current"
+      }
+    },
+    {
+      "caseId": "missing-reference",
+      "declarations": [
+        {
+          "signature": "MissingLab.Entry.Run()",
+          "sourceSpan": {
+            "inputId": "csharp-input:missing-reference/Entry.cs",
+            "inputFingerprint": "sha256:6007d5bbaab1572af5cf2028bb4a71603a88108f70eaa11270dba829cdc45821",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 76,
+              "endByte": 79,
+              "startLine": 5,
+              "startColumn": 26,
+              "endLine": 5,
+              "endColumn": 29
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:missing-reference/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 76,
+                "endUtf16": 79,
+                "startLine": 4,
+                "startColumn": 25,
+                "endLine": 4,
+                "endColumn": 28
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          }
+        }
+      ],
+      "calls": [
+        {
+          "sampleKey": "missing-reference:missing-reference/Entry.cs:85",
+          "text": "ExternalApi.Read()",
+          "sourceSpan": {
+            "inputId": "csharp-input:missing-reference/Entry.cs",
+            "inputFingerprint": "sha256:6007d5bbaab1572af5cf2028bb4a71603a88108f70eaa11270dba829cdc45821",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 85,
+              "endByte": 103,
+              "startLine": 5,
+              "startColumn": 35,
+              "endLine": 5,
+              "endColumn": 53
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:missing-reference/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 85,
+                "endUtf16": 103,
+                "startLine": 4,
+                "startColumn": 34,
+                "endLine": 4,
+                "endColumn": 52
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          },
+          "targetMode": "unknown",
+          "targetSetCompleteness": "unknown",
+          "resolution": "unresolved",
+          "target": null,
+          "candidateSignatures": [],
+          "candidateReason": "None",
+          "operationKind": "Invalid",
+          "reason": "no-bound-symbol",
+          "production": "automatic",
+          "semanticKind": "implementation-fact",
+          "runtimeObserved": false
+        }
+      ],
+      "diagnostics": [
+        {
+          "id": "CS0103",
+          "severity": "Error",
+          "message": "The name 'ExternalApi' does not exist in the current context",
+          "sourceSpan": {
+            "inputId": "csharp-input:missing-reference/Entry.cs",
+            "inputFingerprint": "sha256:6007d5bbaab1572af5cf2028bb4a71603a88108f70eaa11270dba829cdc45821",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 85,
+              "endByte": 96,
+              "startLine": 5,
+              "startColumn": 35,
+              "endLine": 5,
+              "endColumn": 46
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:missing-reference/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 85,
+                "endUtf16": 96,
+                "startLine": 4,
+                "startColumn": 34,
+                "endLine": 4,
+                "endColumn": 45
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          }
+        }
+      ],
+      "localCompilerDiagnosticsClear": false,
+      "completeness": {
+        "complete": false,
+        "missingInputs": [],
+        "unsupportedModes": [
+          "full-project-and-framework-semantics",
+          "dataflow",
+          "runtime-dispatch"
+        ],
+        "freshness": "current"
+      }
+    },
+    {
+      "caseId": "dynamic",
+      "declarations": [
+        {
+          "signature": "DynamicLab.Entry.Run(dynamic)",
+          "sourceSpan": {
+            "inputId": "csharp-input:dynamic/Entry.cs",
+            "inputFingerprint": "sha256:c07bdf31160581c06ec9dbfbb12f9f3ba1aafdae2659b3eedb76d00601bba8a5",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 77,
+              "endByte": 80,
+              "startLine": 5,
+              "startColumn": 27,
+              "endLine": 5,
+              "endColumn": 30
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:dynamic/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 77,
+                "endUtf16": 80,
+                "startLine": 4,
+                "startColumn": 26,
+                "endLine": 4,
+                "endColumn": 29
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          }
+        }
+      ],
+      "calls": [
+        {
+          "sampleKey": "dynamic:dynamic/Entry.cs:102",
+          "text": "receiver.Read()",
+          "sourceSpan": {
+            "inputId": "csharp-input:dynamic/Entry.cs",
+            "inputFingerprint": "sha256:c07bdf31160581c06ec9dbfbb12f9f3ba1aafdae2659b3eedb76d00601bba8a5",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 102,
+              "endByte": 117,
+              "startLine": 5,
+              "startColumn": 52,
+              "endLine": 5,
+              "endColumn": 67
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:dynamic/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 102,
+                "endUtf16": 117,
+                "startLine": 4,
+                "startColumn": 51,
+                "endLine": 4,
+                "endColumn": 66
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          },
+          "targetMode": "unknown",
+          "targetSetCompleteness": "unknown",
+          "resolution": "unresolved",
+          "target": null,
+          "candidateSignatures": [],
+          "candidateReason": "LateBound",
+          "operationKind": "DynamicInvocation",
+          "reason": "dynamic-dispatch",
+          "production": "automatic",
+          "semanticKind": "implementation-fact",
+          "runtimeObserved": false
+        }
+      ],
+      "diagnostics": [
+        {
+          "id": "CS1980",
+          "severity": "Error",
+          "message": "Cannot define a class or member that utilizes 'dynamic' because the compiler required type 'System.Runtime.CompilerServices.DynamicAttribute' cannot be found. Are you missing a reference?",
+          "sourceSpan": {
+            "inputId": "csharp-input:dynamic/Entry.cs",
+            "inputFingerprint": "sha256:c07bdf31160581c06ec9dbfbb12f9f3ba1aafdae2659b3eedb76d00601bba8a5",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 81,
+              "endByte": 88,
+              "startLine": 5,
+              "startColumn": 31,
+              "endLine": 5,
+              "endColumn": 38
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:dynamic/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 81,
+                "endUtf16": 88,
+                "startLine": 4,
+                "startColumn": 30,
+                "endLine": 4,
+                "endColumn": 37
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          }
+        },
+        {
+          "id": "CS1980",
+          "severity": "Error",
+          "message": "Cannot define a class or member that utilizes 'dynamic' because the compiler required type 'System.Runtime.CompilerServices.DynamicAttribute' cannot be found. Are you missing a reference?",
+          "sourceSpan": {
+            "inputId": "csharp-input:dynamic/Entry.cs",
+            "inputFingerprint": "sha256:c07bdf31160581c06ec9dbfbb12f9f3ba1aafdae2659b3eedb76d00601bba8a5",
+            "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+            "normalized": {
+              "startByte": 69,
+              "endByte": 76,
+              "startLine": 5,
+              "startColumn": 19,
+              "endLine": 5,
+              "endColumn": 26
+            },
+            "nativePositions": [
+              {
+                "tool": "Roslyn",
+                "toolVersion": "5.0.0.0",
+                "inputId": "csharp-input:dynamic/Entry.cs",
+                "offsetUnit": "UTF16-code-unit",
+                "offsetBase": 0,
+                "lineBase": 0,
+                "columnBase": 0,
+                "endConvention": "exclusive",
+                "startUtf16": 69,
+                "endUtf16": 76,
+                "startLine": 4,
+                "startColumn": 18,
+                "endLine": 4,
+                "endColumn": 25
+              }
+            ],
+            "mappingIds": [],
+            "mappingStatus": "exact",
+            "diagnosticCode": null
+          }
+        }
+      ],
+      "localCompilerDiagnosticsClear": false,
+      "completeness": {
+        "complete": false,
+        "missingInputs": [
+          "CS1980: Cannot define a class or member that utilizes 'dynamic' because the compiler required type 'System.Runtime.CompilerServices.DynamicAttribute' cannot be found. Are you missing a reference?",
+          "CS1980: Cannot define a class or member that utilizes 'dynamic' because the compiler required type 'System.Runtime.CompilerServices.DynamicAttribute' cannot be found. Are you missing a reference?"
+        ],
+        "unsupportedModes": [
+          "full-project-and-framework-semantics",
+          "dataflow",
+          "runtime-dispatch"
+        ],
+        "freshness": "current"
+      }
+    }
+  ],
+  "coordinateProbes": [
+    {
+      "id": "x",
+      "sourceSpan": {
+        "inputId": "csharp-input:coordinate.txt",
+        "inputFingerprint": "sha256:3b69debcd827888520be10cd94521de2e2b1566881ec41349b4f417883fe8c85",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "normalized": {
+          "startByte": 7,
+          "endByte": 8,
+          "startLine": 1,
+          "startColumn": 3,
+          "endLine": 1,
+          "endColumn": 4
+        },
+        "nativePositions": [
+          {
+            "tool": "Roslyn",
+            "toolVersion": "5.0.0.0",
+            "inputId": "csharp-input:coordinate.txt",
+            "offsetUnit": "UTF16-code-unit",
+            "offsetBase": 0,
+            "lineBase": 0,
+            "columnBase": 0,
+            "endConvention": "exclusive",
+            "startUtf16": 3,
+            "endUtf16": 4,
+            "startLine": 0,
+            "startColumn": 3,
+            "endLine": 0,
+            "endColumn": 4
+          }
+        ],
+        "mappingIds": [],
+        "mappingStatus": "exact",
+        "diagnosticCode": null
+      }
+    },
+    {
+      "id": "z",
+      "sourceSpan": {
+        "inputId": "csharp-input:coordinate.txt",
+        "inputFingerprint": "sha256:3b69debcd827888520be10cd94521de2e2b1566881ec41349b4f417883fe8c85",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "normalized": {
+          "startByte": 10,
+          "endByte": 11,
+          "startLine": 2,
+          "startColumn": 1,
+          "endLine": 2,
+          "endColumn": 2
+        },
+        "nativePositions": [
+          {
+            "tool": "Roslyn",
+            "toolVersion": "5.0.0.0",
+            "inputId": "csharp-input:coordinate.txt",
+            "offsetUnit": "UTF16-code-unit",
+            "offsetBase": 0,
+            "lineBase": 0,
+            "columnBase": 0,
+            "endConvention": "exclusive",
+            "startUtf16": 6,
+            "endUtf16": 7,
+            "startLine": 1,
+            "startColumn": 0,
+            "endLine": 1,
+            "endColumn": 1
+          }
+        ],
+        "mappingIds": [],
+        "mappingStatus": "exact",
+        "diagnosticCode": null
+      }
+    },
+    {
+      "id": "inside-surrogate",
+      "sourceSpan": {
+        "inputId": "csharp-input:coordinate.txt",
+        "inputFingerprint": "sha256:3b69debcd827888520be10cd94521de2e2b1566881ec41349b4f417883fe8c85",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "normalized": null,
+        "nativePositions": [
+          {
+            "tool": "Roslyn",
+            "toolVersion": "5.0.0.0",
+            "inputId": "csharp-input:coordinate.txt",
+            "offsetUnit": "UTF16-code-unit",
+            "offsetBase": 0,
+            "lineBase": 0,
+            "columnBase": 0,
+            "endConvention": "exclusive",
+            "startUtf16": 2,
+            "endUtf16": 3
+          }
+        ],
+        "mappingIds": [],
+        "mappingStatus": "unavailable",
+        "diagnosticCode": "UTF16_ENDPOINT_INSIDE_SURROGATE"
+      }
+    },
+    {
+      "id": "inside-crlf",
+      "sourceSpan": {
+        "inputId": "csharp-input:coordinate.txt",
+        "inputFingerprint": "sha256:3b69debcd827888520be10cd94521de2e2b1566881ec41349b4f417883fe8c85",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "normalized": null,
+        "nativePositions": [
+          {
+            "tool": "Roslyn",
+            "toolVersion": "5.0.0.0",
+            "inputId": "csharp-input:coordinate.txt",
+            "offsetUnit": "UTF16-code-unit",
+            "offsetBase": 0,
+            "lineBase": 0,
+            "columnBase": 0,
+            "endConvention": "exclusive",
+            "startUtf16": 5,
+            "endUtf16": 5
+          }
+        ],
+        "mappingIds": [],
+        "mappingStatus": "unavailable",
+        "diagnosticCode": "UTF16_ENDPOINT_INSIDE_CRLF"
+      }
+    }
+  ],
+  "durationMs": 355.4268,
+  "peakWorkingSetBytes": 207466496,
+  "scopeLimitations": [
+    "Only registered UTF-8 text and explicit runtime metadata; no emit or target execution.",
+    "MSBuild/JDT and real project loading are not exercised; refusing project files does not validate those loaders.",
+    "Not full schema, worker, dataflow, framework or language-depth acceptance."
+  ]
+}

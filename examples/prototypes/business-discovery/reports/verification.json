@@ -1,0 +1,338 @@
+{
+  "status": "passed",
+  "python": "3.14.2",
+  "platform": "Windows-11-10.0.22621-SP0",
+  "implementationFingerprints": {
+    "extract.py": "509399baf2e1391b683c21de4000e3cd3ce14377b5177be139eff184fdfbf372",
+    "evaluate.py": "4514ad6b0a2dff607333adcb95badce44f744a6a5b69706df2d07eeb5e31ada1",
+    "verify.py": "0e4015240b0d0361b971d0cf9eaf6937059ce1ae0b0f4720a1a2c6d89aa8b044",
+    "report_io.py": "a3313520127b6dda64ae24793618003ccf3f25dc1cdcf5d88101ae25662be2b9"
+  },
+  "fixtures": [
+    {
+      "name": "library",
+      "status": "passed",
+      "scenarios": 2,
+      "steps": 8,
+      "partialScenarios": 0,
+      "extractorReadFiles": [
+        "<python-runtime>/_ast_unparse.cpython-314.pyc",
+        "<python-runtime>/_ast_unparse.py",
+        "TECHNICAL-API.md",
+        "inputs\\library\\framework.py",
+        "inputs\\library\\project.json",
+        "inputs\\library\\routes.py",
+        "inputs\\library\\services.py",
+        "inputs\\library\\shared.py",
+        "technical-profile.json"
+      ],
+      "expectedSha256": "a4fb9823cda013746f49f52166460e4803d3b20c2617e12765146fad5609c582"
+    },
+    {
+      "name": "publishing",
+      "status": "passed",
+      "scenarios": 2,
+      "steps": 9,
+      "partialScenarios": 2,
+      "extractorReadFiles": [
+        "TECHNICAL-API.md",
+        "inputs\\publishing\\application.py",
+        "inputs\\publishing\\framework.py",
+        "inputs\\publishing\\project.json",
+        "technical-profile.json"
+      ],
+      "expectedSha256": "1aed47f016e10e5c1cde9608031248b9f66771d56a0e8342b8bdef06fb95c8b3"
+    }
+  ],
+  "evaluatorMutations": [
+    {
+      "name": "empty-output",
+      "status": "rejected",
+      "reasons": [
+        "Scenario/step/condition/call/binding projection differs from independent expected data",
+        "Empty scenario denominator cannot pass"
+      ]
+    },
+    {
+      "name": "extra-scenario",
+      "status": "rejected",
+      "reasons": [
+        "Duplicate scenario",
+        "Scenario identity is duplicated or does not match its full registration anchor",
+        "Step identity is duplicated or outside its scenario",
+        "Step identity is duplicated or outside its scenario",
+        "Step identity is duplicated or outside its scenario",
+        "Step identity is duplicated or outside its scenario",
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "fake-candidate",
+      "status": "rejected",
+      "reasons": [
+        "Unexpected candidate"
+      ]
+    },
+    {
+      "name": "fake-step",
+      "status": "rejected",
+      "reasons": [
+        "Step identity is duplicated or outside its scenario",
+        "Invalid step order or call context",
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "missing-cross-function-step",
+      "status": "rejected",
+      "reasons": [
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "missing-call",
+      "status": "rejected",
+      "reasons": [
+        "Call path contains an unsupported intermediate edge",
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "wrong-authorization-object",
+      "status": "rejected",
+      "reasons": [
+        "Authorization binding fields or evidence reference mismatch"
+      ]
+    },
+    {
+      "name": "invented-check-binding",
+      "status": "rejected",
+      "reasons": [
+        "Authorization binding crosses object, order or check category",
+        "Authorization binding fields or evidence reference mismatch",
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "condition-omission",
+      "status": "rejected",
+      "reasons": [
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "false-decision",
+      "status": "rejected",
+      "reasons": [
+        "Experiment must not invent a concrete authorization decision"
+      ]
+    },
+    {
+      "name": "wrong-evidence",
+      "status": "rejected",
+      "reasons": [
+        "Evidence text does not match original bytes"
+      ]
+    },
+    {
+      "name": "merge-shared-scenarios",
+      "status": "rejected",
+      "reasons": [
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "wrong-project-fingerprint",
+      "status": "rejected",
+      "reasons": [
+        "Project registration fingerprint mismatch"
+      ]
+    },
+    {
+      "name": "wrong-technical-profile",
+      "status": "rejected",
+      "reasons": [
+        "Technical profile or contract fingerprint mismatch"
+      ]
+    },
+    {
+      "name": "wrong-technical-contract",
+      "status": "rejected",
+      "reasons": [
+        "Technical profile or contract fingerprint mismatch"
+      ]
+    },
+    {
+      "name": "wrong-technical-classification",
+      "status": "rejected",
+      "reasons": [
+        "Technical API classification is not registered",
+        "Check evidence does not call the claimed technical API in its lexical scope"
+      ]
+    },
+    {
+      "name": "unrelated-valid-assignment-evidence",
+      "status": "rejected",
+      "reasons": [
+        "Evidence is not an exact Call AST anchor",
+        "Check evidence does not call the claimed technical API in its lexical scope",
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "unrelated-valid-call-evidence",
+      "status": "rejected",
+      "reasons": [
+        "Check evidence does not call the claimed technical API in its lexical scope",
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "missing-technical-evidence",
+      "status": "rejected",
+      "reasons": [
+        "A classified check is missing mandatory technical API evidence",
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "wrong-call-parameter-binding",
+      "status": "rejected",
+      "reasons": [
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "invented-middle-call-context",
+      "status": "rejected",
+      "reasons": [
+        "Call path contains an unsupported intermediate edge",
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    },
+    {
+      "name": "duplicate-scenario-id",
+      "status": "rejected",
+      "reasons": [
+        "Scenario identity is duplicated or does not match its full registration anchor",
+        "Step identity is duplicated or outside its scenario",
+        "Step identity is duplicated or outside its scenario",
+        "Step identity is duplicated or outside its scenario",
+        "Step identity is duplicated or outside its scenario"
+      ]
+    },
+    {
+      "name": "duplicate-step-id",
+      "status": "rejected",
+      "reasons": [
+        "Step identity is duplicated or outside its scenario"
+      ]
+    },
+    {
+      "name": "hide-unknown",
+      "status": "rejected",
+      "reasons": [
+        "Scenario/step/condition/call/binding projection differs from independent expected data"
+      ]
+    }
+  ],
+  "sourceProbes": [
+    {
+      "name": "route-role-rename-unicode-and-crlf",
+      "status": "passed"
+    },
+    {
+      "name": "technical-api-semantics-changed",
+      "status": "rejected",
+      "reason": "Technical API body no longer matches its registered contract: framework.enforce"
+    },
+    {
+      "name": "different-object-does-not-inherit-check",
+      "status": "passed"
+    },
+    {
+      "name": "post-mutation-check-is-unknown",
+      "status": "passed"
+    },
+    {
+      "name": "single-read-ast-fingerprint-race",
+      "status": "passed"
+    },
+    {
+      "name": "module-api-rebinding",
+      "status": "rejected",
+      "reason": "Module rebinding, decorators, classes and unregistered effects are outside this finite input mode"
+    },
+    {
+      "name": "late-local-assignment",
+      "status": "passed-unknown"
+    },
+    {
+      "name": "late-local-definition",
+      "status": "passed-unknown"
+    },
+    {
+      "name": "late-local-import",
+      "status": "passed-unknown"
+    },
+    {
+      "name": "late-local-delete",
+      "status": "passed-unknown"
+    },
+    {
+      "name": "late-loop-target",
+      "status": "passed-unknown"
+    },
+    {
+      "name": "global-declaration-is-unknown",
+      "status": "passed-unknown"
+    },
+    {
+      "name": "late-module-alias-is-unknown",
+      "status": "passed-unknown"
+    },
+    {
+      "name": "same-line-same-address-distinct-identities",
+      "status": "passed"
+    },
+    {
+      "name": "same-line-repeated-handler-distinct-identities",
+      "status": "passed"
+    },
+    {
+      "name": "cli-protects-inputs/library/services.py",
+      "status": "rejected"
+    },
+    {
+      "name": "cli-protects-expected/library.json",
+      "status": "rejected"
+    },
+    {
+      "name": "cli-protects-extract.py",
+      "status": "rejected"
+    },
+    {
+      "name": "verifier-parent-directory-link",
+      "status": "rejected"
+    },
+    {
+      "name": "cli-parent-directory-link",
+      "status": "rejected"
+    },
+    {
+      "name": "verifier-final-directory-link",
+      "status": "rejected"
+    },
+    {
+      "name": "cli-final-directory-link",
+      "status": "rejected"
+    }
+  ],
+  "limitations": [
+    "公开合成开发用例，非独立保留项目；已做独立代码与反例复核",
+    "只验证登记的合成 API 与有限 Python AST 模式",
+    "不计算具体授权 allow/deny，不证明持久化",
+    "不是完整 BS/AP、跨语言或跨项目泛化验收",
+    "当前 Windows 实测父目录与最终路径目录 junction；文件 symlink 与其他平台未实测，也未验证并发替换链接的竞态防护"
+  ]
+}

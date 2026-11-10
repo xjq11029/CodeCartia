@@ -1,0 +1,496 @@
+{
+  "schemaVersion": "business-discovery-experiment/0.1",
+  "analysisMode": "static",
+  "projectId": "catalog-lending",
+  "budget": {
+    "maxDepth": 8,
+    "maxSteps": 100
+  },
+  "projectRegistrationSha256": "2262563a9a4f9c082d3ecd52cd218ffcd2f6459cfc3bceb47ee321735ef1f53a",
+  "technicalProfile": {
+    "sha256": "8585162e56d68730d43dcc8ba6e143c4f366ea6456f99734b5fb9f6f8f3654a6",
+    "contractSha256": "c7363c0db2f42952d7d368fe9083765b0a435658fd8a5130ce5d08ec184ca9fa"
+  },
+  "inputManifest": [
+    {
+      "path": "framework.py",
+      "sha256": "420f2062ad814ce2e371e3a89ee79d6e69f059138369515a395b5f1952541ae5"
+    },
+    {
+      "path": "routes.py",
+      "sha256": "a59754f58ffd9ab2975d829c3043b24ba7e0574dc75bb98129486393f5ae2269"
+    },
+    {
+      "path": "services.py",
+      "sha256": "edcf61274653afd31f167974f60215966efaa4986c49a2384d34f92bce32752e"
+    },
+    {
+      "path": "shared.py",
+      "sha256": "cda6d7fed4a370a41265b364d7a159c93987415c6475b29541528b82a07b3696"
+    }
+  ],
+  "projectDiagnostics": [],
+  "scenarios": [
+    {
+      "id": "routes:13:0:13:39:POST:/loans/open:routes.borrow",
+      "entry": {
+        "method": "POST",
+        "address": "/loans/open",
+        "handler": "routes.borrow",
+        "evidence": {
+          "file": "routes.py",
+          "line": 13,
+          "endLine": 13,
+          "startColumn": 0,
+          "endColumn": 39,
+          "coordinateUnit": "python-utf8-bytes",
+          "sha256": "a59754f58ffd9ab2975d829c3043b24ba7e0574dc75bb98129486393f5ae2269",
+          "text": "register(\"POST\", \"/loans/open\", borrow)"
+        }
+      },
+      "name": "POST /loans/open → routes.borrow",
+      "steps": [
+        {
+          "id": "routes:13:0:13:39:POST:/loans/open:routes.borrow:step:0",
+          "index": 0,
+          "kind": "authorization-check",
+          "implementation": "services.open_loan",
+          "subject": "entry.arg0",
+          "object": "entry.arg1",
+          "requires": [],
+          "authorization": [],
+          "authorizationBindings": [],
+          "evidence": {
+            "file": "services.py",
+            "line": 6,
+            "endLine": 6,
+            "startColumn": 4,
+            "endColumn": 80,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "edcf61274653afd31f167974f60215966efaa4986c49a2384d34f92bce32752e",
+            "text": "enforce(actor, item, actor.role == \"member\" and actor.tenant == item.tenant)"
+          },
+          "callPath": [
+            "routes.borrow",
+            "services.open_loan"
+          ],
+          "condition": "entry.arg0.role == 'member' and entry.arg0.tenant == entry.arg1.tenant",
+          "technicalApi": "framework.enforce",
+          "technicalEvidence": {
+            "file": "framework.py",
+            "line": 16,
+            "endLine": 18,
+            "startColumn": 0,
+            "endColumn": 30,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "420f2062ad814ce2e371e3a89ee79d6e69f059138369515a395b5f1952541ae5",
+            "text": "def enforce(subject, resource, predicate):\n    if not predicate:\n        raise AccessRejected()"
+          }
+        },
+        {
+          "id": "routes:13:0:13:39:POST:/loans/open:routes.borrow:step:1",
+          "index": 1,
+          "kind": "business-check",
+          "implementation": "services.open_loan",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "routes:13:0:13:39:POST:/loans/open:routes.borrow:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "services.py",
+            "line": 7,
+            "endLine": 7,
+            "startColumn": 4,
+            "endColumn": 34,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "edcf61274653afd31f167974f60215966efaa4986c49a2384d34f92bce32752e",
+            "text": "validate(item, item.available)"
+          },
+          "callPath": [
+            "routes.borrow",
+            "services.open_loan"
+          ],
+          "condition": "entry.arg1.available",
+          "technicalApi": "framework.validate",
+          "technicalEvidence": {
+            "file": "framework.py",
+            "line": 21,
+            "endLine": 23,
+            "startColumn": 0,
+            "endColumn": 32,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "420f2062ad814ce2e371e3a89ee79d6e69f059138369515a395b5f1952541ae5",
+            "text": "def validate(resource, predicate):\n    if not predicate:\n        raise InvalidOperation()"
+          }
+        },
+        {
+          "id": "routes:13:0:13:39:POST:/loans/open:routes.borrow:step:2",
+          "index": 2,
+          "kind": "memory-write",
+          "implementation": "services.open_loan",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0,
+            1
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "routes:13:0:13:39:POST:/loans/open:routes.borrow:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "services.py",
+            "line": 8,
+            "endLine": 8,
+            "startColumn": 4,
+            "endColumn": 27,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "edcf61274653afd31f167974f60215966efaa4986c49a2384d34f92bce32752e",
+            "text": "item.state = \"borrowed\""
+          },
+          "callPath": [
+            "routes.borrow",
+            "services.open_loan"
+          ],
+          "field": "state",
+          "value": "'borrowed'"
+        },
+        {
+          "id": "routes:13:0:13:39:POST:/loans/open:routes.borrow:step:3",
+          "index": 3,
+          "kind": "memory-write",
+          "implementation": "shared.record",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0,
+            1
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "routes:13:0:13:39:POST:/loans/open:routes.borrow:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "shared.py",
+            "line": 2,
+            "endLine": 2,
+            "startColumn": 4,
+            "endColumn": 28,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "cda6d7fed4a370a41265b364d7a159c93987415c6475b29541528b82a07b3696",
+            "text": "target.audit = \"updated\""
+          },
+          "callPath": [
+            "routes.borrow",
+            "services.open_loan",
+            "shared.record"
+          ],
+          "field": "audit",
+          "value": "'updated'"
+        }
+      ],
+      "calls": [
+        {
+          "caller": "routes.borrow",
+          "callee": "services.open_loan",
+          "evidence": {
+            "file": "routes.py",
+            "line": 6,
+            "endLine": 6,
+            "startColumn": 11,
+            "endColumn": 39,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "a59754f58ffd9ab2975d829c3043b24ba7e0574dc75bb98129486393f5ae2269",
+            "text": "open_loan(principal, volume)"
+          },
+          "bindings": {
+            "actor": "entry.arg0",
+            "item": "entry.arg1"
+          }
+        },
+        {
+          "caller": "services.open_loan",
+          "callee": "shared.record",
+          "evidence": {
+            "file": "services.py",
+            "line": 9,
+            "endLine": 9,
+            "startColumn": 4,
+            "endColumn": 16,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "edcf61274653afd31f167974f60215966efaa4986c49a2384d34f92bce32752e",
+            "text": "record(item)"
+          },
+          "bindings": {
+            "target": "entry.arg1"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "unresolvedCandidates": [],
+      "complete": true,
+      "authorizationDecision": "unknown"
+    },
+    {
+      "id": "routes:14:0:14:47:POST:/loans/close:routes.return_volume",
+      "entry": {
+        "method": "POST",
+        "address": "/loans/close",
+        "handler": "routes.return_volume",
+        "evidence": {
+          "file": "routes.py",
+          "line": 14,
+          "endLine": 14,
+          "startColumn": 0,
+          "endColumn": 47,
+          "coordinateUnit": "python-utf8-bytes",
+          "sha256": "a59754f58ffd9ab2975d829c3043b24ba7e0574dc75bb98129486393f5ae2269",
+          "text": "register(\"POST\", \"/loans/close\", return_volume)"
+        }
+      },
+      "name": "POST /loans/close → routes.return_volume",
+      "steps": [
+        {
+          "id": "routes:14:0:14:47:POST:/loans/close:routes.return_volume:step:0",
+          "index": 0,
+          "kind": "authorization-check",
+          "implementation": "services.close_loan",
+          "subject": "entry.arg0",
+          "object": "entry.arg1",
+          "requires": [],
+          "authorization": [],
+          "authorizationBindings": [],
+          "evidence": {
+            "file": "services.py",
+            "line": 14,
+            "endLine": 14,
+            "startColumn": 4,
+            "endColumn": 79,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "edcf61274653afd31f167974f60215966efaa4986c49a2384d34f92bce32752e",
+            "text": "enforce(actor, item, actor.role == \"staff\" and actor.tenant == item.tenant)"
+          },
+          "callPath": [
+            "routes.return_volume",
+            "services.close_loan"
+          ],
+          "condition": "entry.arg0.role == 'staff' and entry.arg0.tenant == entry.arg1.tenant",
+          "technicalApi": "framework.enforce",
+          "technicalEvidence": {
+            "file": "framework.py",
+            "line": 16,
+            "endLine": 18,
+            "startColumn": 0,
+            "endColumn": 30,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "420f2062ad814ce2e371e3a89ee79d6e69f059138369515a395b5f1952541ae5",
+            "text": "def enforce(subject, resource, predicate):\n    if not predicate:\n        raise AccessRejected()"
+          }
+        },
+        {
+          "id": "routes:14:0:14:47:POST:/loans/close:routes.return_volume:step:1",
+          "index": 1,
+          "kind": "business-check",
+          "implementation": "services.close_loan",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "routes:14:0:14:47:POST:/loans/close:routes.return_volume:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "services.py",
+            "line": 15,
+            "endLine": 15,
+            "startColumn": 4,
+            "endColumn": 44,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "edcf61274653afd31f167974f60215966efaa4986c49a2384d34f92bce32752e",
+            "text": "validate(item, item.state == \"borrowed\")"
+          },
+          "callPath": [
+            "routes.return_volume",
+            "services.close_loan"
+          ],
+          "condition": "entry.arg1.state == 'borrowed'",
+          "technicalApi": "framework.validate",
+          "technicalEvidence": {
+            "file": "framework.py",
+            "line": 21,
+            "endLine": 23,
+            "startColumn": 0,
+            "endColumn": 32,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "420f2062ad814ce2e371e3a89ee79d6e69f059138369515a395b5f1952541ae5",
+            "text": "def validate(resource, predicate):\n    if not predicate:\n        raise InvalidOperation()"
+          }
+        },
+        {
+          "id": "routes:14:0:14:47:POST:/loans/close:routes.return_volume:step:2",
+          "index": 2,
+          "kind": "memory-write",
+          "implementation": "services.close_loan",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0,
+            1
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "routes:14:0:14:47:POST:/loans/close:routes.return_volume:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "services.py",
+            "line": 16,
+            "endLine": 16,
+            "startColumn": 4,
+            "endColumn": 28,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "edcf61274653afd31f167974f60215966efaa4986c49a2384d34f92bce32752e",
+            "text": "item.state = \"available\""
+          },
+          "callPath": [
+            "routes.return_volume",
+            "services.close_loan"
+          ],
+          "field": "state",
+          "value": "'available'"
+        },
+        {
+          "id": "routes:14:0:14:47:POST:/loans/close:routes.return_volume:step:3",
+          "index": 3,
+          "kind": "memory-write",
+          "implementation": "shared.record",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0,
+            1
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "routes:14:0:14:47:POST:/loans/close:routes.return_volume:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "shared.py",
+            "line": 2,
+            "endLine": 2,
+            "startColumn": 4,
+            "endColumn": 28,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "cda6d7fed4a370a41265b364d7a159c93987415c6475b29541528b82a07b3696",
+            "text": "target.audit = \"updated\""
+          },
+          "callPath": [
+            "routes.return_volume",
+            "services.close_loan",
+            "shared.record"
+          ],
+          "field": "audit",
+          "value": "'updated'"
+        }
+      ],
+      "calls": [
+        {
+          "caller": "routes.return_volume",
+          "callee": "services.close_loan",
+          "evidence": {
+            "file": "routes.py",
+            "line": 10,
+            "endLine": 10,
+            "startColumn": 11,
+            "endColumn": 40,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "a59754f58ffd9ab2975d829c3043b24ba7e0574dc75bb98129486393f5ae2269",
+            "text": "close_loan(principal, volume)"
+          },
+          "bindings": {
+            "actor": "entry.arg0",
+            "item": "entry.arg1"
+          }
+        },
+        {
+          "caller": "services.close_loan",
+          "callee": "shared.record",
+          "evidence": {
+            "file": "services.py",
+            "line": 17,
+            "endLine": 17,
+            "startColumn": 4,
+            "endColumn": 16,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "edcf61274653afd31f167974f60215966efaa4986c49a2384d34f92bce32752e",
+            "text": "record(item)"
+          },
+          "bindings": {
+            "target": "entry.arg1"
+          }
+        }
+      ],
+      "diagnostics": [],
+      "unresolvedCandidates": [],
+      "complete": true,
+      "authorizationDecision": "unknown"
+    }
+  ],
+  "sharedImplementations": [
+    "shared.record"
+  ]
+}

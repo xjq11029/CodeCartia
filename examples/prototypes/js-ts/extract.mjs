@@ -4,18 +4,19 @@ import crypto from "node:crypto";
 import { createRequire } from "node:module";
 import { performance } from "node:perf_hooks";
 import { fileURLToPath } from "node:url";
+import { reportPath, writeReport } from "./io-policy.mjs";
 
 // 可信实验脚本；只加载显式登记的编译器，不执行 inputs 下任何模块。
-const args = process.argv.slice(2);
+export function extract(args = process.argv.slice(2)) {
 const option = (name, fallback) => {
   const i = args.indexOf(name);
   return i < 0 ? fallback : args[i + 1];
 };
 const base = path.dirname(fileURLToPath(import.meta.url));
 const experimentCase = option("--case", "semantic");
-if (!["semantic", "components", "encoding"].includes(experimentCase)) throw new Error("只有登记的 semantic/components/encoding 可执行；框架输入保持规格状态。");
+if (!["semantic", "components", "encoding", "boundary"].includes(experimentCase)) throw new Error("只有登记的 semantic/components/encoding/boundary 可执行；框架输入保持规格状态。");
 const toolConfigPath = path.resolve(base, option("--toolchain", "toolchain.windows-observed.json"));
-const outputPath = path.resolve(base, option("--output", `reports/${experimentCase}.json`));
+const outputPath = reportPath(option("--output", `reports/${experimentCase}.json`));
 const root = fs.realpathSync(path.join(base, "inputs", experimentCase));
 const nodeLimitText = option("--node-limit", "100000");
 const nodeLimit = Number(nodeLimitText);
@@ -30,7 +31,6 @@ const ts = createRequire(import.meta.url)(modulePath);
 if (ts.version !== toolConfig.observedVersion) throw new Error(`工具版本改变：配置 ${toolConfig.observedVersion}，实际 ${ts.version}；须重新登记。`);
 const normalize = (p) => p.replaceAll("\\", "/");
 const within = (p, r) => p === r || p.startsWith(r + path.sep);
-if (within(outputPath, path.join(base, "inputs"))) throw new Error("报告不能覆盖输入。");
 const readFiles = new Map();
 const queries = new Map();
 const experimentDiagnostics = [];
@@ -68,18 +68,24 @@ const fileExists = (file) => {
 const configPath = path.join(root, "tsconfig.json");
 const parsedFile = ts.readConfigFile(configPath, readText);
 if (parsedFile.error) throw new Error(ts.flattenDiagnosticMessageText(parsedFile.error.messageText, "\n"));
+if (!Array.isArray(parsedFile.config.files) || parsedFile.config.extends || parsedFile.config.include || parsedFile.config.references) throw new Error("局部实验仅接受显式 files 的静态 JSON；不展开 include、extends 或项目引用。");
 const parsed = ts.parseJsonConfigFileContent(parsedFile.config, {
   useCaseSensitiveFileNames: true,
-  readDirectory: (dir, extensions, excludes, includes, depth) => allowedPath(dir) ? ts.sys.readDirectory(dir, extensions, excludes, includes, depth) : [],
+  readDirectory: () => [],
   fileExists, readFile: readText,
 }, root);
 if (parsed.errors.length) throw new Error(parsed.errors.map(d => ts.flattenDiagnosticMessageText(d.messageText, "\n")).join("\n"));
 const host = ts.createCompilerHost(parsed.options, true);
 host.readFile = readText;
 host.fileExists = fileExists;
-host.directoryExists = (dir) => Boolean(allowedPath(dir) && fs.existsSync(dir) && fs.statSync(dir).isDirectory());
+host.directoryExists = (dir) => {
+  const permitted = allowedPath(dir);
+  const exists = Boolean(permitted && fs.existsSync(permitted) && fs.statSync(permitted).isDirectory());
+  queries.set(`directory:${normalize(path.resolve(dir))}`, { kind: "directory", path: inputRelative(path.resolve(dir)), exists, deniedByRegistration: !permitted });
+  return exists;
+};
 host.getCurrentDirectory = () => root;
-host.getDirectories = (dir) => allowedPath(dir) ? ts.sys.getDirectories(dir).filter(d => allowedPath(path.join(dir, d))) : [];
+host.getDirectories = (dir) => allowedPath(dir) ? fs.readdirSync(allowedPath(dir), { withFileTypes: true }).filter(d => d.isDirectory() && allowedPath(path.join(dir, d.name))).map(d => d.name) : [];
 host.realpath = (p) => allowedPath(p) || path.resolve(p);
 host.writeFile = () => { throw new Error("实验禁止 emit"); };
 // createCompilerHost默认getSourceFile绑定默认readFile；显式改写保证全部读取走登记边界。
@@ -251,8 +257,8 @@ const report = {
   format: "codecartia-local-experiment-v0.1", contractMapping: "M1-02 0.1-draft 的局部字段核对；非完整schema兼容、非worker实现",
   sourceViewId: "automatic-static-local", capturedAt: new Date().toISOString(),
   toolchain: { name: "TypeScript Compiler API", version: ts.version, source: toolConfig.source, modulePath: normalize(modulePath), moduleFingerprint: sha256(fs.readFileSync(modulePath)), externalRegistrations: [{ root: normalize(libRoot), purpose: "可信候选编译器及只读内置类型定义" }], nodeVersion: process.version, platform: process.platform, architecture: process.arch },
-  inputManifest, scriptFingerprint: sha256(fs.readFileSync(new URL(import.meta.url))), toolConfigFingerprint: sha256(toolConfigBytes), compilerOptions: parsed.options,
-  command: { actual: [process.execPath, ...process.argv.slice(1)], reproduce: `pnpm extract --case ${experimentCase} --toolchain toolchain.windows-observed.json --node-limit ${nodeLimit} --output ${normalize(path.relative(base, outputPath))}` },
+  inputManifest, scriptFingerprint: sha256(fs.readFileSync(new URL(import.meta.url))), outputPolicyFingerprint: sha256(fs.readFileSync(new URL("./io-policy.mjs", import.meta.url))), toolConfigFingerprint: sha256(toolConfigBytes), compilerOptions: parsed.options,
+  command: { actual: [process.execPath, fileURLToPath(import.meta.url), ...args], reproduce: `pnpm extract --case ${experimentCase} --toolchain toolchain.windows-observed.json --node-limit ${nodeLimit} --output ${normalize(path.relative(base, outputPath))}` },
   durationMs: performance.now() - started,
   peakMemoryObservation: { maxRSS: process.resourceUsage().maxRSS, maxRSSUnit: "Node process.resourceUsage kilobytes", memoryAtEnd: process.memoryUsage(), limitation: "进程资源观察；非产品负载/性能验收" },
   registeredRoot: normalize(root), expectedReadByExtractor: false,
@@ -261,6 +267,8 @@ const report = {
   completeness: { complete: !incomplete, missingInputs: diagnostics.filter(d => d.code === "TS2307"), unsupportedModes: ["跨入口多层传播", "HTTP分发", "业务/授权", "框架语义", "完整公共schema", "worker协议", "增量恢复"], truncations: truncatedAt ? [{ profileId: "local-ast-node-limit-observed", nodeLimit, visitedNodes, evidence: truncatedAt }] : [], freshness: "current", affectedScope: experimentCase },
   scopeLimitations: ["真实Compiler API局部静态符号/签名与原始坐标；不执行输入。", "所有工具查询仅限登记源码根和TypeScript内置lib根；无下载/构建。", "完整性只针对登记的局部扫描和有据绑定，不能解释为LC/语言/框架/产品深度准入。", "selected签名是静态类型观察，合法候选不证明运行时目标。", "ID在本次不可变输入里可复核，不保证跨编辑稳定。"],
 };
-fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-fs.writeFileSync(outputPath, JSON.stringify(report, null, 2) + "\n");
+writeReport(outputPath, report);
 process.stdout.write(JSON.stringify({ output: normalize(outputPath), status: report.status, version: ts.version, facts: facts.length, diagnostics: diagnostics.length, complete: report.completeness.complete, visitedNodes, durationMs: report.durationMs }) + "\n");
+return report;
+}
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) extract();

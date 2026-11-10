@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test": "node run.mjs",
     "extract": "node extract.mjs",
     "verify": "node verify.mjs"
   }

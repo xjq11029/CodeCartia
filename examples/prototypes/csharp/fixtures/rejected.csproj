@@ -1,0 +1,6 @@
+<Project>
+  <Target Name="Sentinel" BeforeTargets="Build">
+    <WriteLinesToFile File="$(MSBuildThisFileDirectory)project.executed" Lines="project was evaluated/executed" />
+    <Error Text="The local experiment must reject project files before loading them" />
+  </Target>
+</Project>

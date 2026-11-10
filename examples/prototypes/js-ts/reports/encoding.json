@@ -1,0 +1,625 @@
+{
+  "experimentId": "M1-04-JS-TS-encoding",
+  "status": "semantic-local-executed",
+  "format": "codecartia-local-experiment-v0.1",
+  "contractMapping": "M1-02 0.1-draft 的局部字段核对；非完整schema兼容、非worker实现",
+  "sourceViewId": "automatic-static-local",
+  "capturedAt": "2026-11-10T06:08:53.906Z",
+  "toolchain": {
+    "name": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "source": "当前 Windows 开发机 VS Code 内置 TypeScript；只作为已装候选实测，不作为产品依赖选型。",
+    "modulePath": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/typescript.js",
+    "moduleFingerprint": "569177652966bd528c319171c7dd22860dbf72bde116cbc4f644f1d02bb12e39",
+    "externalRegistrations": [
+      {
+        "root": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib",
+        "purpose": "可信候选编译器及只读内置类型定义"
+      }
+    ],
+    "nodeVersion": "v24.11.0",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "inputManifest": [
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.decorators.d.ts",
+      "fingerprint": "sha256:1ce14b81c5cc821994aa8ec1d42b220dd41b27fcc06373bce3958af7421b77d4",
+      "byteLength": 13153,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.decorators.legacy.d.ts",
+      "fingerprint": "sha256:b3a048b3e9302ef9a34ef4ebb9aecfb28b66abb3bce577206a79fee559c230da",
+      "byteLength": 1287,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.dom.asynciterable.d.ts",
+      "fingerprint": "sha256:7f57fc4404ff020bc45b9c620aff2b40f700b95fe31164024c453a5e3c163c54",
+      "byteLength": 933,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.dom.d.ts",
+      "fingerprint": "sha256:d6b1eba8496bdd0eed6fc8a685768fe01b2da4a0388b5fe7df558290bffcf32f",
+      "byteLength": 2349483,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.dom.iterable.d.ts",
+      "fingerprint": "sha256:7f57fc4404ff020bc45b9c620aff2b40f700b95fe31164024c453a5e3c163c54",
+      "byteLength": 933,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "fingerprint": "sha256:105ba8ff7ba746404fe1a2e189d1d3d2e0eb29a08c18dded791af02f29fb4711",
+      "byteLength": 5305,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "fingerprint": "sha256:eadcffda2aa84802c73938e589b9e58248d74c59cb7fcbca6474e3435ac15504",
+      "byteLength": 22824,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.d.ts",
+      "fingerprint": "sha256:3f88bedbeb09c6f5a6645cb24c7c55f1aa22d19ae96c8e6959cbd8b85a707bc6",
+      "byteLength": 1202,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "fingerprint": "sha256:00343ca5b2e3d48fa5df1db6e32ea2a59afab09590274a6cccb1dbae82e60c7c",
+      "byteLength": 2518,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "fingerprint": "sha256:ebd9f816d4002697cb2864bea1f0b70a103124e18a8cd9645eeccc09bdf80ab4",
+      "byteLength": 18185,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "fingerprint": "sha256:2c1afac30a01772cd2a9a298a7ce7706b5892e447bb46bdbeef720f7b5da77ad",
+      "byteLength": 3161,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "fingerprint": "sha256:7b0225f483e4fa685625ebe43dd584bb7973bbd84e66a6ba7bbe175ee1048b4f",
+      "byteLength": 5212,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "fingerprint": "sha256:c0a4b8ac6ce74679c1da2b3795296f5896e31c38e888469a8e0f99dc3305de60",
+      "byteLength": 6454,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "fingerprint": "sha256:3084a7b5f569088e0146533a00830e206565de65cae2239509168b11434cd84f",
+      "byteLength": 1610,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "fingerprint": "sha256:c5079c53f0f141a0698faa903e76cb41cd664e3efb01cc17a5c46ec2eb0bef42",
+      "byteLength": 10971,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "fingerprint": "sha256:32cafbc484dea6b0ab62cf8473182bbcb23020d70845b406f80b7526f38ae862",
+      "byteLength": 5165,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2016.d.ts",
+      "fingerprint": "sha256:7fe93b39b810eadd916be8db880dd7f0f7012a5cc6ffb62de8f62a2117fa6f1f",
+      "byteLength": 926,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2016.intl.d.ts",
+      "fingerprint": "sha256:fca4cdcb6d6c5ef18a869003d02c9f0fd95df8cfaf6eb431cd3376bc034cad36",
+      "byteLength": 1445,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.arraybuffer.d.ts",
+      "fingerprint": "sha256:b93ec88115de9a9dc1b602291b85baf825c85666bf25985cc5f698073892b467",
+      "byteLength": 876,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.d.ts",
+      "fingerprint": "sha256:bb0074cc08b84a2374af33d8bf044b80851ccc9e719a5e202eacf40db2c31600",
+      "byteLength": 1123,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.date.d.ts",
+      "fingerprint": "sha256:f5c06dcc3fe849fcb297c247865a161f995cc29de7aa823afdd75aaaddc1419b",
+      "byteLength": 1877,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "fingerprint": "sha256:c7b3542146734342e440a84b213384bfa188835537ddbda50d30766f0593aff9",
+      "byteLength": 1410,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "fingerprint": "sha256:b77e16112127a4b169ef0b8c3a4d730edf459c5f25fe52d5e436a6919206c4d7",
+      "byteLength": 2434,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "fingerprint": "sha256:fbffd9337146eff822c7c00acbb78b01ea7ea23987f6c961eba689349e744f8c",
+      "byteLength": 7170,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "fingerprint": "sha256:a995c0e49b721312f74fdfb89e4ba29bd9824c770bbb4021d74d2bf560e4c6bd",
+      "byteLength": 2339,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "fingerprint": "sha256:ce6180fa19b1cccd07ee7f7dbb9a367ac19c0ed160573e4686425060b6df7f57",
+      "byteLength": 1503,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+      "fingerprint": "sha256:3f02e2476bccb9dbe21280d6090f0df17d2f66b74711489415a8aa4df73c9675",
+      "byteLength": 2653,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "fingerprint": "sha256:45e3ab34c1c013c8ab2dc1ba4c80c780744b13b5676800ae2e3be27ae862c40c",
+      "byteLength": 2218,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.d.ts",
+      "fingerprint": "sha256:1a7daebe4f45fb03d9ec53d60008fbf9ac45a697fdc89e4ce218bc94b94f94d6",
+      "byteLength": 1049,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "fingerprint": "sha256:805c86f6cca8d7702a62a844856dbaa2a3fd2abef0536e65d48732441dde5b5b",
+      "byteLength": 2982,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "fingerprint": "sha256:e42e397f1a5a77994f0185fd1466520691456c772d06bf843e5084ceb879a0ad",
+      "byteLength": 1314,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "fingerprint": "sha256:f4c2b41f90c95b1c532ecc874bd3c111865793b23aebcc1c3cbbabcd5d76ffb0",
+      "byteLength": 1193,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.array.d.ts",
+      "fingerprint": "sha256:ab26191cfad5b66afa11b8bf935ef1cd88fabfcb28d30b2dfa6fad877d050332",
+      "byteLength": 3124,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.d.ts",
+      "fingerprint": "sha256:f94b133a3cb14a288803be545ac2683e0d0ff6661bcd37e31aaaec54fc382aed",
+      "byteLength": 1032,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.intl.d.ts",
+      "fingerprint": "sha256:689da16f46e647cef0d64b0def88910e818a5877ca5379ede156ca3afb780ac3",
+      "byteLength": 919,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.object.d.ts",
+      "fingerprint": "sha256:2088bc26531e38fb05eedac2951480db5309f6be3fa4a08d2221abb0f5b4200d",
+      "byteLength": 1434,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.string.d.ts",
+      "fingerprint": "sha256:cb9d366c425fea79716a8fb3af0d78e6b22ebbab3bd64d25063b42dc9f531c1e",
+      "byteLength": 1489,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.symbol.d.ts",
+      "fingerprint": "sha256:500934a8089c26d57ebdb688fc9757389bb6207a3c8f0674d68efa900d2abb34",
+      "byteLength": 967,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.bigint.d.ts",
+      "fingerprint": "sha256:bc21cc8b6fee4f4c2440d08035b7ea3c06b3511314c8bab6bef7a92de58a2593",
+      "byteLength": 38258,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.d.ts",
+      "fingerprint": "sha256:f59d0650799f8782fd74cf73c19223730c6d1b9198671b1c5b3a38e1188b5953",
+      "byteLength": 1162,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.date.d.ts",
+      "fingerprint": "sha256:7ca53d13d2957003abb47922a71866ba7cb2068f8d154877c596d63c359fed25",
+      "byteLength": 2917,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.intl.d.ts",
+      "fingerprint": "sha256:48915f327cd1dea4d7bd358d9dc7732f58f9e1626a29cc0c05c8c692419d9bb7",
+      "byteLength": 22399,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.number.d.ts",
+      "fingerprint": "sha256:b7bf9377723203b5a6a4b920164df22d56a43f593269ba6ae1fdc97774b68855",
+      "byteLength": 1548,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.promise.d.ts",
+      "fingerprint": "sha256:54725f8c4df3d900cb4dac84b64689ce29548da0b4e9b7c2de61d41c79293611",
+      "byteLength": 1764,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.sharedmemory.d.ts",
+      "fingerprint": "sha256:e5594bc3076ac29e6c1ebda77939bc4c8833de72f654b6e376862c0473199323",
+      "byteLength": 5089,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.string.d.ts",
+      "fingerprint": "sha256:2f3eb332c2d73e729f3364fcc0c2b375e72a121e8157d25a82d67a138c83a95c",
+      "byteLength": 2451,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts",
+      "fingerprint": "sha256:6f4427f9642ce8d500970e4e69d1397f64072ab73b97e476b4002a646ac743b1",
+      "byteLength": 1566,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2021.d.ts",
+      "fingerprint": "sha256:8a15b4607d9a499e2dbeed9ec0d3c0d7372c850b2d5f1fb259e8f6d41d468a84",
+      "byteLength": 997,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2021.intl.d.ts",
+      "fingerprint": "sha256:a917a49ac94cd26b754ab84e113369a75d1a47a710661d7cd25e961cc797065f",
+      "byteLength": 8206,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2021.promise.d.ts",
+      "fingerprint": "sha256:db9709688f82c9e5f65a119c64d835f906efe5f559d08b11642d56eb85b79357",
+      "byteLength": 2223,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2021.string.d.ts",
+      "fingerprint": "sha256:4b25b8c874acd1a4cf8444c3617e037d444d19080ac9f634b405583fd10ce1f7",
+      "byteLength": 1553,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2021.weakref.d.ts",
+      "fingerprint": "sha256:37be57d7c90cf1f8112ee2636a068d8fd181289f82b744160ec56a7dc158a9f5",
+      "byteLength": 3132,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.array.d.ts",
+      "fingerprint": "sha256:6d3261badeb7843d157ef3e6f5d1427d0eeb0af0cf9df84a62cfd29fd47ac86e",
+      "byteLength": 4637,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.d.ts",
+      "fingerprint": "sha256:26e0fe14baee4e127f4365d1ae0b276f400562e45e19e35fd2d4c296684715e6",
+      "byteLength": 1069,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.error.d.ts",
+      "fingerprint": "sha256:195daca651dde22f2167ac0d0a05e215308119a3100f5e6268e8317d05a92526",
+      "byteLength": 2340,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.full.d.ts",
+      "fingerprint": "sha256:01a30f9e8582b369075c0808df71121e6855cb06fd8d3d39511d9ebb66405205",
+      "byteLength": 1035,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.intl.d.ts",
+      "fingerprint": "sha256:8b11e4285cd2bb164a4dc09248bdec69e9842517db4ca47c1ba913011e44ff2f",
+      "byteLength": 7653,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.object.d.ts",
+      "fingerprint": "sha256:0508571a52475e245b02bc50fa1394065a0a3d05277fbf5120c3784b85651799",
+      "byteLength": 1046,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.regexp.d.ts",
+      "fingerprint": "sha256:fc611fea8d30ea72c6bbfb599c9b4d393ce22e2f5bfef2172534781e7d138104",
+      "byteLength": 1304,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.string.d.ts",
+      "fingerprint": "sha256:8f9af488f510c3015af3cc8c267a9e9d96c4dd38a1fdff0e11dc5a544711415b",
+      "byteLength": 1116,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es5.d.ts",
+      "fingerprint": "sha256:bcd24271a113971ba9eb71ff8cb01bc6b0f872a85c23fdbe5d93065b375933cd",
+      "byteLength": 218972,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.scripthost.d.ts",
+      "fingerprint": "sha256:f13f4b465c99041e912db5c44129a94588e1aafee35a50eab51044833f50b4ee",
+      "byteLength": 9412,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "fingerprint": "sha256:2a2de5b9459b3fc44decd9ce6100b72f1b002ef523126c1d3d8b2a4a63d74d78",
+      "byteLength": 1002,
+      "encoding": "UTF-8-lossless",
+      "carrier": "semantic-library"
+    },
+    {
+      "inputId": "inputs/encoding/invalid.ts",
+      "fingerprint": "sha256:fc906c0364f192171fd46b96122f54c2752662fa62c3f81f9cc51fbd77a0d648",
+      "byteLength": 6,
+      "encoding": "UTF-8-undecodable",
+      "carrier": "source"
+    },
+    {
+      "inputId": "inputs/encoding/tsconfig.json",
+      "fingerprint": "sha256:c252ede38002cfc32220de5449454d3594599ea185d7f9f1b46cae71a19c6f0c",
+      "byteLength": 127,
+      "encoding": "UTF-8-lossless",
+      "carrier": "config"
+    }
+  ],
+  "scriptFingerprint": "9f22da6395b4c4ed03abd5915aa59c54bfa7195af882db29262d2c2061c46a99",
+  "outputPolicyFingerprint": "498d639fc7d0fff5a9e3040c281b652c08d164746eafd4bae7f1f57b93104290",
+  "toolConfigFingerprint": "c046515bd2412beb921d4f5ca1cd8e6089aed7a14ff523648570dd0d4819519a",
+  "compilerOptions": {
+    "target": 9,
+    "module": 99,
+    "strict": true,
+    "noEmit": true
+  },
+  "command": {
+    "actual": [
+      "D:\\Node\\node.exe",
+      "D:\\ProjectCode\\CodeCartia\\examples\\prototypes\\js-ts\\extract.mjs",
+      "--case",
+      "encoding"
+    ],
+    "reproduce": "pnpm extract --case encoding --toolchain toolchain.windows-observed.json --node-limit 100000 --output reports/encoding.json"
+  },
+  "durationMs": 347.86120000000005,
+  "peakMemoryObservation": {
+    "maxRSS": 496820,
+    "maxRSSUnit": "Node process.resourceUsage kilobytes",
+    "memoryAtEnd": {
+      "rss": 508743680,
+      "heapTotal": 431128576,
+      "heapUsed": 323189272,
+      "external": 20153452,
+      "arrayBuffers": 17980187
+    },
+    "limitation": "进程资源观察；非产品负载/性能验收"
+  },
+  "registeredRoot": "D:/ProjectCode/CodeCartia/examples/prototypes/js-ts/inputs/encoding",
+  "expectedReadByExtractor": false,
+  "resolutionQueries": [
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib",
+      "exists": true,
+      "deniedByRegistration": false
+    },
+    {
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/package.json",
+      "exists": false,
+      "deniedByRegistration": false
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/",
+      "exists": false,
+      "deniedByRegistration": true
+    }
+  ],
+  "symbols": [],
+  "facts": [],
+  "diagnostics": [
+    {
+      "code": "TS6053",
+      "category": "Error",
+      "message": "File 'D:/ProjectCode/CodeCartia/examples/prototypes/js-ts/inputs/encoding/invalid.ts' not found.\n  The file is in the program because:\n    Root file specified for compilation",
+      "evidence": null
+    },
+    {
+      "code": "INVALID_UTF8",
+      "file": "inputs/encoding/invalid.ts",
+      "message": "The encoded data was not valid for encoding utf-8"
+    }
+  ],
+  "budgetObservation": {
+    "profileId": "local-ast-node-limit-observed",
+    "nodeLimit": 100000,
+    "visitedNodes": 0,
+    "truncated": false
+  },
+  "completeness": {
+    "complete": false,
+    "missingInputs": [],
+    "unsupportedModes": [
+      "跨入口多层传播",
+      "HTTP分发",
+      "业务/授权",
+      "框架语义",
+      "完整公共schema",
+      "worker协议",
+      "增量恢复"
+    ],
+    "truncations": [],
+    "freshness": "current",
+    "affectedScope": "encoding"
+  },
+  "scopeLimitations": [
+    "真实Compiler API局部静态符号/签名与原始坐标；不执行输入。",
+    "所有工具查询仅限登记源码根和TypeScript内置lib根；无下载/构建。",
+    "完整性只针对登记的局部扫描和有据绑定，不能解释为LC/语言/框架/产品深度准入。",
+    "selected签名是静态类型观察，合法候选不证明运行时目标。",
+    "ID在本次不可变输入里可复核，不保证跨编辑稳定。"
+  ]
+}

@@ -1,0 +1,724 @@
+{
+  "experimentId": "M1-04-JS-TS-local-verification",
+  "status": "checks-passed",
+  "source": "独立SPEC和expected；局部实验，非产品验收分数",
+  "expectedFingerprint": "6a0fe82b5b46bcc210cb34a5214be0b383ba5806bb7f7acad5383fb029f2ac52",
+  "verifierFingerprint": "dff9cd8228ef71590ddc864f18d89426b9b60c1d23b47143cf88d64b81060ae1",
+  "reportFingerprints": {
+    "semantic": "ddec897982578ebc64b5d924574b908fc0f2a34653dea9902d27e753ff376fc5",
+    "components": "29922656525d9203570d49f6a33fe553a5fba97b1decf104bbad7f617e8733ec",
+    "encoding": "0f553612ce8891e03c996dc1ff83374315b2c3022d5c5a56dbc7488c39fc9440",
+    "truncated": "5eb370653b900c6f2f3ecf262445d022867b34684a409411e3ebe6251b158d36",
+    "boundary": "1d8abd8b04a9d84df49d60aa2f43f22a454d4e4e09a708c58d22a5d21dd48262"
+  },
+  "passed": 134,
+  "total": 134,
+  "checks": [
+    {
+      "name": "semantic:every-call-declaration-argument-and-diagnostic-evidence",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "components:every-call-declaration-argument-and-diagnostic-evidence",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "exact-independent-call-inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/wrapper.ts:3:mode",
+      "passed": true,
+      "detail": "exact"
+    },
+    {
+      "name": "call:inputs/semantic/wrapper.ts:3:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "transmit(route)"
+      }
+    },
+    {
+      "name": "argument:inputs/semantic/wrapper.ts:3:0:raw-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:3:exact-single-target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:3:actual-declaration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:3:argument-parameter-pair",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:5:mode",
+      "passed": true,
+      "detail": "exact"
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:5:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "invoke(\"/alpha\")"
+      }
+    },
+    {
+      "name": "argument:inputs/semantic/entry.ts:5:0:raw-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:5:exact-single-target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:5:actual-declaration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:5:argument-parameter-pair",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:8:mode",
+      "passed": true,
+      "detail": "exact"
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:8:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "invoke(\"/beta\")"
+      }
+    },
+    {
+      "name": "argument:inputs/semantic/entry.ts:8:0:raw-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:8:exact-single-target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:8:actual-declaration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:8:argument-parameter-pair",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:13:mode",
+      "passed": true,
+      "detail": "exact"
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:13:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "same(\"scope-a\")"
+      }
+    },
+    {
+      "name": "argument:inputs/semantic/entry.ts:13:0:raw-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:13:exact-single-target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:13:actual-declaration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:13:argument-parameter-pair",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:17:mode",
+      "passed": true,
+      "detail": "exact"
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:17:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "same(\"scope-b\")"
+      }
+    },
+    {
+      "name": "argument:inputs/semantic/entry.ts:17:0:raw-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:17:exact-single-target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:17:actual-declaration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:17:argument-parameter-pair",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:20:mode",
+      "passed": true,
+      "detail": "exact"
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:20:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "convert(\"ok\")"
+      }
+    },
+    {
+      "name": "argument:inputs/semantic/entry.ts:20:0:raw-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:20:exact-single-target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:20:overload-signature",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:20:return-type",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:21:mode",
+      "passed": true,
+      "detail": "exact"
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:21:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "convert(7)"
+      }
+    },
+    {
+      "name": "argument:inputs/semantic/entry.ts:21:0:raw-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:21:exact-single-target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:21:overload-signature",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:21:return-type",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:22:mode",
+      "passed": true,
+      "detail": "candidateSet"
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:22:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "selected(\"candidate\")"
+      }
+    },
+    {
+      "name": "call:22:candidate-declarations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:22:no-selected-runtime-target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:23:mode",
+      "passed": true,
+      "detail": "unknown"
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:23:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "convert(true)"
+      }
+    },
+    {
+      "name": "call:23:no-recovery-confirmation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:23:error-diagnostic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:26:mode",
+      "passed": true,
+      "detail": "unknown"
+    },
+    {
+      "name": "call:inputs/semantic/entry.ts:26:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "dynamic(\"opaque\")"
+      }
+    },
+    {
+      "name": "call:26:no-recovery-confirmation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/missing.ts:2:mode",
+      "passed": true,
+      "detail": "unknown"
+    },
+    {
+      "name": "call:inputs/semantic/missing.ts:2:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "absent(\"input\")"
+      }
+    },
+    {
+      "name": "call:2:no-recovery-confirmation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:inputs/semantic/esm.js:2:mode",
+      "passed": true,
+      "detail": "exact"
+    },
+    {
+      "name": "call:inputs/semantic/esm.js:2:independent-source-expression",
+      "passed": true,
+      "detail": {
+        "valid": true,
+        "text": "alias(\"js-input\")"
+      }
+    },
+    {
+      "name": "argument:inputs/semantic/esm.js:2:0:raw-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:2:exact-single-target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:2:actual-declaration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "call:2:argument-parameter-pair",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "scope-separation:targetIds:13:17",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "scope-separation:contextId:5:8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shared-target-independent-callsite-arguments",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shared-formal-does-not-create-full-entry-propagation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native-diagnostic:TS2307",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native-diagnostic:TS2322",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "native-diagnostic:TS2769",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "coordinate:inputs/semantic/coordinates.ts:native-and-normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "coordinate:inputs/semantic/coordinates.ts:raw-byte-slice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "coordinate:inputs/semantic/bom.ts:native-and-normalized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "coordinate:inputs/semantic/bom.ts:raw-byte-slice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "jsx:inputs/components/page.tsx:native-symbol",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "jsx:inputs/components/plain.jsx:native-symbol",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual-import-alias-dereference",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing-input-query-recorded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "negative-input-makes-report-incomplete",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local-jsx-without-framework-claim",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "semantic:extractor-current-script",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "semantic:output-policy-current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "semantic:no-expected-in-input-manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "semantic:raw-input-fingerprints",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "semantic:query-observations-current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "semantic:compiler-version-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "components:extractor-current-script",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "components:output-policy-current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "components:no-expected-in-input-manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "components:raw-input-fingerprints",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "components:query-observations-current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "components:compiler-version-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encoding:extractor-current-script",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encoding:output-policy-current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encoding:no-expected-in-input-manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encoding:raw-input-fingerprints",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encoding:query-observations-current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "encoding:compiler-version-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "truncated:extractor-current-script",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "truncated:output-policy-current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "truncated:no-expected-in-input-manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "truncated:raw-input-fingerprints",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "truncated:query-observations-current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "truncated:compiler-version-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "boundary:extractor-current-script",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "boundary:output-policy-current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "boundary:no-expected-in-input-manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "boundary:raw-input-fingerprints",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "boundary:query-observations-current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "boundary:compiler-version-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-utf8-is-diagnosed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "invalid-utf8-raw-fingerprint-preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "explicit-node-limit-truncation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "outside-case-import-denied",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source-and-target-plugin-not-executed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current-boundary-run-and-output-refusal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all-report-writers-reject-linked-final-path-and-parent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:swapped-entry-argument",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:merged-same-name-target",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:merged-entry-context",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:promoted-recovery-signature",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:utf16-used-as-byte",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:missing-call",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:extra-candidate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:missing-union-candidate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:extra-call",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:call-byte-end-outside-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:call-evidence-wrong-fingerprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:call-column-disagrees-with-bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:target-declaration-byte-end-outside-source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:overload-evidence-wrong-fingerprint",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "oracle-rejects:argument-evidence-wrong-source-range",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

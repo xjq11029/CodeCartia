@@ -1,0 +1,9 @@
+{
+  "profileVersion": "synthetic-api/0.1",
+  "evidenceDocument": "TECHNICAL-API.md",
+  "entry": {"symbol": "framework.register", "registry": "REGISTRY", "methodArgument": 0, "addressArgument": 1, "handlerArgument": 2},
+  "checks": [
+    {"symbol": "framework.enforce", "kind": "authorization-check", "subjectArgument": 0, "objectArgument": 1, "predicateArgument": 2, "exception": "AccessRejected", "exceptionBase": "PermissionError"},
+    {"symbol": "framework.validate", "kind": "business-check", "objectArgument": 0, "predicateArgument": 1, "exception": "InvalidOperation", "exceptionBase": "ValueError"}
+  ]
+}

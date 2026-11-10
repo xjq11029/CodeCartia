@@ -2,8 +2,8 @@
   "expectedVersion": "csharp-independent-v1",
   "inputVersion": "csharp-raw-v1",
   "positiveCalls": [
-    { "text": "Converter.Select(7)", "signature": "Lab.Converter.Select(int)", "targetInputId": "csharp-input:positive/Converter.cs" },
-    { "text": "Converter.Select(label)", "signature": "Lab.Converter.Select(string)", "targetInputId": "csharp-input:positive/Converter.cs" }
+    { "text": "Converter.Select(7)", "signature": "Lab.Converter.Select(int)", "targetInputId": "csharp-input:positive/Converter.cs", "targetLine": 5, "targetSpan": {"startByte": 73, "endByte": 79, "startLine": 5, "startColumn": 26, "endLine": 5, "endColumn": 32}, "declarationLine": "public static string Select(int value) => \"number\";" },
+    { "text": "Converter.Select(label)", "signature": "Lab.Converter.Select(string)", "targetInputId": "csharp-input:positive/Converter.cs", "targetLine": 6, "targetSpan": {"startByte": 129, "endByte": 135, "startLine": 6, "startColumn": 26, "endLine": 6, "endColumn": 32}, "declarationLine": "public static string Select(string value) => value;" }
   ],
   "unknownCalls": [
     { "caseId": "missing-reference", "text": "ExternalApi.Read()", "reason": "no-bound-symbol", "diagnosticId": "CS0103" },

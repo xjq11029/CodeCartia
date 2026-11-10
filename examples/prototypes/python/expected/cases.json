@@ -18,6 +18,7 @@
     {"project": "missing", "owner": "entry.dispatch", "callee": "receiver.encode", "mode": "unresolved", "code": "TYPE_ATTRIBUTE_UNVERIFIED"}
   ],
   "requiredDiagnosticCodes": ["INPUT_MISSING", "SYNTAX_ERROR", "MODULE_INPUT_MISSING", "PARAMETER_TARGET_UNKNOWN", "ASSIGNMENT_BINDING_UNKNOWN", "ATTRIBUTE_WRITE_BOUNDARY", "TYPE_ATTRIBUTE_UNVERIFIED", "DECORATOR_BINDING_UNKNOWN"],
+  "callInventory": {"positive": 4, "negative": 9, "missing": 3, "coordinates": 1, "side_effect": 5, "malformed": 0},
   "coordinateCase": {"project": "coordinates", "file": "utf8_crlf.py", "owner": "utf8_crlf.caller", "callee": "target", "line": 6, "startColumn": 18, "endColumn": 27, "nativeStartColumn": 22, "nativeEndColumn": 31, "startByte": 79, "endByte": 88},
   "independentCoordinateText": "甲😀x\r\nz",
   "independentCoordinatePoints": [{"byte": 7, "line": 1, "column": 3}, {"byte": 8, "line": 1, "column": 4}, {"byte": 10, "line": 2, "column": 1}, {"byte": 11, "line": 2, "column": 2}]

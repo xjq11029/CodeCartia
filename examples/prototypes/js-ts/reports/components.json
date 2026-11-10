@@ -4,7 +4,7 @@
   "format": "codecartia-local-experiment-v0.1",
   "contractMapping": "M1-02 0.1-draft 的局部字段核对；非完整schema兼容、非worker实现",
   "sourceViewId": "automatic-static-local",
-  "capturedAt": "2026-11-10T05:05:59.253Z",
+  "capturedAt": "2026-11-10T06:08:53.557Z",
   "toolchain": {
     "name": "TypeScript Compiler API",
     "version": "6.0.3",
@@ -499,7 +499,8 @@
       "carrier": "source"
     }
   ],
-  "scriptFingerprint": "3479cbf5b910a705773a3a5aee43bde1bea475378245f3ecfba24f4a7f0691e0",
+  "scriptFingerprint": "9f22da6395b4c4ed03abd5915aa59c54bfa7195af882db29262d2c2061c46a99",
+  "outputPolicyFingerprint": "498d639fc7d0fff5a9e3040c281b652c08d164746eafd4bae7f1f57b93104290",
   "toolConfigFingerprint": "c046515bd2412beb921d4f5ca1cd8e6089aed7a14ff523648570dd0d4819519a",
   "compilerOptions": {
     "target": 9,
@@ -516,32 +517,32 @@
       "D:\\Node\\node.exe",
       "D:\\ProjectCode\\CodeCartia\\examples\\prototypes\\js-ts\\extract.mjs",
       "--case",
-      "components",
-      "--toolchain",
-      "toolchain.windows-observed.json",
-      "--node-limit",
-      "100000",
-      "--output",
-      "reports/components.json"
+      "components"
     ],
     "reproduce": "pnpm extract --case components --toolchain toolchain.windows-observed.json --node-limit 100000 --output reports/components.json"
   },
-  "durationMs": 604.8004000000001,
+  "durationMs": 426.14510000000007,
   "peakMemoryObservation": {
-    "maxRSS": 299384,
+    "maxRSS": 397096,
     "maxRSSUnit": "Node process.resourceUsage kilobytes",
     "memoryAtEnd": {
-      "rss": 306569216,
-      "heapTotal": 243302400,
-      "heapUsed": 157384704,
-      "external": 14195552,
-      "arrayBuffers": 12101948
+      "rss": 406626304,
+      "heapTotal": 338296832,
+      "heapUsed": 251481144,
+      "external": 17222872,
+      "arrayBuffers": 15049607
     },
     "limitation": "进程资源观察；非产品负载/性能验收"
   },
   "registeredRoot": "D:/ProjectCode/CodeCartia/examples/prototypes/js-ts/inputs/components",
   "expectedReadByExtractor": false,
   "resolutionQueries": [
+    {
+      "kind": "directory",
+      "path": "inputs/components",
+      "exists": true,
+      "deniedByRegistration": false
+    },
     {
       "path": "inputs/components/Widget.ts",
       "exists": false,
@@ -553,9 +554,69 @@
       "deniedByRegistration": false
     },
     {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib",
+      "exists": true,
+      "deniedByRegistration": false
+    },
+    {
       "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/package.json",
       "exists": false,
       "deniedByRegistration": false
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/",
+      "exists": false,
+      "deniedByRegistration": true
     }
   ],
   "symbols": [

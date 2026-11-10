@@ -4,7 +4,7 @@
   "format": "codecartia-local-experiment-v0.1",
   "contractMapping": "M1-02 0.1-draft 的局部字段核对；非完整schema兼容、非worker实现",
   "sourceViewId": "automatic-static-local",
-  "capturedAt": "2026-11-10T05:05:46.283Z",
+  "capturedAt": "2026-11-10T06:08:53.128Z",
   "toolchain": {
     "name": "TypeScript Compiler API",
     "version": "6.0.3",
@@ -464,6 +464,13 @@
       "carrier": "semantic-library"
     },
     {
+      "inputId": "inputs/semantic/bom.ts",
+      "fingerprint": "sha256:9439c33cd2b1928dc4578eefa9c288767114357c7db04982799aca384db6c894",
+      "byteLength": 49,
+      "encoding": "UTF-8-lossless",
+      "carrier": "source"
+    },
+    {
       "inputId": "inputs/semantic/coordinates.ts",
       "fingerprint": "sha256:9593e668f2a669806c7fb60d5dccf6637221f870e8e3af0a4c84941429fd13eb",
       "byteLength": 48,
@@ -514,8 +521,8 @@
     },
     {
       "inputId": "inputs/semantic/tsconfig.json",
-      "fingerprint": "sha256:0a101a3359168fb686e747ac2edd3c355c93a869cfb7e5c42b67c2a64fa5f12d",
-      "byteLength": 360,
+      "fingerprint": "sha256:5c9158f063bda5c020955fda7b2adbef0a6b9c5718215161fc797ed487dec658",
+      "byteLength": 370,
       "encoding": "UTF-8-lossless",
       "carrier": "config"
     },
@@ -527,7 +534,8 @@
       "carrier": "source"
     }
   ],
-  "scriptFingerprint": "3479cbf5b910a705773a3a5aee43bde1bea475378245f3ecfba24f4a7f0691e0",
+  "scriptFingerprint": "9f22da6395b4c4ed03abd5915aa59c54bfa7195af882db29262d2c2061c46a99",
+  "outputPolicyFingerprint": "498d639fc7d0fff5a9e3040c281b652c08d164746eafd4bae7f1f57b93104290",
   "toolConfigFingerprint": "c046515bd2412beb921d4f5ca1cd8e6089aed7a14ff523648570dd0d4819519a",
   "compilerOptions": {
     "target": 9,
@@ -549,32 +557,32 @@
       "D:\\Node\\node.exe",
       "D:\\ProjectCode\\CodeCartia\\examples\\prototypes\\js-ts\\extract.mjs",
       "--case",
-      "semantic",
-      "--toolchain",
-      "toolchain.windows-observed.json",
-      "--node-limit",
-      "100000",
-      "--output",
-      "reports/semantic.json"
+      "semantic"
     ],
     "reproduce": "pnpm extract --case semantic --toolchain toolchain.windows-observed.json --node-limit 100000 --output reports/semantic.json"
   },
-  "durationMs": 660.0956,
+  "durationMs": 641.3127999999999,
   "peakMemoryObservation": {
-    "maxRSS": 300840,
+    "maxRSS": 301972,
     "maxRSSUnit": "Node process.resourceUsage kilobytes",
     "memoryAtEnd": {
-      "rss": 308060160,
-      "heapTotal": 245637120,
-      "heapUsed": 150585344,
-      "external": 14211936,
-      "arrayBuffers": 12118332
+      "rss": 309219328,
+      "heapTotal": 245972992,
+      "heapUsed": 142054928,
+      "external": 14212631,
+      "arrayBuffers": 12119027
     },
     "limitation": "进程资源观察；非产品负载/性能验收"
   },
   "registeredRoot": "D:/ProjectCode/CodeCartia/examples/prototypes/js-ts/inputs/semantic",
   "expectedReadByExtractor": false,
   "resolutionQueries": [
+    {
+      "kind": "directory",
+      "path": "inputs/semantic",
+      "exists": true,
+      "deniedByRegistration": false
+    },
     {
       "path": "inputs/semantic/wrapper.ts",
       "exists": true,
@@ -616,6 +624,12 @@
       "deniedByRegistration": false
     },
     {
+      "kind": "directory",
+      "path": "inputs/semantic/not-provided",
+      "exists": false,
+      "deniedByRegistration": false
+    },
+    {
       "path": "inputs/semantic/js-helper.ts",
       "exists": false,
       "deniedByRegistration": false
@@ -636,9 +650,69 @@
       "deniedByRegistration": false
     },
     {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib",
+      "exists": true,
+      "deniedByRegistration": false
+    },
+    {
       "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/package.json",
       "exists": false,
       "deniedByRegistration": false
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code/7baac39ec3",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode/Microsoft VS Code",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/VSCode",
+      "exists": false,
+      "deniedByRegistration": true
+    },
+    {
+      "kind": "directory",
+      "path": "D:/",
+      "exists": false,
+      "deniedByRegistration": true
     }
   ],
   "symbols": [
@@ -3925,6 +3999,60 @@
           "endColumn": 7
         }
       }
+    },
+    {
+      "kind": "coordinate-trivia",
+      "nativeToken": "FirstTriviaToken",
+      "evidence": {
+        "inputId": "inputs/semantic/bom.ts",
+        "inputFingerprint": "9439c33cd2b1928dc4578eefa9c288767114357c7db04982799aca384db6c894",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "TypeScript Compiler API",
+          "version": "6.0.3",
+          "unit": "UTF-16-code-unit",
+          "base": 0,
+          "endConvention": "exclusive",
+          "start": 1,
+          "end": 8
+        },
+        "mappingStatus": "exact",
+        "normalized": {
+          "startByte": 3,
+          "endByte": 14,
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 1,
+          "endColumn": 7
+        }
+      }
+    },
+    {
+      "kind": "coordinate-last-codepoint",
+      "value": "x",
+      "evidence": {
+        "inputId": "inputs/semantic/bom.ts",
+        "inputFingerprint": "9439c33cd2b1928dc4578eefa9c288767114357c7db04982799aca384db6c894",
+        "coordinatePolicyId": "raw-bytes-codepoints-v0.1",
+        "nativePositions": {
+          "tool": "TypeScript Compiler API",
+          "version": "6.0.3",
+          "unit": "UTF-16-code-unit",
+          "base": 0,
+          "endConvention": "exclusive",
+          "start": 7,
+          "end": 8
+        },
+        "mappingStatus": "exact",
+        "normalized": {
+          "startByte": 13,
+          "endByte": 14,
+          "startLine": 1,
+          "startColumn": 6,
+          "endLine": 1,
+          "endColumn": 7
+        }
+      }
     }
   ],
   "diagnostics": [
@@ -4016,7 +4144,7 @@
   "budgetObservation": {
     "profileId": "local-ast-node-limit-observed",
     "nodeLimit": 100000,
-    "visitedNodes": 282,
+    "visitedNodes": 290,
     "truncated": false
   },
   "completeness": {

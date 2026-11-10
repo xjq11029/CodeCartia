@@ -1,0 +1,21 @@
+{
+  "runnerFingerprint": "1bc02abc7397f1ae4c05494a28d0beedc1e30f8e1374dabe7fc83de6111c38a5",
+  "outputPolicyFingerprint": "498d639fc7d0fff5a9e3040c281b652c08d164746eafd4bae7f1f57b93104290",
+  "outputRefused": true,
+  "linkChecks": [
+    {
+      "name": "final-path-link-refused-with-target-preserved",
+      "linkType": "final-path-directory-junction",
+      "unavailable": "file-symlink-creation-EPERM",
+      "passed": true
+    },
+    {
+      "name": "parent-directory-link-refused-with-target-preserved",
+      "linkType": "directory-junction",
+      "unavailable": null,
+      "passed": true
+    }
+  ],
+  "sentinelsAbsentBeforeAndAfter": true,
+  "scope": "Extractor, runner and verifier share the same report-path policy. Real final-path and parent-directory reparse points are refused without changing the protected test target; linkChecks separately records unavailable file-symlink creation and any junction substitute. Real project/build loading and adversarial concurrent filesystem replacement are untested."
+}

@@ -1,0 +1,535 @@
+{
+  "status": "checks-passed",
+  "scope": "Registered flat modules, lexical declarations, coordinates and explicit refusal; not runtime targets, full Python semantics or real project-loader validation",
+  "expectedFingerprint": "sha256:c5e7282ecb67cfa4c2f559d31c1cf2ce1e12eb050b431114ba56aa801a3a8f7c",
+  "verifierFingerprint": "sha256:028a7145c0cc4824531e509ca2ffb077a0e63bb5beab35348afdc154fa93d2dc",
+  "reportFingerprint": "sha256:f473996de7d60f0520f349481b2d4b44542955502b29af673c8267671d6e5004",
+  "passed": 131,
+  "total": 131,
+  "checks": [
+    {
+      "name": "call-inventory:positive",
+      "passed": true
+    },
+    {
+      "name": "call-inventory:negative",
+      "passed": true
+    },
+    {
+      "name": "call-inventory:missing",
+      "passed": true
+    },
+    {
+      "name": "call-inventory:coordinates",
+      "passed": true
+    },
+    {
+      "name": "call-inventory:side_effect",
+      "passed": true
+    },
+    {
+      "name": "call-inventory:malformed",
+      "passed": true
+    },
+    {
+      "name": "no-unregistered-project-facts",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.dispatch:emit",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.dispatch:emit:0",
+      "passed": true
+    },
+    {
+      "name": "target-source:entry.dispatch:emit:0",
+      "passed": true
+    },
+    {
+      "name": "exact-qualified-declaration:entry.dispatch:emit:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.dispatch:helpers.decode",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.dispatch:helpers.decode:0",
+      "passed": true
+    },
+    {
+      "name": "target-source:entry.dispatch:helpers.decode:0",
+      "passed": true
+    },
+    {
+      "name": "exact-qualified-declaration:entry.dispatch:helpers.decode:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.dispatch:local",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.dispatch:local:0",
+      "passed": true
+    },
+    {
+      "name": "target-source:entry.dispatch:local:0",
+      "passed": true
+    },
+    {
+      "name": "exact-qualified-declaration:entry.dispatch:local:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.dispatch:forwarded",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.dispatch:forwarded:0",
+      "passed": true
+    },
+    {
+      "name": "target-source:entry.dispatch:forwarded:0",
+      "passed": true
+    },
+    {
+      "name": "exact-qualified-declaration:entry.dispatch:forwarded:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.shadow:emit",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.shadow:emit:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.rebound:emit",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.rebound:emit:0",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.rebound:emit:1",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.patched:helpers.encode",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.patched:helpers.encode:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.dynamic:factory",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.dynamic:factory:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.dynamic:target",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.dynamic:target:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.first:same",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.first:same:0",
+      "passed": true
+    },
+    {
+      "name": "target-source:entry.first:same:0",
+      "passed": true
+    },
+    {
+      "name": "exact-qualified-declaration:entry.first:same:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.second:same",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.second:same:0",
+      "passed": true
+    },
+    {
+      "name": "target-source:entry.second:same:0",
+      "passed": true
+    },
+    {
+      "name": "exact-qualified-declaration:entry.second:same:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.decoration_boundary:wrapped",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.decoration_boundary:wrapped:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.dispatch:unknown_alias",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.dispatch:unknown_alias:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.dispatch:importlib.import_module",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.dispatch:importlib.import_module:0",
+      "passed": true
+    },
+    {
+      "name": "binding-count:entry.dispatch:receiver.encode",
+      "passed": true
+    },
+    {
+      "name": "binding:entry.dispatch:receiver.encode:0",
+      "passed": true
+    },
+    {
+      "name": "diagnostic:INPUT_MISSING",
+      "passed": true
+    },
+    {
+      "name": "diagnostic:SYNTAX_ERROR",
+      "passed": true
+    },
+    {
+      "name": "diagnostic:MODULE_INPUT_MISSING",
+      "passed": true
+    },
+    {
+      "name": "diagnostic:PARAMETER_TARGET_UNKNOWN",
+      "passed": true
+    },
+    {
+      "name": "diagnostic:ASSIGNMENT_BINDING_UNKNOWN",
+      "passed": true
+    },
+    {
+      "name": "diagnostic:ATTRIBUTE_WRITE_BOUNDARY",
+      "passed": true
+    },
+    {
+      "name": "diagnostic:TYPE_ATTRIBUTE_UNVERIFIED",
+      "passed": true
+    },
+    {
+      "name": "diagnostic:DECORATOR_BINDING_UNKNOWN",
+      "passed": true
+    },
+    {
+      "name": "coordinate-normalized",
+      "passed": true
+    },
+    {
+      "name": "coordinate-native",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:0",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:0",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:1",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:1",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:2",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:2",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:3",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:3",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:4",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:4",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:5",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:5",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:6",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:6",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:7",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:7",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:8",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:8",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:9",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:9",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:10",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:10",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:11",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:11",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:12",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:12",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:13",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:13",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:14",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:14",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:15",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:15",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:16",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:16",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:17",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:17",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:18",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:18",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:19",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:19",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:20",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:20",
+      "passed": true
+    },
+    {
+      "name": "raw-call-range:21",
+      "passed": true
+    },
+    {
+      "name": "declaration-not-runtime:21",
+      "passed": true
+    },
+    {
+      "name": "not-full-analysis",
+      "passed": true
+    },
+    {
+      "name": "current-extractor",
+      "passed": true
+    },
+    {
+      "name": "current-registry",
+      "passed": true
+    },
+    {
+      "name": "current-source-inputs",
+      "passed": true
+    },
+    {
+      "name": "missing-input-observation-current",
+      "passed": true
+    },
+    {
+      "name": "oracle-not-input",
+      "passed": true
+    },
+    {
+      "name": "source-not-executed",
+      "passed": true
+    },
+    {
+      "name": "coordinate-point:7",
+      "passed": true
+    },
+    {
+      "name": "coordinate-point:8",
+      "passed": true
+    },
+    {
+      "name": "coordinate-point:10",
+      "passed": true
+    },
+    {
+      "name": "coordinate-point:11",
+      "passed": true
+    },
+    {
+      "name": "coordinate-interior-refused:1",
+      "passed": true
+    },
+    {
+      "name": "coordinate-interior-refused:9",
+      "passed": true
+    },
+    {
+      "name": "input-policy:path-traversal",
+      "passed": true
+    },
+    {
+      "name": "input-policy:build-project-refused",
+      "passed": true
+    },
+    {
+      "name": "input-policy:non-source-root-refused",
+      "passed": true
+    },
+    {
+      "name": "build-backend-never-imported",
+      "passed": true
+    },
+    {
+      "name": "output-cannot-overwrite-oracle",
+      "passed": true
+    },
+    {
+      "name": "verifier-directory-link-refused",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:wrong-target",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:missing-call",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:extra-call",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:wrong-byte-offset",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:merged-same-name-scope",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:unknown-promoted",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:same-file-wrong-declaration",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:target-declaration-outside-source",
+      "passed": true
+    }
+  ]
+}

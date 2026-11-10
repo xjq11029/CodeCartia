@@ -1,0 +1,38 @@
+{
+  "projectId": "catalog-lending",
+  "scenarios": [
+    {
+      "entry": ["POST", "/loans/open", "routes.borrow"],
+      "entryAnchor": ["routes.py", 13, 0, "Call"],
+      "complete": true,
+      "calls": [
+        {"caller":"routes.borrow","callee":"services.open_loan","bindings":{"actor":"entry.arg0","item":"entry.arg1"},"anchor":["routes.py",6,11,"Call"]},
+        {"caller":"services.open_loan","callee":"shared.record","bindings":{"target":"entry.arg1"},"anchor":["services.py",9,4,"Call"]}
+      ],
+      "diagnostics": [],
+      "steps": [
+        {"kind":"authorization-check","implementation":"services.open_loan","subject":"entry.arg0","object":"entry.arg1","condition":"entry.arg0.role == 'member' and entry.arg0.tenant == entry.arg1.tenant","requires":[],"authorization":[],"anchor":["services.py",6,4,"Call"],"callPath":["routes.borrow","services.open_loan"]},
+        {"kind":"business-check","implementation":"services.open_loan","subject":null,"object":"entry.arg1","condition":"entry.arg1.available","requires":[0],"authorization":[0],"anchor":["services.py",7,4,"Call"],"callPath":["routes.borrow","services.open_loan"]},
+        {"kind":"memory-write","implementation":"services.open_loan","subject":null,"object":"entry.arg1","field":"state","value":"'borrowed'","requires":[0,1],"authorization":[0],"anchor":["services.py",8,4,"Assign"],"callPath":["routes.borrow","services.open_loan"]},
+        {"kind":"memory-write","implementation":"shared.record","subject":null,"object":"entry.arg1","field":"audit","value":"'updated'","requires":[0,1],"authorization":[0],"anchor":["shared.py",2,4,"Assign"],"callPath":["routes.borrow","services.open_loan","shared.record"]}
+      ]
+    },
+    {
+      "entry": ["POST", "/loans/close", "routes.return_volume"],
+      "entryAnchor": ["routes.py", 14, 0, "Call"],
+      "complete": true,
+      "calls": [
+        {"caller":"routes.return_volume","callee":"services.close_loan","bindings":{"actor":"entry.arg0","item":"entry.arg1"},"anchor":["routes.py",10,11,"Call"]},
+        {"caller":"services.close_loan","callee":"shared.record","bindings":{"target":"entry.arg1"},"anchor":["services.py",17,4,"Call"]}
+      ],
+      "diagnostics": [],
+      "steps": [
+        {"kind":"authorization-check","implementation":"services.close_loan","subject":"entry.arg0","object":"entry.arg1","condition":"entry.arg0.role == 'staff' and entry.arg0.tenant == entry.arg1.tenant","requires":[],"authorization":[],"anchor":["services.py",14,4,"Call"],"callPath":["routes.return_volume","services.close_loan"]},
+        {"kind":"business-check","implementation":"services.close_loan","subject":null,"object":"entry.arg1","condition":"entry.arg1.state == 'borrowed'","requires":[0],"authorization":[0],"anchor":["services.py",15,4,"Call"],"callPath":["routes.return_volume","services.close_loan"]},
+        {"kind":"memory-write","implementation":"services.close_loan","subject":null,"object":"entry.arg1","field":"state","value":"'available'","requires":[0,1],"authorization":[0],"anchor":["services.py",16,4,"Assign"],"callPath":["routes.return_volume","services.close_loan"]},
+        {"kind":"memory-write","implementation":"shared.record","subject":null,"object":"entry.arg1","field":"audit","value":"'updated'","requires":[0,1],"authorization":[0],"anchor":["shared.py",2,4,"Assign"],"callPath":["routes.return_volume","services.close_loan","shared.record"]}
+      ]
+    }
+  ],
+  "sharedImplementations": ["shared.record"]
+}

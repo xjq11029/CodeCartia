@@ -1,0 +1,36 @@
+{
+  "projectId": "editorial-release",
+  "scenarios": [
+    {
+      "entry": ["PUT", "/articles/release", "application.publish"],
+      "entryAnchor": ["application.py", 30, 0, "Call"],
+      "complete": false,
+      "calls": [{"caller":"application.publish","callee":"application.stamp","bindings":{"entry":"entry.arg1"},"anchor":["application.py",17,4,"Call"]}],
+      "diagnostics": ["unknown-call"],
+      "steps": [
+        {"kind":"authorization-check","implementation":"application.publish","subject":"entry.arg0","object":"entry.arg1","condition":"entry.arg0.level >= 2 and entry.arg0.team == entry.arg1.team","requires":[],"authorization":[],"anchor":["application.py",14,4,"Call"],"callPath":["application.publish"]},
+        {"kind":"business-check","implementation":"application.publish","subject":null,"object":"entry.arg1","condition":"entry.arg1.ready","requires":[0],"authorization":[0],"anchor":["application.py",15,4,"Call"],"callPath":["application.publish"]},
+        {"kind":"memory-write","implementation":"application.publish","subject":null,"object":"entry.arg1","field":"phase","value":"'released'","requires":[0,1],"authorization":[0],"anchor":["application.py",16,4,"Assign"],"callPath":["application.publish"]},
+        {"kind":"memory-write","implementation":"application.stamp","subject":null,"object":"entry.arg1","field":"revision","value":"1","requires":[0,1],"authorization":[0],"anchor":["application.py",5,4,"Assign"],"callPath":["application.publish","application.stamp"]},
+        {"kind":"unknown-call","implementation":"application.publish","subject":null,"object":null,"call":"entry.arg2(entry.arg1)","requires":[0,1],"authorization":[],"anchor":["application.py",18,4,"Call"],"callPath":["application.publish"]}
+      ]
+    },
+    {
+      "entry": ["DELETE", "/articles/release", "application.withdraw"],
+      "entryAnchor": ["application.py", 31, 0, "Call"],
+      "complete": false,
+      "calls": [
+        {"caller":"application.withdraw","callee":"application.inspect_lock","bindings":{"person":"entry.arg0","document":"entry.arg1"},"anchor":["application.py",24,4,"Call"]},
+        {"caller":"application.withdraw","callee":"application.stamp","bindings":{"entry":"entry.arg1"},"anchor":["application.py",26,4,"Call"]}
+      ],
+      "diagnostics": ["unclassified-guard"],
+      "steps": [
+        {"kind":"authorization-check","implementation":"application.withdraw","subject":"entry.arg0","object":"entry.arg1","condition":"entry.arg0.level >= 3","requires":[],"authorization":[],"anchor":["application.py",23,4,"Call"],"callPath":["application.withdraw"]},
+        {"kind":"unclassified-guard","implementation":"application.inspect_lock","subject":null,"object":null,"condition":"not entry.arg1.locked","requires":[0],"authorization":[],"anchor":["application.py",9,4,"If"],"callPath":["application.withdraw","application.inspect_lock"]},
+        {"kind":"memory-write","implementation":"application.withdraw","subject":null,"object":"entry.arg1","field":"phase","value":"'withdrawn'","requires":[0,1],"authorization":[0],"anchor":["application.py",25,4,"Assign"],"callPath":["application.withdraw"]},
+        {"kind":"memory-write","implementation":"application.stamp","subject":null,"object":"entry.arg1","field":"revision","value":"1","requires":[0,1],"authorization":[0],"anchor":["application.py",5,4,"Assign"],"callPath":["application.withdraw","application.stamp"]}
+      ]
+    }
+  ],
+  "sharedImplementations": ["application.stamp"]
+}

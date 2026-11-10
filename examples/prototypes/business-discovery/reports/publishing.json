@@ -1,0 +1,500 @@
+{
+  "schemaVersion": "business-discovery-experiment/0.1",
+  "analysisMode": "static",
+  "projectId": "editorial-release",
+  "budget": {
+    "maxDepth": 8,
+    "maxSteps": 100
+  },
+  "projectRegistrationSha256": "20ff4302d14ec81ed99b34d22074d4148c4b829c291567e59d157cfab6c9b06c",
+  "technicalProfile": {
+    "sha256": "8585162e56d68730d43dcc8ba6e143c4f366ea6456f99734b5fb9f6f8f3654a6",
+    "contractSha256": "c7363c0db2f42952d7d368fe9083765b0a435658fd8a5130ce5d08ec184ca9fa"
+  },
+  "inputManifest": [
+    {
+      "path": "framework.py",
+      "sha256": "420f2062ad814ce2e371e3a89ee79d6e69f059138369515a395b5f1952541ae5"
+    },
+    {
+      "path": "application.py",
+      "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb"
+    }
+  ],
+  "projectDiagnostics": [],
+  "scenarios": [
+    {
+      "id": "application:30:0:30:48:PUT:/articles/release:application.publish",
+      "entry": {
+        "method": "PUT",
+        "address": "/articles/release",
+        "handler": "application.publish",
+        "evidence": {
+          "file": "application.py",
+          "line": 30,
+          "endLine": 30,
+          "startColumn": 0,
+          "endColumn": 48,
+          "coordinateUnit": "python-utf8-bytes",
+          "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+          "text": "fw.register(\"PUT\", \"/articles/release\", publish)"
+        }
+      },
+      "name": "PUT /articles/release → application.publish",
+      "steps": [
+        {
+          "id": "application:30:0:30:48:PUT:/articles/release:application.publish:step:0",
+          "index": 0,
+          "kind": "authorization-check",
+          "implementation": "application.publish",
+          "subject": "entry.arg0",
+          "object": "entry.arg1",
+          "requires": [],
+          "authorization": [],
+          "authorizationBindings": [],
+          "evidence": {
+            "file": "application.py",
+            "line": 14,
+            "endLine": 14,
+            "startColumn": 4,
+            "endColumn": 82,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "fw.enforce(editor, article, editor.level >= 2 and editor.team == article.team)"
+          },
+          "callPath": [
+            "application.publish"
+          ],
+          "condition": "entry.arg0.level >= 2 and entry.arg0.team == entry.arg1.team",
+          "technicalApi": "framework.enforce",
+          "technicalEvidence": {
+            "file": "framework.py",
+            "line": 16,
+            "endLine": 18,
+            "startColumn": 0,
+            "endColumn": 30,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "420f2062ad814ce2e371e3a89ee79d6e69f059138369515a395b5f1952541ae5",
+            "text": "def enforce(subject, resource, predicate):\n    if not predicate:\n        raise AccessRejected()"
+          }
+        },
+        {
+          "id": "application:30:0:30:48:PUT:/articles/release:application.publish:step:1",
+          "index": 1,
+          "kind": "business-check",
+          "implementation": "application.publish",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "application:30:0:30:48:PUT:/articles/release:application.publish:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "application.py",
+            "line": 15,
+            "endLine": 15,
+            "startColumn": 4,
+            "endColumn": 39,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "fw.validate(article, article.ready)"
+          },
+          "callPath": [
+            "application.publish"
+          ],
+          "condition": "entry.arg1.ready",
+          "technicalApi": "framework.validate",
+          "technicalEvidence": {
+            "file": "framework.py",
+            "line": 21,
+            "endLine": 23,
+            "startColumn": 0,
+            "endColumn": 32,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "420f2062ad814ce2e371e3a89ee79d6e69f059138369515a395b5f1952541ae5",
+            "text": "def validate(resource, predicate):\n    if not predicate:\n        raise InvalidOperation()"
+          }
+        },
+        {
+          "id": "application:30:0:30:48:PUT:/articles/release:application.publish:step:2",
+          "index": 2,
+          "kind": "memory-write",
+          "implementation": "application.publish",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0,
+            1
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "application:30:0:30:48:PUT:/articles/release:application.publish:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "application.py",
+            "line": 16,
+            "endLine": 16,
+            "startColumn": 4,
+            "endColumn": 30,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "article.phase = \"released\""
+          },
+          "callPath": [
+            "application.publish"
+          ],
+          "field": "phase",
+          "value": "'released'"
+        },
+        {
+          "id": "application:30:0:30:48:PUT:/articles/release:application.publish:step:3",
+          "index": 3,
+          "kind": "memory-write",
+          "implementation": "application.stamp",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0,
+            1
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "application:30:0:30:48:PUT:/articles/release:application.publish:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "application.py",
+            "line": 5,
+            "endLine": 5,
+            "startColumn": 4,
+            "endColumn": 22,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "entry.revision = 1"
+          },
+          "callPath": [
+            "application.publish",
+            "application.stamp"
+          ],
+          "field": "revision",
+          "value": "1"
+        },
+        {
+          "id": "application:30:0:30:48:PUT:/articles/release:application.publish:step:4",
+          "index": 4,
+          "kind": "unknown-call",
+          "implementation": "application.publish",
+          "subject": null,
+          "object": null,
+          "requires": [
+            0,
+            1
+          ],
+          "authorization": [],
+          "authorizationBindings": [],
+          "evidence": {
+            "file": "application.py",
+            "line": 18,
+            "endLine": 18,
+            "startColumn": 4,
+            "endColumn": 21,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "callback(article)"
+          },
+          "callPath": [
+            "application.publish"
+          ],
+          "call": "entry.arg2(entry.arg1)"
+        }
+      ],
+      "calls": [
+        {
+          "caller": "application.publish",
+          "callee": "application.stamp",
+          "evidence": {
+            "file": "application.py",
+            "line": 17,
+            "endLine": 17,
+            "startColumn": 4,
+            "endColumn": 18,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "stamp(article)"
+          },
+          "bindings": {
+            "entry": "entry.arg1"
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "unknown-call",
+          "stepId": "application:30:0:30:48:PUT:/articles/release:application.publish:step:4",
+          "evidence": {
+            "file": "application.py",
+            "line": 18,
+            "endLine": 18,
+            "startColumn": 4,
+            "endColumn": 21,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "callback(article)"
+          }
+        }
+      ],
+      "unresolvedCandidates": [],
+      "complete": false,
+      "authorizationDecision": "unknown"
+    },
+    {
+      "id": "application:31:0:31:52:DELETE:/articles/release:application.withdraw",
+      "entry": {
+        "method": "DELETE",
+        "address": "/articles/release",
+        "handler": "application.withdraw",
+        "evidence": {
+          "file": "application.py",
+          "line": 31,
+          "endLine": 31,
+          "startColumn": 0,
+          "endColumn": 52,
+          "coordinateUnit": "python-utf8-bytes",
+          "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+          "text": "fw.register(\"DELETE\", \"/articles/release\", withdraw)"
+        }
+      },
+      "name": "DELETE /articles/release → application.withdraw",
+      "steps": [
+        {
+          "id": "application:31:0:31:52:DELETE:/articles/release:application.withdraw:step:0",
+          "index": 0,
+          "kind": "authorization-check",
+          "implementation": "application.withdraw",
+          "subject": "entry.arg0",
+          "object": "entry.arg1",
+          "requires": [],
+          "authorization": [],
+          "authorizationBindings": [],
+          "evidence": {
+            "file": "application.py",
+            "line": 23,
+            "endLine": 23,
+            "startColumn": 4,
+            "endColumn": 50,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "fw.enforce(editor, article, editor.level >= 3)"
+          },
+          "callPath": [
+            "application.withdraw"
+          ],
+          "condition": "entry.arg0.level >= 3",
+          "technicalApi": "framework.enforce",
+          "technicalEvidence": {
+            "file": "framework.py",
+            "line": 16,
+            "endLine": 18,
+            "startColumn": 0,
+            "endColumn": 30,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "420f2062ad814ce2e371e3a89ee79d6e69f059138369515a395b5f1952541ae5",
+            "text": "def enforce(subject, resource, predicate):\n    if not predicate:\n        raise AccessRejected()"
+          }
+        },
+        {
+          "id": "application:31:0:31:52:DELETE:/articles/release:application.withdraw:step:1",
+          "index": 1,
+          "kind": "unclassified-guard",
+          "implementation": "application.inspect_lock",
+          "subject": null,
+          "object": null,
+          "requires": [
+            0
+          ],
+          "authorization": [],
+          "authorizationBindings": [],
+          "evidence": {
+            "file": "application.py",
+            "line": 9,
+            "endLine": 10,
+            "startColumn": 4,
+            "endColumn": 36,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "if document.locked:\n        raise RuntimeError(\"locked\")"
+          },
+          "callPath": [
+            "application.withdraw",
+            "application.inspect_lock"
+          ],
+          "condition": "not entry.arg1.locked"
+        },
+        {
+          "id": "application:31:0:31:52:DELETE:/articles/release:application.withdraw:step:2",
+          "index": 2,
+          "kind": "memory-write",
+          "implementation": "application.withdraw",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0,
+            1
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "application:31:0:31:52:DELETE:/articles/release:application.withdraw:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "application.py",
+            "line": 25,
+            "endLine": 25,
+            "startColumn": 4,
+            "endColumn": 31,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "article.phase = \"withdrawn\""
+          },
+          "callPath": [
+            "application.withdraw"
+          ],
+          "field": "phase",
+          "value": "'withdrawn'"
+        },
+        {
+          "id": "application:31:0:31:52:DELETE:/articles/release:application.withdraw:step:3",
+          "index": 3,
+          "kind": "memory-write",
+          "implementation": "application.stamp",
+          "subject": null,
+          "object": "entry.arg1",
+          "requires": [
+            0,
+            1
+          ],
+          "authorization": [
+            0
+          ],
+          "authorizationBindings": [
+            {
+              "checkpointId": "application:31:0:31:52:DELETE:/articles/release:application.withdraw:step:0",
+              "subject": "entry.arg0",
+              "object": "entry.arg1",
+              "coverage": "same-object-call-prefix",
+              "decision": "unknown"
+            }
+          ],
+          "evidence": {
+            "file": "application.py",
+            "line": 5,
+            "endLine": 5,
+            "startColumn": 4,
+            "endColumn": 22,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "entry.revision = 1"
+          },
+          "callPath": [
+            "application.withdraw",
+            "application.stamp"
+          ],
+          "field": "revision",
+          "value": "1"
+        }
+      ],
+      "calls": [
+        {
+          "caller": "application.withdraw",
+          "callee": "application.inspect_lock",
+          "evidence": {
+            "file": "application.py",
+            "line": 24,
+            "endLine": 24,
+            "startColumn": 4,
+            "endColumn": 33,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "inspect_lock(editor, article)"
+          },
+          "bindings": {
+            "person": "entry.arg0",
+            "document": "entry.arg1"
+          }
+        },
+        {
+          "caller": "application.withdraw",
+          "callee": "application.stamp",
+          "evidence": {
+            "file": "application.py",
+            "line": 26,
+            "endLine": 26,
+            "startColumn": 4,
+            "endColumn": 18,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "stamp(article)"
+          },
+          "bindings": {
+            "entry": "entry.arg1"
+          }
+        }
+      ],
+      "diagnostics": [
+        {
+          "code": "unclassified-guard",
+          "stepId": "application:31:0:31:52:DELETE:/articles/release:application.withdraw:step:1",
+          "evidence": {
+            "file": "application.py",
+            "line": 9,
+            "endLine": 10,
+            "startColumn": 4,
+            "endColumn": 36,
+            "coordinateUnit": "python-utf8-bytes",
+            "sha256": "b754b4f6f201347738ea51023ff8b888369e7e01271dee9c66ec8796a828b1cb",
+            "text": "if document.locked:\n        raise RuntimeError(\"locked\")"
+          }
+        }
+      ],
+      "unresolvedCandidates": [],
+      "complete": false,
+      "authorizationDecision": "unknown"
+    }
+  ],
+  "sharedImplementations": [
+    "application.stamp"
+  ]
+}

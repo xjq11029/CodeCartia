@@ -1,0 +1,16 @@
+{
+  "experimentId": "M1-04-python-ast-local",
+  "registryVersion": "0.1-experiment",
+  "projects": [
+    {
+      "id": "boundary",
+      "root": "expected",
+      "files": [
+        "cases.json"
+      ]
+    }
+  ],
+  "encodingProfile": "UTF-8-only-experiment",
+  "searchPathPolicy": "only-exact-registered-flat-module-files; no sys.path, import hooks, namespace packages or installed modules",
+  "sourcePolicy": "read-only-parse; no import, eval, exec, compile-to-code, subprocess or module execution"
+}

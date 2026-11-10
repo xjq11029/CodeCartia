@@ -1,0 +1,223 @@
+{
+  "status": "checks-passed",
+  "scope": "local Roslyn binding, coordinates and explicit refusal policy only; not real project-loader safety",
+  "verifierFingerprint": "sha256:901beb9a54c99b6a9f21b09c7ed80450a06c0ccf9b94bbb9879212d7dbd84886",
+  "expectedFingerprint": "sha256:3b0412545757f87ee8adaf0e7eeb596c58dcce9bd5102d2e2044469ee057a25f",
+  "reportFingerprint": "sha256:ff3d7d2f2af6abf03508e5cf2a13aebc9e84e9d0ba6cc4aaf9b805e9fd6ecd25",
+  "passed": 53,
+  "total": 53,
+  "checks": [
+    {
+      "name": "exact-case-inventory",
+      "passed": true
+    },
+    {
+      "name": "exact-call-inventory",
+      "passed": true
+    },
+    {
+      "name": "positive-present:Converter.Select(7)",
+      "passed": true
+    },
+    {
+      "name": "static-binding:Converter.Select(7)",
+      "passed": true
+    },
+    {
+      "name": "target-evidence:Converter.Select(7)",
+      "passed": true
+    },
+    {
+      "name": "exact-overload-declaration:Converter.Select(7)",
+      "passed": true
+    },
+    {
+      "name": "positive-present:Converter.Select(label)",
+      "passed": true
+    },
+    {
+      "name": "static-binding:Converter.Select(label)",
+      "passed": true
+    },
+    {
+      "name": "target-evidence:Converter.Select(label)",
+      "passed": true
+    },
+    {
+      "name": "exact-overload-declaration:Converter.Select(label)",
+      "passed": true
+    },
+    {
+      "name": "unknown-present:ExternalApi.Read()",
+      "passed": true
+    },
+    {
+      "name": "unknown-not-promoted:ExternalApi.Read()",
+      "passed": true
+    },
+    {
+      "name": "native-diagnostic:CS0103",
+      "passed": true
+    },
+    {
+      "name": "unknown-present:receiver.Read()",
+      "passed": true
+    },
+    {
+      "name": "unknown-not-promoted:receiver.Read()",
+      "passed": true
+    },
+    {
+      "name": "coordinate-status:x",
+      "passed": true
+    },
+    {
+      "name": "coordinate-exact:x",
+      "passed": true
+    },
+    {
+      "name": "coordinate-status:z",
+      "passed": true
+    },
+    {
+      "name": "coordinate-exact:z",
+      "passed": true
+    },
+    {
+      "name": "coordinate-status:inside-surrogate",
+      "passed": true
+    },
+    {
+      "name": "coordinate-rejected:inside-surrogate",
+      "passed": true
+    },
+    {
+      "name": "coordinate-status:inside-crlf",
+      "passed": true
+    },
+    {
+      "name": "coordinate-rejected:inside-crlf",
+      "passed": true
+    },
+    {
+      "name": "source-byte-slice:positive:positive/Entry.cs:85",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-claim:positive:positive/Entry.cs:85",
+      "passed": true
+    },
+    {
+      "name": "source-byte-slice:positive:positive/Entry.cs:170",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-claim:positive:positive/Entry.cs:170",
+      "passed": true
+    },
+    {
+      "name": "source-byte-slice:missing-reference:missing-reference/Entry.cs:85",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-claim:missing-reference:missing-reference/Entry.cs:85",
+      "passed": true
+    },
+    {
+      "name": "source-byte-slice:dynamic:dynamic/Entry.cs:102",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-claim:dynamic:dynamic/Entry.cs:102",
+      "passed": true
+    },
+    {
+      "name": "positive-native-diagnostics-clear",
+      "passed": true
+    },
+    {
+      "name": "partial-schema-only",
+      "passed": true
+    },
+    {
+      "name": "unverified-project-load-visible",
+      "passed": true
+    },
+    {
+      "name": "current-extractor",
+      "passed": true
+    },
+    {
+      "name": "current-input-registry",
+      "passed": true
+    },
+    {
+      "name": "all-inputs-current",
+      "passed": true
+    },
+    {
+      "name": "current-tool-input:System.Private.CoreLib.dll",
+      "passed": true
+    },
+    {
+      "name": "current-tool-input:Microsoft.CodeAnalysis.dll",
+      "passed": true
+    },
+    {
+      "name": "current-tool-input:Microsoft.CodeAnalysis.CSharp.dll",
+      "passed": true
+    },
+    {
+      "name": "expected-not-analyzer-input",
+      "passed": true
+    },
+    {
+      "name": "boundary-test-current",
+      "passed": true
+    },
+    {
+      "name": "boundary-refusals",
+      "passed": true
+    },
+    {
+      "name": "project-sentinel-absent",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:wrong-overload",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:missing-call",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:extra-candidate",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:wrong-byte-coordinate",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:dynamic-promoted",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:surrogate-interior-promoted",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:target-declaration-outside-source",
+      "passed": true
+    },
+    {
+      "name": "oracle-rejects:other-overload-declaration",
+      "passed": true
+    },
+    {
+      "name": "verifier-directory-link-refused",
+      "passed": true
+    }
+  ]
+}

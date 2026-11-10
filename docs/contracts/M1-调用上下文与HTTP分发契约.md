@@ -1,6 +1,6 @@
 # M1 调用上下文与 HTTP 分发契约
 
-> 草案版本：0.1｜schemaVersion：`0.1-draft`｜日期：2026-11-10｜工作包：M1-02
+> 草案版本：0.2｜schemaVersion：`0.2-draft`｜日期：2026-11-10｜工作包：M1-02
 >
 > 依据：设计 v0.6 §6.3、§7.1、§8.2；推进 v0.4 §4.2；R01/R09、BS01/BS02/BS03、AP04/AP05。
 > 状态：供原型核对的文档草案，未执行分析验证；框架版本、传播与分发模式、条件求解及预算尚未冻结。
@@ -40,7 +40,7 @@ H1–H8 使用明确提供的合成路由注册、挂载和控制转移语义；
 
 ## 2. 公共引用与调用字段
 
-以下为字段提议，不是已实现接口。每条关系仍使用公共 `Relation`，单独记录 `resolution = confirmed / candidate / conflict / unresolved`、`targetMode = exact / candidateSet / unknown`、`targetSetCompleteness = complete / partial / unknown`、`Completeness`、证据与推导引用。解析状态不替代候选集合完整性，`confirmed` 也不证明某次运行已执行该调用。
+以下为字段提议，不是已实现接口。每个具名版本记录持有公共 FactRef；逻辑实体端点使用 EntityRef，摘要/实例/路径、证据、条件和推导依赖使用完整 FactRef，按公共 §2.1 精确解析。每条关系仍使用公共 `Relation`，单独记录 `resolution = confirmed / candidate / conflict / unresolved`、`targetMode = exact / candidateSet / unknown`、`targetSetCompleteness = complete / partial / unknown`、`Completeness`、证据与推导引用。解析状态不替代候选集合完整性，`confirmed` 也不证明某次运行已执行该调用。
 
 ### 2.1 入口、调用点与摘要实例
 
@@ -49,11 +49,11 @@ H1–H8 使用明确提供的合成路由注册、挂载和控制转移语义；
 | `EntryContext` | `id`、入口实体、入口种类、`scope`、输入绑定、初始条件、身份/资源上下文引用、证据 | `scope` 含 `projectId / environmentId / configId / entryContextId`；入口身份与上下文分开，多入口不能仅因最终处理器相同合并上下文 |
 | `CallSite` | `id`、所属符号、被调用表达式、实参与调用结果槽、原始位置、证据 | 调用点与被调用符号有独立 ID；位置变化使用公共身份匹配记录，行号不单独作稳定 ID |
 | `FunctionSummary` | `id`、被摘要符号及签名、版本/输入指纹、形式参数与返回槽、条件化传播/调用/作用摘要、依赖、完整性 | 摘要表达相对于形参的事实；不把所有调用者实参的并集当成该函数每次执行的事实；重载/泛型等实例语义由对应适配器提供 |
-| `InvocationBinding` | `id`、`callSiteId`、`summaryId`、`callerContextId`、`calleeContextId`、入口上下文、实参/形参配对、返回/结果配对、条件、证据/推导 | 配对项引用 `symbolId / valueVersionId / contextId`，保留接收者/字段/别名等必要绑定；缺必要项时保留未知，不借用其他调用实例填充 |
+| `InvocationBinding` | `id`、`callSiteRef`、`summaryRef`、`callerContextRef`、`calleeContextRef`、入口上下文、实参/形参配对、返回/结果配对、条件、证据/推导 | 配对项引用 `symbolId / valueVersionId / contextId`，保留接收者/字段/别名等必要绑定；缺必要项时保留未知，不借用其他调用实例填充 |
 | `CallContext` | `id`、`entryContextId`、父上下文、调用点、摘要实例绑定、配置、条件、传播模式/预算引用 | `contextId` 区分内部摘要实例；`entryContextId` 指可追踪起始入口。同一静态调用点由不同上游调用进入时仍须按支持模式区分参数实例 |
 | `ValueBinding` | `id`、所属符号、值版本、上下文、值/模板或候选、字段路径、别名依据、来源 | 值版本由已支持的赋值/写入/返回事实确定，不能只按变量名或属性名标识；候选值与排除理由可并存 |
 
-所有 `evidenceIds / derivationIds / conditionIds` 均引用同一快照内对象；跨工程调用使用明确的两端工程引用与配置映射，不把调用方的工程身份替换成被调方身份。环境或配置跨界须有映射证据，不能自动继承同名环境。
+所有 `evidenceRefs / derivationRefs / conditionRefs` 及 summaryRef/callSiteRef/callerContextRef/calleeContextRef 均精确引用同一快照内版本；没有指定 revision 不得查找“当前”摘要。保留的 contextId/entryContextId/symbolId/valueVersionId 是绑定和作用域身份，不能单独充当摘要/条件内容的依据。跨工程调用使用明确的两端工程引用与配置映射，不把调用方的工程身份替换成被调方身份。环境或配置跨界须有映射证据，不能自动继承同名环境。
 
 省略参数、默认值、接收者、可变参数、泛型替换、闭包捕获、回调和递归各模式均须在 M1-05 登记适配器前提。公共结构允许表达这些事实，不声明它们已经能被所有语言提取；无法表示或验证的必要绑定必须降低相关推导完整性。
 
@@ -61,7 +61,7 @@ H1–H8 使用明确提供的合成路由注册、挂载和控制转移语义；
 
 | 结构 | 必要字段 | 组合约束 |
 |---|---|---|
-| `Condition` | 公共 `id / expression / bindings / semanticProfileId / evidenceIds / evaluation / requiredInputs`；`bindings` 内引用 `symbolId / valueVersionId / contextId`，关联适用配置与完整性 | 常量、比较、逻辑组合与未知项分别表达；每个操作须有支持依据。原始表达式文本供阅读，不能替代绑定后的语义；`evaluation` 是具体赋值下的满足/不满足/未知，与路径相容性分开 |
+| `Condition` | 公共 `id / expression / bindings / semanticProfileId / evidenceRefs / evaluation / requiredInputs`；`bindings` 内引用 `symbolId / valueVersionId / contextId`，关联适用配置与完整性 | 常量、比较、逻辑组合与未知项分别表达；每个操作须有支持依据。原始表达式文本供阅读，不能替代绑定后的语义；`evaluation` 是具体赋值下的满足/不满足/未知，与路径相容性分开 |
 | `PathConstraint` | 路径条件引用、绑定/替换记录、组合结果、支持/反对证据、缺口 | 对同一绑定值能证明互斥时排除；不同作用域/值版本不自动互斥；条件可能重叠或无法求解时保留未知，不能凭优先级选择 |
 | `StaticPath` | `id`、入口上下文、起止实体、按路径次序的关系/绑定引用、条件、调用返回配对、排除路径、来源、完整性 | 内部关系的上下文、参数、对象和返回配对须兼容；完整链路不能由忽略上下文的普通图可达性直接生成 |
 
@@ -118,7 +118,7 @@ H1–H8 使用明确提供的合成路由注册、挂载和控制转移语义；
 | 展开/候选/迭代超限 | 预算配置引用、实际使用量、截断位置、剩余范围 | 保存局部事实与候选；`Completeness.complete=false` 并填入 `truncations`，不得假装穷举 |
 | 输入变化或过期 | 旧/新输入指纹、受影响结果、快照及重算状态 | 旧证据仅作为历史引用，不能显示为当前确认依据 |
 
-`Completeness` 复用公共字段 `complete / missingInputs / unsupportedModes / truncations / freshness / affectedScope / diagnosticIds`。局部事实可在相关分析范围不完整时保持其有据 `confirmed`，但依赖必要缺口的完整链路或确定授权结论须受限。预算数值及超限计分规则属于 D04/D08 和 M1-05/06，不在本草案填默认值；未定义的模式或预算不能成为完整性承诺。
+`Completeness` 复用公共字段 `complete / missingInputs / unsupportedModes / truncations / freshness / affectedScope / diagnosticRefs`。局部事实可在相关分析范围不完整时保持其有据 `confirmed`，但依赖必要缺口的完整链路或确定授权结论须受限。预算数值及超限计分规则属于 D04/D08 和 M1-05/06，不在本草案填默认值；未定义的模式或预算不能成为完整性承诺。
 
 ### 4.2 依赖登记与增量对照
 
@@ -128,7 +128,7 @@ HTTP 查询与路径额外依赖服务映射、代理/rewrite、拦截器、完�
 
 变化沿摘要/实例/地址查询/分发路径传播到场景、步骤授权、角色反查、条件矩阵、影响查询与解释。无法确定精确范围时按[资源、快照与规则组合契约](M1-资源快照与规则组合契约.md)扩大重算范围，不能保留可能失效的确认链路。删除入口只撤去受影响绑定，其他入口仍有依据的共享实现或角色/策略事实继续保留。
 
-同一冻结输入、配置、分析器、有效规则组合、支持模式和预算下，增量与全量须在调用候选、上下文、参数/返回配对、条件、地址候选、分发顺序、排除依据、步骤/检查绑定、证据与诊断上等价。仅快照 ID、时间戳和无语义输出顺序可忽略；打乱 worker 完成顺序不得改变参数绑定或目标工程的注册顺序。
+同一冻结输入、配置、分析器、有效规则组合、支持模式和预算下，增量与全量须在调用候选、上下文、参数/返回配对、条件、地址候选、分发顺序、排除依据、步骤/检查绑定、证据与诊断上等价。比较时先建立版本事实对应，再忽略仅容器身份的快照 ID、时间戳和无语义输出顺序；运行时 FactRef 不得忽略这些精确键。打乱 worker 完成顺序不得改变参数绑定或目标工程的注册顺序；跨发布请求的当前结果选择另受 R12 最新请求世代约束。
 
 ## 5. 后续核对与待决策
 
