@@ -1,34 +1,43 @@
 flowchart LR
-  %% 设计图解；未实现。箭头含义见本图说明。
+  %% 设计图解；未实现。箭头为有据概念关系，非解析或运行先后。
   scenario["业务场景"]:::business
-  step["场景步骤"]:::business
+  step["场景步骤<br/>入口／调用上下文"]:::business
   action["业务动作"]:::business
   object["业务对象<br/>状态／值版本"]:::data
-  actor["业务参与者"]:::business
-  binding["步骤授权绑定"]:::core
   rule["业务规则<br/>状态操作"]:::business
-  evidence["实现与<br/>逐项证据"]:::data
-  subject["主体／身份<br/>与资源关系"]:::data
-  role["系统角色<br/>身份域"]:::data
-  policy["权限／策略<br/>独立共享实体"]:::data
+  actor["业务参与者"]:::business
+  subject["当前入口有效主体<br/>身份上下文"]:::data
+  binding["步骤授权绑定<br/>上下文关联记录"]:::core
   checkpoint["实际检查点<br/>入口／路径"]:::core
+  evidence["实现与<br/>逐项证据"]:::data
+  role["系统角色<br/>身份域"]:::data
+  permission["独立权限标识"]:::data
+  policy["实际授权策略"]:::data
   visibility["前端可见性<br/>认证条件"]:::warning
   unlinked["未关联声明<br/>诊断状态"]:::warning
   scenario -- "包含 1:N" --> step
   step -- "组织 1:N" --> action
   action -- "操作 M:N" --> object
-  step -- "参与 M:N" --> actor
-  action -- "上下文绑定" --> binding
   action -- "受规则约束" --> rule
-  object -. "状态依据" .-> evidence
-  actor -- "有据映射" --> subject
-  actor -- "映射 M:N" --> role
-  subject -- "主体／数据条件" --> binding
-  role -- "有据授予 M:N" --> policy
-  policy -- "引用 M:N" --> binding
-  binding -- "有据覆盖路径" --> checkpoint
-  checkpoint -. "挂载／执行依据" .-> evidence
-  visibility -- "独立条件" --> binding
+  step -- "参与 M:N" --> actor
+  step -- "入口／调用／配置" --> binding
+  action -- "具体动作" --> binding
+  object -- "对象／资源／范围" --> binding
+  actor -. "有据主体映射" .-> subject
+  actor -. "参与者映射<br/>不授予权限" .-> role
+  subject -- "经验证的<br/>角色取得" --> role
+  role -- "有据授予 M:N" --> permission
+  subject -- "有据直接授予" --> permission
+  subject -- "主体属性或<br/>资源关系" --> binding
+  role -- "适用角色条件" --> binding
+  binding -- "有据引用权限" --> permission
+  binding -- "有据引用策略" --> policy
+  binding -- "有据覆盖<br/>当前动作路径" --> checkpoint
+  checkpoint -- "按路径条件执行" --> policy
+  action -. "实现于" .-> evidence
+  checkpoint -. "挂载与<br/>执行依据" .-> evidence
+  policy -. "判定实现<br/>配置依据" .-> evidence
+  visibility -- "独立说明" --> binding
   unlinked -. "保留原始实体" .-> role
   classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e
   classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73

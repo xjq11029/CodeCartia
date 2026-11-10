@@ -1,6 +1,6 @@
 # CodeCartia 文档
 
-当前文档包含设计方案 v0.6（2026-11-09）、历史审查与业务主线修订记录、推进方案 v0.4 及验收样例 v0.3；M1-01「需求追踪与覆盖清单」文档已交付，现已同步以业务步骤组织角色授权的原则。仓库仍处于实施准备阶段，尚未实现应用或执行验证原型，M1 基线未冻结、G1 未通过。
+当前文档包含设计方案 v0.6（2026-11-09）、历史审查与业务主线修订记录、推进方案 v0.4 及验收样例 v0.3；M1-01「需求追踪与覆盖清单」文档已交付，M1-02 四份 `0.1-draft` 统一契约草案已交付并通过文档交叉复核（2026-11-10）。跨语言事实核对仍待执行，可据草案开始 M1-03 worker 协议准备。仓库仍处于实施准备阶段，尚未实现应用或执行分析验证原型，M1 基线未冻结、G1 未通过。
 
 ## 阅读顺序与路径对照
 
@@ -21,13 +21,15 @@
 | 11 | M1 待决策清单 | [docs/decisions/M1-待决策清单.md](decisions/M1-待决策清单.md) | D01–D11 的依据、责任、依赖和最迟决定阶段；尚未冻结范围、预算、阈值或选型 |
 | 12 | 设计审查报告 | [docs/CodeCartia-设计审查报告.md](CodeCartia-设计审查报告.md) | 先扫问题汇总，再看历史问题、R08–R10 与 v0.6 业务主线/步骤绑定修订；相关实现仍待验收 |
 | 13 | M1-01 复核记录 | [docs/progress/M1-01-复核记录.md](progress/M1-01-复核记录.md) | M1-01 文档交付已完成并通过交叉复核；查看修订、检查与尚未交付项 |
+| 14 | M1-02 统一契约草案 | [docs/contracts/README.md](contracts/README.md) | 开始 worker/语义原型前阅读：公共身份/证据/来源、上下文/HTTP、资源/快照/规则、业务步骤授权；四份草案共用版本，均未冻结 |
+| 15 | M1-02 复核记录 | [docs/progress/M1-02-复核记录.md](progress/M1-02-复核记录.md) | 草案交付分工、交叉问题处理、文档检查与待执行的各语言核对/契约原型 |
 
 看完第 5 步的业务样例后，回到设计方案，按第 6、7、8、13 章深入理解关系与证据模型、跨工程链路、数据管理与 AI、跨项目规则改进，再补读第 5、9、10、12 章的支持范围、执行边界、质量验收和待验证问题。
 
-进入子目录时，先读对应 README：[docs/diagrams/README.md](diagrams/README.md)、[docs/prototype/README.md](prototype/README.md)、[docs/progress/README.md](progress/README.md)、[docs/acceptance/README.md](acceptance/README.md)、[docs/capabilities/README.md](capabilities/README.md)、[docs/decisions/README.md](decisions/README.md)。图解与体验原型的维护方式见各自 README。
+进入子目录时，先读对应 README：[docs/diagrams/README.md](diagrams/README.md)、[docs/prototype/README.md](prototype/README.md)、[docs/contracts/README.md](contracts/README.md)、[docs/progress/README.md](progress/README.md)、[docs/acceptance/README.md](acceptance/README.md)、[docs/capabilities/README.md](capabilities/README.md)、[docs/decisions/README.md](decisions/README.md)。图解与体验原型的维护方式见各自 README。
 
 ## 目录与验收边界
 
-本目录包含文档索引和四份设计/审查/推进/验收主文档，以及 `diagrams/`、`prototype/` 和四个实施准备子目录 `capabilities/`、`acceptance/`、`decisions/`、`progress/`。内容具体以各目录 README 为准，`contracts/` 尚未创建。体验原型使用模拟关系与真实示例位置，不进行自动分析。当前设计以 v0.6 为准；文档修订、图解、体验原型或覆盖登记不代表实现通过。核心验收采用自动静态分析，AI 解释与人工调整另报；业务场景和步骤是阅读主线，角色与授权通过有据绑定解释这些动作，反查使用同一套关系。代码行为、业务含义与运行事实分别表达。
+本目录包含文档索引和四份设计/审查/推进/验收主文档，以及 `diagrams/`、`prototype/`、`contracts/` 和四个追踪子目录 `capabilities/`、`acceptance/`、`decisions/`、`progress/`。内容具体以各目录 README 为准；`contracts/` 当前为四份统一契约草案，worker 协议待交付。体验原型使用模拟关系与真实示例位置，不进行自动分析。当前设计以 v0.6 为准；文档修订、图解、体验原型、覆盖登记或契约草案交付不代表实现通过。核心验收采用自动静态分析，AI 解释与人工调整另报；业务场景和步骤是阅读主线，角色与授权通过有据绑定解释这些动作，反查使用同一套关系。代码行为、业务含义与运行事实分别表达。
 
 98%／90% 数值仍需基准验证，不直接套用于新增业务/权限能力。传播与业务/授权模式表、计算预算、样本和各分项门槛须在 M1 冻结；本目录尚无原型执行或产品验收报告。安装说明、实测能力矩阵、扩展指南与质量报告将在相应实现完成后补充。
