@@ -1,0 +1,385 @@
+{
+  "reportVersion": "project-loading-evaluation-v0.1",
+  "caseId": "python-side-effect",
+  "inputTreeFingerprint": "sha256:ac1245ae9f8e76739e023ef0f8e5a42aee9fb50adec722be279b767894b4d43a",
+  "inputTree": {
+    "build/build_backend.py": "sha256:3070b901aa3081493f7edda8713f84a15991aabb3ea993bb00ba492fd8fc2faa",
+    "pyproject.toml": "sha256:79219e0e11176d60b7f637890e19edf04ec47f0519f0d9619adb678f12d0cd62",
+    "setup.py": "sha256:71952abc5fe784a1bd7e27787de2a76a44b70d28f1ebedf7eb160b53b872c97d",
+    "src/sentinel_pkg/__init__.py": "sha256:0651d5bc1f9e5da88cd5ce03de2d675b0edc93bc2b5e70a7fa2062f278238bff"
+  },
+  "implementationFingerprints": {
+    "examples/prototypes/project-loading/expected/cases.json": "sha256:f37b8e48e86405b31ed9a40caf37442c3bc749afac700abcebb1444e8a30d410",
+    "examples/prototypes/project-loading/node_bridge.mjs": "sha256:60d0eeebbc110c0c7b924fe6ddd1f545943bcbc2d71db40e50f35eace8f64768",
+    "examples/prototypes/project-loading/python_bridge.py": "sha256:d71d7af7eb6ab153375e6655d48b6514fa8588faf5d83fcdc6ed75bdf745d270",
+    "examples/prototypes/project-loading/SPEC.md": "sha256:0dbfd1933d3b31e2aa111fb2610c59b83e2647344006506363dcb627c7b15c64",
+    "examples/prototypes/project-loading/verify.py": "sha256:410aee40eeb09844621a9c48ce6e80614f86bb341a5b947c84c56f68188dfcd7",
+    "examples/prototypes/python/extract.py": "sha256:dd57f9cdc7c7e88b086b73a9bc1d6b5c021c332cbf6fec4ee3a5f9237650047a",
+    "examples/prototypes/python/project_extract.py": "sha256:2d9ecdd4eb9102d1e38dd0ae26fb6b05b7ab9200c3adc46d94f31d289f5fc183",
+    "examples/prototypes/python/project_verify.py": "sha256:39d65585a417417977c3ca8f918b59f9b86a109c02ec9fe428a25875ed5bcefc",
+    "examples/prototypes/python/verify.py": "sha256:028a7145c0cc4824531e509ca2ffb077a0e63bb5beab35348afdc154fa93d2dc"
+  },
+  "actual": {
+    "reportVersion": "project-loading-v0.1",
+    "language": "python",
+    "projectId": "python-side-effect",
+    "projectRoot": "D:\\ProjectCode\\CodeCartia\\examples\\prototypes\\project-loading\\fixtures\\python\\side-effect",
+    "configFile": "pyproject.toml",
+    "toolchain": {
+      "name": "Python stdlib ast/tomllib",
+      "version": "3.14.2",
+      "executable": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "extractorSha256": "sha256:2d9ecdd4eb9102d1e38dd0ae26fb6b05b7ab9200c3adc46d94f31d289f5fc183"
+    },
+    "effectiveLimits": {
+      "maxFiles": 512,
+      "maxFileBytes": 2097152,
+      "maxTotalBytes": 16777216,
+      "maxDirectories": 4096,
+      "maxAstNodes": 100000,
+      "maxImportDepth": 32
+    },
+    "discovery": {
+      "mode": "static-setuptools-roots",
+      "sourceRoots": [
+        "src"
+      ],
+      "include": [
+        "*"
+      ],
+      "exclude": [],
+      "namespaces": true,
+      "excludedDirectoryNames": [
+        ".git",
+        ".hg",
+        ".svn",
+        ".tox",
+        ".venv",
+        "__pycache__",
+        "node_modules",
+        "venv"
+      ],
+      "declaredDependencies": [],
+      "buildSystem": {
+        "requires": [],
+        "build-backend": "build_backend",
+        "backend-path": [
+          "build"
+        ]
+      },
+      "buildBackendExecuted": false
+    },
+    "budgetSemantics": {
+      "maxFiles": "all-captured-config-metadata-and-source-files",
+      "maxAstNodes": "per-source-file-before-fact-extraction",
+      "maxImportDepth": "per-import-reference-chain",
+      "astParsing": "File byte limits apply before parsing; the AST node limit does not bound parser CPU or memory."
+    },
+    "observed": {
+      "filesRead": 3,
+      "bytesRead": 508,
+      "directoriesVisited": 2,
+      "sourcesParsed": 1,
+      "astNodes": 25,
+      "maxAstNodesPerSource": 25,
+      "maxImportDepth": 0
+    },
+    "inputManifest": [
+      {
+        "path": "pyproject.toml",
+        "kind": "config",
+        "sha256": "sha256:79219e0e11176d60b7f637890e19edf04ec47f0519f0d9619adb678f12d0cd62",
+        "sizeBytes": 235
+      },
+      {
+        "path": "setup.py",
+        "kind": "metadata",
+        "sha256": "sha256:71952abc5fe784a1bd7e27787de2a76a44b70d28f1ebedf7eb160b53b872c97d",
+        "sizeBytes": 112,
+        "metadataKind": "build-config"
+      },
+      {
+        "path": "src/sentinel_pkg/__init__.py",
+        "kind": "source",
+        "sha256": "sha256:0651d5bc1f9e5da88cd5ce03de2d675b0edc93bc2b5e70a7fa2062f278238bff",
+        "sizeBytes": 161
+      }
+    ],
+    "inputQueries": [
+      {
+        "path": "pyproject.toml",
+        "exists": true
+      },
+      {
+        "path": "setup.py",
+        "exists": true
+      },
+      {
+        "path": "src/sentinel_pkg/__init__.py",
+        "exists": true
+      }
+    ],
+    "declarations": [
+      {
+        "file": "src/sentinel_pkg/__init__.py",
+        "name": "keep_declaration",
+        "qualifiedName": "sentinel_pkg.keep_declaration",
+        "kind": "function",
+        "span": {
+          "startByte": 115,
+          "endByte": 160,
+          "startLine": 6,
+          "startColumn": 1,
+          "endLine": 7,
+          "endColumn": 17
+        }
+      }
+    ],
+    "imports": [
+      {
+        "file": "src/sentinel_pkg/__init__.py",
+        "moduleSpecifier": "pathlib",
+        "span": {
+          "startByte": 0,
+          "endByte": 24,
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 1,
+          "endColumn": 25
+        },
+        "resolution": "unresolved"
+      }
+    ],
+    "calls": [
+      {
+        "file": "src/sentinel_pkg/__init__.py",
+        "owner": "sentinel_pkg",
+        "callee": "Path(__file__).with_name(\"EXECUTED_MODULE\").write_text",
+        "span": {
+          "startByte": 26,
+          "endByte": 112,
+          "startLine": 3,
+          "startColumn": 1,
+          "endLine": 3,
+          "endColumn": 87
+        },
+        "bindingKind": "lexical-declaration-reference",
+        "resolution": "unresolved",
+        "target": null,
+        "runtimeTargetMode": "unknown",
+        "executionReachability": "not-evaluated"
+      },
+      {
+        "file": "src/sentinel_pkg/__init__.py",
+        "owner": "sentinel_pkg",
+        "callee": "Path(__file__).with_name",
+        "span": {
+          "startByte": 26,
+          "endByte": 69,
+          "startLine": 3,
+          "startColumn": 1,
+          "endLine": 3,
+          "endColumn": 44
+        },
+        "bindingKind": "lexical-declaration-reference",
+        "resolution": "unresolved",
+        "target": null,
+        "runtimeTargetMode": "unknown",
+        "executionReachability": "not-evaluated"
+      },
+      {
+        "file": "src/sentinel_pkg/__init__.py",
+        "owner": "sentinel_pkg",
+        "callee": "Path",
+        "span": {
+          "startByte": 26,
+          "endByte": 40,
+          "startLine": 3,
+          "startColumn": 1,
+          "endLine": 3,
+          "endColumn": 15
+        },
+        "bindingKind": "lexical-declaration-reference",
+        "resolution": "unresolved",
+        "target": null,
+        "runtimeTargetMode": "unknown",
+        "executionReachability": "not-evaluated"
+      }
+    ],
+    "diagnostics": [
+      {
+        "code": "DYNAMIC_PROJECT_CONFIG",
+        "message": "Legacy build configuration is not evaluated.",
+        "file": "setup.py"
+      },
+      {
+        "code": "MODULE_INPUT_MISSING",
+        "message": "Import cannot be resolved from captured project sources; installed environments are not queried.",
+        "file": "src/sentinel_pkg/__init__.py",
+        "span": {
+          "startByte": 0,
+          "endByte": 24,
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 1,
+          "endColumn": 25
+        }
+      },
+      {
+        "code": "MODULE_INPUT_MISSING",
+        "message": "Call has no lexical declaration proof within the supported static modes.",
+        "file": "src/sentinel_pkg/__init__.py",
+        "span": {
+          "startByte": 26,
+          "endByte": 40,
+          "startLine": 3,
+          "startColumn": 1,
+          "endLine": 3,
+          "endColumn": 15
+        }
+      },
+      {
+        "code": "TYPE_ATTRIBUTE_UNVERIFIED",
+        "message": "Call has no lexical declaration proof within the supported static modes.",
+        "file": "src/sentinel_pkg/__init__.py",
+        "span": {
+          "startByte": 26,
+          "endByte": 112,
+          "startLine": 3,
+          "startColumn": 1,
+          "endLine": 3,
+          "endColumn": 87
+        }
+      },
+      {
+        "code": "TYPE_ATTRIBUTE_UNVERIFIED",
+        "message": "Call has no lexical declaration proof within the supported static modes.",
+        "file": "src/sentinel_pkg/__init__.py",
+        "span": {
+          "startByte": 26,
+          "endByte": 69,
+          "startLine": 3,
+          "startColumn": 1,
+          "endLine": 3,
+          "endColumn": 44
+        }
+      }
+    ],
+    "completeness": {
+      "complete": false,
+      "missingInputs": [
+        "module:pathlib"
+      ],
+      "unsupportedModes": [
+        "general-dataflow",
+        "installed-dependency-resolution",
+        "legacy-build-configuration",
+        "runtime-targets-and-reachability",
+        "types-and-frameworks"
+      ],
+      "truncations": []
+    },
+    "targetModulesExecuted": false,
+    "buildBackendExecuted": false,
+    "expectedReadByExtractor": false,
+    "scopeLimitations": [
+      "Confirmed calls identify lexical declarations only; reachability and runtime targets remain unknown.",
+      "Static source roots, UTF-8 sources, package imports and finite re-exports are an exploration slice, not Python framework or packaging conformance.",
+      "No import hooks, setup/backend execution, dependency installation or installed-environment search is performed.",
+      "Existing path links and read-time file changes are refused; concurrent path replacement is not proven safe on every platform."
+    ]
+  },
+  "observation": {
+    "elapsedMs": 80.746,
+    "stderr": ""
+  },
+  "mutationChecks": [
+    {
+      "name": "empty-report",
+      "rejected": true,
+      "reason": "wrong report version"
+    },
+    {
+      "name": "wrong-project",
+      "rejected": true,
+      "reason": "wrong project identity"
+    },
+    {
+      "name": "wrong-input-fingerprint",
+      "rejected": true,
+      "reason": "input fingerprint mismatch: pyproject.toml"
+    },
+    {
+      "name": "wrong-input-size",
+      "rejected": true,
+      "reason": "input size mismatch: pyproject.toml"
+    },
+    {
+      "name": "missing-call",
+      "rejected": true,
+      "reason": "missing expected call: src/sentinel_pkg/__init__.py: Path(__file__).with_name(\"EXECUTED_MODULE\").write_text(\"unexpected\", encoding=\"utf-8\")"
+    },
+    {
+      "name": "duplicate-call",
+      "rejected": true,
+      "reason": "duplicate call within one configuration"
+    },
+    {
+      "name": "wrong-call-byte-range",
+      "rejected": true,
+      "reason": "wrong source span: calls"
+    },
+    {
+      "name": "wrong-codepoint-column",
+      "rejected": true,
+      "reason": "wrong source span: calls"
+    },
+    {
+      "name": "runtime-target-upgrade",
+      "rejected": true,
+      "reason": "static reference claimed a runtime target"
+    },
+    {
+      "name": "binding-kind-upgrade",
+      "rejected": true,
+      "reason": "binding semantics changed"
+    },
+    {
+      "name": "additional-noncall-fact",
+      "rejected": true,
+      "reason": "unexpected additional call"
+    },
+    {
+      "name": "unknown-upgraded",
+      "rejected": true,
+      "reason": "wrong resolution: Path(__file__).with_name(\"EXECUTED_MODULE\").write_text(\"unexpected\", encoding=\"utf-8\")"
+    },
+    {
+      "name": "incomplete-became-complete",
+      "rejected": true,
+      "reason": "incomplete input became complete"
+    },
+    {
+      "name": "completeness-reasons-removed",
+      "rejected": true,
+      "reason": "incomplete report lost every reason"
+    }
+  ],
+  "freshnessChecks": [
+    {
+      "name": "stale-input-tree",
+      "rejected": true,
+      "reason": "saved report has stale fixture inputs"
+    },
+    {
+      "name": "changed-input-ledger",
+      "rejected": true,
+      "reason": "saved report input ledger changed"
+    },
+    {
+      "name": "stale-implementation",
+      "rejected": true,
+      "reason": "saved report has stale implementation/specification"
+    }
+  ]
+}

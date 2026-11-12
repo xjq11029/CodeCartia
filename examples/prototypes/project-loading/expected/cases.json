@@ -1,0 +1,108 @@
+{
+  "version": "project-loading-expected-v0.1",
+  "authorship": "根据原始源码独立定义；未读取提取器结果生成预期。",
+  "cases": [
+    {
+      "id": "js-positive", "language": "js-ts", "root": "fixtures/js/positive", "configFile": "tsconfig.json",
+      "requiredInputs": ["package.json", "tsconfig.json", "tsconfig.base.json", "packages/core/tsconfig.json", "packages/core/src/index.ts", "packages/core/src/labels.ts", "src/main.ts"],
+      "forbiddenInputs": ["src/ignored/not-an-input.ts"],
+      "requiredDiagnostics": [],
+      "exactCallFiles": ["src/main.ts", "packages/core/src/index.ts", "packages/core/src/labels.ts"], "callConfigurations":["tsconfig.json"],
+      "calls": [{"file":"src/main.ts","source":"describe(value)","callee":"describe","resolution":"confirmed","target":{"file":"packages/core/src/labels.ts","name":"formatLabel","source":"export function formatLabel(value: string): string {\n  return \"【\" + value + \"】\";\n}"}}],
+      "declarations": [{"file":"src/main.ts","name":"describeItem","source":"export function describeItem(value: string): string {\n  return /* 甲😀 */ describe(value);\n}"}],
+      "imports": [{"file":"src/main.ts","moduleSpecifier":"@inventory/core","resolution":"resolved","targetFile":"packages/core/src/index.ts"}],
+      "markers": []
+    },
+    {
+      "id": "js-missing", "language":"js-ts", "root":"fixtures/js/missing-dependency", "configFile":"tsconfig.json",
+      "requiredInputs":["package.json","tsconfig.json","src/main.ts"], "forbiddenInputs":[], "requiredDiagnostics":[["MODULE_INPUT_MISSING","MODULE_RESOLUTION_FAILED","INPUT_MISSING"]], "requiresIncomplete":true,
+      "exactCallFiles":["src/main.ts"], "callConfigurations":["tsconfig.json"],
+      "calls":[{"file":"src/main.ts","source":"send(value)","callee":"send","resolution":"unresolved","target":null}],
+      "imports":[{"file":"src/main.ts","moduleSpecifier":"absent-transport-client","resolution":"unresolved"}],
+      "markers":[]
+    },
+    {
+      "id":"js-dynamic", "language":"js-ts", "root":"fixtures/js/dynamic-config", "configFile":"project.config.mjs",
+      "requiredInputs":[], "forbiddenInputs":[], "requiredDiagnostics":["DYNAMIC_CONFIG_UNSUPPORTED"], "requiresIncomplete":true,
+      "exactCallFiles":[], "calls":[], "markers":["EXECUTED_CONFIG"], "noCalls":true
+    },
+    {
+      "id":"js-side-effect", "language":"js-ts", "root":"fixtures/js/side-effect", "configFile":"tsconfig.json",
+      "requiredInputs":["package.json","tsconfig.json","src/main.ts"], "forbiddenInputs":["scripts/hook.cjs"], "requiredDiagnostics":[], "requiresIncomplete":true,
+      "exactCallFiles":["src/main.ts"], "callConfigurations":["tsconfig.json"],
+      "calls":[{"file":"src/main.ts","source":"writeFileSync(import.meta.dirname + \"/EXECUTED_MODULE\", \"unexpected\")","callee":"writeFileSync","resolution":"unresolved","target":null}],
+      "markers":["src/EXECUTED_MODULE","EXECUTED_BUILD"]
+    },
+    {
+      "id":"python-positive", "language":"python", "root":"fixtures/python/positive", "configFile":"pyproject.toml",
+      "requiredInputs":["pyproject.toml","src/warehouse_demo/__init__.py","src/warehouse_demo/core.py","src/warehouse_demo/service.py"], "forbiddenInputs":[], "requiredDiagnostics":[],
+      "exactCallFiles":["src/warehouse_demo/__init__.py","src/warehouse_demo/core.py","src/warehouse_demo/service.py"],
+      "calls":[{"file":"src/warehouse_demo/service.py","source":"describe(value)","callee":"describe","resolution":"confirmed","target":{"file":"src/warehouse_demo/core.py","name":"render_label","source":"def render_label(value):\n    return \"【\" + value + \"】\""}}],
+      "declarations":[{"file":"src/warehouse_demo/service.py","name":"describe_item","source":"def describe_item(value):\n    heading = \"甲😀\"; return describe(value)"}],
+      "imports":[{"file":"src/warehouse_demo/service.py","moduleSpecifier":".","resolution":"resolved","targetFile":"src/warehouse_demo/__init__.py"}],
+      "markers":[]
+    },
+    {
+      "id":"python-missing", "language":"python", "root":"fixtures/python/missing-dependency", "configFile":"pyproject.toml",
+      "requiredInputs":["pyproject.toml","src/outbox_demo/__init__.py","src/outbox_demo/service.py"], "forbiddenInputs":[], "requiredDiagnostics":["MODULE_INPUT_MISSING"], "requiresIncomplete":true,
+      "exactCallFiles":["src/outbox_demo/__init__.py","src/outbox_demo/service.py"],
+      "calls":[{"file":"src/outbox_demo/service.py","source":"send(value)","callee":"send","resolution":"unresolved","target":null}],
+      "imports":[{"file":"src/outbox_demo/service.py","moduleSpecifier":"absent_transport_client","resolution":"unresolved"}],
+      "markers":[]
+    },
+    {
+      "id":"python-dynamic", "language":"python", "root":"fixtures/python/dynamic-config", "configFile":"pyproject.toml",
+      "requiredInputs":["pyproject.toml","src/dynamic_pkg/__init__.py"], "forbiddenInputs":[], "forbiddenSourceInputs":["build/build_backend.py","setup.py"], "requiredDiagnostics":["DYNAMIC_PROJECT_CONFIG"], "requiresIncomplete":true,
+      "exactCallFiles":["src/dynamic_pkg/__init__.py"],
+      "calls":[
+        {"file":"src/dynamic_pkg/__init__.py","source":"Path(__file__)","resolution":"unresolved","target":null},
+        {"file":"src/dynamic_pkg/__init__.py","source":"Path(__file__).with_name(\"EXECUTED_MODULE\")","resolution":"unresolved","target":null},
+        {"file":"src/dynamic_pkg/__init__.py","source":"Path(__file__).with_name(\"EXECUTED_MODULE\").write_text(\"unexpected\", encoding=\"utf-8\")","resolution":"unresolved","target":null}
+      ],
+      "markers":["src/dynamic_pkg/EXECUTED_MODULE","EXECUTED_BACKEND","EXECUTED_SETUP"]
+    },
+    {
+      "id":"python-side-effect", "language":"python", "root":"fixtures/python/side-effect", "configFile":"pyproject.toml",
+      "requiredInputs":["pyproject.toml","src/sentinel_pkg/__init__.py"], "forbiddenInputs":[], "forbiddenSourceInputs":["build/build_backend.py","setup.py"], "requiredDiagnostics":[], "requiresIncomplete":true,
+      "exactCallFiles":["src/sentinel_pkg/__init__.py"],
+      "calls":[
+        {"file":"src/sentinel_pkg/__init__.py","source":"Path(__file__)","resolution":"unresolved","target":null},
+        {"file":"src/sentinel_pkg/__init__.py","source":"Path(__file__).with_name(\"EXECUTED_MODULE\")","resolution":"unresolved","target":null},
+        {"file":"src/sentinel_pkg/__init__.py","source":"Path(__file__).with_name(\"EXECUTED_MODULE\").write_text(\"unexpected\", encoding=\"utf-8\")","resolution":"unresolved","target":null}
+      ],
+      "declarations":[{"file":"src/sentinel_pkg/__init__.py","name":"keep_declaration","source":"def keep_declaration(value):\n    return value"}],
+      "markers":["src/sentinel_pkg/EXECUTED_MODULE","EXECUTED_BACKEND","EXECUTED_SETUP"]
+    },
+    {
+      "id":"js-unknown-type", "language":"js-ts", "root":"fixtures/js/unknown-type", "configFile":"tsconfig.json",
+      "requiredInputs":["package.json","tsconfig.json","src/main.ts"], "forbiddenInputs":[], "requiredDiagnostics":[],
+      "exactCallFiles":["src/main.ts"], "callConfigurations":["tsconfig.json"],
+      "calls":[{"file":"src/main.ts","source":"callback(value)","callee":"callback","resolution":"unresolved","target":null}],
+      "markers":[]
+    },
+    {
+      "id":"python-late-rebinding", "language":"python", "root":"fixtures/python/late-rebinding", "configFile":"pyproject.toml",
+      "requiredInputs":["pyproject.toml","src/shadow_demo/__init__.py","src/shadow_demo/core.py","src/shadow_demo/service.py"], "forbiddenInputs":[], "requiredDiagnostics":["ASSIGNMENT_BINDING_UNKNOWN"], "requiresIncomplete":true,
+      "exactCallFiles":["src/shadow_demo/__init__.py","src/shadow_demo/core.py","src/shadow_demo/service.py"],
+      "calls":[
+        {"file":"src/shadow_demo/service.py","source":"transform(value)","callee":"transform","resolution":"unresolved","target":null},
+        {"file":"src/shadow_demo/service.py","source":"transform_local(value)","callee":"transform_local","resolution":"confirmed","target":{"file":"src/shadow_demo/core.py","name":"transform","source":"def transform(value):\n    return value"}}
+      ],
+      "markers":[]
+    },
+    {
+      "id":"python-binding-boundaries", "language":"python", "root":"fixtures/python/binding-boundaries", "configFile":"pyproject.toml",
+      "requiredInputs":["pyproject.toml","src/bindings_demo/__init__.py","src/bindings_demo/core.py","src/bindings_demo/unmodified.py","src/bindings_demo/service.py"], "forbiddenInputs":[], "requiredDiagnostics":["ASSIGNMENT_BINDING_UNKNOWN","ATTRIBUTE_WRITE_BOUNDARY"], "requiresIncomplete":true,
+      "exactCallFiles":["src/bindings_demo/__init__.py","src/bindings_demo/core.py","src/bindings_demo/unmodified.py","src/bindings_demo/service.py"],
+      "calls":[
+        {"file":"src/bindings_demo/core.py","source":"dispatch(value)","callee":"dispatch","resolution":"unresolved","target":null},
+        {"file":"src/bindings_demo/service.py","source":"marker(value)","callee":"marker","resolution":"unresolved","target":null},
+        {"file":"src/bindings_demo/service.py","source":"shared(value)","callee":"shared","resolution":"unresolved","target":null},
+        {"file":"src/bindings_demo/service.py","source":"local_target(value)","callee":"local_target","resolution":"unresolved","target":null},
+        {"file":"src/bindings_demo/service.py","source":"core.dispatch(value)","callee":"core.dispatch","resolution":"unresolved","target":null},
+        {"file":"src/bindings_demo/service.py","source":"stable(value)","callee":"stable","resolution":"confirmed","target":{"file":"src/bindings_demo/service.py","name":"stable","source":"def stable(item):\n    return item"}}
+      ],
+      "markers":[]
+    }
+  ]
+}

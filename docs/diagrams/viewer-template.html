@@ -220,10 +220,11 @@
     <nav aria-label="设计图解"><ol class="chapter-list" id="chapter-list"></ol></nav>
     <div class="sidebar-bottom">
       <div class="sidebar-legend"><span><i class="dot"></i>结构与分析</span><span><i class="dot teal"></i>业务语义</span><span><i class="dot amber"></i>条件与缺口</span></div>
-      <p>图解依据当前设计文档组织。颜色用于阅读分组与提示，不表示产品能力已实现或通过验收。</p>
+      <p>初版验证 JS/TS 和 Python，其他语言后续验证。颜色用于阅读分组与提示，不表示产品能力已实现或通过验收。</p>
       <a href="architecture-guide.md">文字图解与阅读顺序 ↗</a>
       <a href="README.md">图集、文件与使用说明 ↗</a>
       <a href="../CodeCartia-设计方案.md">完整设计方案 v0.6 ↗</a>
+      <a href="../decisions/D13-初版语言验证范围.md">初版语言验证范围 ↗</a>
     </div>
   </aside>
   <main id="reading-content" tabindex="-1">
@@ -275,11 +276,11 @@
     </section>
     <section class="sources-panel" aria-label="来源和图源"><div><h2>来源文档</h2><ul class="source-list" id="graph-sources"></ul></div><div class="download-links"><a id="mermaid-source-link" href="sources/overview.mmd">当前 Mermaid 图源 ↗</a><a href="architecture-guide.md">Markdown 导航 ↗</a><a href="README.md">全部文件 ↗</a></div></section>
     <nav class="chapter-pager" aria-label="章节前后导航"><button class="pager-button" id="prev-chapter">← 上一章</button><button class="pager-button" id="next-chapter">下一章 →</button></nav>
-    <footer class="page-footer"><span>CodeCartia（源图） · 设计 v0.6 · 2026-11-09</span><span>离线自包含图解可用；应用尚未实现，M1 基线未冻结。</span></footer>
+    <footer class="page-footer"><span>CodeCartia（源图） · 设计 v0.6 · 语言范围同步于 2026-11-12</span><span>初版验证 JS/TS、Python；应用尚未实现，M1 基线未冻结。</span></footer>
   </main>
   <noscript>
     <style>main,.sidebar,.top-button{display:none!important}.fallback{margin-left:0}</style>
-    <section class="fallback"><h1>CodeCartia 架构与设计图解</h1><p>当前未启用 JavaScript。下方保留八张静态 SVG，或阅读 <a href="architecture-guide.md">Markdown 图解</a>与<a href="README.md">图集说明</a>。设计 v0.6；应用尚未实现；M1 基线未冻结。</p><div class="fallback-grid">
+    <section class="fallback"><h1>CodeCartia 架构与设计图解</h1><p>当前未启用 JavaScript。下方保留八张静态 SVG，或阅读 <a href="architecture-guide.md">Markdown 图解</a>与<a href="README.md">图集说明</a>。设计 v0.6；初版验证 JS/TS、Python，其他语言后续验证；应用尚未实现，M1 基线未冻结。</p><div class="fallback-grid">
       <article class="fallback-card"><h2>01 · 产品总览与阅读主线</h2><img src="svgs/overview.svg" alt="产品总览：从多工程输入到业务场景、步骤与证据"><p><a href="svgs/overview.svg">独立 SVG</a><a href="sources/overview.mmd">Mermaid 图源</a></p></article>
       <article class="fallback-card"><h2>02 · 总体架构与模块职责</h2><img src="svgs/architecture.svg" alt="总体架构：分析编排、语言worker、事实存储、查询与本地Web"><p><a href="svgs/architecture.svg">独立 SVG</a><a href="sources/architecture.mmd">Mermaid 图源</a></p></article>
       <article class="fallback-card"><h2>03 · 分析流水线与跨工程关联</h2><img src="svgs/analysis.svg" alt="静态分析流水线与框架、跨工程关联的证据边界"><p><a href="svgs/analysis.svg">独立 SVG</a><a href="sources/analysis.mmd">Mermaid 图源</a></p></article>
@@ -622,7 +623,7 @@
     });
     function buildPrintReader() {
       const reader=$('print-reader');reader.replaceChildren();
-      const cover=el('article',null,'print-cover');cover.append(el('p','CODECARTIA / DESIGN READER','eyebrow'),el('h1','CodeCartia 架构与设计图解'),el('p','设计 v0.6 · 2026-11-09\n应用尚未实现；M1 基线未冻结。\n图解依据设计与合成规格组织，颜色与连线不表示验收通过或真实运行。'));
+      const cover=el('article',null,'print-cover');cover.append(el('p','CODECARTIA / DESIGN READER','eyebrow'),el('h1','CodeCartia 架构与设计图解'),el('p','设计 v0.6 · 语言范围同步于 2026-11-12\n初版验证 JS/TS、Python；Java、C#、C、C++ 整体延后。\n应用尚未实现；M1 基线未冻结。\n图解依据设计与合成规格组织，颜色与连线不表示验收通过或真实运行。'));
       const contents=el('ol');chapters.forEach(ch=>contents.append(el('li',graphs[ch.id].title || ch.title)));cover.append(contents);reader.append(cover);
       chapters.forEach((chapter,index)=>{
         const graph=graphs[chapter.id],page=el('article',null,'print-page');

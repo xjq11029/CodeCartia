@@ -1,10 +1,10 @@
 flowchart LR
-  %% 设计图解；未实现。箭头含义见本图说明。
+  %% 设计图解；未实现。初版验证 JS/TS、Python，Java/C#/C/C++ 后续验证。箭头含义见本图说明。
   business_roots["登记业务源码根"]:::data
   semantic_roots["登记语义输入根"]:::data
   workspace_config["工作区／环境<br/>输入清单"]:::data
   cli["CLI 编排进程"]:::core
-  workers["语言分析<br/>独立 worker"]:::core
+  workers["JS/TS · Python<br/>独立 worker"]:::core
   adapters["框架／协议<br/>适配器"]:::core
   ai["可选 AI 适配"]:::optional
   facts["统一事实<br/>与证据模型"]:::data

@@ -1,0 +1,575 @@
+{
+  "experimentVersion": "runtime-experiment-v0.1",
+  "executedAtUtc": "2026-11-12T06:24:49.428112+00:00",
+  "environment": {
+    "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "sqlite": "3.50.4",
+    "os": "Windows-11-10.0.22621-SP0"
+  },
+  "versions": {
+    "protocolVersion": "0.2-draft",
+    "schemaVersion": "0.2-draft"
+  },
+  "transportProfileId": "jsonl-utf8-sha256-sorted-keys-v0.1-experimental",
+  "explorationLimits": {
+    "maxFrameBytes": 1048576,
+    "maxJsonDepth": 64,
+    "maxQueuedFrames": 128,
+    "maxLogBytes": 65536,
+    "maxSessionFrames": 256,
+    "maxAuditEntries": 768,
+    "maxAuditBytes": 8388608,
+    "maxBatchRecords": 256,
+    "maxBatches": 64,
+    "maxRecords": 4096,
+    "maxInFlightBatches": 1,
+    "startupSeconds": 5.0,
+    "taskSeconds": 5.0,
+    "stopSeconds": 1.0
+  },
+  "inputManifest": [
+    {
+      "path": "cases.py",
+      "sha256": "2ad746baa63c735e8531edabf679b77113cd53bd042ab42586835d67fc801132"
+    },
+    {
+      "path": "host.py",
+      "sha256": "79efdc9e02baf9a20b6cd36d6219b8759f08c159abc20eb45bcdf393612c200e"
+    },
+    {
+      "path": "io_policy.py",
+      "sha256": "55b66fcb05693c2cb9f88f638cd62fec0986f45597bc2a15e1ab14b64f4dc552"
+    },
+    {
+      "path": "producer.py",
+      "sha256": "cf19f0fc9d846fc36c2f4f53ecd4e16ba1fd0df27b433b3af8939e592396c84d"
+    },
+    {
+      "path": "store.py",
+      "sha256": "ccd88bdba8184f7a8b41fa6b67df815cdcbbaed6df94c71ea5654effb78f5720"
+    },
+    {
+      "path": "store_probe.py",
+      "sha256": "b3654b344927def237f055e6b351044ec9290ec627d2f955fbab229e11df6713"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "ad8896db4d01012cb888bfa64d6989094ef78054e8ef8b3e4f027f3d2f021c05"
+    },
+    {
+      "path": "wire.py",
+      "sha256": "5bfa06b5dc98d07999b00e7dfa0cd49951d529cbd6cbe9f424d83b69353512ff"
+    },
+    {
+      "path": "SPEC.md",
+      "sha256": "5e38494164aa7a0549beafbef42beb4c78c93a4d93709ad1b8dc06876e1bf912"
+    }
+  ],
+  "passed": 47,
+  "total": 47,
+  "cases": [
+    {
+      "name": "forward-reference-and-log-isolation",
+      "source": "WP04/WP10",
+      "passed": true,
+      "seconds": 0.1072,
+      "observation": {
+        "wireRecords": 5,
+        "materializedRecords": 5,
+        "ackWasPublication": false,
+        "stderrExcluded": true
+      }
+    },
+    {
+      "name": "duplicate-batch-idempotence",
+      "source": "WP05/W-B",
+      "passed": true,
+      "seconds": 0.107,
+      "observation": {
+        "rawRecords": 5,
+        "uniqueRecords": 5
+      }
+    },
+    {
+      "name": "cross-batch-record-counts",
+      "source": "W-B/raw-vs-materialized",
+      "passed": true,
+      "seconds": 0.1066,
+      "observation": {
+        "rawRecords": 6,
+        "uniqueRecords": 5
+      }
+    },
+    {
+      "name": "missing-batch",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.1018,
+      "observation": {
+        "rejected": true,
+        "reason": "missing final batch sequence"
+      }
+    },
+    {
+      "name": "wrong-count",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.1044,
+      "observation": {
+        "rejected": true,
+        "reason": "final manifest/counts differ from received ledger"
+      }
+    },
+    {
+      "name": "wrong-hash",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.0975,
+      "observation": {
+        "rejected": true,
+        "reason": "batch fingerprint mismatch"
+      }
+    },
+    {
+      "name": "conflicting-duplicate",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.0965,
+      "observation": {
+        "rejected": true,
+        "reason": "conflicting duplicate batch/sequence"
+      }
+    },
+    {
+      "name": "wrong-revision",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.1075,
+      "observation": {
+        "rejected": true,
+        "reason": "missing exact fact: evidenceRefs"
+      }
+    },
+    {
+      "name": "id-only-reference",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.0932,
+      "observation": {
+        "rejected": true,
+        "reason": "missing revisionId"
+      }
+    },
+    {
+      "name": "self-support",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.1042,
+      "observation": {
+        "rejected": true,
+        "reason": "cyclic fact support"
+      }
+    },
+    {
+      "name": "auxiliary-source",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.1097,
+      "observation": {
+        "rejected": true,
+        "reason": "auxiliary source in automatic baseline"
+      }
+    },
+    {
+      "name": "missing-exact-reference",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.1011,
+      "observation": {
+        "rejected": true,
+        "reason": "missing exact fact: evidenceRefs"
+      }
+    },
+    {
+      "name": "unknown-required-feature",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.0908,
+      "observation": {
+        "rejected": true,
+        "reason": "unknown required message feature"
+      }
+    },
+    {
+      "name": "lost-coverage-gap",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.1031,
+      "observation": {
+        "rejected": true,
+        "reason": "final completeness lost a producer gap"
+      }
+    },
+    {
+      "name": "boolean-empty-count",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.0967,
+      "observation": {
+        "rejected": true,
+        "reason": "invalid totalRecordCount"
+      }
+    },
+    {
+      "name": "bad-json",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.0933,
+      "observation": {
+        "rejected": true,
+        "reason": "invalid UTF-8/JSON frame"
+      }
+    },
+    {
+      "name": "oversize",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.4197,
+      "observation": {
+        "rejected": true,
+        "reason": "oversized or unterminated frame"
+      }
+    },
+    {
+      "name": "violate-credit",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.0926,
+      "observation": {
+        "rejected": true,
+        "reason": "fact sent without credit"
+      }
+    },
+    {
+      "name": "nonfinite-frame",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.0897,
+      "observation": {
+        "rejected": true,
+        "reason": "invalid UTF-8/JSON frame"
+      }
+    },
+    {
+      "name": "surrogate-frame",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.0889,
+      "observation": {
+        "rejected": true,
+        "reason": "invalid UTF-8/JSON frame"
+      }
+    },
+    {
+      "name": "missing-kind",
+      "source": "WP05/06/09/11/12/15",
+      "passed": true,
+      "seconds": 0.0892,
+      "observation": {
+        "rejected": true,
+        "reason": "invalid message structure"
+      }
+    },
+    {
+      "name": "no-common-schema",
+      "source": "WP01/W-H",
+      "passed": true,
+      "seconds": 0.067,
+      "observation": {
+        "sessionRejected": true,
+        "reason": "incompatible worker bootstrap"
+      }
+    },
+    {
+      "name": "unknown-feature",
+      "source": "WP01/W-H",
+      "passed": true,
+      "seconds": 0.0686,
+      "observation": {
+        "sessionRejected": true,
+        "reason": "incompatible worker bootstrap"
+      }
+    },
+    {
+      "name": "wrong-ready",
+      "source": "WP01/W-H",
+      "passed": true,
+      "seconds": 0.0715,
+      "observation": {
+        "sessionRejected": true,
+        "reason": "ready does not match selected configuration"
+      }
+    },
+    {
+      "name": "unsupported-required-mode",
+      "source": "WP02",
+      "passed": true,
+      "seconds": 0.0903,
+      "observation": {
+        "requestRejected": true,
+        "noFacts": true
+      }
+    },
+    {
+      "name": "old-attempt-frame-isolation",
+      "source": "WP03",
+      "passed": true,
+      "seconds": 0.1057,
+      "observation": {
+        "staleMessagesQuarantined": 1,
+        "currentRecords": 5
+      }
+    },
+    {
+      "name": "zero-credit-wait-for-cancel",
+      "source": "WP07/08/10",
+      "passed": true,
+      "seconds": 0.0948,
+      "observation": {
+        "ackObserved": true,
+        "cleanup": "exited",
+        "decision": "sealed_cancelled"
+      }
+    },
+    {
+      "name": "zero-credit-ignore-cancel",
+      "source": "WP07/08/10",
+      "passed": true,
+      "seconds": 0.417,
+      "observation": {
+        "ackObserved": true,
+        "cleanup": "forced_terminated",
+        "decision": "sealed_cancelled"
+      }
+    },
+    {
+      "name": "zero-credit-late-complete",
+      "source": "WP07/08/10",
+      "passed": true,
+      "seconds": 0.0946,
+      "observation": {
+        "ackObserved": true,
+        "cleanup": "exited",
+        "decision": "sealed_cancelled"
+      }
+    },
+    {
+      "name": "cancel-during-validation",
+      "source": "W-L05",
+      "passed": true,
+      "seconds": 0.099,
+      "observation": {
+        "winner": "cancelled"
+      }
+    },
+    {
+      "name": "completion-before-cancel",
+      "source": "W-L04",
+      "passed": true,
+      "seconds": 0.1068,
+      "observation": {
+        "winner": "completed"
+      }
+    },
+    {
+      "name": "worker-crash-preserves-current",
+      "source": "WP08",
+      "passed": true,
+      "seconds": 0.1824,
+      "observation": {
+        "decision": "sealed_failed",
+        "oldCurrentPreserved": true,
+        "reason": "worker closed its protocol stream"
+      }
+    },
+    {
+      "name": "worker-timeout-preserves-current",
+      "source": "WP08",
+      "passed": true,
+      "seconds": 0.4403,
+      "observation": {
+        "decision": "sealed_timed_out",
+        "oldCurrentPreserved": true,
+        "reason": "worker deadline exceeded"
+      }
+    },
+    {
+      "name": "stale-frames-cannot-postpone-deadline",
+      "source": "WP08/10/control-deadline",
+      "passed": true,
+      "seconds": 0.8506,
+      "observation": {
+        "decision": "sealed_timed_out",
+        "elapsedSeconds": 0.15686490000007325,
+        "quarantined": 29,
+        "boundedAuditEntries": 64,
+        "reason": "worker absolute deadline exceeded"
+      }
+    },
+    {
+      "name": "stale-frames-count-toward-session-budget",
+      "source": "WP10/control-budget",
+      "passed": true,
+      "seconds": 2.3032,
+      "observation": {
+        "decision": "sealed_failed",
+        "elapsedSeconds": 1.6105338000015763,
+        "quarantined": 253,
+        "boundedAuditEntries": 512,
+        "reason": "session message budget exhausted"
+      }
+    },
+    {
+      "name": "allowed-partial",
+      "source": "W-S01",
+      "passed": true,
+      "seconds": 0.1166,
+      "observation": {
+        "allowPartial": true,
+        "decision": "sealed_partial",
+        "protocolIntegrity": "valid"
+      }
+    },
+    {
+      "name": "strict-semantic-incomplete",
+      "source": "WP13/W-S09",
+      "passed": true,
+      "seconds": 0.1028,
+      "observation": {
+        "allowPartial": false,
+        "decision": "sealed_failed",
+        "protocolIntegrity": "valid"
+      }
+    },
+    {
+      "name": "reverse-completion-order",
+      "source": "W-L10/D12",
+      "passed": true,
+      "seconds": 0.2085,
+      "observation": {
+        "latestGeneration": 2,
+        "current": "snapshot-B",
+        "older": "historical"
+      }
+    },
+    {
+      "name": "new-request-after-precheck-fails",
+      "source": "W-L10/11/D12",
+      "passed": true,
+      "seconds": 0.2811,
+      "observation": {
+        "newRequestAfterPrecheck": true,
+        "latestFailedGeneration": 3,
+        "olderDidNotRegainEligibility": true
+      }
+    },
+    {
+      "name": "idempotent-request-and-failed-attempt-retry",
+      "source": "W-L12",
+      "passed": true,
+      "seconds": 0.183,
+      "observation": {
+        "generationAfterRetry": 1,
+        "oldAttemptDecision": "sealed_failed"
+      }
+    },
+    {
+      "name": "storage-error-after-completion",
+      "source": "WP14",
+      "passed": true,
+      "seconds": 0.204,
+      "observation": {
+        "executionDecisionPreserved": true,
+        "oldCurrentPreserved": true,
+        "reason": "injected storage failure before commit"
+      }
+    },
+    {
+      "name": "input-change-after-completion",
+      "source": "WP14",
+      "passed": true,
+      "seconds": 0.2051,
+      "observation": {
+        "executionDecisionPreserved": true,
+        "oldCurrentPreserved": true,
+        "reason": "inputs changed after completion"
+      }
+    },
+    {
+      "name": "process-crash-before-sqlite-commit",
+      "source": "M1-08/R12",
+      "passed": true,
+      "seconds": 0.2789,
+      "observation": {
+        "point": "before-commit",
+        "latestGeneration": 2,
+        "current": "snapshot-seed",
+        "processKilled": true
+      }
+    },
+    {
+      "name": "process-crash-after-sqlite-commit",
+      "source": "M1-08/R12",
+      "passed": true,
+      "seconds": 0.2974,
+      "observation": {
+        "point": "after-commit",
+        "latestGeneration": 2,
+        "current": "snapshot-new",
+        "processKilled": true
+      }
+    },
+    {
+      "name": "empty-technical-stream",
+      "source": "W-S07",
+      "passed": true,
+      "seconds": 0.0964,
+      "observation": {
+        "protocolZeroOutputValid": true,
+        "productAcceptance": "not-measured"
+      }
+    },
+    {
+      "name": "corrupt-recovery-state",
+      "source": "R12/recovery",
+      "passed": true,
+      "seconds": 0.1072,
+      "observation": {
+        "corruptStateRejected": true,
+        "reason": "corrupt snapshot content"
+      }
+    },
+    {
+      "name": "strict-framing-and-output-boundary",
+      "source": "WP10/12",
+      "passed": true,
+      "seconds": 0.0008,
+      "observation": {
+        "invalidFramesRejected": 7,
+        "sourceOverwriteRejected": true,
+        "hardLinkOverwriteRejected": true
+      }
+    }
+  ],
+  "productAcceptance": "not-measured",
+  "g1": "not-frozen",
+  "limitations": [
+    "controlled producer, not language-worker integration",
+    "single active attempt per process",
+    "FactRef/manifest/source subset, not full theme schema",
+    "no cross-worker external providers",
+    "Windows process-kill recovery is not physical power-loss durability",
+    "no cross-platform/package/semantic quality acceptance"
+  ]
+}

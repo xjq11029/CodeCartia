@@ -1,0 +1,2664 @@
+{
+  "before": {
+    "scope": "Allowed owned static source/config/README/requirements; node_modules and runtime data excluded.",
+    "files": [
+      {
+        "path": ".vscode/launch.json",
+        "sha256": "sha256:bb434bf7b6961a72f8427ddad4b069ef11b02130f35325644621c0a9d5753e81",
+        "sizeBytes": 368,
+        "mtimeNs": "1776935089031505900",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".vscode/settings.json",
+        "sha256": "sha256:047719445fc55e2c1b3c325ca8b01b11e8a3dab9b614e5d0f4337dd5e4186f4d",
+        "sizeBytes": 40,
+        "mtimeNs": "1775790042059427500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/audit_check.py",
+        "sha256": "sha256:5c3e5fcd4c3974ed179ab1643c2717d92a6623de21161272f6b6f510d32d368a",
+        "sizeBytes": 2561,
+        "mtimeNs": "1789105758147822700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/audit_check2.py",
+        "sha256": "sha256:1aa5e4bd74066d24a8b51e7480e02403906ff37b964e076bcf71a97f5e6fdf05",
+        "sizeBytes": 2012,
+        "mtimeNs": "1789105771200785500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/audit_spec.py",
+        "sha256": "sha256:913b0487b1c9a51b8f4dc77a48cd9c314faa3f53761674eeb3373fc8aabc4267",
+        "sizeBytes": 1382,
+        "mtimeNs": "1789111181836676200",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/audit_summary.py",
+        "sha256": "sha256:8a8f3bf2fb4a09d9b6548a2da0dd22f466743ed90c5ef7cf85019f38ac30cb40",
+        "sizeBytes": 2412,
+        "mtimeNs": "1789111163994806600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/diagnose_measure.js",
+        "sha256": "sha256:57ab74e0c378ccbded4e4e6b3732294f4148355103a7b347c19cd31314ed80d8",
+        "sizeBytes": 7093,
+        "mtimeNs": "1787291529928898600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/dump_exports.js",
+        "sha256": "sha256:bc062b3ed55622ee17f782edfef64d2c24e4fce2cbab3278c089c868d002cbbb",
+        "sizeBytes": 1965,
+        "mtimeNs": "1787297769257644800",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/dump_imports.js",
+        "sha256": "sha256:c457187902d6ed02fd26b79274dc0071db1d0be8bae0ad9021938026ea3266aa",
+        "sizeBytes": 1949,
+        "mtimeNs": "1787301167236474200",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/dump_strings.js",
+        "sha256": "sha256:5f5180e836e07d96b0569aa64880efcc2277c455bb095b54ad711672bdc0fa55",
+        "sizeBytes": 800,
+        "mtimeNs": "1787295775439029700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/find_files_mtsdk.js",
+        "sha256": "sha256:0531799fd106cf592eeeac6d7635f8ed6dc0cb755360248c4f53d23a94b54310",
+        "sizeBytes": 2147,
+        "mtimeNs": "1787301193415048300",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/gen_model_docx.py",
+        "sha256": "sha256:2331d71ace8466926c16b815b5bbb314715c955c818bf5b622b5b1751145d7bd",
+        "sizeBytes": 5072,
+        "mtimeNs": "1785805232587842100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/gen_report.py",
+        "sha256": "sha256:7af860229c6727055d6ccf92109b0e63ba534e300bd3eac4ee1d759c9a9ac839",
+        "sizeBytes": 90702,
+        "mtimeNs": "1788337864034953400",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/index_rows.json",
+        "sha256": "sha256:eff59b800c8d8be996b81f305e76de31efb01b17f1d9e7df0117a5e0caf223dd",
+        "sizeBytes": 28919,
+        "mtimeNs": "1789105667655659700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/list_exports.js",
+        "sha256": "sha256:e0345f19cf648acdce02665831c6f2cac4e0c139232be99d776ca846d226c3a2",
+        "sizeBytes": 512,
+        "mtimeNs": "1787293105612583700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/list_exports2.js",
+        "sha256": "sha256:40957a30a97ca3b4c073bb5193917b3de16cce9ab7698df0f2a0ac265b06e740",
+        "sizeBytes": 2432,
+        "mtimeNs": "1787299211274678000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/list_measure_exports.js",
+        "sha256": "sha256:74ac7bdc905e175e64996c898f51c09f914f8ecad0d3a13f1ee576ed8029f840",
+        "sizeBytes": 2037,
+        "mtimeNs": "1787298783780650300",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/md2docx.py",
+        "sha256": "sha256:21eb8f2dea469824e36528ee8fba120270351b2ffdf6fefd5671395e71541ec3",
+        "sizeBytes": 6906,
+        "mtimeNs": "1788227928848644600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/migrate_docs.py",
+        "sha256": "sha256:2556024ae009907ee24a77117071f677a03a8bcf355be37a546f873f35a3540f",
+        "sizeBytes": 6166,
+        "mtimeNs": "1789092610666845500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/pe_exports.js",
+        "sha256": "sha256:803e474c5fada2592443553a1e13b1c8eba99d93a70fda7d3aa601c4311cb31b",
+        "sizeBytes": 2297,
+        "mtimeNs": "1787293505237214600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/pe_sections.js",
+        "sha256": "sha256:129ba5ee4cf2e0c0f3db1286fe5e93550edb513461db9be4fbb16b4095020566",
+        "sizeBytes": 1366,
+        "mtimeNs": "1787295817046209100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/probe_dll.js",
+        "sha256": "sha256:81d9512f1c35f980e8d1521877835cfc95f234b00506ce3e22c5bf9ec84dc555",
+        "sizeBytes": 3789,
+        "mtimeNs": "1787297809457260400",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/probe_exports.js",
+        "sha256": "sha256:1a0b5c90e4f69a23ace604e78c42510d2bec983036b044f70a6ee9a157390e3b",
+        "sizeBytes": 1320,
+        "mtimeNs": "1787298810160193800",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/probe_mtsdk2.js",
+        "sha256": "sha256:f55ffe61f7d1684e758b868828db4bab29703d83cbe55fbfe35f7c19c569329a",
+        "sizeBytes": 4477,
+        "mtimeNs": "1787300367184763000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/resync_device.js",
+        "sha256": "sha256:bfa9eee836c7764d5297796d9f9b58a9ba31de812c1fea2fdb7b8421ffc526d6",
+        "sizeBytes": 1694,
+        "mtimeNs": "1787291599651897100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_atm.js",
+        "sha256": "sha256:f167e88e94113bca7fd3bd81cf4f4528d76eeadb2f43f7fd3ba54bd1c56d12bb",
+        "sizeBytes": 3412,
+        "mtimeNs": "1787301384602167500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_context2.js",
+        "sha256": "sha256:c13ec6dcedd8819e12f75e66d88f2c49d31878a80e8fbee4b263737016a43255",
+        "sizeBytes": 2184,
+        "mtimeNs": "1787292070987841000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_devtype.js",
+        "sha256": "sha256:8c46dca32f56c1c15f1e9e14a2554acc5e8485e0c10ae0c928b06c71ffbc9c02",
+        "sizeBytes": 3950,
+        "mtimeNs": "1787297317430743400",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_dll_context.js",
+        "sha256": "sha256:0888c699d64feb36e5d5d25af79e66da5a1945115cc1e5fef986182abdcfc4fe",
+        "sizeBytes": 1347,
+        "mtimeNs": "1787291177121560100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_dll_patterns.js",
+        "sha256": "sha256:1648fbe2a5116da0124465ccce0f7f53ada6282eda2dc145fcc840164b09dcf7",
+        "sizeBytes": 1366,
+        "mtimeNs": "1787291125401156700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_dll_strings.js",
+        "sha256": "sha256:0ea29cd81282074ea3956e123b1033b2edd082a5551e53cbcd8d95770a93a42d",
+        "sizeBytes": 1281,
+        "mtimeNs": "1787291091813082900",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_exports.py",
+        "sha256": "sha256:a73c2d3e871b3edc1536a4b33f12073e9678a17681440597814702918f01566b",
+        "sizeBytes": 1121,
+        "mtimeNs": "1785480611698070100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_fields.js",
+        "sha256": "sha256:fd58cecc6bccc2180945a3fa447d65e8994ac292d65b5f2f69a269f870a65e56",
+        "sizeBytes": 2268,
+        "mtimeNs": "1787301343732120000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_mtsdk_devtype.js",
+        "sha256": "sha256:9d7d10b72894bc21d76176dd482d007c518bc5fd90bbd9a4dafef9948f27863f",
+        "sizeBytes": 2312,
+        "mtimeNs": "1787300409688234000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_mtsdk_strings.js",
+        "sha256": "sha256:58054620eadac2cf33b372983f8c88a9ab64601a9cf9677558ecc04a98db4d4a",
+        "sizeBytes": 881,
+        "mtimeNs": "1787295744327823600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/skill_validate_test.py",
+        "sha256": "sha256:b22d2c9e43c8b804acdd864c39f7f1670fee7d638a818734bb31170cd53bda1c",
+        "sizeBytes": 2558,
+        "mtimeNs": "1789111953567060500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_atm_range.js",
+        "sha256": "sha256:94ffba33f7d34d908a6645636ddd09ff83d6394ccf28b5f44984b95c798342a7",
+        "sizeBytes": 3291,
+        "mtimeNs": "1787299296090350200",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_dll_synth.js",
+        "sha256": "sha256:ba865204b2664385c9db587ba28275dae450546064fd18438df5f26f0b4f02e6",
+        "sizeBytes": 3840,
+        "mtimeNs": "1787291825584457400",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_e2e_recog.js",
+        "sha256": "sha256:d60f22e087f08ad99e2bae762242ab60d8816e4a41497e6278c32dbe61c953bf",
+        "sizeBytes": 3971,
+        "mtimeNs": "1787549380886406100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_endian.js",
+        "sha256": "sha256:4713928d32e0f1941bbe08c0290decd39847d0a639191f40ac335237c60261c2",
+        "sizeBytes": 3880,
+        "mtimeNs": "1787299074044867300",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_exit_cleanup.js",
+        "sha256": "sha256:a3a7d61091762d7201f93b5437a4df3def299f41b4da8bd18dad98e6959be967",
+        "sizeBytes": 861,
+        "mtimeNs": "1787637211944203500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_ext_scan.js",
+        "sha256": "sha256:9e9a9fe9e89084a907e94a414b2a4c6615cc64323c46a3424688d3c9943b4a32",
+        "sizeBytes": 3241,
+        "mtimeNs": "1787299262090855600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_matrix.js",
+        "sha256": "sha256:cb92e6ddba2e81a2b04a22c6ceed676f0a5046263aade211c2b5ab9dc88416be",
+        "sizeBytes": 5201,
+        "mtimeNs": "1787298966506129600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_paramlen.js",
+        "sha256": "sha256:369a3841b00bf31fbe1d809b6f2b8c8eaf8b007eab61bf1984f74e8dabcdaa2f",
+        "sizeBytes": 2477,
+        "mtimeNs": "1787297870254028200",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_recog_chain.js",
+        "sha256": "sha256:f1dcf2c9bc26879223c3f86b721e3498e900c80c540e2933cc846c39e1d3bd0c",
+        "sizeBytes": 2560,
+        "mtimeNs": "1787548518597314100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_struct_order.js",
+        "sha256": "sha256:e77475b448e2eb160a9d1d6252a4d994f36a5b987ce98fbacc2e84723d1b71cf",
+        "sizeBytes": 3095,
+        "mtimeNs": "1787301235830157000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_tmp_measure.js",
+        "sha256": "sha256:77b51c1d3aaa66558aa60d28c25e746db674ff289770ae10af4a7778ca5beb07",
+        "sizeBytes": 4374,
+        "mtimeNs": "1787302196051525700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_usb2_dll.js",
+        "sha256": "sha256:861f23ae30ee2406033a565bed98bde0ebbb9cc28103de8209096539e1bf20e3",
+        "sizeBytes": 3903,
+        "mtimeNs": "1787293143632502300",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_ws_deviceid.js",
+        "sha256": "sha256:59e1b54de3e0983e9935770f9005d53f9eaa61d60ab7efe89a4e1a7066d81087",
+        "sizeBytes": 3006,
+        "mtimeNs": "1787548549460860100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_ws_deviceid2.js",
+        "sha256": "sha256:2b07b9043fffd051cf2c32e23b84e21c2b5f73f9975d43b6cfc44b468bc11eaf",
+        "sizeBytes": 3013,
+        "mtimeNs": "1787548639214299200",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/ws_listen.js",
+        "sha256": "sha256:3deee1d107898be6cf998f7712a16ebd6d82e01684845584f75c4fdbc0c084d1",
+        "sizeBytes": 1613,
+        "mtimeNs": "1788236810648701200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "AGENTS.md",
+        "sha256": "sha256:f60e35a2415d03790c64247c2d57593b308e8388fcbe286d04d6d7104d7452e0",
+        "sizeBytes": 2719,
+        "mtimeNs": "1791616004930733600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "README.md",
+        "sha256": "sha256:a782700f6b64a0d41636ef977490a55294b2e2243ef4b37951f63522cd2c5c3a",
+        "sizeBytes": 7491,
+        "mtimeNs": "1784700435336067100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "app.js",
+        "sha256": "sha256:130df251baa3d0b86816ca7417109adb34429a022e284a5898c6c5fe69aa342b",
+        "sizeBytes": 6547,
+        "mtimeNs": "1787297280883185900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "bin/www",
+        "sha256": "sha256:f25b810e7a2361fd10ee70212a7dadb5d4568f45fe387389a9738e816b3eb32e",
+        "sizeBytes": 2841,
+        "mtimeNs": "1787276534365534300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "code-review/README.md",
+        "sha256": "sha256:88b9b81058ca37142fc09f9850f4729c4affe7580cb57e8447f2fa051fb7908e",
+        "sizeBytes": 6903,
+        "mtimeNs": "1787812057640093600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/adminDao.js",
+        "sha256": "sha256:eb1f3405acb5189469299b94a97ba07518684bc7c02ac0944f36dbe467a256e7",
+        "sizeBytes": 802,
+        "mtimeNs": "1777280001742453000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/alarmLogDao.js",
+        "sha256": "sha256:3649f82de3e8fa3859ef029fe8aa2007f39d06761f1d7814eb5375d1ef93bfa4",
+        "sizeBytes": 543,
+        "mtimeNs": "1783390572689221000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/commandSendDao.js",
+        "sha256": "sha256:b4e2ea1962af8265f72382b345fe79505e06571c1131e6c9215ba674b3557d06",
+        "sizeBytes": 564,
+        "mtimeNs": "1783390575132927400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/controlCoreDao.js",
+        "sha256": "sha256:9332a7b72d2718ebda8320307e3d68d21b5e57b9a01f0c1075dd0eb31e1bd794",
+        "sizeBytes": 515,
+        "mtimeNs": "1783390563889365700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/dataDao.js",
+        "sha256": "sha256:83b38eb039dfff8ea1b2a5ca8a7958715801054f02a59b2175bb0b2575b25e0f",
+        "sizeBytes": 2014,
+        "mtimeNs": "1783390719149011300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/db.js",
+        "sha256": "sha256:6bd1f7164701805e6045ecb21d0eb75e25b7fd4e7c78abf3b854a28404c123fd",
+        "sizeBytes": 9608,
+        "mtimeNs": "1784874418430208400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/dbConnect.js",
+        "sha256": "sha256:affe92a0ca11d250c88a6cbe706ccd0d8baabb4c7c1e5dfec35b346253141a95",
+        "sizeBytes": 599,
+        "mtimeNs": "1783390302712893600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/deviceDao.js",
+        "sha256": "sha256:00c32ae2e2456fbb51458bdb502dd1923d5cf35431f5342ee83c0e263d01c92a",
+        "sizeBytes": 2311,
+        "mtimeNs": "1783390642112005000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/deviceStatusDao.js",
+        "sha256": "sha256:47ad2196f34961659136408d72de479b44a46ebbe2350f9dcd416c6e6c048299",
+        "sizeBytes": 486,
+        "mtimeNs": "1783390562368284300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/infraredFileDao.js",
+        "sha256": "sha256:2081d1bb6f700e039b19624ae3de033b50015cc14cc0d4ef5a71493bef3da207",
+        "sizeBytes": 1896,
+        "mtimeNs": "1783566997698264500",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/inspectionDao.js",
+        "sha256": "sha256:620018ef74f01e766cfa16ddf731e2d98542d0935366f1bddee91d96f4f8a8db",
+        "sizeBytes": 3405,
+        "mtimeNs": "1783390649364778400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/manualControlDao.js",
+        "sha256": "sha256:03f70c3cdc37c132efadf9852fef80dd18025afc2500ae536c219b67d32c46f8",
+        "sizeBytes": 533,
+        "mtimeNs": "1783390573887297200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/messageDao.js",
+        "sha256": "sha256:7367ef02fedb469efdfcc63bc3eebb229f1196cd7e7c6a22b5dc375cb694bc0f",
+        "sizeBytes": 2519,
+        "mtimeNs": "1765332992660393900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/adminModel.js",
+        "sha256": "sha256:9759ae59f2d330372eff7403fbd943aa1320a3341aabffe8eecbc6cf5706aa8f",
+        "sizeBytes": 515,
+        "mtimeNs": "1765332992661898600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/chargerModel.js",
+        "sha256": "sha256:673860c7b59dd655ffe951cf1dc6e454c835dc7d624d83840bbc651d6127f71b",
+        "sizeBytes": 1277,
+        "mtimeNs": "1783390499867131800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/controlCoreModel.js",
+        "sha256": "sha256:524af66a4ee8300432a8a4586530e00b2bdec59d0625fa71d753adf1d977b6bf",
+        "sizeBytes": 1393,
+        "mtimeNs": "1783390360767558200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/dataRecordModel.js",
+        "sha256": "sha256:faad1db9da5841932c63732ec4769bf687122c4767b7db035a0bc6b16aaf7510",
+        "sizeBytes": 851,
+        "mtimeNs": "1783390503677528400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/deviceModel.js",
+        "sha256": "sha256:22ed3189a864241f0e8b520d69c37090e098ffeee8aee702a6f0504fdb72dc08",
+        "sizeBytes": 1088,
+        "mtimeNs": "1783390328401594900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/dictModel.js",
+        "sha256": "sha256:56c739460da69d18bdcd9d189cd2499bb7d66750a39c633ba44b5c390658b432",
+        "sizeBytes": 760,
+        "mtimeNs": "1783390505608557100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/dictValueModel.js",
+        "sha256": "sha256:869ef8d4ad02e9d6a3be9f09c5a9036c178ffc77f4d65fa382324bc50cb0cd83",
+        "sizeBytes": 645,
+        "mtimeNs": "1783390506094705100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/infraredFileModel.js",
+        "sha256": "sha256:b1153c64b8716d73016ac08bfb623f4476f8b30b4670a21ae14f289471d8ca50",
+        "sizeBytes": 1030,
+        "mtimeNs": "1783566988236095700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/inspectionCommandModel.js",
+        "sha256": "sha256:badd90632814d7e9ebefa3901809f38f64bbb591a4f09599ee58810e840b0302",
+        "sizeBytes": 1053,
+        "mtimeNs": "1783390336890831600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/inspectionPathModel.js",
+        "sha256": "sha256:846cb547508a46e4b3aafc9beca972092d88a463f21c2311c838fe44c036f0d1",
+        "sizeBytes": 1298,
+        "mtimeNs": "1783390500640836300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/inspectionPlanModel.js",
+        "sha256": "sha256:9a6d01e96f8e96cad932a5cf442f1a4a464dd3247392d6220a221b3798d05d9b",
+        "sizeBytes": 1843,
+        "mtimeNs": "1783390500372200400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/maintenanceRecordModel.js",
+        "sha256": "sha256:233f4c7ad58dfefbcf4a3ea225150260d4326ff91b7640a4923e1777b50221fa",
+        "sizeBytes": 1222,
+        "mtimeNs": "1783390499820301900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/manualControlModel.js",
+        "sha256": "sha256:cc0a7f5bb181d0478bd902a157a4d960d962b6dc2cd5d733824569b1b5c6f069",
+        "sizeBytes": 883,
+        "mtimeNs": "1783390375927754900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/motorStatusModel.js",
+        "sha256": "sha256:96d2b77c3ebaed3e2f343b579ba31060b0fdf42739a4d74734904854acc1c8eb",
+        "sizeBytes": 1552,
+        "mtimeNs": "1783390366722165200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/noEntryAreaModel.js",
+        "sha256": "sha256:09a1fb09dd4edae8ce6ee451074bbe46c78c14b08b4e08bf7098e14782fef0e1",
+        "sizeBytes": 759,
+        "mtimeNs": "1783390501266139300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/paramsConfigModel.js",
+        "sha256": "sha256:571cf3779704d6604410c9a2a650c13cd258ae617a805ca6d73ab42ab8e26001",
+        "sizeBytes": 700,
+        "mtimeNs": "1783390373940606600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/peripheralStatusModel.js",
+        "sha256": "sha256:f5354640f67194db98e7a1ddf388369d9cd9e5482c254ae8629a542e7f92798a",
+        "sizeBytes": 951,
+        "mtimeNs": "1783390362950740100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/permissionModel.js",
+        "sha256": "sha256:2b6ae2f93df53903aa45b1699ce7cf13f4e5b2ee6f5476b582e674c2d9be0a05",
+        "sizeBytes": 964,
+        "mtimeNs": "1783390505145429100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/powerManagementModel.js",
+        "sha256": "sha256:afa3956bd9e73a355feae15fcf2bfc359d11a8daf3f2e1167257f0c5cf4c8e04",
+        "sizeBytes": 1417,
+        "mtimeNs": "1783390370010967100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/robotStatusModel.js",
+        "sha256": "sha256:e43f5300c651c56c4e00712099f6be832d1acf30ed463f0473b0bb3ea0c8cb74",
+        "sizeBytes": 1178,
+        "mtimeNs": "1783390503446132100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/roleModel.js",
+        "sha256": "sha256:20508d1e5f9c1495831459d21d6f453c3a43ee98f1b4f84666d4b7f73c7ef9c0",
+        "sizeBytes": 977,
+        "mtimeNs": "1784700354584541100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/sensorModel.js",
+        "sha256": "sha256:a7c315aa110ced70b72918ac9c35d4b8ab01bd256dc2f8ef68d8e78292392b2d",
+        "sizeBytes": 1829,
+        "mtimeNs": "1783390332703057500",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/signalStatusModel.js",
+        "sha256": "sha256:13e5d890df6fdc8ab93695b5ff0f0e2563abc2927d4105310e66bd9defa069dc",
+        "sizeBytes": 1056,
+        "mtimeNs": "1783390372234984800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/taskFeedbackModel.js",
+        "sha256": "sha256:ba9c1f0cf5954320853d362ffdf78daccc315337b3471a04a274eeeb52351e1a",
+        "sizeBytes": 2133,
+        "mtimeNs": "1783390502298960600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/taskModel.js",
+        "sha256": "sha256:f22896b87872013a4d32da70732e36f532ecbbae0a3afc6cdecb267a210710e2",
+        "sizeBytes": 1818,
+        "mtimeNs": "1783390501871591200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/userModel.js",
+        "sha256": "sha256:6b8d7b635b9c2f36e38c7fed47544bbe8f786d6807a8a98f7f933f85f182f10a",
+        "sizeBytes": 945,
+        "mtimeNs": "1783390504333969400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/videoStreamModel.js",
+        "sha256": "sha256:177344a631c5443d08d9e8dc7e846ca30901c7e6b7f77e39e7e3357fd693541d",
+        "sizeBytes": 1661,
+        "mtimeNs": "1785135997329968400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/warningRecordModel.js",
+        "sha256": "sha256:05f33e4a64b92c362ee355e2b9d5f2e2ebd57a74660324d5d0d7bb7a16acb996",
+        "sizeBytes": 799,
+        "mtimeNs": "1783390334379595000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/warningRuleModel.js",
+        "sha256": "sha256:234828cd1c235e6fe9fa56f14872b870c0b18838ae03df9a32345947d31c5eb8",
+        "sizeBytes": 1275,
+        "mtimeNs": "1783390502838826300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/mongodbConnect.js",
+        "sha256": "sha256:a47be45609af794e790bd9c94fd31aba1069d0cb21690e0476eada4173290508",
+        "sizeBytes": 418,
+        "mtimeNs": "1775618540738330600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/motorStatusDao.js",
+        "sha256": "sha256:116c03c2924a3be38970d6649dc009250d176d072db585d430e9449676c72c2b",
+        "sizeBytes": 509,
+        "mtimeNs": "1783390566230279700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/paramsConfigDao.js",
+        "sha256": "sha256:a259389cb0497462ce0d0b6bce28a4bc37351d6c8e59d9a9d70af79ada4d17f6",
+        "sizeBytes": 553,
+        "mtimeNs": "1783390571313456600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/peripheralStatusDao.js",
+        "sha256": "sha256:380ea29c4dfa1fc7e0a06e297455ffd775f953231e3484b915c508b63d0217e6",
+        "sizeBytes": 550,
+        "mtimeNs": "1783390565024406100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/powerManagementDao.js",
+        "sha256": "sha256:8fe89be306722e82189c6dc0b558e1e9f2654978ec1a8bf8cfd2c9c825c75e2c",
+        "sizeBytes": 548,
+        "mtimeNs": "1783390567504837600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/redisConnect.js",
+        "sha256": "sha256:53c96977afee1323cd7ff29d3a506932ecbfd6084c8b2f5d22193b074543750d",
+        "sizeBytes": 473,
+        "mtimeNs": "1774508529686930300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/robotDao.js",
+        "sha256": "sha256:f92163c1892bfadce81af165bc3be73bf75014b1b3c382cebc6d558655616e3a",
+        "sizeBytes": 1343,
+        "mtimeNs": "1783390714645805500",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/sensorDao.js",
+        "sha256": "sha256:5a8b5d0a95d5079b1b5a2d5d7c4ae4776096021530cb43f30427485dd25df9f0",
+        "sizeBytes": 477,
+        "mtimeNs": "1783390568927287900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/signalStatusDao.js",
+        "sha256": "sha256:e74f33d6b1089d3ef4c595e290667fd9a2947a8842ff7007a0281b2a1d6ec21c",
+        "sizeBytes": 516,
+        "mtimeNs": "1783390569931830000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/systemDao.js",
+        "sha256": "sha256:65e09e63667c7fb999a097c074b76481080fae517a1e3a5816bdf23fa5b0e3b8",
+        "sizeBytes": 5127,
+        "mtimeNs": "1783390707011411100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/taskDao.js",
+        "sha256": "sha256:7503c15af4436ee2a58a0b4c52ac772fb89f4f792d105fee7da37f6f727d280e",
+        "sizeBytes": 2074,
+        "mtimeNs": "1783390711808371400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/videoStreamDao.js",
+        "sha256": "sha256:e2a44f87ff60788bc7d45b2bfd268b18c117409df2e2d8a3dbb1dea809c5318c",
+        "sizeBytes": 515,
+        "mtimeNs": "1783390576367608700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/warningDao.js",
+        "sha256": "sha256:c43a5cb77820fa80e37e56eef5a18ae17530e89c32c70f2179bc3708f04f10c1",
+        "sizeBytes": 1156,
+        "mtimeNs": "1783390652062883600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "inference-sidecar/README.md",
+        "sha256": "sha256:1d8efe8abda34fa9cdf1647b7ab021e1ac89dc9689bdb25e0c7125be4bbac2a4",
+        "sizeBytes": 3127,
+        "mtimeNs": "1786413250627710900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "inference-sidecar/export_onnx.py",
+        "sha256": "sha256:b811bc52884e36c62deeaa97a93934f8cd528fd534afd9e00d6859b8c99970a4",
+        "sizeBytes": 3004,
+        "mtimeNs": "1786083028836138700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "inference-sidecar/main.py",
+        "sha256": "sha256:97a795c66c5f54eb6b8863f255657cd1d2ed0406e03e08b83c6f533a8e791dbf",
+        "sizeBytes": 9342,
+        "mtimeNs": "1788236156129379900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "inference-sidecar/requirements.txt",
+        "sha256": "sha256:c29e1164b65bee49ca044fd1c3b2e91b7060a54c62b20d29851273d4390a95b7",
+        "sizeBytes": 494,
+        "mtimeNs": "1785913749198713800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/sdk-capture/frame-processor.js",
+        "sha256": "sha256:25f83a3aab3e096c445b249df2d07845d96c8ce4ba4c86c29531b2aee8783c76",
+        "sizeBytes": 8907,
+        "mtimeNs": "1785147686858812100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/sdk-capture/frame-tap.js",
+        "sha256": "sha256:643d56abbc5ef0605986b73d61ada2df8a63ca01a752e0f48b42b545fe9a0ffc",
+        "sizeBytes": 3347,
+        "mtimeNs": "1787301971579092000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/sdk-capture/index.js",
+        "sha256": "sha256:618a218d9dc9283c1ab52c074edf99cf0d2e7fa134538056ab01194b1b598f47",
+        "sizeBytes": 4543,
+        "mtimeNs": "1785899188508382300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/sdk-capture/measure-bridge.js",
+        "sha256": "sha256:4c01ea269a94dd0230ab0c272658e6ab107fea0263fd80ec9f27892b2b64d518",
+        "sizeBytes": 12153,
+        "mtimeNs": "1787302040049863200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/sdk-capture/sdk-bridge.js",
+        "sha256": "sha256:33e4302b2c858511da1fa0a5c12f3351ca21dbbd2b915c2ff961f0bf25c1e930",
+        "sizeBytes": 35105,
+        "mtimeNs": "1787301936867824600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/ws-lite.js",
+        "sha256": "sha256:61fd0eee8746816f6e72aa73d461861a2ba3d763d3cecd15aae3af5fbef96ac8",
+        "sizeBytes": 7150,
+        "mtimeNs": "1787276534366041900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "package.json",
+        "sha256": "sha256:4211ea55b5268f8ab7d0989fd6f78239776350b588348d7ba52736dc67236ba2",
+        "sizeBytes": 1065,
+        "mtimeNs": "1787637676983956100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/admin.js",
+        "sha256": "sha256:0720dbe35a341c7a48c7785e94d375728882a28940f55611f70bcb05ae1f868a",
+        "sizeBytes": 1378,
+        "mtimeNs": "1783390811131126200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/alarmLog.js",
+        "sha256": "sha256:1a2de10607c5d010ff477ea81681647fc177afaa43d55ea2c78f681d2cca7509",
+        "sizeBytes": 964,
+        "mtimeNs": "1783390613877439400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/captcha.js",
+        "sha256": "sha256:d1559236fd143ea097c0bbf2770aa1ec2c244f3ec6cb1f8ebde3f2806bdcc28a",
+        "sizeBytes": 441,
+        "mtimeNs": "1775801968548338000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/commandSend.js",
+        "sha256": "sha256:8a936783ef148a57d25cb3a1a98fcf025977687123fda60af8ca1e0947af9b38",
+        "sizeBytes": 985,
+        "mtimeNs": "1783390618288741700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/controlCore.js",
+        "sha256": "sha256:e77712df92e54beb8ba61fa6a73f0ed98d05d9cb4e0151b1592b330a6b1847cd",
+        "sizeBytes": 985,
+        "mtimeNs": "1783390598827153800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/data.js",
+        "sha256": "sha256:3b404a2182c1805eb2b549d289c6cfa8180c062b87011adc4ccbf0c14e1b6c86",
+        "sizeBytes": 1612,
+        "mtimeNs": "1783390814555074800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/device.js",
+        "sha256": "sha256:10daec7db0d94493482e8dd9244f2d45a18cf544c86ec24c38d5b478e46d8fda",
+        "sizeBytes": 2630,
+        "mtimeNs": "1783390771666295600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/deviceStatus.js",
+        "sha256": "sha256:196dfd1ca9d8d115dbd72729588fda531fdbc91e9781f309663f68982da88461",
+        "sizeBytes": 992,
+        "mtimeNs": "1783390596476164200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/infrared.js",
+        "sha256": "sha256:5ab3b077cb6affdb5125ac37e540b5dafd9d7a23fc461a0628296e166416507b",
+        "sizeBytes": 1900,
+        "mtimeNs": "1783567072108851200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/inspection.js",
+        "sha256": "sha256:e650151c98d584591347d0e0012606b932044805dc6f1766b7e1357eca285c60",
+        "sizeBytes": 3783,
+        "mtimeNs": "1783390779427118600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/manualControl.js",
+        "sha256": "sha256:1ec5f29a37098c493b518a9ea91405dfdc967a536206eb76fc2ad60c1f491c95",
+        "sizeBytes": 999,
+        "mtimeNs": "1783390616066909100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/motorStatus.js",
+        "sha256": "sha256:17a187b5c46f4e0ed072c9904ed5c3edfd0c325eb3940f2acce96a45bcc8e499",
+        "sizeBytes": 985,
+        "mtimeNs": "1783390603017358100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/paramsConfig.js",
+        "sha256": "sha256:bea9b1d8959edbcdf09c3d02ae01735b41a76d587ba6474e9f366dcf142dfdc6",
+        "sizeBytes": 992,
+        "mtimeNs": "1783390611673012100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/peripheralStatus.js",
+        "sha256": "sha256:125431d88f8d614160755bacd01091f2f85ccbd518a1332460500ff63634cb75",
+        "sizeBytes": 1020,
+        "mtimeNs": "1783390600796277700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/powerManagement.js",
+        "sha256": "sha256:24112110763211237cdd21659d08507c49547ddc19785f63f96cf0c39f58b560",
+        "sizeBytes": 1013,
+        "mtimeNs": "1783390605253618400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/robot.js",
+        "sha256": "sha256:42221ec50a103a2c291248fcae1fc1779140764d373036320ee2b7f1a9e55583",
+        "sizeBytes": 1618,
+        "mtimeNs": "1783390817767012700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/sdk-capture.js",
+        "sha256": "sha256:431f9a1379f7a2dc475292e71d1f39306b0ad3d8e79efe718393033773bf990d",
+        "sizeBytes": 11080,
+        "mtimeNs": "1787549309442637300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/sensor.js",
+        "sha256": "sha256:51b2c947bc1e87d42d4929f906a55b21487ce2689b7c003744d76072c1dc585d",
+        "sizeBytes": 947,
+        "mtimeNs": "1783390607685747900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/signalStatus.js",
+        "sha256": "sha256:b80d63863de788e2fe49e82c3e197d3914642ba19f9cc87245519bd7aae6ef13",
+        "sizeBytes": 992,
+        "mtimeNs": "1783390609700740900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/system.js",
+        "sha256": "sha256:6ebde052236ff623599fc8591e8765c060056ef7b50e72c015a396ea6ddb8607",
+        "sizeBytes": 4117,
+        "mtimeNs": "1784790540218992600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/task.js",
+        "sha256": "sha256:cbb5408d9280e93b346332ec0e0d0ba5914126181bd533b8c30bef234e0b3f9b",
+        "sizeBytes": 2531,
+        "mtimeNs": "1783390831232502700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/upload.js",
+        "sha256": "sha256:ae3567d4a1bbdd19068e3b25bebc6c28920edc4dbf97764fbb1d8057c9f9f0cc",
+        "sizeBytes": 738,
+        "mtimeNs": "1783390832866784300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/videoStream.js",
+        "sha256": "sha256:4c7ef03881afd6d8665a9d6f60e5d4f76efc442f2790cba4757cc67859e449e7",
+        "sizeBytes": 8854,
+        "mtimeNs": "1788236366885303200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/warning.js",
+        "sha256": "sha256:64ea37ce5e433db253caacc6329672bdc51bd33d2a0bcc4070c3f42da55aa9ec",
+        "sizeBytes": 1398,
+        "mtimeNs": "1783390782595048400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "seed.js",
+        "sha256": "sha256:f0f09f0a271b86316c118545af9f449a2cfdea194585ad2e075fd6f39fcaaaba",
+        "sizeBytes": 22979,
+        "mtimeNs": "1784858212184779800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/adminService.js",
+        "sha256": "sha256:f1543b811234d0a0c3cdfdf5cd04fd8b4a1b6c0c084057bccf3e7003d4d49b7a",
+        "sizeBytes": 2048,
+        "mtimeNs": "1783390837706783000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/cameraInferenceScheduler.js",
+        "sha256": "sha256:4fc7ad273dc5ad299d093db55f6a94919432b45f14d392588c0e7f6bdd219eb8",
+        "sizeBytes": 11315,
+        "mtimeNs": "1788402445011591300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/captchaService.js",
+        "sha256": "sha256:6af6968ad4f38ec856187df6b0eedf5a60564fed72187079b53fbff6aa794250",
+        "sizeBytes": 230,
+        "mtimeNs": "1765332992684737300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/detectionGateway.js",
+        "sha256": "sha256:bdf940a31b1905e47a96843f03b337cb6799e4b6f6353998422933590dfb11dd",
+        "sizeBytes": 4737,
+        "mtimeNs": "1787276534371052000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/ffmpegCompat.js",
+        "sha256": "sha256:43e60af979672fd726140a174abd677d1e7a37f9721f4d274f0be37c0f475d30",
+        "sizeBytes": 2354,
+        "mtimeNs": "1787281845266822600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/frameStreamService.js",
+        "sha256": "sha256:4aa8becaeb88ee53417a055c84a441364c1cddeb0d3cb3c09edb97cd6320968c",
+        "sizeBytes": 8756,
+        "mtimeNs": "1787276534371555200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/inferenceScheduler.js",
+        "sha256": "sha256:db7a23d0e60e46b2f7d26e1094fe10702ebbcd5ab07766e5984da535f69ab95b",
+        "sizeBytes": 18933,
+        "mtimeNs": "1788312989128748600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/infraredSync.js",
+        "sha256": "sha256:a8b186a7bdb00ba07a3073e0de936a724775724347e8b5d2035da56bce0a9c71",
+        "sizeBytes": 8302,
+        "mtimeNs": "1783567047586373600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/recordService.js",
+        "sha256": "sha256:3b1f40eab92a3dd1ee853449cfacef76abb906a59097bb61624f17e4dcb54138",
+        "sizeBytes": 16283,
+        "mtimeNs": "1785136092030143900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/rtspTranscoder.js",
+        "sha256": "sha256:6a1ba2508cdb7dad8720838b307d98a24f0807a22a8240933be0e09eec00001c",
+        "sizeBytes": 37619,
+        "mtimeNs": "1788236164846781400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/sdkMeasureService.js",
+        "sha256": "sha256:2e032785f077a449edcdc1fa017cfb47deac7a87bc84cb1b94aa42c493f9908f",
+        "sizeBytes": 6916,
+        "mtimeNs": "1787302076526826400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/sdkStreamService.js",
+        "sha256": "sha256:63c3d6880100d7da74c92fd13d67307000f2a6412d588e63687a439713dc2f6a",
+        "sizeBytes": 44309,
+        "mtimeNs": "1787280961115317000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/streamManager.js",
+        "sha256": "sha256:79ad181ccc5ebf41bce905a66f877b6869610e591989f09d118b6201d28b784f",
+        "sizeBytes": 16320,
+        "mtimeNs": "1784858232339789900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/sdkStreamDemo.js",
+        "sha256": "sha256:c0cf0e596449d55a819228ec2bcead4aa25e78b79f7a882867b001808c100d96",
+        "sizeBytes": 4278,
+        "mtimeNs": "1784707436131357000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/startStream.js",
+        "sha256": "sha256:eb811c210257c8be049041ce958adaa808d6547a968440e70625e792b5578f43",
+        "sizeBytes": 2118,
+        "mtimeNs": "1784785708878370400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testAPI.js",
+        "sha256": "sha256:1faede5d4d64dbe5d534ea8aec50448a63aa397e6a831a82d47a925b6a8af8d9",
+        "sizeBytes": 8703,
+        "mtimeNs": "1776925142461495800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testMQ.js",
+        "sha256": "sha256:98deabb3fafe61d0a0305190cd784e9512e826311e67e7e9b5ba4d43f5df94b6",
+        "sizeBytes": 1746,
+        "mtimeNs": "1775784822000733300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testOpenStream.js",
+        "sha256": "sha256:a462fcc1bb00df467ee96b60a344db53e8adbab032197b2f15e5a5f2ec6ba0ef",
+        "sizeBytes": 1006,
+        "mtimeNs": "1784711031983038200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testRedis.js",
+        "sha256": "sha256:6641ae16767a8830337882398714f278a9b5872c4aed0ce7353ece2d6ab783b3",
+        "sizeBytes": 11428,
+        "mtimeNs": "1778650605245857700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testRtspStream.js",
+        "sha256": "sha256:5aacbff7a320aa1891554af80f54e2844ee6dacd8b767322854137df68dc87ff",
+        "sizeBytes": 9421,
+        "mtimeNs": "1783474009609752100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testRtspTranscoder.js",
+        "sha256": "sha256:fae403e495907d181dbdde95a9b04df8356281c4665b8bb24f7420792e9d4cc5",
+        "sizeBytes": 9120,
+        "mtimeNs": "1784878767901549100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testSdkCapture.js",
+        "sha256": "sha256:e37683e62deebe3bc272dd7933d56b32eb0d621ab8c837870ed598a6265749b5",
+        "sizeBytes": 26246,
+        "mtimeNs": "1784707226355724400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/usb2Diagnostic.js",
+        "sha256": "sha256:b8329a47d90f29ef0c5ac933a4050c844ea1251a0bb1e69b39eb285f47146457",
+        "sizeBytes": 6283,
+        "mtimeNs": "1784774053904404700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "utils/errors.js",
+        "sha256": "sha256:48eb7a4d8e5e311ef0204a76c8bf190e4aac63a1490fa7677e21380c13809258",
+        "sizeBytes": 1383,
+        "mtimeNs": "1776759698694249400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "utils/queryHelper.js",
+        "sha256": "sha256:023372c3fe98c63fd0ead06f19b9625635e6715c71f0822f0cb30ad480864011",
+        "sizeBytes": 2189,
+        "mtimeNs": "1783390301429972400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "utils/rabbitmq.js",
+        "sha256": "sha256:e2648bf44a85994c2837391bc4870bede69b8859f1c0df90e40dbf2201e6bc07",
+        "sizeBytes": 3262,
+        "mtimeNs": "1784700560449920500",
+        "changedDuringRead": false
+      },
+      {
+        "path": "utils/tool.js",
+        "sha256": "sha256:aa5c914a5fab4167ec48e5abe5ce117cac77f6c44ff5c8eb30664eb1ca153823",
+        "sizeBytes": 5401,
+        "mtimeNs": "1788161927849842200",
+        "changedDuringRead": false
+      }
+    ],
+    "excludedPaths": [
+      ".env",
+      ".git",
+      ".workbuddy/__pycache__",
+      ".workbuddy/frame_gray.bin",
+      ".workbuddy/frame_param.bin",
+      ".workbuddy/offdll/AWSSDK.Core.dll",
+      ".workbuddy/offdll/AWSSDK.S3.dll",
+      ".workbuddy/offdll/AnalyseObjectHelper.dll",
+      ".workbuddy/offdll/Auto_continuous_shutter.dll",
+      ".workbuddy/offdll/CommandHelper.dll",
+      ".workbuddy/offdll/Common.dll",
+      ".workbuddy/offdll/ConfigureHelper.dll",
+      ".workbuddy/offdll/Cpl64.dll",
+      ".workbuddy/offdll/DocumentFormat.OpenXml.dll",
+      ".workbuddy/offdll/Framework.dll",
+      ".workbuddy/offdll/GD_RTSP.dll",
+      ".workbuddy/offdll/GFileAnalysis.dll",
+      ".workbuddy/offdll/GaussFilter.dll",
+      ".workbuddy/offdll/GaussFilter_old.dll",
+      ".workbuddy/offdll/GuideIGSUSB2.dll",
+      ".workbuddy/offdll/GuideJpegLib.dll",
+      ".workbuddy/offdll/GuideNetLiveStream.dll",
+      ".workbuddy/offdll/GuideSecurityNetwork.dll",
+      ".workbuddy/offdll/GuideUSB2LiveStream.dll",
+      ".workbuddy/offdll/GuideUSB2LiveStream1.dll",
+      ".workbuddy/offdll/GuideUSBCamera.dll",
+      ".workbuddy/offdll/GuideWPFControlLibrary.dll",
+      ".workbuddy/offdll/ICSharpCode.SharpZipLib.dll",
+      ".workbuddy/offdll/ITA.dll",
+      ".workbuddy/offdll/LibUsbDotNet.LibUsbDotNet.dll",
+      ".workbuddy/offdll/LiveCharts.Wpf.dll",
+      ".workbuddy/offdll/LiveCharts.dll",
+      ".workbuddy/offdll/LogHelper.dll",
+      ".workbuddy/offdll/MTSDK.dll",
+      ".workbuddy/offdll/Microsoft.Bcl.AsyncInterfaces.dll",
+      ".workbuddy/offdll/Microsoft.Expression.Drawing.dll",
+      ".workbuddy/offdll/Microsoft.Xaml.Behaviors.dll",
+      ".workbuddy/offdll/Module.dll",
+      ".workbuddy/offdll/Mp4Core.dll",
+      ".workbuddy/offdll/NPOI.dll",
+      ".workbuddy/offdll/Newtonsoft.Json.dll",
+      ".workbuddy/offdll/SR_CPU.dll",
+      ".workbuddy/offdll/SR_CPU_192_144.dll",
+      ".workbuddy/offdll/SharpAvi.dll",
+      ".workbuddy/offdll/StriationDetection.dll",
+      ".workbuddy/offdll/System.Buffers.dll",
+      ".workbuddy/offdll/System.Memory.dll",
+      ".workbuddy/offdll/System.Numerics.Vectors.dll",
+      ".workbuddy/offdll/System.Runtime.CompilerServices.Unsafe.dll",
+      ".workbuddy/offdll/System.Text.Encodings.Web.dll",
+      ".workbuddy/offdll/System.Text.Json.dll",
+      ".workbuddy/offdll/System.Threading.Tasks.Extensions.dll",
+      ".workbuddy/offdll/System.ValueTuple.dll",
+      ".workbuddy/offdll/System.Windows.Interactivity.dll",
+      ".workbuddy/offdll/TFTPHelper.dll",
+      ".workbuddy/offdll/VideoRecord.dll",
+      ".workbuddy/offdll/ZedGraph.dll",
+      ".workbuddy/offdll/bodyDistance.dll",
+      ".workbuddy/offdll/comm.dll",
+      ".workbuddy/offdll/comm2.dll",
+      ".workbuddy/offdll/gdGetGausFilter.dll",
+      ".workbuddy/offdll/gna.dll",
+      ".workbuddy/offdll/measure_lib.dll",
+      ".workbuddy/offdll/measure_lib4iHA417W.dll",
+      ".workbuddy/offdll/measure_lib_usb2.dll",
+      ".workbuddy/offdll/msvcp140.dll",
+      ".workbuddy/offdll/openvino.dll",
+      ".workbuddy/offdll/openvino_auto_batch_plugin.dll",
+      ".workbuddy/offdll/openvino_auto_plugin.dll",
+      ".workbuddy/offdll/openvino_hetero_plugin.dll",
+      ".workbuddy/offdll/openvino_intel_cpu_plugin.dll",
+      ".workbuddy/offdll/openvino_intel_gna_plugin.dll",
+      ".workbuddy/offdll/openvino_intel_gpu_plugin.dll",
+      ".workbuddy/offdll/openvino_onnx_frontend.dll",
+      ".workbuddy/offdll/tbb12.dll",
+      ".workbuddy/offdll/vcomp140.dll",
+      ".workbuddy/offdll/vcruntime140.dll",
+      ".workbuddy/offdll/vcruntime140_1.dll",
+      ".workbuddy/test_frame.jpg",
+      "GSTLog(USB2)/2026-07-24/Error.log",
+      "GSTLog(USB2)/2026-07-24/Info.log",
+      "GSTLog(USB2)/2026-07-27/Info.log",
+      "GSTLog(USB2)/2026-07-28/Info.log",
+      "GSTLog(USB2)/2026-08-19/Info.log",
+      "GSTLog(USB2)/2026-08-20/Error.log",
+      "GSTLog(USB2)/2026-08-20/Info.log",
+      "GSTLog(USB2)/2026-08-21/Error.log",
+      "GSTLog(USB2)/2026-08-21/Info.log",
+      "GSTLog(USB2)/2026-08-24/Info.log",
+      "GSTLog(USB2)/2026-08-25/Info.log",
+      "GSTLog(USB2)/2026-08-31/Info.log",
+      "dll",
+      "inference-sidecar/__pycache__",
+      "inference-sidecar/models",
+      "node_modules",
+      "public"
+    ],
+    "unreadable": []
+  },
+  "after": {
+    "scope": "Allowed owned static source/config/README/requirements; node_modules and runtime data excluded.",
+    "files": [
+      {
+        "path": ".vscode/launch.json",
+        "sha256": "sha256:bb434bf7b6961a72f8427ddad4b069ef11b02130f35325644621c0a9d5753e81",
+        "sizeBytes": 368,
+        "mtimeNs": "1776935089031505900",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".vscode/settings.json",
+        "sha256": "sha256:047719445fc55e2c1b3c325ca8b01b11e8a3dab9b614e5d0f4337dd5e4186f4d",
+        "sizeBytes": 40,
+        "mtimeNs": "1775790042059427500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/audit_check.py",
+        "sha256": "sha256:5c3e5fcd4c3974ed179ab1643c2717d92a6623de21161272f6b6f510d32d368a",
+        "sizeBytes": 2561,
+        "mtimeNs": "1789105758147822700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/audit_check2.py",
+        "sha256": "sha256:1aa5e4bd74066d24a8b51e7480e02403906ff37b964e076bcf71a97f5e6fdf05",
+        "sizeBytes": 2012,
+        "mtimeNs": "1789105771200785500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/audit_spec.py",
+        "sha256": "sha256:913b0487b1c9a51b8f4dc77a48cd9c314faa3f53761674eeb3373fc8aabc4267",
+        "sizeBytes": 1382,
+        "mtimeNs": "1789111181836676200",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/audit_summary.py",
+        "sha256": "sha256:8a8f3bf2fb4a09d9b6548a2da0dd22f466743ed90c5ef7cf85019f38ac30cb40",
+        "sizeBytes": 2412,
+        "mtimeNs": "1789111163994806600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/diagnose_measure.js",
+        "sha256": "sha256:57ab74e0c378ccbded4e4e6b3732294f4148355103a7b347c19cd31314ed80d8",
+        "sizeBytes": 7093,
+        "mtimeNs": "1787291529928898600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/dump_exports.js",
+        "sha256": "sha256:bc062b3ed55622ee17f782edfef64d2c24e4fce2cbab3278c089c868d002cbbb",
+        "sizeBytes": 1965,
+        "mtimeNs": "1787297769257644800",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/dump_imports.js",
+        "sha256": "sha256:c457187902d6ed02fd26b79274dc0071db1d0be8bae0ad9021938026ea3266aa",
+        "sizeBytes": 1949,
+        "mtimeNs": "1787301167236474200",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/dump_strings.js",
+        "sha256": "sha256:5f5180e836e07d96b0569aa64880efcc2277c455bb095b54ad711672bdc0fa55",
+        "sizeBytes": 800,
+        "mtimeNs": "1787295775439029700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/find_files_mtsdk.js",
+        "sha256": "sha256:0531799fd106cf592eeeac6d7635f8ed6dc0cb755360248c4f53d23a94b54310",
+        "sizeBytes": 2147,
+        "mtimeNs": "1787301193415048300",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/gen_model_docx.py",
+        "sha256": "sha256:2331d71ace8466926c16b815b5bbb314715c955c818bf5b622b5b1751145d7bd",
+        "sizeBytes": 5072,
+        "mtimeNs": "1785805232587842100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/gen_report.py",
+        "sha256": "sha256:7af860229c6727055d6ccf92109b0e63ba534e300bd3eac4ee1d759c9a9ac839",
+        "sizeBytes": 90702,
+        "mtimeNs": "1788337864034953400",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/index_rows.json",
+        "sha256": "sha256:eff59b800c8d8be996b81f305e76de31efb01b17f1d9e7df0117a5e0caf223dd",
+        "sizeBytes": 28919,
+        "mtimeNs": "1789105667655659700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/list_exports.js",
+        "sha256": "sha256:e0345f19cf648acdce02665831c6f2cac4e0c139232be99d776ca846d226c3a2",
+        "sizeBytes": 512,
+        "mtimeNs": "1787293105612583700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/list_exports2.js",
+        "sha256": "sha256:40957a30a97ca3b4c073bb5193917b3de16cce9ab7698df0f2a0ac265b06e740",
+        "sizeBytes": 2432,
+        "mtimeNs": "1787299211274678000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/list_measure_exports.js",
+        "sha256": "sha256:74ac7bdc905e175e64996c898f51c09f914f8ecad0d3a13f1ee576ed8029f840",
+        "sizeBytes": 2037,
+        "mtimeNs": "1787298783780650300",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/md2docx.py",
+        "sha256": "sha256:21eb8f2dea469824e36528ee8fba120270351b2ffdf6fefd5671395e71541ec3",
+        "sizeBytes": 6906,
+        "mtimeNs": "1788227928848644600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/migrate_docs.py",
+        "sha256": "sha256:2556024ae009907ee24a77117071f677a03a8bcf355be37a546f873f35a3540f",
+        "sizeBytes": 6166,
+        "mtimeNs": "1789092610666845500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/pe_exports.js",
+        "sha256": "sha256:803e474c5fada2592443553a1e13b1c8eba99d93a70fda7d3aa601c4311cb31b",
+        "sizeBytes": 2297,
+        "mtimeNs": "1787293505237214600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/pe_sections.js",
+        "sha256": "sha256:129ba5ee4cf2e0c0f3db1286fe5e93550edb513461db9be4fbb16b4095020566",
+        "sizeBytes": 1366,
+        "mtimeNs": "1787295817046209100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/probe_dll.js",
+        "sha256": "sha256:81d9512f1c35f980e8d1521877835cfc95f234b00506ce3e22c5bf9ec84dc555",
+        "sizeBytes": 3789,
+        "mtimeNs": "1787297809457260400",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/probe_exports.js",
+        "sha256": "sha256:1a0b5c90e4f69a23ace604e78c42510d2bec983036b044f70a6ee9a157390e3b",
+        "sizeBytes": 1320,
+        "mtimeNs": "1787298810160193800",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/probe_mtsdk2.js",
+        "sha256": "sha256:f55ffe61f7d1684e758b868828db4bab29703d83cbe55fbfe35f7c19c569329a",
+        "sizeBytes": 4477,
+        "mtimeNs": "1787300367184763000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/resync_device.js",
+        "sha256": "sha256:bfa9eee836c7764d5297796d9f9b58a9ba31de812c1fea2fdb7b8421ffc526d6",
+        "sizeBytes": 1694,
+        "mtimeNs": "1787291599651897100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_atm.js",
+        "sha256": "sha256:f167e88e94113bca7fd3bd81cf4f4528d76eeadb2f43f7fd3ba54bd1c56d12bb",
+        "sizeBytes": 3412,
+        "mtimeNs": "1787301384602167500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_context2.js",
+        "sha256": "sha256:c13ec6dcedd8819e12f75e66d88f2c49d31878a80e8fbee4b263737016a43255",
+        "sizeBytes": 2184,
+        "mtimeNs": "1787292070987841000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_devtype.js",
+        "sha256": "sha256:8c46dca32f56c1c15f1e9e14a2554acc5e8485e0c10ae0c928b06c71ffbc9c02",
+        "sizeBytes": 3950,
+        "mtimeNs": "1787297317430743400",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_dll_context.js",
+        "sha256": "sha256:0888c699d64feb36e5d5d25af79e66da5a1945115cc1e5fef986182abdcfc4fe",
+        "sizeBytes": 1347,
+        "mtimeNs": "1787291177121560100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_dll_patterns.js",
+        "sha256": "sha256:1648fbe2a5116da0124465ccce0f7f53ada6282eda2dc145fcc840164b09dcf7",
+        "sizeBytes": 1366,
+        "mtimeNs": "1787291125401156700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_dll_strings.js",
+        "sha256": "sha256:0ea29cd81282074ea3956e123b1033b2edd082a5551e53cbcd8d95770a93a42d",
+        "sizeBytes": 1281,
+        "mtimeNs": "1787291091813082900",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_exports.py",
+        "sha256": "sha256:a73c2d3e871b3edc1536a4b33f12073e9678a17681440597814702918f01566b",
+        "sizeBytes": 1121,
+        "mtimeNs": "1785480611698070100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_fields.js",
+        "sha256": "sha256:fd58cecc6bccc2180945a3fa447d65e8994ac292d65b5f2f69a269f870a65e56",
+        "sizeBytes": 2268,
+        "mtimeNs": "1787301343732120000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_mtsdk_devtype.js",
+        "sha256": "sha256:9d7d10b72894bc21d76176dd482d007c518bc5fd90bbd9a4dafef9948f27863f",
+        "sizeBytes": 2312,
+        "mtimeNs": "1787300409688234000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/scan_mtsdk_strings.js",
+        "sha256": "sha256:58054620eadac2cf33b372983f8c88a9ab64601a9cf9677558ecc04a98db4d4a",
+        "sizeBytes": 881,
+        "mtimeNs": "1787295744327823600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/skill_validate_test.py",
+        "sha256": "sha256:b22d2c9e43c8b804acdd864c39f7f1670fee7d638a818734bb31170cd53bda1c",
+        "sizeBytes": 2558,
+        "mtimeNs": "1789111953567060500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_atm_range.js",
+        "sha256": "sha256:94ffba33f7d34d908a6645636ddd09ff83d6394ccf28b5f44984b95c798342a7",
+        "sizeBytes": 3291,
+        "mtimeNs": "1787299296090350200",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_dll_synth.js",
+        "sha256": "sha256:ba865204b2664385c9db587ba28275dae450546064fd18438df5f26f0b4f02e6",
+        "sizeBytes": 3840,
+        "mtimeNs": "1787291825584457400",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_e2e_recog.js",
+        "sha256": "sha256:d60f22e087f08ad99e2bae762242ab60d8816e4a41497e6278c32dbe61c953bf",
+        "sizeBytes": 3971,
+        "mtimeNs": "1787549380886406100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_endian.js",
+        "sha256": "sha256:4713928d32e0f1941bbe08c0290decd39847d0a639191f40ac335237c60261c2",
+        "sizeBytes": 3880,
+        "mtimeNs": "1787299074044867300",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_exit_cleanup.js",
+        "sha256": "sha256:a3a7d61091762d7201f93b5437a4df3def299f41b4da8bd18dad98e6959be967",
+        "sizeBytes": 861,
+        "mtimeNs": "1787637211944203500",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_ext_scan.js",
+        "sha256": "sha256:9e9a9fe9e89084a907e94a414b2a4c6615cc64323c46a3424688d3c9943b4a32",
+        "sizeBytes": 3241,
+        "mtimeNs": "1787299262090855600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_matrix.js",
+        "sha256": "sha256:cb92e6ddba2e81a2b04a22c6ceed676f0a5046263aade211c2b5ab9dc88416be",
+        "sizeBytes": 5201,
+        "mtimeNs": "1787298966506129600",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_paramlen.js",
+        "sha256": "sha256:369a3841b00bf31fbe1d809b6f2b8c8eaf8b007eab61bf1984f74e8dabcdaa2f",
+        "sizeBytes": 2477,
+        "mtimeNs": "1787297870254028200",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_recog_chain.js",
+        "sha256": "sha256:f1dcf2c9bc26879223c3f86b721e3498e900c80c540e2933cc846c39e1d3bd0c",
+        "sizeBytes": 2560,
+        "mtimeNs": "1787548518597314100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_struct_order.js",
+        "sha256": "sha256:e77475b448e2eb160a9d1d6252a4d994f36a5b987ce98fbacc2e84723d1b71cf",
+        "sizeBytes": 3095,
+        "mtimeNs": "1787301235830157000",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_tmp_measure.js",
+        "sha256": "sha256:77b51c1d3aaa66558aa60d28c25e746db674ff289770ae10af4a7778ca5beb07",
+        "sizeBytes": 4374,
+        "mtimeNs": "1787302196051525700",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_usb2_dll.js",
+        "sha256": "sha256:861f23ae30ee2406033a565bed98bde0ebbb9cc28103de8209096539e1bf20e3",
+        "sizeBytes": 3903,
+        "mtimeNs": "1787293143632502300",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_ws_deviceid.js",
+        "sha256": "sha256:59e1b54de3e0983e9935770f9005d53f9eaa61d60ab7efe89a4e1a7066d81087",
+        "sizeBytes": 3006,
+        "mtimeNs": "1787548549460860100",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/test_ws_deviceid2.js",
+        "sha256": "sha256:2b07b9043fffd051cf2c32e23b84e21c2b5f73f9975d43b6cfc44b468bc11eaf",
+        "sizeBytes": 3013,
+        "mtimeNs": "1787548639214299200",
+        "changedDuringRead": false
+      },
+      {
+        "path": ".workbuddy/ws_listen.js",
+        "sha256": "sha256:3deee1d107898be6cf998f7712a16ebd6d82e01684845584f75c4fdbc0c084d1",
+        "sizeBytes": 1613,
+        "mtimeNs": "1788236810648701200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "AGENTS.md",
+        "sha256": "sha256:f60e35a2415d03790c64247c2d57593b308e8388fcbe286d04d6d7104d7452e0",
+        "sizeBytes": 2719,
+        "mtimeNs": "1791616004930733600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "README.md",
+        "sha256": "sha256:a782700f6b64a0d41636ef977490a55294b2e2243ef4b37951f63522cd2c5c3a",
+        "sizeBytes": 7491,
+        "mtimeNs": "1784700435336067100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "app.js",
+        "sha256": "sha256:130df251baa3d0b86816ca7417109adb34429a022e284a5898c6c5fe69aa342b",
+        "sizeBytes": 6547,
+        "mtimeNs": "1787297280883185900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "bin/www",
+        "sha256": "sha256:f25b810e7a2361fd10ee70212a7dadb5d4568f45fe387389a9738e816b3eb32e",
+        "sizeBytes": 2841,
+        "mtimeNs": "1787276534365534300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "code-review/README.md",
+        "sha256": "sha256:88b9b81058ca37142fc09f9850f4729c4affe7580cb57e8447f2fa051fb7908e",
+        "sizeBytes": 6903,
+        "mtimeNs": "1787812057640093600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/adminDao.js",
+        "sha256": "sha256:eb1f3405acb5189469299b94a97ba07518684bc7c02ac0944f36dbe467a256e7",
+        "sizeBytes": 802,
+        "mtimeNs": "1777280001742453000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/alarmLogDao.js",
+        "sha256": "sha256:3649f82de3e8fa3859ef029fe8aa2007f39d06761f1d7814eb5375d1ef93bfa4",
+        "sizeBytes": 543,
+        "mtimeNs": "1783390572689221000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/commandSendDao.js",
+        "sha256": "sha256:b4e2ea1962af8265f72382b345fe79505e06571c1131e6c9215ba674b3557d06",
+        "sizeBytes": 564,
+        "mtimeNs": "1783390575132927400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/controlCoreDao.js",
+        "sha256": "sha256:9332a7b72d2718ebda8320307e3d68d21b5e57b9a01f0c1075dd0eb31e1bd794",
+        "sizeBytes": 515,
+        "mtimeNs": "1783390563889365700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/dataDao.js",
+        "sha256": "sha256:83b38eb039dfff8ea1b2a5ca8a7958715801054f02a59b2175bb0b2575b25e0f",
+        "sizeBytes": 2014,
+        "mtimeNs": "1783390719149011300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/db.js",
+        "sha256": "sha256:6bd1f7164701805e6045ecb21d0eb75e25b7fd4e7c78abf3b854a28404c123fd",
+        "sizeBytes": 9608,
+        "mtimeNs": "1784874418430208400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/dbConnect.js",
+        "sha256": "sha256:affe92a0ca11d250c88a6cbe706ccd0d8baabb4c7c1e5dfec35b346253141a95",
+        "sizeBytes": 599,
+        "mtimeNs": "1783390302712893600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/deviceDao.js",
+        "sha256": "sha256:00c32ae2e2456fbb51458bdb502dd1923d5cf35431f5342ee83c0e263d01c92a",
+        "sizeBytes": 2311,
+        "mtimeNs": "1783390642112005000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/deviceStatusDao.js",
+        "sha256": "sha256:47ad2196f34961659136408d72de479b44a46ebbe2350f9dcd416c6e6c048299",
+        "sizeBytes": 486,
+        "mtimeNs": "1783390562368284300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/infraredFileDao.js",
+        "sha256": "sha256:2081d1bb6f700e039b19624ae3de033b50015cc14cc0d4ef5a71493bef3da207",
+        "sizeBytes": 1896,
+        "mtimeNs": "1783566997698264500",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/inspectionDao.js",
+        "sha256": "sha256:620018ef74f01e766cfa16ddf731e2d98542d0935366f1bddee91d96f4f8a8db",
+        "sizeBytes": 3405,
+        "mtimeNs": "1783390649364778400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/manualControlDao.js",
+        "sha256": "sha256:03f70c3cdc37c132efadf9852fef80dd18025afc2500ae536c219b67d32c46f8",
+        "sizeBytes": 533,
+        "mtimeNs": "1783390573887297200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/messageDao.js",
+        "sha256": "sha256:7367ef02fedb469efdfcc63bc3eebb229f1196cd7e7c6a22b5dc375cb694bc0f",
+        "sizeBytes": 2519,
+        "mtimeNs": "1765332992660393900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/adminModel.js",
+        "sha256": "sha256:9759ae59f2d330372eff7403fbd943aa1320a3341aabffe8eecbc6cf5706aa8f",
+        "sizeBytes": 515,
+        "mtimeNs": "1765332992661898600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/chargerModel.js",
+        "sha256": "sha256:673860c7b59dd655ffe951cf1dc6e454c835dc7d624d83840bbc651d6127f71b",
+        "sizeBytes": 1277,
+        "mtimeNs": "1783390499867131800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/controlCoreModel.js",
+        "sha256": "sha256:524af66a4ee8300432a8a4586530e00b2bdec59d0625fa71d753adf1d977b6bf",
+        "sizeBytes": 1393,
+        "mtimeNs": "1783390360767558200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/dataRecordModel.js",
+        "sha256": "sha256:faad1db9da5841932c63732ec4769bf687122c4767b7db035a0bc6b16aaf7510",
+        "sizeBytes": 851,
+        "mtimeNs": "1783390503677528400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/deviceModel.js",
+        "sha256": "sha256:22ed3189a864241f0e8b520d69c37090e098ffeee8aee702a6f0504fdb72dc08",
+        "sizeBytes": 1088,
+        "mtimeNs": "1783390328401594900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/dictModel.js",
+        "sha256": "sha256:56c739460da69d18bdcd9d189cd2499bb7d66750a39c633ba44b5c390658b432",
+        "sizeBytes": 760,
+        "mtimeNs": "1783390505608557100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/dictValueModel.js",
+        "sha256": "sha256:869ef8d4ad02e9d6a3be9f09c5a9036c178ffc77f4d65fa382324bc50cb0cd83",
+        "sizeBytes": 645,
+        "mtimeNs": "1783390506094705100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/infraredFileModel.js",
+        "sha256": "sha256:b1153c64b8716d73016ac08bfb623f4476f8b30b4670a21ae14f289471d8ca50",
+        "sizeBytes": 1030,
+        "mtimeNs": "1783566988236095700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/inspectionCommandModel.js",
+        "sha256": "sha256:badd90632814d7e9ebefa3901809f38f64bbb591a4f09599ee58810e840b0302",
+        "sizeBytes": 1053,
+        "mtimeNs": "1783390336890831600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/inspectionPathModel.js",
+        "sha256": "sha256:846cb547508a46e4b3aafc9beca972092d88a463f21c2311c838fe44c036f0d1",
+        "sizeBytes": 1298,
+        "mtimeNs": "1783390500640836300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/inspectionPlanModel.js",
+        "sha256": "sha256:9a6d01e96f8e96cad932a5cf442f1a4a464dd3247392d6220a221b3798d05d9b",
+        "sizeBytes": 1843,
+        "mtimeNs": "1783390500372200400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/maintenanceRecordModel.js",
+        "sha256": "sha256:233f4c7ad58dfefbcf4a3ea225150260d4326ff91b7640a4923e1777b50221fa",
+        "sizeBytes": 1222,
+        "mtimeNs": "1783390499820301900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/manualControlModel.js",
+        "sha256": "sha256:cc0a7f5bb181d0478bd902a157a4d960d962b6dc2cd5d733824569b1b5c6f069",
+        "sizeBytes": 883,
+        "mtimeNs": "1783390375927754900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/motorStatusModel.js",
+        "sha256": "sha256:96d2b77c3ebaed3e2f343b579ba31060b0fdf42739a4d74734904854acc1c8eb",
+        "sizeBytes": 1552,
+        "mtimeNs": "1783390366722165200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/noEntryAreaModel.js",
+        "sha256": "sha256:09a1fb09dd4edae8ce6ee451074bbe46c78c14b08b4e08bf7098e14782fef0e1",
+        "sizeBytes": 759,
+        "mtimeNs": "1783390501266139300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/paramsConfigModel.js",
+        "sha256": "sha256:571cf3779704d6604410c9a2a650c13cd258ae617a805ca6d73ab42ab8e26001",
+        "sizeBytes": 700,
+        "mtimeNs": "1783390373940606600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/peripheralStatusModel.js",
+        "sha256": "sha256:f5354640f67194db98e7a1ddf388369d9cd9e5482c254ae8629a542e7f92798a",
+        "sizeBytes": 951,
+        "mtimeNs": "1783390362950740100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/permissionModel.js",
+        "sha256": "sha256:2b6ae2f93df53903aa45b1699ce7cf13f4e5b2ee6f5476b582e674c2d9be0a05",
+        "sizeBytes": 964,
+        "mtimeNs": "1783390505145429100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/powerManagementModel.js",
+        "sha256": "sha256:afa3956bd9e73a355feae15fcf2bfc359d11a8daf3f2e1167257f0c5cf4c8e04",
+        "sizeBytes": 1417,
+        "mtimeNs": "1783390370010967100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/robotStatusModel.js",
+        "sha256": "sha256:e43f5300c651c56c4e00712099f6be832d1acf30ed463f0473b0bb3ea0c8cb74",
+        "sizeBytes": 1178,
+        "mtimeNs": "1783390503446132100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/roleModel.js",
+        "sha256": "sha256:20508d1e5f9c1495831459d21d6f453c3a43ee98f1b4f84666d4b7f73c7ef9c0",
+        "sizeBytes": 977,
+        "mtimeNs": "1784700354584541100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/sensorModel.js",
+        "sha256": "sha256:a7c315aa110ced70b72918ac9c35d4b8ab01bd256dc2f8ef68d8e78292392b2d",
+        "sizeBytes": 1829,
+        "mtimeNs": "1783390332703057500",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/signalStatusModel.js",
+        "sha256": "sha256:13e5d890df6fdc8ab93695b5ff0f0e2563abc2927d4105310e66bd9defa069dc",
+        "sizeBytes": 1056,
+        "mtimeNs": "1783390372234984800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/taskFeedbackModel.js",
+        "sha256": "sha256:ba9c1f0cf5954320853d362ffdf78daccc315337b3471a04a274eeeb52351e1a",
+        "sizeBytes": 2133,
+        "mtimeNs": "1783390502298960600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/taskModel.js",
+        "sha256": "sha256:f22896b87872013a4d32da70732e36f532ecbbae0a3afc6cdecb267a210710e2",
+        "sizeBytes": 1818,
+        "mtimeNs": "1783390501871591200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/userModel.js",
+        "sha256": "sha256:6b8d7b635b9c2f36e38c7fed47544bbe8f786d6807a8a98f7f933f85f182f10a",
+        "sizeBytes": 945,
+        "mtimeNs": "1783390504333969400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/videoStreamModel.js",
+        "sha256": "sha256:177344a631c5443d08d9e8dc7e846ca30901c7e6b7f77e39e7e3357fd693541d",
+        "sizeBytes": 1661,
+        "mtimeNs": "1785135997329968400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/warningRecordModel.js",
+        "sha256": "sha256:05f33e4a64b92c362ee355e2b9d5f2e2ebd57a74660324d5d0d7bb7a16acb996",
+        "sizeBytes": 799,
+        "mtimeNs": "1783390334379595000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/model/warningRuleModel.js",
+        "sha256": "sha256:234828cd1c235e6fe9fa56f14872b870c0b18838ae03df9a32345947d31c5eb8",
+        "sizeBytes": 1275,
+        "mtimeNs": "1783390502838826300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/mongodbConnect.js",
+        "sha256": "sha256:a47be45609af794e790bd9c94fd31aba1069d0cb21690e0476eada4173290508",
+        "sizeBytes": 418,
+        "mtimeNs": "1775618540738330600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/motorStatusDao.js",
+        "sha256": "sha256:116c03c2924a3be38970d6649dc009250d176d072db585d430e9449676c72c2b",
+        "sizeBytes": 509,
+        "mtimeNs": "1783390566230279700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/paramsConfigDao.js",
+        "sha256": "sha256:a259389cb0497462ce0d0b6bce28a4bc37351d6c8e59d9a9d70af79ada4d17f6",
+        "sizeBytes": 553,
+        "mtimeNs": "1783390571313456600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/peripheralStatusDao.js",
+        "sha256": "sha256:380ea29c4dfa1fc7e0a06e297455ffd775f953231e3484b915c508b63d0217e6",
+        "sizeBytes": 550,
+        "mtimeNs": "1783390565024406100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/powerManagementDao.js",
+        "sha256": "sha256:8fe89be306722e82189c6dc0b558e1e9f2654978ec1a8bf8cfd2c9c825c75e2c",
+        "sizeBytes": 548,
+        "mtimeNs": "1783390567504837600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/redisConnect.js",
+        "sha256": "sha256:53c96977afee1323cd7ff29d3a506932ecbfd6084c8b2f5d22193b074543750d",
+        "sizeBytes": 473,
+        "mtimeNs": "1774508529686930300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/robotDao.js",
+        "sha256": "sha256:f92163c1892bfadce81af165bc3be73bf75014b1b3c382cebc6d558655616e3a",
+        "sizeBytes": 1343,
+        "mtimeNs": "1783390714645805500",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/sensorDao.js",
+        "sha256": "sha256:5a8b5d0a95d5079b1b5a2d5d7c4ae4776096021530cb43f30427485dd25df9f0",
+        "sizeBytes": 477,
+        "mtimeNs": "1783390568927287900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/signalStatusDao.js",
+        "sha256": "sha256:e74f33d6b1089d3ef4c595e290667fd9a2947a8842ff7007a0281b2a1d6ec21c",
+        "sizeBytes": 516,
+        "mtimeNs": "1783390569931830000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/systemDao.js",
+        "sha256": "sha256:65e09e63667c7fb999a097c074b76481080fae517a1e3a5816bdf23fa5b0e3b8",
+        "sizeBytes": 5127,
+        "mtimeNs": "1783390707011411100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/taskDao.js",
+        "sha256": "sha256:7503c15af4436ee2a58a0b4c52ac772fb89f4f792d105fee7da37f6f727d280e",
+        "sizeBytes": 2074,
+        "mtimeNs": "1783390711808371400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/videoStreamDao.js",
+        "sha256": "sha256:e2a44f87ff60788bc7d45b2bfd268b18c117409df2e2d8a3dbb1dea809c5318c",
+        "sizeBytes": 515,
+        "mtimeNs": "1783390576367608700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "dao/warningDao.js",
+        "sha256": "sha256:c43a5cb77820fa80e37e56eef5a18ae17530e89c32c70f2179bc3708f04f10c1",
+        "sizeBytes": 1156,
+        "mtimeNs": "1783390652062883600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "inference-sidecar/README.md",
+        "sha256": "sha256:1d8efe8abda34fa9cdf1647b7ab021e1ac89dc9689bdb25e0c7125be4bbac2a4",
+        "sizeBytes": 3127,
+        "mtimeNs": "1786413250627710900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "inference-sidecar/export_onnx.py",
+        "sha256": "sha256:b811bc52884e36c62deeaa97a93934f8cd528fd534afd9e00d6859b8c99970a4",
+        "sizeBytes": 3004,
+        "mtimeNs": "1786083028836138700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "inference-sidecar/main.py",
+        "sha256": "sha256:97a795c66c5f54eb6b8863f255657cd1d2ed0406e03e08b83c6f533a8e791dbf",
+        "sizeBytes": 9342,
+        "mtimeNs": "1788236156129379900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "inference-sidecar/requirements.txt",
+        "sha256": "sha256:c29e1164b65bee49ca044fd1c3b2e91b7060a54c62b20d29851273d4390a95b7",
+        "sizeBytes": 494,
+        "mtimeNs": "1785913749198713800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/sdk-capture/frame-processor.js",
+        "sha256": "sha256:25f83a3aab3e096c445b249df2d07845d96c8ce4ba4c86c29531b2aee8783c76",
+        "sizeBytes": 8907,
+        "mtimeNs": "1785147686858812100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/sdk-capture/frame-tap.js",
+        "sha256": "sha256:643d56abbc5ef0605986b73d61ada2df8a63ca01a752e0f48b42b545fe9a0ffc",
+        "sizeBytes": 3347,
+        "mtimeNs": "1787301971579092000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/sdk-capture/index.js",
+        "sha256": "sha256:618a218d9dc9283c1ab52c074edf99cf0d2e7fa134538056ab01194b1b598f47",
+        "sizeBytes": 4543,
+        "mtimeNs": "1785899188508382300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/sdk-capture/measure-bridge.js",
+        "sha256": "sha256:4c01ea269a94dd0230ab0c272658e6ab107fea0263fd80ec9f27892b2b64d518",
+        "sizeBytes": 12153,
+        "mtimeNs": "1787302040049863200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/sdk-capture/sdk-bridge.js",
+        "sha256": "sha256:33e4302b2c858511da1fa0a5c12f3351ca21dbbd2b915c2ff961f0bf25c1e930",
+        "sizeBytes": 35105,
+        "mtimeNs": "1787301936867824600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "lib/ws-lite.js",
+        "sha256": "sha256:61fd0eee8746816f6e72aa73d461861a2ba3d763d3cecd15aae3af5fbef96ac8",
+        "sizeBytes": 7150,
+        "mtimeNs": "1787276534366041900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "package.json",
+        "sha256": "sha256:4211ea55b5268f8ab7d0989fd6f78239776350b588348d7ba52736dc67236ba2",
+        "sizeBytes": 1065,
+        "mtimeNs": "1787637676983956100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/admin.js",
+        "sha256": "sha256:0720dbe35a341c7a48c7785e94d375728882a28940f55611f70bcb05ae1f868a",
+        "sizeBytes": 1378,
+        "mtimeNs": "1783390811131126200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/alarmLog.js",
+        "sha256": "sha256:1a2de10607c5d010ff477ea81681647fc177afaa43d55ea2c78f681d2cca7509",
+        "sizeBytes": 964,
+        "mtimeNs": "1783390613877439400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/captcha.js",
+        "sha256": "sha256:d1559236fd143ea097c0bbf2770aa1ec2c244f3ec6cb1f8ebde3f2806bdcc28a",
+        "sizeBytes": 441,
+        "mtimeNs": "1775801968548338000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/commandSend.js",
+        "sha256": "sha256:8a936783ef148a57d25cb3a1a98fcf025977687123fda60af8ca1e0947af9b38",
+        "sizeBytes": 985,
+        "mtimeNs": "1783390618288741700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/controlCore.js",
+        "sha256": "sha256:e77712df92e54beb8ba61fa6a73f0ed98d05d9cb4e0151b1592b330a6b1847cd",
+        "sizeBytes": 985,
+        "mtimeNs": "1783390598827153800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/data.js",
+        "sha256": "sha256:3b404a2182c1805eb2b549d289c6cfa8180c062b87011adc4ccbf0c14e1b6c86",
+        "sizeBytes": 1612,
+        "mtimeNs": "1783390814555074800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/device.js",
+        "sha256": "sha256:10daec7db0d94493482e8dd9244f2d45a18cf544c86ec24c38d5b478e46d8fda",
+        "sizeBytes": 2630,
+        "mtimeNs": "1783390771666295600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/deviceStatus.js",
+        "sha256": "sha256:196dfd1ca9d8d115dbd72729588fda531fdbc91e9781f309663f68982da88461",
+        "sizeBytes": 992,
+        "mtimeNs": "1783390596476164200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/infrared.js",
+        "sha256": "sha256:5ab3b077cb6affdb5125ac37e540b5dafd9d7a23fc461a0628296e166416507b",
+        "sizeBytes": 1900,
+        "mtimeNs": "1783567072108851200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/inspection.js",
+        "sha256": "sha256:e650151c98d584591347d0e0012606b932044805dc6f1766b7e1357eca285c60",
+        "sizeBytes": 3783,
+        "mtimeNs": "1783390779427118600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/manualControl.js",
+        "sha256": "sha256:1ec5f29a37098c493b518a9ea91405dfdc967a536206eb76fc2ad60c1f491c95",
+        "sizeBytes": 999,
+        "mtimeNs": "1783390616066909100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/motorStatus.js",
+        "sha256": "sha256:17a187b5c46f4e0ed072c9904ed5c3edfd0c325eb3940f2acce96a45bcc8e499",
+        "sizeBytes": 985,
+        "mtimeNs": "1783390603017358100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/paramsConfig.js",
+        "sha256": "sha256:bea9b1d8959edbcdf09c3d02ae01735b41a76d587ba6474e9f366dcf142dfdc6",
+        "sizeBytes": 992,
+        "mtimeNs": "1783390611673012100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/peripheralStatus.js",
+        "sha256": "sha256:125431d88f8d614160755bacd01091f2f85ccbd518a1332460500ff63634cb75",
+        "sizeBytes": 1020,
+        "mtimeNs": "1783390600796277700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/powerManagement.js",
+        "sha256": "sha256:24112110763211237cdd21659d08507c49547ddc19785f63f96cf0c39f58b560",
+        "sizeBytes": 1013,
+        "mtimeNs": "1783390605253618400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/robot.js",
+        "sha256": "sha256:42221ec50a103a2c291248fcae1fc1779140764d373036320ee2b7f1a9e55583",
+        "sizeBytes": 1618,
+        "mtimeNs": "1783390817767012700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/sdk-capture.js",
+        "sha256": "sha256:431f9a1379f7a2dc475292e71d1f39306b0ad3d8e79efe718393033773bf990d",
+        "sizeBytes": 11080,
+        "mtimeNs": "1787549309442637300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/sensor.js",
+        "sha256": "sha256:51b2c947bc1e87d42d4929f906a55b21487ce2689b7c003744d76072c1dc585d",
+        "sizeBytes": 947,
+        "mtimeNs": "1783390607685747900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/signalStatus.js",
+        "sha256": "sha256:b80d63863de788e2fe49e82c3e197d3914642ba19f9cc87245519bd7aae6ef13",
+        "sizeBytes": 992,
+        "mtimeNs": "1783390609700740900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/system.js",
+        "sha256": "sha256:6ebde052236ff623599fc8591e8765c060056ef7b50e72c015a396ea6ddb8607",
+        "sizeBytes": 4117,
+        "mtimeNs": "1784790540218992600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/task.js",
+        "sha256": "sha256:cbb5408d9280e93b346332ec0e0d0ba5914126181bd533b8c30bef234e0b3f9b",
+        "sizeBytes": 2531,
+        "mtimeNs": "1783390831232502700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/upload.js",
+        "sha256": "sha256:ae3567d4a1bbdd19068e3b25bebc6c28920edc4dbf97764fbb1d8057c9f9f0cc",
+        "sizeBytes": 738,
+        "mtimeNs": "1783390832866784300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/videoStream.js",
+        "sha256": "sha256:4c7ef03881afd6d8665a9d6f60e5d4f76efc442f2790cba4757cc67859e449e7",
+        "sizeBytes": 8854,
+        "mtimeNs": "1788236366885303200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "routes/warning.js",
+        "sha256": "sha256:64ea37ce5e433db253caacc6329672bdc51bd33d2a0bcc4070c3f42da55aa9ec",
+        "sizeBytes": 1398,
+        "mtimeNs": "1783390782595048400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "seed.js",
+        "sha256": "sha256:f0f09f0a271b86316c118545af9f449a2cfdea194585ad2e075fd6f39fcaaaba",
+        "sizeBytes": 22979,
+        "mtimeNs": "1784858212184779800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/adminService.js",
+        "sha256": "sha256:f1543b811234d0a0c3cdfdf5cd04fd8b4a1b6c0c084057bccf3e7003d4d49b7a",
+        "sizeBytes": 2048,
+        "mtimeNs": "1783390837706783000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/cameraInferenceScheduler.js",
+        "sha256": "sha256:4fc7ad273dc5ad299d093db55f6a94919432b45f14d392588c0e7f6bdd219eb8",
+        "sizeBytes": 11315,
+        "mtimeNs": "1788402445011591300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/captchaService.js",
+        "sha256": "sha256:6af6968ad4f38ec856187df6b0eedf5a60564fed72187079b53fbff6aa794250",
+        "sizeBytes": 230,
+        "mtimeNs": "1765332992684737300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/detectionGateway.js",
+        "sha256": "sha256:bdf940a31b1905e47a96843f03b337cb6799e4b6f6353998422933590dfb11dd",
+        "sizeBytes": 4737,
+        "mtimeNs": "1787276534371052000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/ffmpegCompat.js",
+        "sha256": "sha256:43e60af979672fd726140a174abd677d1e7a37f9721f4d274f0be37c0f475d30",
+        "sizeBytes": 2354,
+        "mtimeNs": "1787281845266822600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/frameStreamService.js",
+        "sha256": "sha256:4aa8becaeb88ee53417a055c84a441364c1cddeb0d3cb3c09edb97cd6320968c",
+        "sizeBytes": 8756,
+        "mtimeNs": "1787276534371555200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/inferenceScheduler.js",
+        "sha256": "sha256:db7a23d0e60e46b2f7d26e1094fe10702ebbcd5ab07766e5984da535f69ab95b",
+        "sizeBytes": 18933,
+        "mtimeNs": "1788312989128748600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/infraredSync.js",
+        "sha256": "sha256:a8b186a7bdb00ba07a3073e0de936a724775724347e8b5d2035da56bce0a9c71",
+        "sizeBytes": 8302,
+        "mtimeNs": "1783567047586373600",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/recordService.js",
+        "sha256": "sha256:3b1f40eab92a3dd1ee853449cfacef76abb906a59097bb61624f17e4dcb54138",
+        "sizeBytes": 16283,
+        "mtimeNs": "1785136092030143900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/rtspTranscoder.js",
+        "sha256": "sha256:6a1ba2508cdb7dad8720838b307d98a24f0807a22a8240933be0e09eec00001c",
+        "sizeBytes": 37619,
+        "mtimeNs": "1788236164846781400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/sdkMeasureService.js",
+        "sha256": "sha256:2e032785f077a449edcdc1fa017cfb47deac7a87bc84cb1b94aa42c493f9908f",
+        "sizeBytes": 6916,
+        "mtimeNs": "1787302076526826400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/sdkStreamService.js",
+        "sha256": "sha256:63c3d6880100d7da74c92fd13d67307000f2a6412d588e63687a439713dc2f6a",
+        "sizeBytes": 44309,
+        "mtimeNs": "1787280961115317000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "service/streamManager.js",
+        "sha256": "sha256:79ad181ccc5ebf41bce905a66f877b6869610e591989f09d118b6201d28b784f",
+        "sizeBytes": 16320,
+        "mtimeNs": "1784858232339789900",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/sdkStreamDemo.js",
+        "sha256": "sha256:c0cf0e596449d55a819228ec2bcead4aa25e78b79f7a882867b001808c100d96",
+        "sizeBytes": 4278,
+        "mtimeNs": "1784707436131357000",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/startStream.js",
+        "sha256": "sha256:eb811c210257c8be049041ce958adaa808d6547a968440e70625e792b5578f43",
+        "sizeBytes": 2118,
+        "mtimeNs": "1784785708878370400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testAPI.js",
+        "sha256": "sha256:1faede5d4d64dbe5d534ea8aec50448a63aa397e6a831a82d47a925b6a8af8d9",
+        "sizeBytes": 8703,
+        "mtimeNs": "1776925142461495800",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testMQ.js",
+        "sha256": "sha256:98deabb3fafe61d0a0305190cd784e9512e826311e67e7e9b5ba4d43f5df94b6",
+        "sizeBytes": 1746,
+        "mtimeNs": "1775784822000733300",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testOpenStream.js",
+        "sha256": "sha256:a462fcc1bb00df467ee96b60a344db53e8adbab032197b2f15e5a5f2ec6ba0ef",
+        "sizeBytes": 1006,
+        "mtimeNs": "1784711031983038200",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testRedis.js",
+        "sha256": "sha256:6641ae16767a8830337882398714f278a9b5872c4aed0ce7353ece2d6ab783b3",
+        "sizeBytes": 11428,
+        "mtimeNs": "1778650605245857700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testRtspStream.js",
+        "sha256": "sha256:5aacbff7a320aa1891554af80f54e2844ee6dacd8b767322854137df68dc87ff",
+        "sizeBytes": 9421,
+        "mtimeNs": "1783474009609752100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testRtspTranscoder.js",
+        "sha256": "sha256:fae403e495907d181dbdde95a9b04df8356281c4665b8bb24f7420792e9d4cc5",
+        "sizeBytes": 9120,
+        "mtimeNs": "1784878767901549100",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/testSdkCapture.js",
+        "sha256": "sha256:e37683e62deebe3bc272dd7933d56b32eb0d621ab8c837870ed598a6265749b5",
+        "sizeBytes": 26246,
+        "mtimeNs": "1784707226355724400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "test/usb2Diagnostic.js",
+        "sha256": "sha256:b8329a47d90f29ef0c5ac933a4050c844ea1251a0bb1e69b39eb285f47146457",
+        "sizeBytes": 6283,
+        "mtimeNs": "1784774053904404700",
+        "changedDuringRead": false
+      },
+      {
+        "path": "utils/errors.js",
+        "sha256": "sha256:48eb7a4d8e5e311ef0204a76c8bf190e4aac63a1490fa7677e21380c13809258",
+        "sizeBytes": 1383,
+        "mtimeNs": "1776759698694249400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "utils/queryHelper.js",
+        "sha256": "sha256:023372c3fe98c63fd0ead06f19b9625635e6715c71f0822f0cb30ad480864011",
+        "sizeBytes": 2189,
+        "mtimeNs": "1783390301429972400",
+        "changedDuringRead": false
+      },
+      {
+        "path": "utils/rabbitmq.js",
+        "sha256": "sha256:e2648bf44a85994c2837391bc4870bede69b8859f1c0df90e40dbf2201e6bc07",
+        "sizeBytes": 3262,
+        "mtimeNs": "1784700560449920500",
+        "changedDuringRead": false
+      },
+      {
+        "path": "utils/tool.js",
+        "sha256": "sha256:aa5c914a5fab4167ec48e5abe5ce117cac77f6c44ff5c8eb30664eb1ca153823",
+        "sizeBytes": 5401,
+        "mtimeNs": "1788161927849842200",
+        "changedDuringRead": false
+      }
+    ],
+    "excludedPaths": [
+      ".env",
+      ".git",
+      ".workbuddy/__pycache__",
+      ".workbuddy/frame_gray.bin",
+      ".workbuddy/frame_param.bin",
+      ".workbuddy/offdll/AWSSDK.Core.dll",
+      ".workbuddy/offdll/AWSSDK.S3.dll",
+      ".workbuddy/offdll/AnalyseObjectHelper.dll",
+      ".workbuddy/offdll/Auto_continuous_shutter.dll",
+      ".workbuddy/offdll/CommandHelper.dll",
+      ".workbuddy/offdll/Common.dll",
+      ".workbuddy/offdll/ConfigureHelper.dll",
+      ".workbuddy/offdll/Cpl64.dll",
+      ".workbuddy/offdll/DocumentFormat.OpenXml.dll",
+      ".workbuddy/offdll/Framework.dll",
+      ".workbuddy/offdll/GD_RTSP.dll",
+      ".workbuddy/offdll/GFileAnalysis.dll",
+      ".workbuddy/offdll/GaussFilter.dll",
+      ".workbuddy/offdll/GaussFilter_old.dll",
+      ".workbuddy/offdll/GuideIGSUSB2.dll",
+      ".workbuddy/offdll/GuideJpegLib.dll",
+      ".workbuddy/offdll/GuideNetLiveStream.dll",
+      ".workbuddy/offdll/GuideSecurityNetwork.dll",
+      ".workbuddy/offdll/GuideUSB2LiveStream.dll",
+      ".workbuddy/offdll/GuideUSB2LiveStream1.dll",
+      ".workbuddy/offdll/GuideUSBCamera.dll",
+      ".workbuddy/offdll/GuideWPFControlLibrary.dll",
+      ".workbuddy/offdll/ICSharpCode.SharpZipLib.dll",
+      ".workbuddy/offdll/ITA.dll",
+      ".workbuddy/offdll/LibUsbDotNet.LibUsbDotNet.dll",
+      ".workbuddy/offdll/LiveCharts.Wpf.dll",
+      ".workbuddy/offdll/LiveCharts.dll",
+      ".workbuddy/offdll/LogHelper.dll",
+      ".workbuddy/offdll/MTSDK.dll",
+      ".workbuddy/offdll/Microsoft.Bcl.AsyncInterfaces.dll",
+      ".workbuddy/offdll/Microsoft.Expression.Drawing.dll",
+      ".workbuddy/offdll/Microsoft.Xaml.Behaviors.dll",
+      ".workbuddy/offdll/Module.dll",
+      ".workbuddy/offdll/Mp4Core.dll",
+      ".workbuddy/offdll/NPOI.dll",
+      ".workbuddy/offdll/Newtonsoft.Json.dll",
+      ".workbuddy/offdll/SR_CPU.dll",
+      ".workbuddy/offdll/SR_CPU_192_144.dll",
+      ".workbuddy/offdll/SharpAvi.dll",
+      ".workbuddy/offdll/StriationDetection.dll",
+      ".workbuddy/offdll/System.Buffers.dll",
+      ".workbuddy/offdll/System.Memory.dll",
+      ".workbuddy/offdll/System.Numerics.Vectors.dll",
+      ".workbuddy/offdll/System.Runtime.CompilerServices.Unsafe.dll",
+      ".workbuddy/offdll/System.Text.Encodings.Web.dll",
+      ".workbuddy/offdll/System.Text.Json.dll",
+      ".workbuddy/offdll/System.Threading.Tasks.Extensions.dll",
+      ".workbuddy/offdll/System.ValueTuple.dll",
+      ".workbuddy/offdll/System.Windows.Interactivity.dll",
+      ".workbuddy/offdll/TFTPHelper.dll",
+      ".workbuddy/offdll/VideoRecord.dll",
+      ".workbuddy/offdll/ZedGraph.dll",
+      ".workbuddy/offdll/bodyDistance.dll",
+      ".workbuddy/offdll/comm.dll",
+      ".workbuddy/offdll/comm2.dll",
+      ".workbuddy/offdll/gdGetGausFilter.dll",
+      ".workbuddy/offdll/gna.dll",
+      ".workbuddy/offdll/measure_lib.dll",
+      ".workbuddy/offdll/measure_lib4iHA417W.dll",
+      ".workbuddy/offdll/measure_lib_usb2.dll",
+      ".workbuddy/offdll/msvcp140.dll",
+      ".workbuddy/offdll/openvino.dll",
+      ".workbuddy/offdll/openvino_auto_batch_plugin.dll",
+      ".workbuddy/offdll/openvino_auto_plugin.dll",
+      ".workbuddy/offdll/openvino_hetero_plugin.dll",
+      ".workbuddy/offdll/openvino_intel_cpu_plugin.dll",
+      ".workbuddy/offdll/openvino_intel_gna_plugin.dll",
+      ".workbuddy/offdll/openvino_intel_gpu_plugin.dll",
+      ".workbuddy/offdll/openvino_onnx_frontend.dll",
+      ".workbuddy/offdll/tbb12.dll",
+      ".workbuddy/offdll/vcomp140.dll",
+      ".workbuddy/offdll/vcruntime140.dll",
+      ".workbuddy/offdll/vcruntime140_1.dll",
+      ".workbuddy/test_frame.jpg",
+      "GSTLog(USB2)/2026-07-24/Error.log",
+      "GSTLog(USB2)/2026-07-24/Info.log",
+      "GSTLog(USB2)/2026-07-27/Info.log",
+      "GSTLog(USB2)/2026-07-28/Info.log",
+      "GSTLog(USB2)/2026-08-19/Info.log",
+      "GSTLog(USB2)/2026-08-20/Error.log",
+      "GSTLog(USB2)/2026-08-20/Info.log",
+      "GSTLog(USB2)/2026-08-21/Error.log",
+      "GSTLog(USB2)/2026-08-21/Info.log",
+      "GSTLog(USB2)/2026-08-24/Info.log",
+      "GSTLog(USB2)/2026-08-25/Info.log",
+      "GSTLog(USB2)/2026-08-31/Info.log",
+      "dll",
+      "inference-sidecar/__pycache__",
+      "inference-sidecar/models",
+      "node_modules",
+      "public"
+    ],
+    "unreadable": []
+  },
+  "expectedSelectionMtimes": [
+    {
+      "path": "utils/queryHelper.js",
+      "mtimeNs": "1783390301429972400"
+    },
+    {
+      "path": "inference-sidecar/main.py",
+      "mtimeNs": "1788236156129379900"
+    },
+    {
+      "path": "package.json",
+      "mtimeNs": "1787637676983956100"
+    },
+    {
+      "path": "inference-sidecar/requirements.txt",
+      "mtimeNs": "1785913749198713800"
+    }
+  ]
+}

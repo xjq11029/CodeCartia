@@ -1,0 +1,1824 @@
+{
+  "reportVersion": "external-project-observation-v0.1",
+  "observedAtUtc": "2026-11-12T07:15:31.846461+00:00",
+  "status": "checks-passed",
+  "scope": "Six hand-selected source anchors in one real project family; not exhaustive semantic truth, held-out quality, framework or product acceptance.",
+  "roots": {
+    "js-ts": "D:/Server-side/platform-server",
+    "python": "D:/Server-side/platform-server/inference-sidecar"
+  },
+  "bindings": {
+    "expectedSha256": "sha256:5d779a59f1ae15065d0d26c4f952d957d07f3c15e54c9ab2c70a0d8a19ce4228",
+    "entryInputSha256": "sha256:bbdff2d3281329958d589a695dec5d9b4dd21a8422bf93129c950d3dfc491f14",
+    "specSha256": "sha256:cc5961cee9e99972eeaaf6202cfc9f72efe0e2438693839217769107849a0d51",
+    "implementations": {
+      "external-projects/policy.py": "sha256:ab4f39fbbd785056b99ed5bcd263a59ed2f6a0d9f981da9a68618b57f4bb0c5d",
+      "external-projects/verify.py": "sha256:38e01047ce9e917081fc452fd0681866ccf468d0ccc0e6a6fad74c290b65de3a",
+      "external-projects/python_bridge.py": "sha256:e1db14be90e8bcf7259164a6ad0a4b7b28b245939f64806fb2e47ab723452857",
+      "external-projects/node_bridge.mjs": "sha256:5daf19325a800cb34f08e99b60554c3dea85821a30db11f12e7c9d60f6779bad",
+      "python/project_extract.py": "sha256:2d9ecdd4eb9102d1e38dd0ae26fb6b05b7ab9200c3adc46d94f31d289f5fc183",
+      "js-ts/project-extract.mjs": "sha256:e2e427d5d33b5927c3ffc11ffa52ea07463269d64a50a9a43e05adecd785f809",
+      "js-ts/io-policy.mjs": "sha256:d0828c2dfa73f6f822af070f4567dba5768cc7b2cad8996fb0a8bb57293a6b97",
+      "js-ts/toolchain.windows-observed.json": "sha256:c046515bd2412beb921d4f5ca1cd8e6089aed7a14ff523648570dd0d4819519a"
+    },
+    "policyVersion": "external-static-inputs-v0.1"
+  },
+  "observerPython": "3.14.2",
+  "passed": 333,
+  "total": 333,
+  "selectedAnchors": 6,
+  "selectedAnchorTotal": 6,
+  "rawReportSha256": {
+    "js-ts": "sha256:e4d7f4280564bc5aaea1b3851277b0036b06c9e93f8ea037728746a4524240e2",
+    "python": "sha256:607a822b57386488830efc33d523f2b88da3c35fb6c566793796d0cfab1f6f01"
+  },
+  "supportingReportSha256": {
+    "access-audit.json": "sha256:301ea9b52c08fca2c32d7a143d4b3728b0e956ad6b98ddbc291b3e74be832835",
+    "input-snapshots.json": "sha256:3698da29660501e6d380712da9d3a6aba781d9e940168255982f4b5fb7ecc3e8"
+  },
+  "staticSnapshotFileCount": 174,
+  "inputChanges": [],
+  "knownNotCapturedInputs": [],
+  "explicitEntryInput": {
+    "version": "external-entry-input-v0.1",
+    "selectionDate": "2026-11-12",
+    "scope": "One explicit technical source input; the six semantic anchors remain unchanged.",
+    "path": "bin/www",
+    "language": "javascript",
+    "sha256": "sha256:f25b810e7a2361fd10ee70212a7dadb5d4568f45fe387389a9738e816b3eb32e",
+    "sizeBytes": 2841,
+    "shebang": "#!/usr/bin/env node",
+    "requiredDeclaration": {
+      "name": "normalizePort",
+      "span": {
+        "startByte": 1710,
+        "endByte": 1924,
+        "startLine": 56,
+        "startColumn": 1,
+        "endLine": 70,
+        "endColumn": 2
+      }
+    },
+    "requiredCall": {
+      "callee": "normalizePort",
+      "span": {
+        "startByte": 378,
+        "endByte": 419,
+        "startLine": 17,
+        "startColumn": 12,
+        "endLine": 17,
+        "endColumn": 53
+      }
+    },
+    "source": {
+      "file": "package.json",
+      "field": "scripts.start",
+      "value": "node ./bin/www",
+      "sha256": "sha256:4211ea55b5268f8ab7d0989fd6f78239776350b588348d7ba52736dc67236ba2",
+      "interpretation": "Read as metadata only; no command parsing or execution. The path and language were explicitly selected after reading the shebang."
+    },
+    "request": {
+      "additionalEntryFiles": [
+        {
+          "path": "bin/www",
+          "language": "javascript"
+        }
+      ]
+    }
+  },
+  "declaredDependencies": {
+    "nodeProjectVersion": "0.1.0",
+    "node": {
+      "amqplib": "^0.10.9",
+      "cookie-parser": "^1.4.7",
+      "debug": "^4.4.3",
+      "dotenv": "^17.3.1",
+      "express": "~4.16.0",
+      "express-async-errors": "^3.1.1",
+      "express-jwt": "^6.1.0",
+      "express-session": "^1.19.0",
+      "fluent-ffmpeg": "^2.1.3",
+      "fluent-ffmpeg-7": "^2.1.5",
+      "http-errors": "^2.0.1",
+      "ioredis": "^5.10.1",
+      "jade": "^1.11.0",
+      "jsonwebtoken": "^9.0.3",
+      "koffi": "^3.1.1",
+      "markdown-toc": "^1.2.0",
+      "md5": "^2.3.0",
+      "mongoose": "^9.3.3",
+      "morgan": "^1.10.1",
+      "multer": "^2.1.1",
+      "mysql2": "^3.20.0",
+      "sequelize": "^6.37.8",
+      "svg-captcha": "^1.4.0",
+      "validate.js": "^0.13.1",
+      "ws": "^8.21.3"
+    },
+    "pythonRequirements": [
+      "fastapi>=0.110",
+      "uvicorn>=0.27",
+      "numpy>=1.24",
+      "ultralytics>=8.1",
+      "onnxruntime>=1.17",
+      "onnx>=1.15"
+    ],
+    "installedVersionsVerified": false
+  },
+  "summary": {
+    "js-ts": {
+      "toolchain": {
+        "name": "TypeScript Compiler API",
+        "version": "6.0.3",
+        "modulePath": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/typescript.js",
+        "libRoot": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib",
+        "moduleSha256": "sha256:569177652966bd528c319171c7dd22860dbf72bde116cbc4f644f1d02bb12e39",
+        "registrationSha256": "sha256:c046515bd2412beb921d4f5ca1cd8e6089aed7a14ff523648570dd0d4819519a",
+        "source": "当前 Windows 开发机 VS Code 内置 TypeScript；只作为已装候选实测，不作为产品依赖选型。",
+        "nodeVersion": "v24.11.0",
+        "platform": "win32",
+        "architecture": "x64"
+      },
+      "inputsByKind": {
+        "source": 115,
+        "toolchain": 63,
+        "metadata": 1
+      },
+      "declarations": 2110,
+      "calls": 4380,
+      "callResolutions": {
+        "unresolved": 2338,
+        "confirmed": 2042
+      },
+      "diagnosticCodes": {
+        "CONFIG_INFERRED": 1,
+        "TS2307": 110,
+        "TS2591": 114,
+        "TS2339": 284,
+        "TS2304": 21,
+        "TS7006": 883,
+        "TS2554": 1,
+        "TS2345": 130,
+        "TS7022": 3,
+        "TS18046": 81,
+        "TS2314": 5,
+        "TS7008": 34,
+        "TS2739": 4,
+        "TS2322": 9,
+        "TS2353": 10,
+        "TS7053": 17,
+        "TS7034": 11,
+        "TS7005": 24,
+        "TS2741": 1,
+        "TS2531": 13,
+        "TS2551": 1,
+        "TS2362": 2,
+        "TS2363": 2,
+        "TS2810": 10,
+        "TS1064": 1,
+        "TS2532": 3,
+        "TS2488": 1,
+        "TS18047": 7
+      },
+      "completeness": {
+        "complete": false,
+        "scope": "static-project-loading-and-fact-capture",
+        "targetResolutionComplete": false,
+        "unresolvedCalls": 2338,
+        "missingInputs": [],
+        "unsupportedModes": [
+          "project-configuration-not-provided"
+        ],
+        "truncations": []
+      }
+    },
+    "python": {
+      "toolchain": {
+        "name": "Python stdlib ast/tomllib",
+        "version": "3.14.2",
+        "executable": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "extractorSha256": "sha256:2d9ecdd4eb9102d1e38dd0ae26fb6b05b7ab9200c3adc46d94f31d289f5fc183"
+      },
+      "inputsByKind": {
+        "source": 2
+      },
+      "declarations": 11,
+      "calls": 147,
+      "callResolutions": {
+        "unresolved": 140,
+        "confirmed": 7
+      },
+      "diagnosticCodes": {
+        "MODULE_INPUT_MISSING": 48,
+        "NAME_BINDING_UNKNOWN": 59,
+        "TYPE_ATTRIBUTE_UNVERIFIED": 39,
+        "NESTED_EXPRESSION_SCOPE_UNSUPPORTED": 15,
+        "CONDITIONAL_BINDING_UNKNOWN": 1,
+        "DECORATOR_BINDING_UNKNOWN": 4,
+        "INPUT_MISSING": 1
+      },
+      "completeness": {
+        "complete": false,
+        "missingInputs": [
+          "module:asyncio",
+          "module:base64",
+          "module:cv2",
+          "module:fastapi",
+          "module:fastapi.middleware.cors",
+          "module:numpy",
+          "module:onnxruntime",
+          "module:os",
+          "module:sys",
+          "module:ultralytics",
+          "module:uvicorn",
+          "pyproject.toml"
+        ],
+        "unsupportedModes": [
+          "decorator-binding-unknown",
+          "general-dataflow",
+          "installed-dependency-resolution",
+          "lambda-and-comprehension-scopes",
+          "runtime-targets-and-reachability",
+          "types-and-frameworks"
+        ],
+        "truncations": []
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "selected-input-hash:js-source",
+      "passed": true
+    },
+    {
+      "name": "selected-input-hash:py-source",
+      "passed": true
+    },
+    {
+      "name": "selected-input-hash:js-metadata",
+      "passed": true
+    },
+    {
+      "name": "selected-input-hash:py-metadata",
+      "passed": true
+    },
+    {
+      "name": "explicit-node-entry-captured",
+      "passed": true
+    },
+    {
+      "name": "explicit-node-entry-has-source-facts",
+      "passed": true
+    },
+    {
+      "name": "report-identity:js-ts",
+      "passed": true
+    },
+    {
+      "name": "not-complete-project:js-ts",
+      "passed": true
+    },
+    {
+      "name": "runtime-targets-remain-unknown:js-ts",
+      "passed": true
+    },
+    {
+      "name": "unknown-targets-have-no-declaration:js-ts",
+      "passed": true
+    },
+    {
+      "name": "missing-project-config-diagnosed:js-ts",
+      "passed": true
+    },
+    {
+      "name": "original-config-not-created:js-ts:tsconfig.json",
+      "passed": true
+    },
+    {
+      "name": "original-config-not-created:js-ts:jsconfig.json",
+      "passed": true
+    },
+    {
+      "name": "no-external-write-attempts:js-ts",
+      "passed": true
+    },
+    {
+      "name": "no-target-execution-attempts:js-ts",
+      "passed": true
+    },
+    {
+      "name": "no-forbidden-read-attempts:js-ts",
+      "passed": true
+    },
+    {
+      "name": "nonempty-input-manifest:js-ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:app.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:app.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:bin/www",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:bin/www",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.decorators.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.decorators.legacy.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.dom.asynciterable.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.dom.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.dom.iterable.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2016.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2016.intl.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.arraybuffer.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.date.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.array.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.intl.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.object.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.string.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2019.symbol.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.bigint.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.date.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.intl.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.number.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.promise.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.sharedmemory.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.string.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2021.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2021.intl.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2021.promise.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2021.string.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2021.weakref.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.array.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.error.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.full.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.intl.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.object.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.regexp.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es2022.string.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.es5.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.scripthost.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/adminDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/adminDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/alarmLogDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/alarmLogDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/commandSendDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/commandSendDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/controlCoreDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/controlCoreDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/dataDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/dataDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/db.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/db.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/dbConnect.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/dbConnect.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/deviceDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/deviceDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/deviceStatusDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/deviceStatusDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/infraredFileDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/infraredFileDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/inspectionDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/inspectionDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/manualControlDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/manualControlDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/messageDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/messageDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/adminModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/adminModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/chargerModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/chargerModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/controlCoreModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/controlCoreModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/dataRecordModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/dataRecordModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/deviceModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/deviceModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/dictModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/dictModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/dictValueModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/dictValueModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/infraredFileModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/infraredFileModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/inspectionCommandModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/inspectionCommandModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/inspectionPathModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/inspectionPathModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/inspectionPlanModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/inspectionPlanModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/maintenanceRecordModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/maintenanceRecordModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/manualControlModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/manualControlModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/motorStatusModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/motorStatusModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/noEntryAreaModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/noEntryAreaModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/paramsConfigModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/paramsConfigModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/peripheralStatusModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/peripheralStatusModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/permissionModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/permissionModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/powerManagementModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/powerManagementModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/robotStatusModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/robotStatusModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/roleModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/roleModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/sensorModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/sensorModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/signalStatusModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/signalStatusModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/taskFeedbackModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/taskFeedbackModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/taskModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/taskModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/userModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/userModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/videoStreamModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/videoStreamModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/warningRecordModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/warningRecordModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/model/warningRuleModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/model/warningRuleModel.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/mongodbConnect.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/mongodbConnect.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/motorStatusDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/motorStatusDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/paramsConfigDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/paramsConfigDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/peripheralStatusDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/peripheralStatusDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/powerManagementDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/powerManagementDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/redisConnect.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/redisConnect.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/robotDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/robotDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/sensorDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/sensorDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/signalStatusDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/signalStatusDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/systemDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/systemDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/taskDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/taskDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/videoStreamDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/videoStreamDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:dao/warningDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:dao/warningDao.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:lib/sdk-capture/frame-processor.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:lib/sdk-capture/frame-processor.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:lib/sdk-capture/frame-tap.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:lib/sdk-capture/frame-tap.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:lib/sdk-capture/index.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:lib/sdk-capture/index.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:lib/sdk-capture/measure-bridge.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:lib/sdk-capture/measure-bridge.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:lib/sdk-capture/sdk-bridge.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:lib/sdk-capture/sdk-bridge.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:lib/ws-lite.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:lib/ws-lite.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:package.json",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:package.json",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/admin.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/admin.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/alarmLog.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/alarmLog.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/captcha.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/captcha.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/commandSend.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/commandSend.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/controlCore.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/controlCore.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/data.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/data.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/device.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/device.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/deviceStatus.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/deviceStatus.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/infrared.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/infrared.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/inspection.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/inspection.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/manualControl.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/manualControl.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/motorStatus.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/motorStatus.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/paramsConfig.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/paramsConfig.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/peripheralStatus.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/peripheralStatus.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/powerManagement.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/powerManagement.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/robot.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/robot.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/sdk-capture.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/sdk-capture.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/sensor.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/sensor.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/signalStatus.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/signalStatus.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/system.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/system.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/task.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/task.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/upload.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/upload.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/videoStream.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/videoStream.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:routes/warning.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:routes/warning.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:seed.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:seed.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/adminService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/adminService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/cameraInferenceScheduler.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/cameraInferenceScheduler.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/captchaService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/captchaService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/detectionGateway.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/detectionGateway.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/ffmpegCompat.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/ffmpegCompat.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/frameStreamService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/frameStreamService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/inferenceScheduler.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/inferenceScheduler.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/infraredSync.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/infraredSync.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/recordService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/recordService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/rtspTranscoder.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/rtspTranscoder.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/sdkMeasureService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/sdkMeasureService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/sdkStreamService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/sdkStreamService.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:service/streamManager.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:service/streamManager.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:test/sdkStreamDemo.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:test/sdkStreamDemo.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:test/startStream.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:test/startStream.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:test/testAPI.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:test/testAPI.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:test/testMQ.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:test/testMQ.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:test/testOpenStream.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:test/testOpenStream.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:test/testRedis.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:test/testRedis.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:test/testRtspStream.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:test/testRtspStream.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:test/testRtspTranscoder.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:test/testRtspTranscoder.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:test/testSdkCapture.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:test/testSdkCapture.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:test/usb2Diagnostic.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:test/usb2Diagnostic.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:utils/errors.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:utils/errors.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:utils/queryHelper.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:utils/queryHelper.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:utils/rabbitmq.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:utils/rabbitmq.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:js-ts:utils/tool.js",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:js-ts:utils/tool.js",
+      "passed": true
+    },
+    {
+      "name": "report-identity:python",
+      "passed": true
+    },
+    {
+      "name": "not-complete-project:python",
+      "passed": true
+    },
+    {
+      "name": "runtime-targets-remain-unknown:python",
+      "passed": true
+    },
+    {
+      "name": "unknown-targets-have-no-declaration:python",
+      "passed": true
+    },
+    {
+      "name": "missing-project-config-diagnosed:python",
+      "passed": true
+    },
+    {
+      "name": "original-config-not-created:python:pyproject.toml",
+      "passed": true
+    },
+    {
+      "name": "no-external-write-attempts:python",
+      "passed": true
+    },
+    {
+      "name": "no-target-execution-attempts:python",
+      "passed": true
+    },
+    {
+      "name": "no-forbidden-read-attempts:python",
+      "passed": true
+    },
+    {
+      "name": "nonempty-input-manifest:python",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:python:export_onnx.py",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:python:export_onnx.py",
+      "passed": true
+    },
+    {
+      "name": "captured-input-still-current:python:main.py",
+      "passed": true
+    },
+    {
+      "name": "captured-input-matches-before:python:main.py",
+      "passed": true
+    },
+    {
+      "name": "selected-anchor:js-declaration",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "name": "buildWhere",
+          "qualifiedName": "buildWhere",
+          "span": {
+            "startByte": 440,
+            "endByte": 1121,
+            "startLine": 12,
+            "startColumn": 1,
+            "endLine": 30,
+            "endColumn": 2
+          }
+        },
+        "actual": [
+          {
+            "name": "buildWhere",
+            "qualifiedName": "buildWhere",
+            "span": {
+              "startByte": 440,
+              "endByte": 1121,
+              "startLine": 12,
+              "startColumn": 1,
+              "endLine": 30,
+              "endColumn": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "selected-anchor:js-static-call",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "callee": "buildWhere",
+          "span": {
+            "startByte": 1746,
+            "endByte": 1781,
+            "startLine": 44,
+            "startColumn": 19,
+            "endLine": 44,
+            "endColumn": 54
+          },
+          "bindingKind": "static-signature-reference",
+          "resolution": "confirmed",
+          "target": {
+            "file": "utils/queryHelper.js",
+            "qualifiedName": "buildWhere",
+            "span": {
+              "startByte": 440,
+              "endByte": 1121,
+              "startLine": 12,
+              "startColumn": 1,
+              "endLine": 30,
+              "endColumn": 2
+            }
+          },
+          "runtimeTargetMode": "unknown"
+        },
+        "actual": [
+          {
+            "callee": "buildWhere",
+            "span": {
+              "startByte": 1746,
+              "endByte": 1781,
+              "startLine": 44,
+              "startColumn": 19,
+              "endLine": 44,
+              "endColumn": 54
+            },
+            "bindingKind": "static-signature-reference",
+            "resolution": "confirmed",
+            "target": {
+              "file": "utils/queryHelper.js",
+              "qualifiedName": "buildWhere",
+              "span": {
+                "startByte": 440,
+                "endByte": 1121,
+                "startLine": 12,
+                "startColumn": 1,
+                "endLine": 30,
+                "endColumn": 2
+              }
+            },
+            "runtimeTargetMode": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "name": "selected-anchor:js-unknown-call",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "callee": "model.findAndCountAll",
+          "span": {
+            "startByte": 1878,
+            "endByte": 2010,
+            "startLine": 46,
+            "startColumn": 35,
+            "endLine": 51,
+            "endColumn": 7
+          },
+          "bindingKind": "static-signature-reference",
+          "resolution": "unresolved",
+          "target": null,
+          "runtimeTargetMode": "unknown"
+        },
+        "actual": [
+          {
+            "callee": "model.findAndCountAll",
+            "span": {
+              "startByte": 1878,
+              "endByte": 2010,
+              "startLine": 46,
+              "startColumn": 35,
+              "endLine": 51,
+              "endColumn": 7
+            },
+            "bindingKind": "static-signature-reference",
+            "resolution": "unresolved",
+            "target": null,
+            "runtimeTargetMode": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "name": "selected-anchor:python-declaration",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "name": "_decode_image_b64",
+          "qualifiedName": "main._decode_image_b64",
+          "span": {
+            "startByte": 4171,
+            "endByte": 4946,
+            "startLine": 105,
+            "startColumn": 1,
+            "endLine": 120,
+            "endColumn": 48
+          }
+        },
+        "actual": [
+          {
+            "name": "_decode_image_b64",
+            "qualifiedName": "main._decode_image_b64",
+            "span": {
+              "startByte": 4171,
+              "endByte": 4946,
+              "startLine": 105,
+              "startColumn": 1,
+              "endLine": 120,
+              "endColumn": 48
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "selected-anchor:python-static-call",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "callee": "_decode_image_b64",
+          "span": {
+            "startByte": 7990,
+            "endByte": 8018,
+            "startLine": 204,
+            "startColumn": 19,
+            "endLine": 204,
+            "endColumn": 47
+          },
+          "bindingKind": "lexical-declaration-reference",
+          "resolution": "confirmed",
+          "target": {
+            "file": "main.py",
+            "qualifiedName": "main._decode_image_b64",
+            "span": {
+              "startByte": 4171,
+              "endByte": 4946,
+              "startLine": 105,
+              "startColumn": 1,
+              "endLine": 120,
+              "endColumn": 48
+            }
+          },
+          "runtimeTargetMode": "unknown"
+        },
+        "actual": [
+          {
+            "callee": "_decode_image_b64",
+            "span": {
+              "startByte": 7990,
+              "endByte": 8018,
+              "startLine": 204,
+              "startColumn": 19,
+              "endLine": 204,
+              "endColumn": 47
+            },
+            "bindingKind": "lexical-declaration-reference",
+            "resolution": "confirmed",
+            "target": {
+              "file": "main.py",
+              "qualifiedName": "main._decode_image_b64",
+              "span": {
+                "startByte": 4171,
+                "endByte": 4946,
+                "startLine": 105,
+                "startColumn": 1,
+                "endLine": 120,
+                "endColumn": 48
+              }
+            },
+            "runtimeTargetMode": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "name": "selected-anchor:python-unknown-call",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "callee": "np.frombuffer",
+          "span": {
+            "startByte": 3738,
+            "endByte": 3780,
+            "startLine": 96,
+            "startColumn": 9,
+            "endLine": 96,
+            "endColumn": 51
+          },
+          "bindingKind": "lexical-declaration-reference",
+          "resolution": "unresolved",
+          "target": null,
+          "runtimeTargetMode": "unknown"
+        },
+        "actual": [
+          {
+            "callee": "np.frombuffer",
+            "span": {
+              "startByte": 3738,
+              "endByte": 3780,
+              "startLine": 96,
+              "startColumn": 9,
+              "endLine": 96,
+              "endColumn": 51
+            },
+            "bindingKind": "lexical-declaration-reference",
+            "resolution": "unresolved",
+            "target": null,
+            "runtimeTargetMode": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "name": "permitted-static-inputs-unchanged",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "unverifiedBoundaries": [
+    "Express/FastAPI routing, reachable HTTP chains, asynchronous scheduling and framework semantics.",
+    "koffi/DLL/FFI internals, model execution and cross-service identity.",
+    "General dataflow, business steps, authorization and complete project quality."
+  ]
+}

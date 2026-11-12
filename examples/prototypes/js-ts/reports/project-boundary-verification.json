@@ -1,0 +1,140 @@
+{
+  "reportVersion": "project-loading-boundary-v0.1",
+  "status": "checks-passed",
+  "scope": "Local static loading and filesystem/resource boundaries; separate from independent semantic fixtures and product acceptance.",
+  "nodeVersion": "v24.11.0",
+  "platform": "win32",
+  "extractorSha256": "sha256:e2e427d5d33b5927c3ffc11ffa52ea07463269d64a50a9a43e05adecd785f809",
+  "testSha256": "sha256:7649fb26c0b763b6678f2e6cdb327de24b4631d3673cabc7c762d3bf7c3a0449",
+  "policySha256": "sha256:d0828c2dfa73f6f822af070f4567dba5768cc7b2cad8996fb0a8bb57293a6b97",
+  "passed": 28,
+  "total": 29,
+  "skipped": 1,
+  "results": [
+    {
+      "name": "same source retains two project configuration bindings",
+      "passed": true
+    },
+    {
+      "name": "explicit extensionless JavaScript enters the program and binds imported and local calls",
+      "passed": true
+    },
+    {
+      "name": "additional sources are added only to the primary configuration",
+      "passed": true
+    },
+    {
+      "name": "an explicit source does not permit reading other extensionless imports",
+      "passed": true
+    },
+    {
+      "name": "unsupported entry languages and ordinary non-JavaScript file types are refused",
+      "passed": true
+    },
+    {
+      "name": "additional entry paths cannot escape the registered root",
+      "passed": true
+    },
+    {
+      "name": "additional entry directory junctions are refused before reading",
+      "passed": true
+    },
+    {
+      "name": "a non-Node shebang is not treated as JavaScript",
+      "passed": true
+    },
+    {
+      "name": "explicit entry capture still enforces UTF-8 and file budgets",
+      "passed": true
+    },
+    {
+      "name": "absolute and escaping configuration requests are refused",
+      "passed": true
+    },
+    {
+      "name": "imports and extended configuration cannot read outside projectRoot",
+      "passed": true
+    },
+    {
+      "name": "a junction used as projectRoot is refused",
+      "passed": true
+    },
+    {
+      "name": "a configuration behind a directory junction is refused",
+      "passed": true
+    },
+    {
+      "name": "directory junctions cannot supply imported source",
+      "passed": true
+    },
+    {
+      "name": "final file symlinks are refused when the host permits their creation",
+      "passed": false,
+      "skipped": true,
+      "reason": "File symlink creation is unavailable: EPERM"
+    },
+    {
+      "name": "reports cannot overwrite any file in the analyzed project",
+      "passed": true
+    },
+    {
+      "name": "report parent and final-path junctions are refused",
+      "passed": true
+    },
+    {
+      "name": "an existing input package cannot be overwritten by an output alias",
+      "passed": true
+    },
+    {
+      "name": "output hard links cannot overwrite protected input bytes",
+      "passed": true
+    },
+    {
+      "name": "maxNodes exhaustion is explicit and never complete",
+      "passed": true
+    },
+    {
+      "name": "maxFiles exhaustion is explicit and never complete",
+      "passed": true
+    },
+    {
+      "name": "maxTotalBytes exhaustion is explicit and never complete",
+      "passed": true
+    },
+    {
+      "name": "maxDirectories exhaustion is explicit and never complete",
+      "passed": true
+    },
+    {
+      "name": "maxDirectoryEntries exhaustion is explicit and never complete",
+      "passed": true
+    },
+    {
+      "name": "maxQueries exhaustion is explicit and never complete",
+      "passed": true
+    },
+    {
+      "name": "project-reference expansion obeys its project budget",
+      "passed": true
+    },
+    {
+      "name": "oversized original input is refused before parsing",
+      "passed": true
+    },
+    {
+      "name": "malformed UTF-8 keeps an input fingerprint but cannot yield source facts",
+      "passed": true
+    },
+    {
+      "name": "invalid exploration budgets are rejected",
+      "passed": true
+    }
+  ],
+  "unavailableChecks": [
+    {
+      "name": "actual file symbolic link",
+      "reason": "EPERM",
+      "completed": false
+    }
+  ]
+}

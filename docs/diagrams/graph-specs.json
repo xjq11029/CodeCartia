@@ -2,7 +2,7 @@
   "meta": {
     "title": "CodeCartia（源图）架构与设计图解",
     "designVersion": "0.6",
-    "date": "2026-11-09",
+    "date": "2026-11-12",
     "status": "设计图解，尚未实现"
   },
   "graphs": [
@@ -20,13 +20,13 @@
           "步骤里的角色、授权和业务规则都要回到“逐项实现依据”核对；箭头表示阅读关联。"
         ],
         "example": "想知道采购申请如何审批，可以先打开审批场景，再查看审批动作、金额规则、参与角色和对应代码。",
-        "scope": "本图描述 CodeCartia 产品的信息组织设计，核心自动分析与产品分析验收尚未完成。"
+        "scope": "本图描述 CodeCartia 产品的信息组织设计。2026-11-12 调整后，首版只验证 JS/TS 和 Python；核心自动分析与产品分析验收尚未完成。"
       },
       "source": [
         {
           "label": "设计 v0.6",
           "path": "../CodeCartia-设计方案.md",
-          "section": "第 3.1–3.4 节：主要流程、四种关系视图与业务步骤阅读"
+          "section": "第 3.1–3.4 节：主要流程、四种关系视图与业务步骤阅读；第 5 节：初版语言范围"
         },
         {
           "label": "项目当前状态",
@@ -36,6 +36,7 @@
       ],
       "notes": [
         "本图为设计阅读材料，CodeCartia 的 CLI、产品 Web 与自动分析器尚未实现；已有体验原型和采购示例不代表产品分析验收通过，技术候选、模式、预算与准入门槛仍待验证和冻结。",
+        "首版验证 JS/TS（含 Vue、React、Node.js、Next.js 及相关源码输入）和 Python；Java、C#、C、C++ 的验证整体延后，不阻塞首版，也不计为通过。业务、步骤授权、协议及质量要求继续约束首版范围。",
         "角色筛选只改变查看范围；不代为登录目标工程，也不授予权限。",
         "每个动作分别保留对象、入口、身份域和数据条件；不把跨场景允许结果取并集。",
         "没有运行证据时，图中的关联与动画不表示真实执行、耗时或生产使用。"
@@ -459,7 +460,7 @@
           "labelY": 500
         }
       ],
-      "mermaid": "flowchart LR\n  %% 设计图解；未实现。箭头含义见本图说明。\n  workspace[\"多工程工作区\"]:::data\n  business[\"业务总览\"]:::business\n  scenario[\"场景详情\"]:::business\n  step[\"步骤／动作\"]:::business\n  system[\"系统总览\"]:::core\n  chain[\"跨工程关系\"]:::core\n  roles[\"步骤内角色<br/>与授权\"]:::business\n  object[\"对象／规则<br/>状态／异常\"]:::business\n  modules[\"模块与文件\"]:::core\n  symbols[\"符号与调用\"]:::core\n  matrix[\"条件矩阵<br/>角色反查\"]:::business\n  evidence[\"逐项实现依据\"]:::data\n  workspace -- \"默认阅读\" --> business\n  business -- \"进入场景\" --> scenario\n  scenario -- \"展开动作\" --> step\n  workspace -- \"架构入口\" --> system\n  system -- \"模块展开\" --> modules\n  system -- \"协议联动\" --> chain\n  chain -- \"实现展开\" --> symbols\n  modules -- \"定位符号\" --> symbols\n  step -- \"业务上下文\" --> object\n  step -- \"谁／哪些条件\" --> roles\n  roles -- \"同绑定反查\" --> matrix\n  object -. \"追溯依据\" .-> evidence\n  symbols -. \"实现位置\" .-> evidence\n  matrix -. \"条件依据\" .-> evidence\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
+      "mermaid": "flowchart LR\n  %% 设计图解；未实现。初版验证 JS/TS、Python，Java/C#/C/C++ 后续验证。箭头含义见本图说明。\n  workspace[\"多工程工作区\"]:::data\n  business[\"业务总览\"]:::business\n  scenario[\"场景详情\"]:::business\n  step[\"步骤／动作\"]:::business\n  system[\"系统总览\"]:::core\n  chain[\"跨工程关系\"]:::core\n  roles[\"步骤内角色<br/>与授权\"]:::business\n  object[\"对象／规则<br/>状态／异常\"]:::business\n  modules[\"模块与文件\"]:::core\n  symbols[\"符号与调用\"]:::core\n  matrix[\"条件矩阵<br/>角色反查\"]:::business\n  evidence[\"逐项实现依据\"]:::data\n  workspace -- \"默认阅读\" --> business\n  business -- \"进入场景\" --> scenario\n  scenario -- \"展开动作\" --> step\n  workspace -- \"架构入口\" --> system\n  system -- \"模块展开\" --> modules\n  system -- \"协议联动\" --> chain\n  chain -- \"实现展开\" --> symbols\n  modules -- \"定位符号\" --> symbols\n  step -- \"业务上下文\" --> object\n  step -- \"谁／哪些条件\" --> roles\n  roles -- \"同绑定反查\" --> matrix\n  object -. \"追溯依据\" .-> evidence\n  symbols -. \"实现位置\" .-> evidence\n  matrix -. \"条件依据\" .-> evidence\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
     },
     {
       "id": "architecture",
@@ -475,13 +476,13 @@
           "查询服务把保存的结果提供给本地 Web；AI 是可选说明助手，箭头表示信息或接口依赖。"
         ],
         "example": "分析一个前后端工程时，语言分析组件查出函数关系，框架适配器关联请求和接口，阅读界面把有据结果展示出来。",
-        "scope": "本图描述 CodeCartia 自身的规划架构，CLI、产品 Web 和自动分析器尚未实现；技术选型仍待验证。"
+        "scope": "本图描述 CodeCartia 自身的规划架构；首版只验证 JS/TS 和 Python，其他语言 worker 保留为后续扩展。CLI、产品 Web 和自动分析器尚未实现。"
       },
       "source": [
         {
           "label": "设计 v0.6",
           "path": "../CodeCartia-设计方案.md",
-          "section": "第 4.1–4.2 节：实现候选、适配器与 worker；第 8–9.1 节：服务、输入及渲染边界"
+          "section": "第 4.1–5 节：实现候选、适配器、worker 与初版语言范围；第 8–9.1 节：服务、输入及渲染边界"
         },
         {
           "label": "待决策清单",
@@ -491,7 +492,8 @@
       ],
       "notes": [
         "本图为设计阅读材料，CodeCartia 的 CLI、产品 Web 与自动分析器尚未实现；已有体验原型和采购示例不代表产品分析验收通过，技术候选、模式、预算与准入门槛仍待验证和冻结。",
-        "候选：CLI TypeScript/Node.js；Web React/TypeScript/Vite＋pnpm；语义工具 TypeScript Compiler API、Vue SFC 编译器、JDT、Roslyn、Clang，Python AST 与类型辅助。",
+        "首版候选：CLI TypeScript/Node.js；Web React/TypeScript/Vite＋pnpm；语义工具 TypeScript Compiler API、Vue SFC 编译器、Python AST 与类型辅助。相关框架版本、模式与依赖仍待验证。",
+        "Java、C#、C、C++ 及 JDT、Roslyn、Clang 的专属验证延后；Spring、ASP.NET 及涉及这些语言的完整实现链路随之延后。独立 worker 与统一事实契约保留扩展能力，延后项不计为已支持或验收通过。",
         "候选：SQLite＋快照文件、Cytoscape.js＋ELK.js；全部需要原型、平台与许可证验证，不能视为已采纳。",
         "目标源码只读；不启动目标应用、不自动执行构建脚本、编译数据库 command，不自动构建、生成或下载缺失输入。",
         "业务索引排除规则不直接充当 worker 读取禁令；外部语义输入与通用 Web 文件访问采用不同边界。",
@@ -541,8 +543,8 @@
         {
           "id": "semantic_roots",
           "label": "登记语义输入根",
-          "detail": "设计中只读加载必要 SDK、类型定义、程序集、系统头文件、存根和已有生成输入；工作区外输入需明确登记、来源可核验，解析路径与符号链接仍在登记根内。依据：设计 §9。",
-          "plainExplanation": "登记帮助读懂代码的类型定义、库和头文件等资料，缺失时保留说明。",
+          "detail": "统一输入契约保留 SDK、类型定义、程序集、系统头文件、存根和已有生成输入。首版验证 JS/TS 与 Python 所需输入；Java/C#/C/C++ 专属输入随语言延后。工作区外输入需明确登记、来源可核验，解析路径与符号链接仍在登记根内。依据：设计 §5、§9。",
+          "plainExplanation": "登记帮助读懂 JS/TS、Python 的类型、库和存根资料，缺失时保留说明。",
           "type": "data",
           "x": 40,
           "y": 275,
@@ -576,9 +578,9 @@
         },
         {
           "id": "workers",
-          "label": "语言分析\n独立 worker",
-          "detail": "设计中按目标语言提取语义与有限数据流。Java/C#/C/C++ 等使用独立进程；协议包含能力、分批事实、诊断、取消、超时与完整性，日志独立。依据：设计 §4.1–4.2。",
-          "plainExplanation": "由熟悉各语言的独立分析进程读懂代码，提取函数、类型和调用等关系。",
+          "label": "JS/TS · Python\n独立 worker",
+          "detail": "首版按 JS/TS 与 Python 提取语义及有限数据流；Java/C#/C/C++ 的 worker 验证延后。共用协议仍包含能力、分批事实、诊断、取消、超时与完整性，日志独立；延后不免除首版协议验证。依据：设计 §4.1–5。",
+          "plainExplanation": "首版分析 JS/TS 和 Python，提取函数、类型和调用关系；其他语言保留后续接入设计。",
           "type": "core",
           "x": 330,
           "y": 275,
@@ -589,7 +591,7 @@
         {
           "id": "adapters",
           "label": "框架／协议\n适配器",
-          "detail": "设计中分别识别组件、路由注册/分发、DI、请求、资源关联、身份/角色/策略及实际检查绑定；不能仅凭名字确定授权或执行链。依据：设计 §4.2、§7。",
+          "detail": "设计中分别识别组件、路由注册/分发、DI、请求、资源关联、身份/角色/策略及实际检查绑定；首版验证 JS/TS 与 Python 生态的冻结模式，Spring、ASP.NET 随对应语言延后。不能仅凭名字确定授权或执行链。依据：设计 §4.2–5、§7。",
           "plainExplanation": "理解框架和通信约定，把组件、请求、接口以及实际权限检查关联起来。",
           "type": "core",
           "x": 330,
@@ -1063,7 +1065,7 @@
           "labelY": 110
         }
       ],
-      "mermaid": "flowchart LR\n  %% 设计图解；未实现。箭头含义见本图说明。\n  business_roots[\"登记业务源码根\"]:::data\n  semantic_roots[\"登记语义输入根\"]:::data\n  workspace_config[\"工作区／环境<br/>输入清单\"]:::data\n  cli[\"CLI 编排进程\"]:::core\n  workers[\"语言分析<br/>独立 worker\"]:::core\n  adapters[\"框架／协议<br/>适配器\"]:::core\n  ai[\"可选 AI 适配\"]:::optional\n  facts[\"统一事实<br/>与证据模型\"]:::data\n  business_layer[\"业务语义层<br/>步骤授权绑定\"]:::business\n  store[\"快照索引<br/>与关系存储\"]:::data\n  web[\"本地 Web<br/>阅读界面\"]:::core\n  session[\"会话／访问<br/>与渲染边界\"]:::warning\n  export[\"设计中的导出\"]:::core\n  query[\"查询与视图<br/>本地服务\"]:::core\n  business_roots -- \"许可扫描\" --> cli\n  semantic_roots -- \"只读加载\" --> workers\n  workspace_config -- \"任务配置\" --> cli\n  workspace_config -- \"环境映射\" --> adapters\n  cli -- \"调度／取消\" --> workers\n  cli -- \"调度适配\" --> adapters\n  workers -- \"分批事实\" --> facts\n  adapters -- \"注册／关联\" --> facts\n  facts -- \"原始事实\" --> store\n  facts -- \"有据组织\" --> business_layer\n  business_layer -- \"快照写入\" --> store\n  store -- \"读取快照\" --> query\n  web -- \"受限请求\" --> session\n  session -- \"校验后查询\" --> query\n  query -- \"受控导出\" --> export\n  query -. \"选定证据\" .-> ai\n  ai -. \"辅助说明\" .-> web\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
+      "mermaid": "flowchart LR\n  %% 设计图解；未实现。初版验证 JS/TS、Python，Java/C#/C/C++ 后续验证。箭头含义见本图说明。\n  business_roots[\"登记业务源码根\"]:::data\n  semantic_roots[\"登记语义输入根\"]:::data\n  workspace_config[\"工作区／环境<br/>输入清单\"]:::data\n  cli[\"CLI 编排进程\"]:::core\n  workers[\"JS/TS · Python<br/>独立 worker\"]:::core\n  adapters[\"框架／协议<br/>适配器\"]:::core\n  ai[\"可选 AI 适配\"]:::optional\n  facts[\"统一事实<br/>与证据模型\"]:::data\n  business_layer[\"业务语义层<br/>步骤授权绑定\"]:::business\n  store[\"快照索引<br/>与关系存储\"]:::data\n  web[\"本地 Web<br/>阅读界面\"]:::core\n  session[\"会话／访问<br/>与渲染边界\"]:::warning\n  export[\"设计中的导出\"]:::core\n  query[\"查询与视图<br/>本地服务\"]:::core\n  business_roots -- \"许可扫描\" --> cli\n  semantic_roots -- \"只读加载\" --> workers\n  workspace_config -- \"任务配置\" --> cli\n  workspace_config -- \"环境映射\" --> adapters\n  cli -- \"调度／取消\" --> workers\n  cli -- \"调度适配\" --> adapters\n  workers -- \"分批事实\" --> facts\n  adapters -- \"注册／关联\" --> facts\n  facts -- \"原始事实\" --> store\n  facts -- \"有据组织\" --> business_layer\n  business_layer -- \"快照写入\" --> store\n  store -- \"读取快照\" --> query\n  web -- \"受限请求\" --> session\n  session -- \"校验后查询\" --> query\n  query -- \"受控导出\" --> export\n  query -. \"选定证据\" .-> ai\n  ai -. \"辅助说明\" .-> web\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
     },
     {
       "id": "analysis",
@@ -1079,13 +1081,13 @@
           "遇到缺输入、失败或超限时，看“诊断”和“部分结果”，保留能确认的部分并标明缺口。"
         ],
         "example": "找到了页面请求但缺少后端路由配置时，先保留请求和源码依据，并说明后端关联尚未确认。",
-        "scope": "本图描述 CodeCartia 的分析信息流设计，箭头不代表目标工程运行轨迹，产品分析验收尚未完成。"
+        "scope": "本图描述首版 JS/TS、Python 的分析信息流设计，共用契约也保留后续语言扩展；箭头不代表目标工程运行轨迹，产品分析验收尚未完成。"
       },
       "source": [
         {
           "label": "设计 v0.6",
           "path": "../CodeCartia-设计方案.md",
-          "section": "第 4.2、5.2–5.4、6.2–6.3、7.1–7.4、8.2 节"
+          "section": "第 4.2、5、6.2–6.3、7.1–7.4、8.2 节"
         },
         {
           "label": "合成验收 v0.3",
@@ -1097,7 +1099,7 @@
         "本图为设计阅读材料，CodeCartia 的 CLI、产品 Web 与自动分析器尚未实现；已有体验原型和采购示例不代表产品分析验收通过，技术候选、模式、预算与准入门槛仍待验证和冻结。",
         "HTTP 地址匹配仅生成候选；依据框架版本、注册顺序/优先级及条件控制转移推导可达处理链。",
         "授权、角色声明可先于场景识别；先保留事实，业务依据补齐后建立步骤绑定，不丢弃先到事实。",
-        "语义、框架、传播和授权模式及预算待 M1 冻结；缺编译上下文的部分结果不能计为该语言深度分析完成。",
+        "首版 JS/TS、Python 的语义、框架、传播和授权模式及预算待 M1 冻结；缺必要上下文的部分结果不能计为深度分析完成。Java、C#、C、C++ 延后验证，不以缺失实验阻塞初版，也不记为通过。",
         "来源继承完整依赖链；AI 或人工输入参与的推导不得洗成纯自动结果。",
         "语言事实可直接进入统一模型并合并索引；框架识别、场景组织与步骤授权绑定分别补充结果。未关联或框架未识别不导致原始事实被丢弃，也不被计为对应深度能力已完成。"
       ],
@@ -1143,9 +1145,9 @@
         },
         {
           "id": "semantic",
-          "label": "语义／有限数据流\n语言 worker",
-          "detail": "设计中解析作用域、符号、类型、调用候选及参数/返回摘要；能力握手和支持模式约束传播，缺工具、失败与超时需诊断。依据：设计 §4.2、§5.3、§6.3。",
-          "plainExplanation": "读懂变量作用范围、类型和调用关系，在支持范围内追踪值如何传递。",
+          "label": "语义／有限数据流\nJS/TS · Python",
+          "detail": "首版在 JS/TS 与 Python 中解析作用域、符号、类型、调用候选及参数/返回摘要；能力握手和支持模式约束传播，缺工具、失败与超时需诊断。其他语言的真实验证后续开展。依据：设计 §4.2、§5、§6.3。",
+          "plainExplanation": "首版读懂 JS/TS、Python 的变量作用范围、类型和调用关系，在支持模式内追踪值如何传递。",
           "type": "core",
           "x": 910,
           "y": 80,
@@ -1660,7 +1662,7 @@
           "labelY": 585
         }
       ],
-      "mermaid": "flowchart LR\n  %% 设计图解；未实现。箭头含义见本图说明。\n  input[\"源码／静态配置<br/>语义输入\"]:::data\n  freeze[\"冻结输入清单\"]:::data\n  discover[\"工程发现<br/>与基础索引\"]:::core\n  semantic[\"语义／有限数据流<br/>语言 worker\"]:::core\n  framework[\"框架事实<br/>与检查点\"]:::core\n  facts[\"统一事实<br/>证据与来源\"]:::data\n  links[\"跨工程关联<br/>条件化处理链\"]:::core\n  scenario[\"场景／步骤<br/>条件化结构\"]:::business\n  binding[\"步骤授权关联\"]:::business\n  merge[\"合并证据<br/>来源／冲突\"]:::core\n  snapshot[\"快照／关系<br/>派生结果\"]:::data\n  read[\"查询／图／源码<br/>同一语义结果\"]:::core\n  partial[\"部分结果／候选\"]:::warning\n  diagnosis[\"失败／缺输入<br/>完整性诊断\"]:::warning\n  input -- \"登记指纹\" --> freeze\n  freeze -- \"选定输入\" --> discover\n  discover -- \"相关工程\" --> semantic\n  semantic -- \"语义事实\" --> facts\n  semantic -- \"语言事实\" --> framework\n  framework -- \"结构化事实\" --> facts\n  facts -- \"上下文／配置\" --> links\n  links -- \"可关联步骤\" --> scenario\n  scenario -- \"动作／对象\" --> binding\n  facts -- \"原始事实\" --> merge\n  facts -- \"已索引授权事实\" --> binding\n  binding -- \"条件化绑定\" --> merge\n  merge -- \"来源与证据\" --> snapshot\n  snapshot -- \"快照查询\" --> read\n  semantic -. \"worker 失败\" .-> diagnosis\n  links -. \"分发未知／超限\" .-> diagnosis\n  diagnosis -. \"保留可用范围\" .-> partial\n  partial -. \"附完整性状态\" .-> snapshot\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
+      "mermaid": "flowchart LR\n  %% 设计图解；未实现。初版验证 JS/TS、Python，Java/C#/C/C++ 后续验证。箭头含义见本图说明。\n  input[\"源码／静态配置<br/>语义输入\"]:::data\n  freeze[\"冻结输入清单\"]:::data\n  discover[\"工程发现<br/>与基础索引\"]:::core\n  semantic[\"语义／有限数据流<br/>JS/TS · Python\"]:::core\n  framework[\"框架事实<br/>与检查点\"]:::core\n  facts[\"统一事实<br/>证据与来源\"]:::data\n  links[\"跨工程关联<br/>条件化处理链\"]:::core\n  scenario[\"场景／步骤<br/>条件化结构\"]:::business\n  binding[\"步骤授权关联\"]:::business\n  merge[\"合并证据<br/>来源／冲突\"]:::core\n  snapshot[\"快照／关系<br/>派生结果\"]:::data\n  read[\"查询／图／源码<br/>同一语义结果\"]:::core\n  partial[\"部分结果／候选\"]:::warning\n  diagnosis[\"失败／缺输入<br/>完整性诊断\"]:::warning\n  input -- \"登记指纹\" --> freeze\n  freeze -- \"选定输入\" --> discover\n  discover -- \"相关工程\" --> semantic\n  semantic -- \"语义事实\" --> facts\n  semantic -- \"语言事实\" --> framework\n  framework -- \"结构化事实\" --> facts\n  facts -- \"上下文／配置\" --> links\n  links -- \"可关联步骤\" --> scenario\n  scenario -- \"动作／对象\" --> binding\n  facts -- \"原始事实\" --> merge\n  facts -- \"已索引授权事实\" --> binding\n  binding -- \"条件化绑定\" --> merge\n  merge -- \"来源与证据\" --> snapshot\n  snapshot -- \"快照查询\" --> read\n  semantic -. \"worker 失败\" .-> diagnosis\n  links -. \"分发未知／超限\" .-> diagnosis\n  diagnosis -. \"保留可用范围\" .-> partial\n  partial -. \"附完整性状态\" .-> snapshot\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
     },
     {
       "id": "model",
@@ -2452,7 +2454,7 @@
           "labelY": 800
         }
       ],
-      "mermaid": "flowchart LR\n  %% 设计图解；未实现。箭头为有据概念关系，非解析或运行先后。\n  scenario[\"业务场景\"]:::business\n  step[\"场景步骤<br/>入口／调用上下文\"]:::business\n  action[\"业务动作\"]:::business\n  object[\"业务对象<br/>状态／值版本\"]:::data\n  rule[\"业务规则<br/>状态操作\"]:::business\n  actor[\"业务参与者\"]:::business\n  subject[\"当前入口有效主体<br/>身份上下文\"]:::data\n  binding[\"步骤授权绑定<br/>上下文关联记录\"]:::core\n  checkpoint[\"实际检查点<br/>入口／路径\"]:::core\n  evidence[\"实现与<br/>逐项证据\"]:::data\n  role[\"系统角色<br/>身份域\"]:::data\n  permission[\"独立权限标识\"]:::data\n  policy[\"实际授权策略\"]:::data\n  visibility[\"前端可见性<br/>认证条件\"]:::warning\n  unlinked[\"未关联声明<br/>诊断状态\"]:::warning\n  scenario -- \"包含 1:N\" --> step\n  step -- \"组织 1:N\" --> action\n  action -- \"操作 M:N\" --> object\n  action -- \"受规则约束\" --> rule\n  step -- \"参与 M:N\" --> actor\n  step -- \"入口／调用／配置\" --> binding\n  action -- \"具体动作\" --> binding\n  object -- \"对象／资源／范围\" --> binding\n  actor -. \"有据主体映射\" .-> subject\n  actor -. \"参与者映射<br/>不授予权限\" .-> role\n  subject -- \"经验证的<br/>角色取得\" --> role\n  role -- \"有据授予 M:N\" --> permission\n  subject -- \"有据直接授予\" --> permission\n  subject -- \"主体属性或<br/>资源关系\" --> binding\n  role -- \"适用角色条件\" --> binding\n  binding -- \"有据引用权限\" --> permission\n  binding -- \"有据引用策略\" --> policy\n  binding -- \"有据覆盖<br/>当前动作路径\" --> checkpoint\n  checkpoint -- \"按路径条件执行\" --> policy\n  action -. \"实现于\" .-> evidence\n  checkpoint -. \"挂载与<br/>执行依据\" .-> evidence\n  policy -. \"判定实现<br/>配置依据\" .-> evidence\n  visibility -- \"独立说明\" --> binding\n  unlinked -. \"保留原始实体\" .-> role\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
+      "mermaid": "flowchart LR\n  %% 设计图解；未实现。初版验证 JS/TS、Python，Java/C#/C/C++ 后续验证。箭头为有据概念关系，非解析或运行先后。\n  scenario[\"业务场景\"]:::business\n  step[\"场景步骤<br/>入口／调用上下文\"]:::business\n  action[\"业务动作\"]:::business\n  object[\"业务对象<br/>状态／值版本\"]:::data\n  rule[\"业务规则<br/>状态操作\"]:::business\n  actor[\"业务参与者\"]:::business\n  subject[\"当前入口有效主体<br/>身份上下文\"]:::data\n  binding[\"步骤授权绑定<br/>上下文关联记录\"]:::core\n  checkpoint[\"实际检查点<br/>入口／路径\"]:::core\n  evidence[\"实现与<br/>逐项证据\"]:::data\n  role[\"系统角色<br/>身份域\"]:::data\n  permission[\"独立权限标识\"]:::data\n  policy[\"实际授权策略\"]:::data\n  visibility[\"前端可见性<br/>认证条件\"]:::warning\n  unlinked[\"未关联声明<br/>诊断状态\"]:::warning\n  scenario -- \"包含 1:N\" --> step\n  step -- \"组织 1:N\" --> action\n  action -- \"操作 M:N\" --> object\n  action -- \"受规则约束\" --> rule\n  step -- \"参与 M:N\" --> actor\n  step -- \"入口／调用／配置\" --> binding\n  action -- \"具体动作\" --> binding\n  object -- \"对象／资源／范围\" --> binding\n  actor -. \"有据主体映射\" .-> subject\n  actor -. \"参与者映射<br/>不授予权限\" .-> role\n  subject -- \"经验证的<br/>角色取得\" --> role\n  role -- \"有据授予 M:N\" --> permission\n  subject -- \"有据直接授予\" --> permission\n  subject -- \"主体属性或<br/>资源关系\" --> binding\n  role -- \"适用角色条件\" --> binding\n  binding -- \"有据引用权限\" --> permission\n  binding -- \"有据引用策略\" --> policy\n  binding -- \"有据覆盖<br/>当前动作路径\" --> checkpoint\n  checkpoint -- \"按路径条件执行\" --> policy\n  action -. \"实现于\" .-> evidence\n  checkpoint -. \"挂载与<br/>执行依据\" .-> evidence\n  policy -. \"判定实现<br/>配置依据\" .-> evidence\n  visibility -- \"独立说明\" --> binding\n  unlinked -. \"保留原始实体\" .-> role\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
     },
     {
       "id": "scenario",
@@ -2974,7 +2976,7 @@
           "labelY": 595
         }
       ],
-      "mermaid": "flowchart LR\n  %% 设计图解；未实现。箭头含义见本图说明。\n  entry[\"审批入口\"]:::business\n  identity[\"已认证身份<br/>u2 / T1\"]:::data\n  object[\"绑定同一申请<br/>r2 / owner:u1\"]:::data\n  auth[\"manager 授权<br/>同租户／非本人\"]:::business\n  state[\"业务状态校验<br/>SUBMITTED\"]:::business\n  amount[\"业务金额校验<br/>金额 ≤ 5000\"]:::business\n  transaction[\"显式事务<br/>状态＋审计\"]:::business\n  commit[\"事务提交成功<br/>审批已持久化\"]:::business\n  receipt[\"提交后<br/>调用回执发送\"]:::business\n  receipt_ok[\"回执调用<br/>成功返回分支\"]:::business\n  auth_failure[\"授权拒绝<br/>终止审批动作\"]:::warning\n  business_failure[\"业务校验失败<br/>无状态写入\"]:::warning\n  receipt_failure[\"记录回执失败<br/>审批不回滚\"]:::warning\n  commit_failure[\"事务提交失败<br/>不报持久成功\"]:::warning\n  entry -- \"身份校验\" --> identity\n  identity -- \"同一上下文\" --> object\n  object -- \"主体／对象条件\" --> auth\n  auth -- \"授权允许\" --> state\n  state -- \"状态符合\" --> amount\n  amount -- \"金额符合\" --> transaction\n  transaction -- \"提交成功\" --> commit\n  commit -- \"提交之后\" --> receipt\n  receipt -- \"成功返回\" --> receipt_ok\n  auth -. \"条件不满足\" .-> auth_failure\n  state -. \"状态错误\" .-> business_failure\n  amount -. \"金额超限\" .-> business_failure\n  transaction -. \"事务／提交失败\" .-> commit_failure\n  receipt -. \"发送失败\" .-> receipt_failure\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
+      "mermaid": "flowchart LR\n  %% 设计图解；未实现。初版验证 JS/TS、Python，Java/C#/C/C++ 后续验证。箭头含义见本图说明。\n  entry[\"审批入口\"]:::business\n  identity[\"已认证身份<br/>u2 / T1\"]:::data\n  object[\"绑定同一申请<br/>r2 / owner:u1\"]:::data\n  auth[\"manager 授权<br/>同租户／非本人\"]:::business\n  state[\"业务状态校验<br/>SUBMITTED\"]:::business\n  amount[\"业务金额校验<br/>金额 ≤ 5000\"]:::business\n  transaction[\"显式事务<br/>状态＋审计\"]:::business\n  commit[\"事务提交成功<br/>审批已持久化\"]:::business\n  receipt[\"提交后<br/>调用回执发送\"]:::business\n  receipt_ok[\"回执调用<br/>成功返回分支\"]:::business\n  auth_failure[\"授权拒绝<br/>终止审批动作\"]:::warning\n  business_failure[\"业务校验失败<br/>无状态写入\"]:::warning\n  receipt_failure[\"记录回执失败<br/>审批不回滚\"]:::warning\n  commit_failure[\"事务提交失败<br/>不报持久成功\"]:::warning\n  entry -- \"身份校验\" --> identity\n  identity -- \"同一上下文\" --> object\n  object -- \"主体／对象条件\" --> auth\n  auth -- \"授权允许\" --> state\n  state -- \"状态符合\" --> amount\n  amount -- \"金额符合\" --> transaction\n  transaction -- \"提交成功\" --> commit\n  commit -- \"提交之后\" --> receipt\n  receipt -- \"成功返回\" --> receipt_ok\n  auth -. \"条件不满足\" .-> auth_failure\n  state -. \"状态错误\" .-> business_failure\n  amount -. \"金额超限\" .-> business_failure\n  transaction -. \"事务／提交失败\" .-> commit_failure\n  receipt -. \"发送失败\" .-> receipt_failure\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
     },
     {
       "id": "navigation",
@@ -3458,7 +3460,7 @@
           "labelY": 585
         }
       ],
-      "mermaid": "flowchart LR\n  %% 设计图解；未实现。箭头含义见本图说明。\n  overview[\"项目业务总览\"]:::business\n  scenario[\"场景详情\"]:::business\n  step[\"步骤／动作\"]:::business\n  object[\"业务对象／规则<br/>状态／异常\"]:::business\n  system[\"系统／模块视图\"]:::core\n  symbol[\"符号／调用查询\"]:::core\n  context[\"当前步骤<br/>授权上下文\"]:::business\n  evidence[\"依据面板<br/>源码／配置\"]:::data\n  role[\"角色／权限反查\"]:::core\n  matrix[\"步骤条件矩阵\"]:::business\n  diagnosis[\"未关联／未知<br/>诊断入口\"]:::warning\n  export[\"保存／导出<br/>快照与条件\"]:::core\n  overview -- \"进入场景\" --> scenario\n  scenario -- \"展开步骤\" --> step\n  step -- \"查看业务\" --> object\n  step -- \"查看／返回\" --> context\n  object -. \"追溯／返回\" .-> evidence\n  overview -- \"继续看代码\" --> system\n  system -- \"深入实现\" --> symbol\n  symbol -. \"定位源码\" .-> evidence\n  role -- \"同绑定比较\" --> matrix\n  role -- \"回到具体步骤\" --> context\n  matrix -- \"同绑定详情\" --> context\n  role -- \"未关联声明\" --> diagnosis\n  evidence -- \"保存依据\" --> export\n  matrix -- \"同绑定导出\" --> export\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
+      "mermaid": "flowchart LR\n  %% 设计图解；未实现。初版验证 JS/TS、Python，Java/C#/C/C++ 后续验证。箭头含义见本图说明。\n  overview[\"项目业务总览\"]:::business\n  scenario[\"场景详情\"]:::business\n  step[\"步骤／动作\"]:::business\n  object[\"业务对象／规则<br/>状态／异常\"]:::business\n  system[\"系统／模块视图\"]:::core\n  symbol[\"符号／调用查询\"]:::core\n  context[\"当前步骤<br/>授权上下文\"]:::business\n  evidence[\"依据面板<br/>源码／配置\"]:::data\n  role[\"角色／权限反查\"]:::core\n  matrix[\"步骤条件矩阵\"]:::business\n  diagnosis[\"未关联／未知<br/>诊断入口\"]:::warning\n  export[\"保存／导出<br/>快照与条件\"]:::core\n  overview -- \"进入场景\" --> scenario\n  scenario -- \"展开步骤\" --> step\n  step -- \"查看业务\" --> object\n  step -- \"查看／返回\" --> context\n  object -. \"追溯／返回\" .-> evidence\n  overview -- \"继续看代码\" --> system\n  system -- \"深入实现\" --> symbol\n  symbol -. \"定位源码\" .-> evidence\n  role -- \"同绑定比较\" --> matrix\n  role -- \"回到具体步骤\" --> context\n  matrix -- \"同绑定详情\" --> context\n  role -- \"未关联声明\" --> diagnosis\n  evidence -- \"保存依据\" --> export\n  matrix -- \"同绑定导出\" --> export\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
     },
     {
       "id": "incremental",
@@ -3994,7 +3996,7 @@
           "labelY": 15
         }
       ],
-      "mermaid": "flowchart LR\n  %% 设计图解；未实现。箭头含义见本图说明。\n  current[\"完整快照<br/>保存视图\"]:::data\n  change[\"源码／输入／配置<br/>规则组合变化\"]:::core\n  freeze[\"冻结新输入<br/>与有效组合\"]:::data\n  queries[\"查询／集合依赖<br/>成功与失败\"]:::data\n  invalidate[\"直接＋传递失效\"]:::warning\n  stale[\"旧结果标过期\"]:::warning\n  recompute[\"重算受影响范围\"]:::core\n  merge[\"重合并独立证据<br/>共享实体保留\"]:::core\n  compare[\"验收／回归对照<br/>增量＝全量\"]:::core\n  publish[\"新的完整快照\"]:::data\n  views[\"主视图／反查<br/>矩阵／解释更新\"]:::business\n  history[\"旧快照／注释<br/>历史可回看\"]:::data\n  incomplete[\"中断／对照失败<br/>保留诊断\"]:::warning\n  input_moved[\"分析期间输入变<br/>重试或下一任务\"]:::warning\n  current -- \"检测变化\" --> change\n  change -- \"新指纹\" --> freeze\n  freeze -- \"依赖对照\" --> queries\n  queries -- \"集合／查询变\" --> invalidate\n  invalidate -. \"标记旧派生\" .-> stale\n  stale -- \"选定重建范围\" --> recompute\n  recompute -- \"当前独立依据\" --> merge\n  merge -- \"完整候选结果\" --> publish\n  merge -. \"验收／回归\" .-> compare\n  publish -- \"切换结果\" --> views\n  views -- \"保留历史\" --> history\n  recompute -. \"中断／超限\" .-> incomplete\n  compare -. \"对照不等价\" .-> incomplete\n  freeze -. \"期间又变化\" .-> input_moved\n  input_moved -- \"重新冻结\" --> freeze\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
+      "mermaid": "flowchart LR\n  %% 设计图解；未实现。初版验证 JS/TS、Python，Java/C#/C/C++ 后续验证。箭头含义见本图说明。\n  current[\"完整快照<br/>保存视图\"]:::data\n  change[\"源码／输入／配置<br/>规则组合变化\"]:::core\n  freeze[\"冻结新输入<br/>与有效组合\"]:::data\n  queries[\"查询／集合依赖<br/>成功与失败\"]:::data\n  invalidate[\"直接＋传递失效\"]:::warning\n  stale[\"旧结果标过期\"]:::warning\n  recompute[\"重算受影响范围\"]:::core\n  merge[\"重合并独立证据<br/>共享实体保留\"]:::core\n  compare[\"验收／回归对照<br/>增量＝全量\"]:::core\n  publish[\"新的完整快照\"]:::data\n  views[\"主视图／反查<br/>矩阵／解释更新\"]:::business\n  history[\"旧快照／注释<br/>历史可回看\"]:::data\n  incomplete[\"中断／对照失败<br/>保留诊断\"]:::warning\n  input_moved[\"分析期间输入变<br/>重试或下一任务\"]:::warning\n  current -- \"检测变化\" --> change\n  change -- \"新指纹\" --> freeze\n  freeze -- \"依赖对照\" --> queries\n  queries -- \"集合／查询变\" --> invalidate\n  invalidate -. \"标记旧派生\" .-> stale\n  stale -- \"选定重建范围\" --> recompute\n  recompute -- \"当前独立依据\" --> merge\n  merge -- \"完整候选结果\" --> publish\n  merge -. \"验收／回归\" .-> compare\n  publish -- \"切换结果\" --> views\n  views -- \"保留历史\" --> history\n  recompute -. \"中断／超限\" .-> incomplete\n  compare -. \"对照不等价\" .-> incomplete\n  freeze -. \"期间又变化\" .-> input_moved\n  input_moved -- \"重新冻结\" --> freeze\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
     },
     {
       "id": "rules",
@@ -4566,7 +4568,7 @@
           "labelY": 690
         }
       ],
-      "mermaid": "flowchart LR\n  %% 设计图解；未实现。箭头含义见本图说明。\n  feedback[\"新项目错连<br/>漏连／未解析\"]:::data\n  triage[\"根因分类<br/>补必要上下文\"]:::core\n  candidate[\"AI 候选规则<br/>模式＋前提＋反例\"]:::optional\n  verify[\"源码／语义<br/>配置核对\"]:::core\n  trial[\"项目内试运行<br/>新旧自动副本\"]:::core\n  independent[\"独立项目验证<br/>家族隔离\"]:::core\n  regression[\"冻结基准回归<br/>受影响分项\"]:::core\n  review[\"维护者审查<br/>适用范围\"]:::core\n  package[\"不可变版本<br/>规则包\"]:::data\n  effective[\"冻结有效组合<br/>启用／覆盖／依赖\"]:::core\n  new_project[\"另一新项目<br/>自动分析复测\"]:::core\n  rollback[\"回归后<br/>停用／回退\"]:::warning\n  quarantine[\"证据不足／失败<br/>保留候选\"]:::warning\n  rebuild[\"依赖失效<br/>重新合并／分析\"]:::core\n  feedback -- \"证据与问题\" --> triage\n  triage -- \"允许范围证据\" --> candidate\n  candidate -- \"候选与反例\" --> verify\n  verify -- \"核对通过\" --> trial\n  trial -- \"同输入比较\" --> independent\n  independent -- \"独立支持\" --> regression\n  regression -- \"分项回归通过\" --> review\n  review -- \"审查固化\" --> package\n  package -- \"冻结启用组合\" --> effective\n  effective -- \"无 AI 自动运行\" --> new_project\n  new_project -. \"出现回归\" .-> rollback\n  new_project -- \"继续记录反馈\" --> feedback\n  verify -. \"核对不足\" .-> quarantine\n  independent -. \"未泛化\" .-> quarantine\n  regression -. \"回归失败\" .-> quarantine\n  rollback -- \"切换组合\" --> rebuild\n  rebuild -- \"失效后重算\" --> effective\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
+      "mermaid": "flowchart LR\n  %% 设计图解；未实现。初版验证 JS/TS、Python，Java/C#/C/C++ 后续验证。箭头含义见本图说明。\n  feedback[\"新项目错连<br/>漏连／未解析\"]:::data\n  triage[\"根因分类<br/>补必要上下文\"]:::core\n  candidate[\"AI 候选规则<br/>模式＋前提＋反例\"]:::optional\n  verify[\"源码／语义<br/>配置核对\"]:::core\n  trial[\"项目内试运行<br/>新旧自动副本\"]:::core\n  independent[\"独立项目验证<br/>家族隔离\"]:::core\n  regression[\"冻结基准回归<br/>受影响分项\"]:::core\n  review[\"维护者审查<br/>适用范围\"]:::core\n  package[\"不可变版本<br/>规则包\"]:::data\n  effective[\"冻结有效组合<br/>启用／覆盖／依赖\"]:::core\n  new_project[\"另一新项目<br/>自动分析复测\"]:::core\n  rollback[\"回归后<br/>停用／回退\"]:::warning\n  quarantine[\"证据不足／失败<br/>保留候选\"]:::warning\n  rebuild[\"依赖失效<br/>重新合并／分析\"]:::core\n  feedback -- \"证据与问题\" --> triage\n  triage -- \"允许范围证据\" --> candidate\n  candidate -- \"候选与反例\" --> verify\n  verify -- \"核对通过\" --> trial\n  trial -- \"同输入比较\" --> independent\n  independent -- \"独立支持\" --> regression\n  regression -- \"分项回归通过\" --> review\n  review -- \"审查固化\" --> package\n  package -- \"冻结启用组合\" --> effective\n  effective -- \"无 AI 自动运行\" --> new_project\n  new_project -. \"出现回归\" .-> rollback\n  new_project -- \"继续记录反馈\" --> feedback\n  verify -. \"核对不足\" .-> quarantine\n  independent -. \"未泛化\" .-> quarantine\n  regression -. \"回归失败\" .-> quarantine\n  rollback -- \"切换组合\" --> rebuild\n  rebuild -- \"失效后重算\" --> effective\n  classDef core fill:#eef4ff,stroke:#6082b2,color:#31577e\n  classDef data fill:#f0f3f8,stroke:#8a9aaf,color:#475b73\n  classDef business fill:#eaf7f4,stroke:#60a99b,color:#24796d\n  classDef optional fill:#f4effb,stroke:#ac93c5,color:#80619f,stroke-dasharray:6 4\n  classDef warning fill:#fff6e8,stroke:#d6ab6a,color:#a87931"
     }
   ]
 }

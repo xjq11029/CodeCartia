@@ -1,0 +1,6 @@
+{
+  "name": "inventory-workspace-fixture",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/*"]
+}

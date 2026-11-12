@@ -5,6 +5,8 @@
   "scripts": {
     "test": "node run.mjs",
     "extract": "node extract.mjs",
-    "verify": "node verify.mjs"
+    "verify": "node verify.mjs",
+    "extract:project": "node project-extract.mjs",
+    "test:project": "node --test --test-isolation=none project-boundary.test.mjs"
   }
 }

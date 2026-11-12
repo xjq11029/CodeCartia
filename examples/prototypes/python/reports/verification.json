@@ -3,7 +3,7 @@
   "scope": "Registered flat modules, lexical declarations, coordinates and explicit refusal; not runtime targets, full Python semantics or real project-loader validation",
   "expectedFingerprint": "sha256:c5e7282ecb67cfa4c2f559d31c1cf2ce1e12eb050b431114ba56aa801a3a8f7c",
   "verifierFingerprint": "sha256:028a7145c0cc4824531e509ca2ffb077a0e63bb5beab35348afdc154fa93d2dc",
-  "reportFingerprint": "sha256:f473996de7d60f0520f349481b2d4b44542955502b29af673c8267671d6e5004",
+  "reportFingerprint": "sha256:61b5396e2f677e3026c7d587224892d91dc62ea74d67abc6f30f87212315cd18",
   "passed": 131,
   "total": 131,
   "checks": [

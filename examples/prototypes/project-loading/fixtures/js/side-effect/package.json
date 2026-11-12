@@ -1,0 +1,6 @@
+{
+  "name": "module-side-effect-fixture",
+  "private": true,
+  "type": "module",
+  "scripts": {"preinstall":"node scripts/hook.cjs","build":"node scripts/hook.cjs"}
+}

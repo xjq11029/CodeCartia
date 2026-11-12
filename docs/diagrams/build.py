@@ -259,7 +259,7 @@ def render_svg(graph: dict) -> str:
             f'height="{max(8, node["h"] - 28)}" rx="1.5" fill="{accent}"/>'
             + svg_text(cx, cy, node["label"], 19, node["w"] - 28) + '</g>'
         )
-    output.append(svg_text(24, height - 17, "设计 v0.6 · 尚未实现 · 箭头含义以本章节说明为准",
+    output.append(svg_text(24, height - 17, "设计 v0.6 · 初版验证 JS/TS、Python · 尚未实现 · 箭头含义以本章节说明为准",
                            13, width - 48, "#788ba1", 400, False))
     output.append('</svg>')
     return "\n".join(output)
@@ -272,10 +272,13 @@ def script_json(data: object) -> str:
 def markdown(data: dict) -> str:
     lines = [
         "# CodeCartia 架构与设计图解", "",
-        "> 图解版本：0.1｜依据：设计 v0.6、推进 v0.4、验收样例 v0.3｜日期：2026-11-09", "",
+        "> 图解版本：0.1｜依据：设计 v0.6、推进 v0.4、验收样例 v0.3｜日期：2026-11-09；语言范围同步：2026-11-12", "",
         "本图解解释 CodeCartia 的产品设计。当前已有设计图解、模拟体验原型与可运行采购示例；",
         "产品分析器、CLI 与 Web 尚未实现，BS/AP 完整分析验收未执行，M1 基线未冻结、G1 未通过。",
         "图中的技术选型仍为候选；采购示例的功能测试不代表 CodeCartia 自动分析能力已经通过验收。", "",
+        "初版只验证 JS/TS（含 Vue、React、Node.js、Next.js 及相关源码输入）和 Python；",
+        "Java、C#、C、C++ 及其专属框架与工具链验证延后，保留扩展设计，不阻塞初版，也不计为通过。",
+        "范围依据：[D13 初版语言验证范围](../decisions/D13-初版语言验证范围.md)。", "",
         "[打开离线交互图解](index.html) · [图源与维护方法](README.md) · [完整设计](../CodeCartia-设计方案.md)", "",
         "按产品全景、系统架构、分析流程、核心模型、业务示例、界面导航、快照变化和规则改进阅读。",
         "各图箭头分别表示阅读关系、信息依赖或合成目标工程的条件路径，不能混作真实运行记录。", "",

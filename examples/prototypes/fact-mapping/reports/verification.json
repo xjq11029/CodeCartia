@@ -1,0 +1,281 @@
+{
+  "reportVersion": "project-fact-mapping-verification-v0.1",
+  "status": "checks-passed",
+  "bundleFingerprint": "sha256:4be738ef044d494223a5eac02969069d8537f977520a9d2342263bc226db72e1",
+  "registryFingerprint": "sha256:18c9862c205b7010051d32a412d03ca3a0c832146a5c5af853a8e2560e63cebe",
+  "verifierFingerprint": "sha256:fad0c7f68b854e247806be32634a0ef36b41c4f03e20b991ab6c4cf0b534ffe7",
+  "projects": 7,
+  "records": 210,
+  "baselineIssues": [],
+  "mutationCount": 28,
+  "mutationsDetected": 28,
+  "mutations": [
+    {
+      "name": "missing-revision",
+      "expectedCode": "E_REF_SCHEMA",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_REF_SCHEMA",
+        "E_REQUIRED_SEMANTIC_INPUT",
+        "E_SOURCE_CLOSURE"
+      ]
+    },
+    {
+      "name": "wrong-exact-revision",
+      "expectedCode": "E_REF_DANGLING",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_REF_DANGLING",
+        "E_REQUIRED_SEMANTIC_INPUT",
+        "E_SOURCE_CLOSURE"
+      ]
+    },
+    {
+      "name": "logical-entity-used-as-proof",
+      "expectedCode": "E_REF_SCHEMA",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_REF_SCHEMA",
+        "E_CONFIGURATION_SCOPE",
+        "E_REQUIRED_SEMANTIC_INPUT",
+        "E_SOURCE_CLOSURE"
+      ]
+    },
+    {
+      "name": "deleted-evidence",
+      "expectedCode": "E_REF_DANGLING",
+      "passed": true,
+      "detectedCodes": [
+        "E_REF_DANGLING"
+      ]
+    },
+    {
+      "name": "relationship-without-evidence",
+      "expectedCode": "E_EVIDENCE_REQUIRED",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_TARGET_DECLARATION_EVIDENCE",
+        "E_EVIDENCE_REQUIRED",
+        "E_REQUIRED_SEMANTIC_INPUT"
+      ]
+    },
+    {
+      "name": "unknown-promoted",
+      "expectedCode": "E_UNKNOWN_UPGRADE",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_UNKNOWN_UPGRADE"
+      ]
+    },
+    {
+      "name": "runtime-target-promoted",
+      "expectedCode": "E_RUNTIME_UPGRADE",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_RUNTIME_UPGRADE"
+      ]
+    },
+    {
+      "name": "wrong-target-declaration",
+      "expectedCode": "E_WRONG_TARGET",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_WRONG_TARGET",
+        "E_REQUIRED_SEMANTIC_INPUT"
+      ]
+    },
+    {
+      "name": "same-declaration-in-wrong-config",
+      "expectedCode": "E_CONFIGURATION_SCOPE",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_CONFIGURATION_SCOPE",
+        "E_REQUIRED_SEMANTIC_INPUT"
+      ]
+    },
+    {
+      "name": "changed-source-column",
+      "expectedCode": "E_SOURCE_COORDINATE",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_SOURCE_COORDINATE",
+        "E_EVIDENCE_REQUIRED"
+      ]
+    },
+    {
+      "name": "source-fingerprint-forged",
+      "expectedCode": "E_EVIDENCE_INPUT",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_EVIDENCE_INPUT"
+      ]
+    },
+    {
+      "name": "source-path-label-forged",
+      "expectedCode": "E_SOURCE_IDENTITY",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_SOURCE_IDENTITY",
+        "E_EVIDENCE_REQUIRED"
+      ]
+    },
+    {
+      "name": "source-span-removed",
+      "expectedCode": "E_SOURCE_LOCATOR",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_SOURCE_LOCATOR"
+      ]
+    },
+    {
+      "name": "invented-native-unit",
+      "expectedCode": "E_INVENTED_NATIVE_COORDINATE",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_INVENTED_NATIVE_COORDINATE"
+      ]
+    },
+    {
+      "name": "scope-missing",
+      "expectedCode": "E_REF_SCHEMA",
+      "passed": true,
+      "detectedCodes": [
+        "E_REF_SCHEMA",
+        "E_INDEPENDENT_DERIVATION_REQUIRED",
+        "E_REF_DANGLING"
+      ]
+    },
+    {
+      "name": "scope-changed",
+      "expectedCode": "E_SCOPE",
+      "passed": true,
+      "detectedCodes": [
+        "E_SCOPE",
+        "E_REVISION_CONTENT",
+        "E_CONFIGURATION_SCOPE",
+        "E_REQUIRED_SEMANTIC_INPUT"
+      ]
+    },
+    {
+      "name": "foreign-snapshot-reference",
+      "expectedCode": "E_REF_DANGLING",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_REF_DANGLING",
+        "E_REQUIRED_SEMANTIC_INPUT",
+        "E_SOURCE_CLOSURE"
+      ]
+    },
+    {
+      "name": "manual-evidence-in-static-view",
+      "expectedCode": "E_SOURCE_PRODUCTION",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_SOURCE_PRODUCTION"
+      ]
+    },
+    {
+      "name": "removed-source-closure",
+      "expectedCode": "E_SOURCE_CLOSURE",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_SOURCE_CLOSURE"
+      ]
+    },
+    {
+      "name": "self-consistent-target-version-omitted",
+      "expectedCode": "E_REQUIRED_SEMANTIC_INPUT",
+      "passed": true,
+      "detectedCodes": [
+        "E_REQUIRED_SEMANTIC_INPUT"
+      ]
+    },
+    {
+      "name": "self-consistent-raw-evidence-input-omitted",
+      "expectedCode": "E_REQUIRED_SEMANTIC_INPUT",
+      "passed": true,
+      "detectedCodes": [
+        "E_REQUIRED_SEMANTIC_INPUT"
+      ]
+    },
+    {
+      "name": "self-supporting-derivation",
+      "expectedCode": "E_CAUSAL_CYCLE",
+      "passed": true,
+      "detectedCodes": [
+        "E_REVISION_CONTENT",
+        "E_REQUIRED_SEMANTIC_INPUT",
+        "E_CAUSAL_CYCLE",
+        "E_SOURCE_CLOSURE"
+      ]
+    },
+    {
+      "name": "backlink-written-into-payload",
+      "expectedCode": "E_BACKLINK_PAYLOAD",
+      "passed": true,
+      "detectedCodes": [
+        "E_BACKLINK_PAYLOAD",
+        "E_REVISION_CONTENT"
+      ]
+    },
+    {
+      "name": "missing-independent-derivation",
+      "expectedCode": "E_INDEPENDENT_DERIVATION_REQUIRED",
+      "passed": true,
+      "detectedCodes": [
+        "E_INDEPENDENT_DERIVATION_REQUIRED",
+        "E_SUPPORT_PROJECTION"
+      ]
+    },
+    {
+      "name": "extra-call-fact",
+      "expectedCode": "E_FACT_CARDINALITY",
+      "passed": true,
+      "detectedCodes": [
+        "E_DUPLICATE_EXACT_VERSION",
+        "E_FACT_CARDINALITY"
+      ]
+    },
+    {
+      "name": "empty-output",
+      "expectedCode": "E_EMPTY_OR_EXTRA_BUNDLES",
+      "passed": true,
+      "detectedCodes": [
+        "E_EMPTY_OR_EXTRA_BUNDLES"
+      ]
+    },
+    {
+      "name": "full-schema-upgrade",
+      "expectedCode": "E_BUNDLE_PROFILE",
+      "passed": true,
+      "detectedCodes": [
+        "E_BUNDLE_PROFILE"
+      ]
+    },
+    {
+      "name": "identity-lifetime-upgrade",
+      "expectedCode": "E_IDENTITY_CONTINUITY_UPGRADE",
+      "passed": true,
+      "detectedCodes": [
+        "E_IDENTITY_CONTINUITY_UPGRADE"
+      ]
+    }
+  ],
+  "boundary": "Independent reference/digest/source-coordinate checks against pure actual reports and raw inputs; not a second language analyzer or a full public-schema conformance suite."
+}

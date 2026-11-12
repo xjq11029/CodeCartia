@@ -1,0 +1,12 @@
+{
+  "inputRegistryVersion": "project-fact-mapping-inputs-v0.1",
+  "cases": [
+    { "projectId": "js-positive", "report": "../project-loading/reports/raw/js-positive.json", "projectRoot": "../project-loading/fixtures/js/positive" },
+    { "projectId": "python-positive", "report": "../project-loading/reports/raw/python-positive.json", "projectRoot": "../project-loading/fixtures/python/positive" },
+    { "projectId": "js-missing", "report": "../project-loading/reports/raw/js-missing.json", "projectRoot": "../project-loading/fixtures/js/missing-dependency" },
+    { "projectId": "python-missing", "report": "../project-loading/reports/raw/python-missing.json", "projectRoot": "../project-loading/fixtures/python/missing-dependency" },
+    { "projectId": "js-unknown-type", "report": "../project-loading/reports/raw/js-unknown-type.json", "projectRoot": "../project-loading/fixtures/js/unknown-type" },
+    { "projectId": "python-late-rebinding", "report": "../project-loading/reports/raw/python-late-rebinding.json", "projectRoot": "../project-loading/fixtures/python/late-rebinding" },
+    { "projectId": "python-binding-boundaries", "report": "../project-loading/reports/raw/python-binding-boundaries.json", "projectRoot": "../project-loading/fixtures/python/binding-boundaries" }
+  ]
+}

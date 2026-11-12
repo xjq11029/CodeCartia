@@ -1,0 +1,134 @@
+{
+  "reportVersion": "project-loading-v0.1",
+  "language": "js-ts",
+  "projectId": "js-dynamic",
+  "capturedAt": "2026-11-12T07:10:06.630Z",
+  "request": {
+    "configFile": "project.config.mjs",
+    "effectiveLimits": {
+      "maxFiles": 2048,
+      "maxFileBytes": 8388608,
+      "maxTotalBytes": 67108864,
+      "maxNodes": 300000,
+      "maxProjects": 32,
+      "maxDirectories": 4096,
+      "maxDirectoryEntries": 50000,
+      "maxQueries": 100000
+    },
+    "additionalEntryFiles": []
+  },
+  "rootIdentity": {
+    "id": "sha256:7c62c05d03f77e6875d8086b8230f472e9ec0e4eb2d833cffa4c8dee661505a3",
+    "requestedRoot": "D:/ProjectCode/CodeCartia/examples/prototypes/project-loading/fixtures/js/dynamic-config",
+    "canonicalRoot": "D:/ProjectCode/CodeCartia/examples/prototypes/project-loading/fixtures/js/dynamic-config",
+    "caseSensitive": false
+  },
+  "toolchain": {
+    "name": "TypeScript Compiler API",
+    "version": "6.0.3",
+    "modulePath": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib/typescript.js",
+    "libRoot": "D:/VSCode/Microsoft VS Code/7baac39ec3/resources/app/extensions/node_modules/typescript/lib",
+    "moduleSha256": "sha256:569177652966bd528c319171c7dd22860dbf72bde116cbc4f644f1d02bb12e39",
+    "registrationSha256": "sha256:c046515bd2412beb921d4f5ca1cd8e6089aed7a14ff523648570dd0d4819519a",
+    "source": "当前 Windows 开发机 VS Code 内置 TypeScript；只作为已装候选实测，不作为产品依赖选型。",
+    "nodeVersion": "v24.11.0",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "inputManifest": [
+    {
+      "path": "package.json",
+      "kind": "metadata",
+      "sha256": "sha256:34c3dcfb2a97899bfb019d9e9ff0e798c5820ceba878b1d70b86a8098481fcd3",
+      "sizeBytes": 65
+    },
+    {
+      "path": "project.config.mjs",
+      "kind": "config",
+      "sha256": "sha256:840595edfae6833841c96a3617fbc1a60812d39ce9a71225343798e067b357e4",
+      "sizeBytes": 157
+    }
+  ],
+  "inputSnapshotId": "sha256:e82abf43130bc0153e2561c4a3df7f390cf3965c21826508ebb7085d3d4b41eb",
+  "extractorSha256": "sha256:e2e427d5d33b5927c3ffc11ffa52ea07463269d64a50a9a43e05adecd785f809",
+  "outputPolicySha256": "sha256:d0828c2dfa73f6f822af070f4567dba5768cc7b2cad8996fb0a8bb57293a6b97",
+  "configurations": [],
+  "additionalEntryFiles": [],
+  "packageMetadata": [
+    {
+      "file": "package.json",
+      "moduleType": "module",
+      "scriptsExecuted": false
+    }
+  ],
+  "declarations": [],
+  "imports": [],
+  "calls": [],
+  "diagnostics": [
+    {
+      "code": "DYNAMIC_CONFIG_UNSUPPORTED",
+      "message": "Executable project configuration is not evaluated.",
+      "file": "project.config.mjs"
+    }
+  ],
+  "completeness": {
+    "complete": false,
+    "scope": "static-project-loading-and-fact-capture",
+    "targetResolutionComplete": true,
+    "unresolvedCalls": 0,
+    "missingInputs": [],
+    "unsupportedModes": [
+      "dynamic-project-config"
+    ],
+    "truncations": []
+  },
+  "budgetObservation": {
+    "profile": "project-loading-exploration-v0.1",
+    "limits": {
+      "maxFiles": 2048,
+      "maxFileBytes": 8388608,
+      "maxTotalBytes": 67108864,
+      "maxNodes": 300000,
+      "maxProjects": 32,
+      "maxDirectories": 4096,
+      "maxDirectoryEntries": 50000,
+      "maxQueries": 100000
+    },
+    "capturedFiles": 2,
+    "capturedBytes": 222,
+    "visitedNodes": 0,
+    "visitedDirectories": 0,
+    "directoryEntries": 0,
+    "queries": 3,
+    "enforcement": "File/configuration/enumeration limits bound input acquisition; maxNodes bounds fact traversal after compiler parsing/type checking, not total compiler CPU or memory."
+  },
+  "readObservations": [
+    {
+      "path": "package.json",
+      "kind": "file",
+      "outcome": "present"
+    },
+    {
+      "path": "package.json",
+      "kind": "read",
+      "outcome": "captured"
+    },
+    {
+      "path": "project.config.mjs",
+      "kind": "read",
+      "outcome": "captured"
+    }
+  ],
+  "durationMs": 111.9559,
+  "sourceExecution": "not-performed",
+  "compilerEmit": "disabled",
+  "expectedReadByExtractor": false,
+  "scopeLimitations": [
+    "Complete describes input discovery and fact capture for the declared static project-loading slice; targetResolutionComplete separately records static call binding completeness. Neither means language, framework or product acceptance.",
+    "Confirmed calls reference a compiler-selected static signature; all runtime targets and reachability remain unknown.",
+    "Only the project root and the explicitly registered compiler-library root may supply inputs; linked dependencies are refused.",
+    "Source bytes are captured once and reused; metadata changes are diagnosed, but adversarial filesystem races and an atomic filesystem snapshot are not guaranteed.",
+    "No target module, executable configuration, language-service plugin, package script, build, dependency download or compiler emit is executed.",
+    "HTML/Vue template mapping, framework entry/HTTP/authorization semantics, general dataflow, public schema and real worker/storage acceptance are outside this report."
+  ]
+}

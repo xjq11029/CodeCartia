@@ -12,7 +12,9 @@ export function reportPath(requestedPath) {
   if (!within(destination, reportsRoot) || path.extname(destination) !== ".json") throw new Error("报告仅能写入 reports/ 下的 JSON 文件。");
   for (let cursor = destination; within(cursor, base); cursor = path.dirname(cursor)) {
     try {
-      if (fs.lstatSync(cursor).isSymbolicLink()) throw new Error("报告路径不能经过链接或重解析点。");
+      const info = fs.lstatSync(cursor);
+      if (info.isSymbolicLink()) throw new Error("报告路径不能经过链接或重解析点。");
+      if (info.isFile() && info.nlink > 1) throw new Error("报告不能写入具有多个硬链接的文件。");
     } catch (error) {
       if (error.code !== "ENOENT") throw error;
     }

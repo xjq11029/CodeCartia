@@ -1,0 +1,18 @@
+562e3ae1e590ed43f8f3b6b993af0b8341c04f9d27c8f909289ed655dbac0596  CodeCartia-env/install-docker-dba12614.sh
+VM: Ubuntu 24.04.5 LTS / amd64 / noble
+
+Planned changes:
+  - Refresh apt indexes and ensure ca-certificates/curl.
+  - Configure Docker official HTTPS key and stable apt repository.
+  - Install Engine, CLI, containerd, Buildx and Compose at resolved versions.
+  - Enable/start the local Docker service and query its version/status.
+  - Write a package/version inspection report beside this script.
+This script does not add the user to the Docker group or configure TCP listeners.
+This script does not pull SDK images or invoke docker run; starting the service creates Docker runtime/network state.
+
+Current package state:
+
+Existing Docker apt source entries:
+
+Plan mode finished. No packages, repositories or services were changed.
+SSH_EXIT_CODE=0 

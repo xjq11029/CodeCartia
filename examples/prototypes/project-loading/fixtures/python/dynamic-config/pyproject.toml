@@ -1,0 +1,17 @@
+[build-system]
+requires = []
+build-backend = "build_backend"
+backend-path = ["build"]
+
+[project]
+name = "dynamic-metadata-fixture"
+dynamic = ["version"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "dynamic_pkg.__version__"}

@@ -2,9 +2,11 @@
 
 本目录用于 M1-02「统一契约草案」与 M1-03「worker 与扩展协议」。当前六份文档为 0.2 草案：R11 明确精确事实版本引用，R12 按用户已选择的“最后发起请求”控制发布，其他合法结果保留历史。[最小参考实验](../../examples/prototypes/contracts/README.md)已有独立测试及错误实现对照；尚无冻结契约、完整 schema/worker/存储实现或完整跨语言验收，M1-02/03 仍进行中。原 0.1 文档复核记录保留历史版本，不冒充本次运行结果。
 
+2026-11-12 按 [D13](../decisions/D13-初版语言验证范围.md) 调整真实语言核对范围：首版只验证 JS/TS（含前端、Node.js、Next.js）和 Python；Java、C#、C、C++ 及其专属框架/工具链验证后续开展，不阻塞初版 G1/G3/G6，也不计为通过。统一字段与扩展边界保留，`schemaVersion`、`protocolVersion` 仍为 `0.2-draft`；公共引用、worker 生命周期、快照、读取与业务授权正反例仍须完成。已有 C# 局部实验保留历史，不能代替首版范围内的真实验证。
+
 契约以跨项目通用事实为输入，以业务场景、步骤/动作、对象与规则组织结果，在步骤内绑定参与者和授权；角色反查使用同一关系。示例名称、角色、路径及数值仅为指定输入，不作为产品默认规则。
 
-按以下顺序阅读，先看最小正反例再核对字段与约束。事实模型共用 `schemaVersion=0.2-draft`，worker 控制消息独立使用 `protocolVersion=0.2-draft`；相同版本号不代表含义相同，也不与 0.1 自动兼容。ID-only 事实引用和缺发布世代的旧消息不得补默认值继续运行。bootstrap 与坐标策略保留各自独立版本；未选择传输实现、工具链版本、预算或质量门槛。
+按以下顺序阅读，先看最小正反例再核对字段与约束。事实模型共用 `schemaVersion=0.2-draft`，worker 控制消息独立使用 `protocolVersion=0.2-draft`；相同版本号不代表含义相同，也不与 0.1 自动兼容。ID-only 事实引用和缺发布世代的旧消息不得补默认值继续运行。bootstrap 与坐标策略保留各自独立版本；已有 JSONL/SQLite 探索实现；产品传输、工具链版本、预算和质量门槛未冻结。
 
 | 文档 | 内容与边界 |
 |---|---|
@@ -18,3 +20,7 @@
 0.1 历史交付见 [M1-02 复核记录](../progress/M1-02-复核记录.md)与 [M1-03 复核记录](../progress/M1-03-复核记录.md)。本次 R11/R12 的 22 项独立参考测试与 12 个错误实现对照见 [实验报告](../../examples/prototypes/contracts/REPORT.md)；它只验证内存参考模型，不代表坐标、策略/身份分析、完整协议传输、真实存储原子性或各语言已通过。其他正反例仍为待执行规格；真实结果反馈后，M1-09 汇总才冻结。
 
 阅读依据：[设计方案](../CodeCartia-设计方案.md)、[需求追踪](../acceptance/M1-需求与验收追踪.md)、[覆盖清单](../capabilities/README.md)、[待决策清单](../decisions/M1-待决策清单.md)。实际任务与完成状态见 [M1 任务清单](../progress/M1-任务清单.md)。
+
+2026-11-12 已追加[受控真实 worker/SQLite 实验](../../examples/prototypes/worker-runtime/README.md)，按 W-* 子集验证帧/日志、批次与精确引用、取消/超时、最新请求发布及提交前后进程崩溃恢复。它补充上述内存模型，仍不等于完整 schema、语言 worker 接入或全部序列通过；结果和剩余条件见 [G1 首批记录](../progress/G1-工程加载与进程恢复验证.md)。
+
+[公共事实映射实验](../../examples/prototypes/fact-mapping/README.md)另从 JS/TS、Python 的纯实际报告与源码生成声明/调用点、原始证据、静态引用和独立推导子集，核对完整 FactRef、配置/来源和必需语义依赖。全部 envelope 保持 complete=false/fullSchemaConformance=false；尚未核对完整工程失效、跨快照身份或其他主题 schema。

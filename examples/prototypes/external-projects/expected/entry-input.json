@@ -1,0 +1,30 @@
+{
+  "version": "external-entry-input-v0.1",
+  "selectionDate": "2026-11-12",
+  "scope": "One explicit technical source input; the six semantic anchors remain unchanged.",
+  "path": "bin/www",
+  "language": "javascript",
+  "sha256": "sha256:f25b810e7a2361fd10ee70212a7dadb5d4568f45fe387389a9738e816b3eb32e",
+  "sizeBytes": 2841,
+  "shebang": "#!/usr/bin/env node",
+  "requiredDeclaration": {
+    "name": "normalizePort",
+    "span": { "startByte": 1710, "endByte": 1924, "startLine": 56, "startColumn": 1, "endLine": 70, "endColumn": 2 }
+  },
+  "requiredCall": {
+    "callee": "normalizePort",
+    "span": { "startByte": 378, "endByte": 419, "startLine": 17, "startColumn": 12, "endLine": 17, "endColumn": 53 }
+  },
+  "source": {
+    "file": "package.json",
+    "field": "scripts.start",
+    "value": "node ./bin/www",
+    "sha256": "sha256:4211ea55b5268f8ab7d0989fd6f78239776350b588348d7ba52736dc67236ba2",
+    "interpretation": "Read as metadata only; no command parsing or execution. The path and language were explicitly selected after reading the shebang."
+  },
+  "request": {
+    "additionalEntryFiles": [
+      { "path": "bin/www", "language": "javascript" }
+    ]
+  }
+}

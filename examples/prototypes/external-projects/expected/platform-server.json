@@ -1,0 +1,194 @@
+{
+  "version": "external-project-observation-v0.1",
+  "selectionDate": "2026-11-12",
+  "selectionBasis": "Hand-selected source declarations/calls before extractor execution; not an exhaustive or held-out oracle.",
+  "roots": {
+    "js-ts": "D:/Server-side/platform-server",
+    "python": "D:/Server-side/platform-server/inference-sidecar"
+  },
+  "sourceObservations": [
+    {
+      "id": "js-source",
+      "path": "utils/queryHelper.js",
+      "sha256": "sha256:023372c3fe98c63fd0ead06f19b9625635e6715c71f0822f0cb30ad480864011",
+      "sizeBytes": 2189,
+      "mtimeNs": "1783390301429972400"
+    },
+    {
+      "id": "py-source",
+      "path": "inference-sidecar/main.py",
+      "sha256": "sha256:97a795c66c5f54eb6b8863f255657cd1d2ed0406e03e08b83c6f533a8e791dbf",
+      "sizeBytes": 9342,
+      "mtimeNs": "1788236156129379900"
+    },
+    {
+      "id": "js-metadata",
+      "path": "package.json",
+      "sha256": "sha256:4211ea55b5268f8ab7d0989fd6f78239776350b588348d7ba52736dc67236ba2",
+      "sizeBytes": 1065,
+      "mtimeNs": "1787637676983956100"
+    },
+    {
+      "id": "py-metadata",
+      "path": "inference-sidecar/requirements.txt",
+      "sha256": "sha256:c29e1164b65bee49ca044fd1c3b2e91b7060a54c62b20d29851273d4390a95b7",
+      "sizeBytes": 494,
+      "mtimeNs": "1785913749198713800"
+    }
+  ],
+  "metadataPreconditions": {
+    "js-ts": {
+      "absent": [
+        "tsconfig.json",
+        "jsconfig.json"
+      ],
+      "requiredDiagnostic": "CONFIG_INFERRED"
+    },
+    "python": {
+      "absent": [
+        "pyproject.toml"
+      ],
+      "requiredDiagnostic": "INPUT_MISSING"
+    }
+  },
+  "cases": [
+    {
+      "id": "js-declaration",
+      "language": "js-ts",
+      "kind": "declaration",
+      "file": "utils/queryHelper.js",
+      "name": "buildWhere",
+      "qualifiedName": "buildWhere",
+      "span": {
+        "startByte": 440,
+        "endByte": 1121,
+        "startLine": 12,
+        "startColumn": 1,
+        "endLine": 30,
+        "endColumn": 2
+      },
+      "startAnchor": "function buildWhere(query, { fuzzy = [], range = [] } = {}) {",
+      "endAnchor": "newline followed by unindented closing brace"
+    },
+    {
+      "id": "js-static-call",
+      "language": "js-ts",
+      "kind": "call",
+      "file": "utils/queryHelper.js",
+      "callee": "buildWhere",
+      "anchor": "buildWhere(query, { fuzzy, range })",
+      "span": {
+        "startByte": 1746,
+        "endByte": 1781,
+        "startLine": 44,
+        "startColumn": 19,
+        "endLine": 44,
+        "endColumn": 54
+      },
+      "bindingKind": "static-signature-reference",
+      "resolution": "confirmed",
+      "target": {
+        "file": "utils/queryHelper.js",
+        "qualifiedName": "buildWhere",
+        "span": {
+          "startByte": 440,
+          "endByte": 1121,
+          "startLine": 12,
+          "startColumn": 1,
+          "endLine": 30,
+          "endColumn": 2
+        }
+      },
+      "runtimeTargetMode": "unknown"
+    },
+    {
+      "id": "js-unknown-call",
+      "language": "js-ts",
+      "kind": "call",
+      "file": "utils/queryHelper.js",
+      "callee": "model.findAndCountAll",
+      "anchor": "model.findAndCountAll({",
+      "span": {
+        "startByte": 1878,
+        "endByte": 2010,
+        "startLine": 46,
+        "startColumn": 35,
+        "endLine": 51,
+        "endColumn": 7
+      },
+      "bindingKind": "static-signature-reference",
+      "resolution": "unresolved",
+      "target": null,
+      "runtimeTargetMode": "unknown"
+    },
+    {
+      "id": "python-declaration",
+      "language": "python",
+      "kind": "declaration",
+      "file": "main.py",
+      "name": "_decode_image_b64",
+      "qualifiedName": "main._decode_image_b64",
+      "span": {
+        "startByte": 4171,
+        "endByte": 4946,
+        "startLine": 105,
+        "startColumn": 1,
+        "endLine": 120,
+        "endColumn": 48
+      },
+      "startAnchor": "def _decode_image_b64(image_b64):",
+      "endAnchor": "return cv2.cvtColor(img, cv2.COLOR_BGR2RGB)"
+    },
+    {
+      "id": "python-static-call",
+      "language": "python",
+      "kind": "call",
+      "file": "main.py",
+      "callee": "_decode_image_b64",
+      "anchor": "_decode_image_b64(image_b64)",
+      "span": {
+        "startByte": 7990,
+        "endByte": 8018,
+        "startLine": 204,
+        "startColumn": 19,
+        "endLine": 204,
+        "endColumn": 47
+      },
+      "bindingKind": "lexical-declaration-reference",
+      "resolution": "confirmed",
+      "target": {
+        "file": "main.py",
+        "qualifiedName": "main._decode_image_b64",
+        "span": {
+          "startByte": 4171,
+          "endByte": 4946,
+          "startLine": 105,
+          "startColumn": 1,
+          "endLine": 120,
+          "endColumn": 48
+        }
+      },
+      "runtimeTargetMode": "unknown"
+    },
+    {
+      "id": "python-unknown-call",
+      "language": "python",
+      "kind": "call",
+      "file": "main.py",
+      "callee": "np.frombuffer",
+      "anchor": "np.frombuffer(raw[:expected], dtype=\"<i2\")",
+      "span": {
+        "startByte": 3738,
+        "endByte": 3780,
+        "startLine": 96,
+        "startColumn": 9,
+        "endLine": 96,
+        "endColumn": 51
+      },
+      "bindingKind": "lexical-declaration-reference",
+      "resolution": "unresolved",
+      "target": null,
+      "runtimeTargetMode": "unknown"
+    }
+  ]
+}

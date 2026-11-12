@@ -1,0 +1,392 @@
+{
+  "reportVersion": "project-loading-evaluation-v0.1",
+  "caseId": "python-late-rebinding",
+  "inputTreeFingerprint": "sha256:150d28a0a6caf9644d62b03e0c02baca5dfaad5286d07940f19f35939c58e77f",
+  "inputTree": {
+    "pyproject.toml": "sha256:485e93deb62ca2ab9357de589a7881db48055b7652a1b4937ae8778d81888d90",
+    "src/shadow_demo/__init__.py": "sha256:8a7f412dacc9e2cd439df2ec4eaa33a22d8c08a83da68922b772708561e19401",
+    "src/shadow_demo/core.py": "sha256:262ffb94af88f364377da282c99367077eb352e5d7943967c5ed25a9925e93c5",
+    "src/shadow_demo/service.py": "sha256:756a09379c55319b5cb3d0cc3d6273960ace4f02095b4f8b8efd012ca18ad0a3"
+  },
+  "implementationFingerprints": {
+    "examples/prototypes/project-loading/expected/cases.json": "sha256:f37b8e48e86405b31ed9a40caf37442c3bc749afac700abcebb1444e8a30d410",
+    "examples/prototypes/project-loading/node_bridge.mjs": "sha256:60d0eeebbc110c0c7b924fe6ddd1f545943bcbc2d71db40e50f35eace8f64768",
+    "examples/prototypes/project-loading/python_bridge.py": "sha256:d71d7af7eb6ab153375e6655d48b6514fa8588faf5d83fcdc6ed75bdf745d270",
+    "examples/prototypes/project-loading/SPEC.md": "sha256:0dbfd1933d3b31e2aa111fb2610c59b83e2647344006506363dcb627c7b15c64",
+    "examples/prototypes/project-loading/verify.py": "sha256:410aee40eeb09844621a9c48ce6e80614f86bb341a5b947c84c56f68188dfcd7",
+    "examples/prototypes/python/extract.py": "sha256:dd57f9cdc7c7e88b086b73a9bc1d6b5c021c332cbf6fec4ee3a5f9237650047a",
+    "examples/prototypes/python/project_extract.py": "sha256:2d9ecdd4eb9102d1e38dd0ae26fb6b05b7ab9200c3adc46d94f31d289f5fc183",
+    "examples/prototypes/python/project_verify.py": "sha256:39d65585a417417977c3ca8f918b59f9b86a109c02ec9fe428a25875ed5bcefc",
+    "examples/prototypes/python/verify.py": "sha256:028a7145c0cc4824531e509ca2ffb077a0e63bb5beab35348afdc154fa93d2dc"
+  },
+  "actual": {
+    "reportVersion": "project-loading-v0.1",
+    "language": "python",
+    "projectId": "python-late-rebinding",
+    "projectRoot": "D:\\ProjectCode\\CodeCartia\\examples\\prototypes\\project-loading\\fixtures\\python\\late-rebinding",
+    "configFile": "pyproject.toml",
+    "toolchain": {
+      "name": "Python stdlib ast/tomllib",
+      "version": "3.14.2",
+      "executable": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "extractorSha256": "sha256:2d9ecdd4eb9102d1e38dd0ae26fb6b05b7ab9200c3adc46d94f31d289f5fc183"
+    },
+    "effectiveLimits": {
+      "maxFiles": 512,
+      "maxFileBytes": 2097152,
+      "maxTotalBytes": 16777216,
+      "maxDirectories": 4096,
+      "maxAstNodes": 100000,
+      "maxImportDepth": 32
+    },
+    "discovery": {
+      "mode": "static-setuptools-roots",
+      "sourceRoots": [
+        "src"
+      ],
+      "include": [
+        "*"
+      ],
+      "exclude": [],
+      "namespaces": true,
+      "excludedDirectoryNames": [
+        ".git",
+        ".hg",
+        ".svn",
+        ".tox",
+        ".venv",
+        "__pycache__",
+        "node_modules",
+        "venv"
+      ],
+      "declaredDependencies": [],
+      "buildSystem": {},
+      "buildBackendExecuted": false
+    },
+    "budgetSemantics": {
+      "maxFiles": "all-captured-config-metadata-and-source-files",
+      "maxAstNodes": "per-source-file-before-fact-extraction",
+      "maxImportDepth": "per-import-reference-chain",
+      "astParsing": "File byte limits apply before parsing; the AST node limit does not bound parser CPU or memory."
+    },
+    "observed": {
+      "filesRead": 4,
+      "bytesRead": 480,
+      "directoriesVisited": 2,
+      "sourcesParsed": 3,
+      "astNodes": 42,
+      "maxAstNodesPerSource": 32,
+      "maxImportDepth": 1
+    },
+    "inputManifest": [
+      {
+        "path": "pyproject.toml",
+        "kind": "config",
+        "sha256": "sha256:485e93deb62ca2ab9357de589a7881db48055b7652a1b4937ae8778d81888d90",
+        "sizeBytes": 152
+      },
+      {
+        "path": "src/shadow_demo/__init__.py",
+        "kind": "source",
+        "sha256": "sha256:8a7f412dacc9e2cd439df2ec4eaa33a22d8c08a83da68922b772708561e19401",
+        "sizeBytes": 51
+      },
+      {
+        "path": "src/shadow_demo/core.py",
+        "kind": "source",
+        "sha256": "sha256:262ffb94af88f364377da282c99367077eb352e5d7943967c5ed25a9925e93c5",
+        "sizeBytes": 39
+      },
+      {
+        "path": "src/shadow_demo/service.py",
+        "kind": "source",
+        "sha256": "sha256:756a09379c55319b5cb3d0cc3d6273960ace4f02095b4f8b8efd012ca18ad0a3",
+        "sizeBytes": 238
+      }
+    ],
+    "inputQueries": [
+      {
+        "path": "pyproject.toml",
+        "exists": true
+      },
+      {
+        "path": "src/shadow_demo/__init__.py",
+        "exists": true
+      },
+      {
+        "path": "src/shadow_demo/core.py",
+        "exists": true
+      },
+      {
+        "path": "src/shadow_demo/service.py",
+        "exists": true
+      }
+    ],
+    "declarations": [
+      {
+        "file": "src/shadow_demo/core.py",
+        "name": "transform",
+        "qualifiedName": "shadow_demo.core.transform",
+        "kind": "function",
+        "span": {
+          "startByte": 0,
+          "endByte": 38,
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 2,
+          "endColumn": 17
+        }
+      },
+      {
+        "file": "src/shadow_demo/service.py",
+        "name": "local_shadow",
+        "qualifiedName": "shadow_demo.service.local_shadow",
+        "kind": "function",
+        "span": {
+          "startByte": 30,
+          "endByte": 123,
+          "startLine": 4,
+          "startColumn": 1,
+          "endLine": 7,
+          "endColumn": 18
+        }
+      },
+      {
+        "file": "src/shadow_demo/service.py",
+        "name": "imported_local",
+        "qualifiedName": "shadow_demo.service.imported_local",
+        "kind": "function",
+        "span": {
+          "startByte": 126,
+          "endByte": 237,
+          "startLine": 10,
+          "startColumn": 1,
+          "endLine": 12,
+          "endColumn": 34
+        }
+      }
+    ],
+    "imports": [
+      {
+        "file": "src/shadow_demo/service.py",
+        "moduleSpecifier": ".core",
+        "span": {
+          "startByte": 0,
+          "endByte": 27,
+          "startLine": 1,
+          "startColumn": 1,
+          "endLine": 1,
+          "endColumn": 28
+        },
+        "resolution": "resolved",
+        "targetFile": "src/shadow_demo/core.py"
+      },
+      {
+        "file": "src/shadow_demo/service.py",
+        "moduleSpecifier": ".core",
+        "span": {
+          "startByte": 157,
+          "endByte": 203,
+          "startLine": 11,
+          "startColumn": 5,
+          "endLine": 11,
+          "endColumn": 51
+        },
+        "resolution": "resolved",
+        "targetFile": "src/shadow_demo/core.py"
+      }
+    ],
+    "calls": [
+      {
+        "file": "src/shadow_demo/service.py",
+        "owner": "shadow_demo.service.local_shadow",
+        "callee": "transform",
+        "span": {
+          "startByte": 68,
+          "endByte": 84,
+          "startLine": 5,
+          "startColumn": 14,
+          "endLine": 5,
+          "endColumn": 30
+        },
+        "bindingKind": "lexical-declaration-reference",
+        "resolution": "unresolved",
+        "target": null,
+        "runtimeTargetMode": "unknown",
+        "executionReachability": "not-evaluated"
+      },
+      {
+        "file": "src/shadow_demo/service.py",
+        "owner": "shadow_demo.service.imported_local",
+        "callee": "transform_local",
+        "span": {
+          "startByte": 215,
+          "endByte": 237,
+          "startLine": 12,
+          "startColumn": 12,
+          "endLine": 12,
+          "endColumn": 34
+        },
+        "bindingKind": "lexical-declaration-reference",
+        "resolution": "confirmed",
+        "target": {
+          "file": "src/shadow_demo/core.py",
+          "qualifiedName": "shadow_demo.core.transform",
+          "span": {
+            "startByte": 0,
+            "endByte": 38,
+            "startLine": 1,
+            "startColumn": 1,
+            "endLine": 2,
+            "endColumn": 17
+          }
+        },
+        "runtimeTargetMode": "unknown",
+        "executionReachability": "not-evaluated"
+      }
+    ],
+    "diagnostics": [
+      {
+        "code": "ASSIGNMENT_BINDING_UNKNOWN",
+        "message": "Call has no lexical declaration proof within the supported static modes.",
+        "file": "src/shadow_demo/service.py",
+        "span": {
+          "startByte": 68,
+          "endByte": 84,
+          "startLine": 5,
+          "startColumn": 14,
+          "endLine": 5,
+          "endColumn": 30
+        }
+      }
+    ],
+    "completeness": {
+      "complete": false,
+      "missingInputs": [],
+      "unsupportedModes": [
+        "general-dataflow",
+        "installed-dependency-resolution",
+        "runtime-targets-and-reachability",
+        "types-and-frameworks"
+      ],
+      "truncations": []
+    },
+    "targetModulesExecuted": false,
+    "buildBackendExecuted": false,
+    "expectedReadByExtractor": false,
+    "scopeLimitations": [
+      "Confirmed calls identify lexical declarations only; reachability and runtime targets remain unknown.",
+      "Static source roots, UTF-8 sources, package imports and finite re-exports are an exploration slice, not Python framework or packaging conformance.",
+      "No import hooks, setup/backend execution, dependency installation or installed-environment search is performed.",
+      "Existing path links and read-time file changes are refused; concurrent path replacement is not proven safe on every platform."
+    ]
+  },
+  "observation": {
+    "elapsedMs": 83.488,
+    "stderr": ""
+  },
+  "mutationChecks": [
+    {
+      "name": "empty-report",
+      "rejected": true,
+      "reason": "wrong report version"
+    },
+    {
+      "name": "wrong-project",
+      "rejected": true,
+      "reason": "wrong project identity"
+    },
+    {
+      "name": "wrong-input-fingerprint",
+      "rejected": true,
+      "reason": "input fingerprint mismatch: pyproject.toml"
+    },
+    {
+      "name": "wrong-input-size",
+      "rejected": true,
+      "reason": "input size mismatch: pyproject.toml"
+    },
+    {
+      "name": "missing-call",
+      "rejected": true,
+      "reason": "missing expected call: src/shadow_demo/service.py: transform(value)"
+    },
+    {
+      "name": "duplicate-call",
+      "rejected": true,
+      "reason": "duplicate call within one configuration"
+    },
+    {
+      "name": "wrong-call-byte-range",
+      "rejected": true,
+      "reason": "wrong source span: calls"
+    },
+    {
+      "name": "wrong-codepoint-column",
+      "rejected": true,
+      "reason": "wrong source span: calls"
+    },
+    {
+      "name": "runtime-target-upgrade",
+      "rejected": true,
+      "reason": "static reference claimed a runtime target"
+    },
+    {
+      "name": "binding-kind-upgrade",
+      "rejected": true,
+      "reason": "binding semantics changed"
+    },
+    {
+      "name": "additional-noncall-fact",
+      "rejected": true,
+      "reason": "unexpected additional call"
+    },
+    {
+      "name": "wrong-target-name",
+      "rejected": true,
+      "reason": "wrong target lexical name"
+    },
+    {
+      "name": "wrong-target-range",
+      "rejected": true,
+      "reason": "wrong source span: call target"
+    },
+    {
+      "name": "unknown-upgraded",
+      "rejected": true,
+      "reason": "wrong resolution: transform(value)"
+    },
+    {
+      "name": "incomplete-became-complete",
+      "rejected": true,
+      "reason": "incomplete input became complete"
+    },
+    {
+      "name": "completeness-reasons-removed",
+      "rejected": true,
+      "reason": "incomplete report lost every reason"
+    },
+    {
+      "name": "required-diagnostics-removed",
+      "rejected": true,
+      "reason": "missing diagnostic: ASSIGNMENT_BINDING_UNKNOWN"
+    }
+  ],
+  "freshnessChecks": [
+    {
+      "name": "stale-input-tree",
+      "rejected": true,
+      "reason": "saved report has stale fixture inputs"
+    },
+    {
+      "name": "changed-input-ledger",
+      "rejected": true,
+      "reason": "saved report input ledger changed"
+    },
+    {
+      "name": "stale-implementation",
+      "rejected": true,
+      "reason": "saved report has stale implementation/specification"
+    }
+  ]
+}

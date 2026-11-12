@@ -1,0 +1,208 @@
+{
+  "status": "checks-passed",
+  "scope": "Developer regressions for static Python project loading, lexical uncertainty, coordinates and read/write refusal; independent project-loading oracle is separate.",
+  "passed": 48,
+  "total": 48,
+  "checks": [
+    {
+      "name": "relative-package-reexport",
+      "passed": true
+    },
+    {
+      "name": "whole-target-declaration",
+      "passed": true
+    },
+    {
+      "name": "manifest-from-captured-bytes",
+      "passed": true
+    },
+    {
+      "name": "runtime-and-depth-stay-unknown",
+      "passed": true
+    },
+    {
+      "name": "no-module-import-or-bytecode",
+      "passed": true
+    },
+    {
+      "name": "relative-config-traversal",
+      "passed": true
+    },
+    {
+      "name": "absolute-config-refused",
+      "passed": true
+    },
+    {
+      "name": "file-budget-does-not-confirm-partial-project",
+      "passed": true
+    },
+    {
+      "name": "import-budget-stays-unknown",
+      "passed": true
+    },
+    {
+      "name": "negative-budget-refused",
+      "passed": true
+    },
+    {
+      "name": "output-outside-reports-refused",
+      "passed": true
+    },
+    {
+      "name": "output-inside-project-refused",
+      "passed": true
+    },
+    {
+      "name": "hardlinked-output-refused",
+      "passed": true
+    },
+    {
+      "name": "hardlink-target-unchanged",
+      "passed": true
+    },
+    {
+      "name": "decorated-import-not-promoted",
+      "passed": true
+    },
+    {
+      "name": "whole-function-local-rebinding",
+      "passed": true
+    },
+    {
+      "name": "parameter-shadowing",
+      "passed": true
+    },
+    {
+      "name": "with-alias-shadowing",
+      "passed": true
+    },
+    {
+      "name": "exception-alias-shadowing",
+      "passed": true
+    },
+    {
+      "name": "match-capture-shadowing",
+      "passed": true
+    },
+    {
+      "name": "star-import-not-promoted",
+      "passed": true
+    },
+    {
+      "name": "dynamic-namespace-not-promoted",
+      "passed": true
+    },
+    {
+      "name": "later-declaration-does-not-erase-global-write",
+      "passed": true
+    },
+    {
+      "name": "comprehension-walrus-local-by-python-symtable",
+      "passed": true
+    },
+    {
+      "name": "comprehension-walrus-invalidates-outer-binding",
+      "passed": true
+    },
+    {
+      "name": "comprehension-write-keeps-unaffected-binding",
+      "passed": true
+    },
+    {
+      "name": "lambda-body-walrus-stays-in-lambda",
+      "passed": true
+    },
+    {
+      "name": "lambda-default-walrus-writes-enclosing-scope",
+      "passed": true
+    },
+    {
+      "name": "global-function-definition-writes-module",
+      "passed": true
+    },
+    {
+      "name": "global-import-writes-module",
+      "passed": true
+    },
+    {
+      "name": "nonlocal-function-definition-writes-enclosing-scope",
+      "passed": true
+    },
+    {
+      "name": "nonlocal-import-writes-enclosing-scope",
+      "passed": true
+    },
+    {
+      "name": "nonlocal-write-follows-enclosing-nonlocal-alias",
+      "passed": true
+    },
+    {
+      "name": "module-attribute-write",
+      "passed": true
+    },
+    {
+      "name": "module-setattr-write",
+      "passed": true
+    },
+    {
+      "name": "module-dictionary-write",
+      "passed": true
+    },
+    {
+      "name": "module-dictionary-delete",
+      "passed": true
+    },
+    {
+      "name": "module-dictionary-dynamic-key-write",
+      "passed": true
+    },
+    {
+      "name": "module-write-also-invalidates-internal-global-lookup",
+      "passed": true
+    },
+    {
+      "name": "unicode-crlf-call-bytes",
+      "passed": true
+    },
+    {
+      "name": "unicode-codepoint-columns",
+      "passed": true
+    },
+    {
+      "name": "bom-declaration-position",
+      "passed": true
+    },
+    {
+      "name": "source-root-traversal-refused",
+      "passed": true
+    },
+    {
+      "name": "linked-input-directory-refused",
+      "passed": true
+    },
+    {
+      "name": "linked-target-unchanged",
+      "passed": true
+    },
+    {
+      "name": "dynamic-metadata-never-evaluated",
+      "passed": true
+    },
+    {
+      "name": "backend-outside-source-discovery",
+      "passed": true
+    },
+    {
+      "name": "source-build-tree-unchanged",
+      "passed": true
+    }
+  ],
+  "skipped": [
+    {
+      "name": "file-symlink-input-refused",
+      "reason": "File symlink creation unavailable; winerror=1314, errno=22"
+    }
+  ],
+  "extractorSha256": "sha256:2d9ecdd4eb9102d1e38dd0ae26fb6b05b7ab9200c3adc46d94f31d289f5fc183",
+  "verifierSha256": "sha256:39d65585a417417977c3ca8f918b59f9b86a109c02ec9fe428a25875ed5bcefc"
+}

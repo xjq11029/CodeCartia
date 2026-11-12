@@ -1,9 +1,9 @@
 flowchart LR
-  %% 设计图解；未实现。箭头含义见本图说明。
+  %% 设计图解；未实现。初版验证 JS/TS、Python，Java/C#/C/C++ 后续验证。箭头含义见本图说明。
   input["源码／静态配置<br/>语义输入"]:::data
   freeze["冻结输入清单"]:::data
   discover["工程发现<br/>与基础索引"]:::core
-  semantic["语义／有限数据流<br/>语言 worker"]:::core
+  semantic["语义／有限数据流<br/>JS/TS · Python"]:::core
   framework["框架事实<br/>与检查点"]:::core
   facts["统一事实<br/>证据与来源"]:::data
   links["跨工程关联<br/>条件化处理链"]:::core

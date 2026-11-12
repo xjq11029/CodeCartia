@@ -4,7 +4,7 @@
   "format": "codecartia-local-experiment-v0.1",
   "contractMapping": "M1-02 0.1-draft 的局部字段核对；非完整schema兼容、非worker实现",
   "sourceViewId": "automatic-static-local",
-  "capturedAt": "2026-11-10T06:08:54.592Z",
+  "capturedAt": "2026-11-12T07:11:06.229Z",
   "toolchain": {
     "name": "TypeScript Compiler API",
     "version": "6.0.3",
@@ -535,7 +535,7 @@
     }
   ],
   "scriptFingerprint": "9f22da6395b4c4ed03abd5915aa59c54bfa7195af882db29262d2c2061c46a99",
-  "outputPolicyFingerprint": "498d639fc7d0fff5a9e3040c281b652c08d164746eafd4bae7f1f57b93104290",
+  "outputPolicyFingerprint": "d0828c2dfa73f6f822af070f4567dba5768cc7b2cad8996fb0a8bb57293a6b97",
   "toolConfigFingerprint": "c046515bd2412beb921d4f5ca1cd8e6089aed7a14ff523648570dd0d4819519a",
   "compilerOptions": {
     "target": 9,
@@ -565,14 +565,14 @@
     ],
     "reproduce": "pnpm extract --case semantic --toolchain toolchain.windows-observed.json --node-limit 10 --output reports/truncated.json"
   },
-  "durationMs": 345.78960000000006,
+  "durationMs": 346.57910000000015,
   "peakMemoryObservation": {
-    "maxRSS": 688240,
+    "maxRSS": 689480,
     "maxRSSUnit": "Node process.resourceUsage kilobytes",
     "memoryAtEnd": {
-      "rss": 704757760,
-      "heapTotal": 618971136,
-      "heapUsed": 509101088,
+      "rss": 706027520,
+      "heapTotal": 618446848,
+      "heapUsed": 508937424,
       "external": 26022804,
       "arrayBuffers": 23849539
     },

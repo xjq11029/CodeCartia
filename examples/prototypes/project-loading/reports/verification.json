@@ -1,0 +1,224 @@
+{
+  "reportVersion": "project-loading-verification-v0.1",
+  "evaluatedAtUtc": "2026-11-12T07:21:50.621076+00:00",
+  "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "win32",
+  "passed": true,
+  "caseCount": 11,
+  "casesPassed": 11,
+  "mutationsRejected": 159,
+  "staleReportsRejected": 33,
+  "results": [
+    {
+      "caseId": "js-positive",
+      "passed": true,
+      "counts": {
+        "inputs": 70,
+        "projectInputs": 7,
+        "declarations": 4,
+        "calls": 1,
+        "confirmedReferences": 1,
+        "diagnostics": 0,
+        "complete": true
+      },
+      "mutationsRejected": 15,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 540.979,
+        "stderr": ""
+      }
+    },
+    {
+      "caseId": "js-missing",
+      "passed": true,
+      "counts": {
+        "inputs": 66,
+        "projectInputs": 3,
+        "declarations": 1,
+        "calls": 1,
+        "confirmedReferences": 0,
+        "diagnostics": 2,
+        "complete": false
+      },
+      "mutationsRejected": 16,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 699.827,
+        "stderr": ""
+      }
+    },
+    {
+      "caseId": "js-dynamic",
+      "passed": true,
+      "counts": {
+        "inputs": 2,
+        "projectInputs": 2,
+        "declarations": 0,
+        "calls": 0,
+        "confirmedReferences": 0,
+        "diagnostics": 1,
+        "complete": false
+      },
+      "mutationsRejected": 7,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 184.221,
+        "stderr": ""
+      }
+    },
+    {
+      "caseId": "js-side-effect",
+      "passed": true,
+      "counts": {
+        "inputs": 66,
+        "projectInputs": 3,
+        "declarations": 1,
+        "calls": 1,
+        "confirmedReferences": 0,
+        "diagnostics": 3,
+        "complete": false
+      },
+      "mutationsRejected": 15,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 686.613,
+        "stderr": ""
+      }
+    },
+    {
+      "caseId": "python-positive",
+      "passed": true,
+      "counts": {
+        "inputs": 4,
+        "projectInputs": 4,
+        "declarations": 3,
+        "calls": 1,
+        "confirmedReferences": 1,
+        "diagnostics": 0,
+        "complete": false
+      },
+      "mutationsRejected": 15,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 84.982,
+        "stderr": ""
+      }
+    },
+    {
+      "caseId": "python-missing",
+      "passed": true,
+      "counts": {
+        "inputs": 3,
+        "projectInputs": 3,
+        "declarations": 1,
+        "calls": 1,
+        "confirmedReferences": 0,
+        "diagnostics": 2,
+        "complete": false
+      },
+      "mutationsRejected": 15,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 81.639,
+        "stderr": ""
+      }
+    },
+    {
+      "caseId": "python-dynamic",
+      "passed": true,
+      "counts": {
+        "inputs": 3,
+        "projectInputs": 3,
+        "declarations": 0,
+        "calls": 3,
+        "confirmedReferences": 0,
+        "diagnostics": 6,
+        "complete": false
+      },
+      "mutationsRejected": 14,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 80.543,
+        "stderr": ""
+      }
+    },
+    {
+      "caseId": "python-side-effect",
+      "passed": true,
+      "counts": {
+        "inputs": 3,
+        "projectInputs": 3,
+        "declarations": 1,
+        "calls": 3,
+        "confirmedReferences": 0,
+        "diagnostics": 5,
+        "complete": false
+      },
+      "mutationsRejected": 14,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 80.746,
+        "stderr": ""
+      }
+    },
+    {
+      "caseId": "js-unknown-type",
+      "passed": true,
+      "counts": {
+        "inputs": 66,
+        "projectInputs": 3,
+        "declarations": 2,
+        "calls": 1,
+        "confirmedReferences": 0,
+        "diagnostics": 0,
+        "complete": true
+      },
+      "mutationsRejected": 13,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 694.842,
+        "stderr": ""
+      }
+    },
+    {
+      "caseId": "python-late-rebinding",
+      "passed": true,
+      "counts": {
+        "inputs": 4,
+        "projectInputs": 4,
+        "declarations": 3,
+        "calls": 2,
+        "confirmedReferences": 1,
+        "diagnostics": 1,
+        "complete": false
+      },
+      "mutationsRejected": 17,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 83.488,
+        "stderr": ""
+      }
+    },
+    {
+      "caseId": "python-binding-boundaries",
+      "passed": true,
+      "counts": {
+        "inputs": 5,
+        "projectInputs": 5,
+        "declarations": 15,
+        "calls": 6,
+        "confirmedReferences": 1,
+        "diagnostics": 7,
+        "complete": false
+      },
+      "mutationsRejected": 18,
+      "staleReportsRejected": 3,
+      "observation": {
+        "elapsedMs": 84.893,
+        "stderr": ""
+      }
+    }
+  ],
+  "scope": "Public synthetic full-project loading fixtures; not held-out, runtime, framework, or product acceptance.",
+  "freshnessChecked": true
+}

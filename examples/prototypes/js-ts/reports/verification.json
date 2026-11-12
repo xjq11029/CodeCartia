@@ -5,11 +5,11 @@
   "expectedFingerprint": "6a0fe82b5b46bcc210cb34a5214be0b383ba5806bb7f7acad5383fb029f2ac52",
   "verifierFingerprint": "dff9cd8228ef71590ddc864f18d89426b9b60c1d23b47143cf88d64b81060ae1",
   "reportFingerprints": {
-    "semantic": "ddec897982578ebc64b5d924574b908fc0f2a34653dea9902d27e753ff376fc5",
-    "components": "29922656525d9203570d49f6a33fe553a5fba97b1decf104bbad7f617e8733ec",
-    "encoding": "0f553612ce8891e03c996dc1ff83374315b2c3022d5c5a56dbc7488c39fc9440",
-    "truncated": "5eb370653b900c6f2f3ecf262445d022867b34684a409411e3ebe6251b158d36",
-    "boundary": "1d8abd8b04a9d84df49d60aa2f43f22a454d4e4e09a708c58d22a5d21dd48262"
+    "semantic": "e88478fa834e5a2b25fbf6d550abfa2e73ad6e50386ac3f4886001151f76a7dc",
+    "components": "ce17da6b98ad5dc2fa1a3d51e1b3113be848ef2dd4c9a87a35eef443a83de2c5",
+    "encoding": "35b9b456394d2db4c84325c4f511151d2f22576e153d4b241c1de7773ee3b401",
+    "truncated": "fb994d328efd625fa4b36af8ec4ac886527f2e1511f10b2a0ac7aec0b8e5add3",
+    "boundary": "b6031f2539b5e96e50345a9101343285e2aba9c789ffc49881bc5ac90d833cf5"
   },
   "passed": 134,
   "total": 134,
